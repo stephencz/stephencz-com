@@ -9,10 +9,26 @@ author: Stephen Czekalski
 categories: [design patterns]
 updated:
 parts:
+preqs: 
+excerpt_separator: <!--more-->
 ---
 
-Singleton are one of the easiest design patterns to understand. W
+The **Singleton** design pattern is among the easiest design patterns to understand.
+It is also one of the most controversial.
+
+In this article, I present an overview of the Singleton.
+I begin by defining it and outlining its common usage.
+I then provide several examples of how a Singleton can be implemented in Java.
+And, finally, I explore the controversy behind the pattern and answer the vital question: *Should I use a Singleton?*
+
+<!--more-->
 
 ## What is a Singleton?
 
-## How is it implemented?
+The Singleton is one of twenty-three design patterns originally outlined in the famous book: [*Design Patterns: Elements of Reusable Object-Oriented Software*](https://en.wikipedia.org/wiki/Design_Patterns).
+The pattern is classifed as a creational pattern, meaning it is a pattern that manages the creation of objects.
+
+Specifically, the Singleton manages the creation of itself. 
+The intent behind the pattern was originally defined as to:
+
+>  Ensure a class only has one instance, and provide a global point of access to it.

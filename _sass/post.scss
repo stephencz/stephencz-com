@@ -108,7 +108,7 @@
 
 .post-wrapper .body h1 { font-size: $h1-size; }
 
-.post-wrapper .body h2 { font-size: $h2-size; }
+.post-wrapper .body h2 { font-size: $h2-size; margin-top: 60px; }
 
 .post-wrapper .body h3 { font-size: $h3-size; }
 
@@ -117,3 +117,9 @@
 .post-wrapper .body h5 { font-size: $h5-size; }
 
 .post-wrapper .body h6 { font-size: $h6-size; }
+
+.post-wrapper .body blockquote
+{
+  font-style: italic;
+  text-align: center;
+}
