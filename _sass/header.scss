@@ -1,0 +1,21 @@
+.header-wrapper
+{
+  color: $header-color;
+
+  font-size: 4em;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: lowercase;
+
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+@media (max-width: 991.98px)
+{
+  .header-wrapper
+  {
+    text-align: center;
+    margin-left: 0px;
+  }
+}

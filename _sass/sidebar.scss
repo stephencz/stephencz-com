@@ -1,0 +1,57 @@
+.sidebar-wrapper
+{
+}
+
+.sidebar-wrapper > .logo
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sidebar-wrapper > .navigation
+{
+  text-transform: lowercase;
+  margin-top: 25px;
+}
+
+.sidebar-wrapper > .navigation > ul
+{
+  font-size: 2em;
+  text-align: center;
+  list-style: none;
+  padding: 0px;
+}
+
+.sidebar-wrapper > .navigation > ul li
+{
+  padding-top: 30px;
+}
+
+.sidebar-wrapper > .navigation > ul li a:link,
+.sidebar-wrapper > .navigation > ul li a:active,
+.sidebar-wrapper > .navigation > ul li a:visited
+{
+  color: $nav-color;
+  text-decoration: none;
+}
+
+.sidebar-wrapper > .navigation > ul li a:hover
+{
+  color: $nav-hover;
+}
+
+@media (max-width: 991.98px)
+{
+    .sidebar-wrapper
+    {
+        margin-top: 15px;
+        margin-bottom: 50px;
+    }
+
+    .sidebar-wrapper nav.navigation ul li
+    {
+        display: inline-block;
+        padding-right: 20px;
+    }
+}

@@ -1,0 +1,19 @@
+html, body
+{
+    font-size: $pixel-size;
+    font-family: $serif-stack;
+    line-height: $line-height;
+
+    color: #000;
+
+    height: 100%;
+    width: 100%;
+
+    margin: 0;
+    padding: 0px;
+
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-font-smoothing: antialiased !important;
+    text-rendering: optimizelegibility !important;
+}

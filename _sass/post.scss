@@ -1,0 +1,119 @@
+.post-wrapper
+{
+  margin-top: 50px;
+}
+
+.trailing
+{
+  margin-top: 120px;
+}
+
+.post-wrapper h1.title
+{
+  font-size: $h1-size;
+  font-weight: 700;
+  font-family: "Open Sans",sans-serif;
+
+  margin-bottom: 5px;
+}
+
+.post-wrapper h1.title a:link,
+.post-wrapper h1.title a:active,
+.post-wrapper h1.title a:visited
+{
+  color: $title-link-color;
+  text-decoration: none;
+}
+
+.post-wrapper h1.title a:hover
+{
+  color: $title-link-hover;
+  text-decoration: none;
+}
+
+.post-wrapper ul.metadata
+{
+  display: block;
+  list-style: none;
+  
+  font-size: 1.6em;
+
+  padding: 0px;
+  margin: 0px;
+}
+
+.post-wrapper ul.metadata li
+{
+  display: inline-block;
+  margin-bottom: 10px;
+  padding-right: 10px;
+}
+
+.post-wrapper ul.metadata li.info { color: $metadata-info-color; }
+
+.post-wrapper ul.metadata li.category { }
+
+.post-wrapper ul.metadata li.category a:link,
+.post-wrapper ul.metadata li.category a:active,
+.post-wrapper ul.metadata li.category a:visited
+{
+  color: $metadata-link-color;
+  text-decoration: none;
+}
+
+.post-wrapper ul.metadata li.category a:hover
+{
+  color: $metadata-link-hover;
+  text-decoration: none;
+}
+
+.post-wrapper .body p
+{
+  font-size: $font-size;
+  line-height: $line-height;
+  margin-bottom: 20px;
+}
+
+.post-wrapper .body a:link,
+.post-wrapper .body a:active,
+.post-wrapper .body a:visited
+{
+  color: $link-color;
+}
+
+.post-wrapper .body a:hover
+{
+  color: $link-hover;
+}
+
+.post-wrapper .body h1,
+.post-wrapper .body h2,
+.post-wrapper .body h3,
+.post-wrapper .body h4,
+.post-wrapper .body h5,
+.post-wrapper .body h6
+{
+  font-family: $sans-serif-stack;
+}
+
+.post-wrapper .body h1,
+.post-wrapper .body h2,
+.post-wrapper .body h3,
+.post-wrapper .body h4,
+.post-wrapper .body h5,
+.post-wrapper .body h6
+{
+  font-weight: 700;
+}
+
+.post-wrapper .body h1 { font-size: $h1-size; }
+
+.post-wrapper .body h2 { font-size: $h2-size; }
+
+.post-wrapper .body h3 { font-size: $h3-size; }
+
+.post-wrapper .body h4 { font-size: $h4-size; }
+
+.post-wrapper .body h5 { font-size: $h5-size; }
+
+.post-wrapper .body h6 { font-size: $h6-size; }

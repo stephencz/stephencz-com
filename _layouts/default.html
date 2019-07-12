@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+  {% capture page_title %} {{ page.title }} {% endcapture %}
+  {% assign custom_title = page_title %}
+  {% assign custom_description = page.description %}
+    
+  <!-- Meta Tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+  <title>{{ page.title }} | Cream of Potato</title>
+    
+  <meta name="description" content="{{ page.description }}">
+  <meta name=”robots” content=”index, follow”>
+    
+  <link rel=”canonical” href=”https://creamofpotato.com/” />
+    
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,600|Open+Sans:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/base.css">
+    
+</head>
+<body>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 "> {% include header.html %} </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-2"> {% include sidebar.html %} </div>
+      <div class="col-lg-8 "> {{ content }} {% include footer.html %} </div>
+    </div>
+  </div>
+    
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+  <script>
+  </script>
+
+</body>
+</html>

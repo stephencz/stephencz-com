@@ -1,0 +1,41 @@
+title: Cream of Potato
+email: admin@creamofpotato.com
+description: >-
+  Cream of Potato is a programming blog with a focus on in-depth articles about specific topics. 
+  Our goal to promote a culture of critical and high level abstractiong thinking when it comes to software design.
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://www.creamofpotato.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: creamofpotato
+github_username:  stephencz
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  highlighter: rouge
+  parse_block_html: true
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+permalink: /posts/:title
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+exclude:
+  - /scripts
+  - /vendor
+  - /screenshot.png
+  - /README.md
+  - /LICENSE
+  - /Gemfile
+  - /Gemfile.lock
+  - node_modules
+  - .vendor/bundle/
+  - .vendor/cache/
+  - .vendor/gems/
+  - .vendor/ruby/

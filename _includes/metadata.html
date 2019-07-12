@@ -1,0 +1,15 @@
+<ul class="metadata">
+  <li class="info">
+    {% if page.updated %}
+      updated by {{ page.author }} on {{ page.updated | date: "%m/%-d/%Y"}}
+
+    {% else %}
+      published by {{ page.author }} on {{ page.date | date: "%m/%-d/%Y"}}
+
+    {% endif %}
+  </li>
+
+  {% for category in page.categories %} 
+    <li class="category"><a href="/categories/{{category}}">[{{ category }}]</a></li>
+  {% endfor %}
+</ul>
