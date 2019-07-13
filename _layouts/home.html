@@ -4,7 +4,7 @@ layout: default
 {% assign counter = 0 %}
 {% for post in site.posts limit: 10 %}
   <article class="post-wrapper {%if counter != 0 %} trailing {% endif %}">
-      <h1 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+      <h1 class="title"><a href="{{ post.url }}">{{ post.title }} <span class="title-arrow">[↩]</span></a></h1>
       <ul class="metadata">
           <li class="info">
             {% if post.updated %}

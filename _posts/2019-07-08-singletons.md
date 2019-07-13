@@ -1,10 +1,10 @@
 ---
 layout: post
-title: An Overview of Singletons
+title: The Singleton
 description: >- 
   Singletons, while one of easiest design patterns to understand, have a controversial existence.
-  Some people hate them, while others love them. In this article, I a demostrate common implementations
-  of the pattern, as well as explore the patterns love-hate relationship with programmers.
+  Some people hate them, while others love them. In this article, I define what a Singleton is,
+  demostrate common implementations of the pattern, and explore the patterns love-hate relationship with programmers.
 author: Stephen Czekalski
 categories: [design patterns]
 updated:
@@ -29,6 +29,12 @@ The Singleton is one of twenty-three design patterns originally outlined in the 
 The pattern is classifed as a creational pattern, meaning it is a pattern that manages the creation of objects.
 
 Specifically, the Singleton manages the creation of itself. 
-The intent behind the pattern was originally defined as to:
+The intent behind the pattern was originally defined as:
 
 >  Ensure a class only has one instance, and provide a global point of access to it.
+
+This is as concise a definition you will find.
+A Singleton does two things. Its ensures that a class, typically itself, has only one instance.
+And it provides a global point of access to that instance.
+
+### When and Why?

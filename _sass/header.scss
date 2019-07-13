@@ -1,15 +1,24 @@
 .header-wrapper
 {
-  color: $header-color;
-
   font-size: 4em;
   font-weight: 600;
   font-family: 'Open Sans', sans-serif;
   text-transform: lowercase;
+  line-height: 1em;
 
   margin-top: 50px;
   margin-left: 50px;
 }
+
+.header-wrapper a:link,
+.header-wrapper a:active,
+.header-wrapper a:visited,
+.header-wrapper a:hover
+{
+  color: $header-color;
+  text-decoration: none;
+}
+
 
 @media (max-width: 991.98px)
 {

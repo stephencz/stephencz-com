@@ -12,9 +12,21 @@
 {
   font-size: $h1-size;
   font-weight: 700;
-  font-family: "Open Sans",sans-serif;
+  font-family: $sans-serif-stack;
 
   margin-bottom: 5px;
+}
+
+.post-wrapper span.title-arrow
+{
+  font-size: 0.4em;
+  color: $link-color;
+  vertical-align: middle;
+}
+
+.post-wrapper span.title-arrow:hover
+{
+  color: $link-hover;
 }
 
 .post-wrapper h1.title a:link,
@@ -37,6 +49,7 @@
   list-style: none;
   
   font-size: 1.6em;
+  font-family: $sans-serif-stack;
 
   padding: 0px;
   margin: 0px;
@@ -122,4 +135,38 @@
 {
   font-style: italic;
   text-align: center;
+}
+
+.post-wrapper .body sup::before
+{
+  color: $link-color;
+  content: "[";
+}
+
+.post-wrapper .body sup::after
+{
+  color: $link-color;
+  content: "]";
+}
+
+.post-wrapper .body .footnotes
+{
+  border-top: 1px dotted #000;
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+.post-wrapper .body .footnotes ol
+{
+  padding-left: 20px;
+}
+
+.post-wrapper .body .footnotes ol li
+{
+  font-size: 1.6em;
+}
+
+.post-wrapper .body .footnotes ol li p
+{
+  font-size: 1em;
 }
