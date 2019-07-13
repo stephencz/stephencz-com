@@ -31,10 +31,14 @@ $metadata-info-color: #4e4e4e;
 $metadata-link-color: #d80000;
 $metadata-link-hover: #840000;
 
+$wrapper-top-margin: 50px;
+$body-elem-left-pad: 40px;
+
 @import "bootstrap";
 @import "normalize";
 
 @import "html";
+@import "util";
 
 @import "header";
 @import "sidebar";
@@ -42,3 +46,4 @@ $metadata-link-hover: #840000;
 
 @import "post";
 @import "category";
+@import "author";

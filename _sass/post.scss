@@ -1,6 +1,6 @@
 .post-wrapper
 {
-  margin-top: 50px;
+  margin-top: $wrapper-top-margin;
 }
 
 .trailing
@@ -66,9 +66,9 @@
 
 .post-wrapper ul.metadata li.category { }
 
-.post-wrapper ul.metadata li.category a:link,
-.post-wrapper ul.metadata li.category a:active,
-.post-wrapper ul.metadata li.category a:visited
+.post-wrapper ul.metadata li a:link,
+.post-wrapper ul.metadata li a:active,
+.post-wrapper ul.metadata li a:visited
 {
   color: $metadata-link-color;
   text-decoration: none;
@@ -123,7 +123,7 @@
 
 .post-wrapper .body h2 { font-size: $h2-size; margin-top: 60px; }
 
-.post-wrapper .body h3 { font-size: $h3-size; }
+.post-wrapper .body h3 { font-size: $h3-size; margin-top: 40px; }
 
 .post-wrapper .body h4 { font-size: $h4-size; }
 
@@ -134,7 +134,7 @@
 .post-wrapper .body blockquote
 {
   font-style: italic;
-  text-align: center;
+  padding-left: $body-elem-left-pad;
 }
 
 .post-wrapper .body sup::before
@@ -154,6 +154,34 @@
   border-top: 1px dotted #000;
   margin-top: 30px;
   padding-top: 20px;
+}
+
+.post-wrapper .body ol
+{
+  padding-left: $body-elem-left-pad;
+  list-style-position: inside;
+}
+
+.post-wrapper .body ol li
+{
+  font-size: 1.8em;
+  padding-bottom: 20px;
+}
+
+.post-wrapper .body ol.alpha 
+{
+  list-style: none;
+  counter-reset: ol-alpha-counter;
+}
+
+.post-wrapper .body ol.alpha li::before
+{
+  font-weight: 700;
+
+  counter-increment: ol-alpha-counter;
+  content: "(" counter(ol-alpha-counter, lower-alpha) ")";
+
+  padding-right: 10px;
 }
 
 .post-wrapper .body .footnotes ol

@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<div class="author-wrapper">
+  {% for author in site.authors %}
+    <div class="author">
+      <div class="name"><a href="{{ author.url }}"> {{ author.name }} </a></div>
+      <div class="role">{{ author.role }}</div>
+      <div class="bio">{{ author.bio }}</div>
+    </div>
+  {% endfor %}
+</div>

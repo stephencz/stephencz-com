@@ -22,6 +22,11 @@ permalink: /posts/:title
 sass:
   style: compressed
 
+collections:
+  authors:
+    collections_dir: _authors
+    output: true
+
 plugins:
   - jekyll-sitemap
   - jekyll-feed

@@ -1,15 +1,60 @@
-<ul class="metadata">
-  <li class="info">
-    {% if page.updated %}
-      updated by {{ page.author }} on {{ page.updated | date: "%m/%-d/%Y"}}
 
-    {% else %}
-      published by {{ page.author }} on {{ page.date | date: "%m/%-d/%Y"}}
+{% if include.is_home == false %}
 
-    {% endif %}
-  </li>
+  <ul class="metadata">
+    <li class="info">
+      {% for author in site.authors %}
+        {% if author.full_name == page.author %}
 
-  {% for category in page.categories %} 
-    <li class="category"><a href="/categories/{{category}}">[{{ category }}]</a></li>
-  {% endfor %}
-</ul>
+          {% if page.updated %}
+            updated by <a href="{{ author.url }}">{{ author.full_name }}</a> on {{ page.updated | date: "%m/%-d/%Y"}}
+
+          {% else %}
+            published by <a href="{{ author.url }}">{{ author.full_name }}</a> on {{ page.date | date: "%m/%-d/%Y"}}
+          {% endif %}
+
+        {% endif %}
+      {% endfor %}
+    </li>
+
+    {% for category in page.categories %} 
+      <li class="category"><a href="/categories/{{category}}">[{{ category }}]</a></li>
+    {% endfor %}
+  </ul>
+
+{% else %}
+
+  {% comment %} Keeps track of whether or not an author for a post has been found. {% endcomment%}
+  {% assign author_found = false %}
+  <ul class="metadata">
+    <li class="info">
+      {% for author in site.authors %}
+        {% if author.full_name == post.author %}
+          {% if post.updated %}
+            updated by <a href="{{ author.url }}">{{ author.full_name }}</a> on {{ post.updated | date: "%m/%-d/%Y"}}
+
+          {% else %}
+            published by <a href="{{ author.url }}">{{ author.full_name }}</a> on {{ post.date | date: "%m/%-d/%Y"}}
+              
+          {% endif %}
+
+          {% assign author_found = true %}
+        {% endif %}
+      {% endfor %}
+
+      {% comment %} 
+      If an author wasn't found, such as in the case of someone who doesn't have
+      an author page contributing a post, create metadata without link to author page.
+      {% endcomment %}
+      {% if author_found == false %}
+        published by {{ post.author }} on {{ post.date | date: "%m/%-d/%Y"}}
+      {% endif %}
+    </li>
+
+    {% for category in post.categories %} 
+      <li class="category"><a href="/categories/{{category}}">[{{ category }}]</a></li>
+    {% endfor %}
+  </ul>
+  {% assign author_found = false %}
+
+{% endif %}

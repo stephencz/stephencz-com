@@ -17,10 +17,10 @@ module Jekyll
           @site = site
           @base = base
           @dir = dir
-          @name =  category + '.html'
+          @name =  category.gsub(" ", "-") + '.html'
 
           self.process(@name)
-          self.read_yaml(File.join(base, '_layouts'), 'category_page.html')
+          self.read_yaml(File.join(base, '_layouts'), 'category.html')
           self.data['category'] = category
           self.data['category-name'] = "#{category}".capitalize
       end
