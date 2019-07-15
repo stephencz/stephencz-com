@@ -3,6 +3,7 @@
 
   <ul class="metadata">
     <li class="info">
+      {% assign author_found = false %}
       {% for author in site.authors %}
         {% if author.full_name == page.author %}
 
@@ -12,13 +13,18 @@
           {% else %}
             published by <a href="{{ author.url }}">{{ author.full_name }}</a> on {{ page.date | date: "%m/%-d/%Y"}}
           {% endif %}
-
+          {% assign author_found = true %}
         {% endif %}
       {% endfor %}
+
+      {% if author_found == false %}
+        published by {{ page.author }} on {{ page.date | date: "%m/%-d/%Y"}}
+      {% endif %}
     </li>
 
     {% for category in page.categories %} 
-      <li class="category"><a href="/categories/{{category}}">[{{ category }}]</a></li>
+    {% assign url_part = category[0] | replace: " ", "-" %}
+      <li class="category"><a href="/categories/{{ url_part }}">[{{ category }}]</a></li>
     {% endfor %}
   </ul>
 
@@ -42,17 +48,14 @@
         {% endif %}
       {% endfor %}
 
-      {% comment %} 
-      If an author wasn't found, such as in the case of someone who doesn't have
-      an author page contributing a post, create metadata without link to author page.
-      {% endcomment %}
       {% if author_found == false %}
         published by {{ post.author }} on {{ post.date | date: "%m/%-d/%Y"}}
       {% endif %}
     </li>
 
     {% for category in post.categories %} 
-      <li class="category"><a href="/categories/{{category}}">[{{ category }}]</a></li>
+      {% assign url_part = category[0] | replace: " ", "-" %}
+      <li class="category"><a href="/categories/{{ url_part }}">[{{ category }}]</a></li>
     {% endfor %}
   </ul>
   {% assign author_found = false %}
