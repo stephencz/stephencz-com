@@ -156,15 +156,71 @@
   padding-top: 20px;
 }
 
+.post-wrapper .body ul
+{
+  font-size: 1.8em;
+  padding-left: $body-elem-left-pad;
+}
+
+.post-wrapper .body ul li
+{
+  padding-bottom: 30px;
+}
+
+.post-wrapper .body ul li:last-child
+{
+  padding-bottom: 20px;
+}
+
+.post-wrapper .body ol.numbered, 
+.post-wrapper .body ol.sources 
+{
+  list-style: none;
+  counter-reset: ol-number-counter;
+  padding-left: 0px;
+}
+
+.post-wrapper .body ol.numbered li
+{
+  padding-bottom: 30px;
+}
+
+.post-wrapper .body ol.sources li
+{
+  padding-bottom: 10px;
+}
+
+.post-wrapper .body ol.numbered li:last-child
+.post-wrapper .body ol.sources li:last-child
+{
+  padding-bottom: 20px;
+}
+
+.post-wrapper .body ol.numbered li::before,
+.post-wrapper .body ol.sources li::before
+{
+  font-weight: 700;
+
+  counter-increment: ol-number-counter;
+  content: "[" counter(ol-number-counter) "]";
+
+  padding-right: 10px;
+}
+
 .post-wrapper .body ol
 {
-  padding-left: $body-elem-left-pad;
+  font-size: 1.8em;
   list-style-position: inside;
+  padding-left: $body-elem-left-pad;
 }
 
 .post-wrapper .body ol li
 {
-  font-size: 1.8em;
+  padding-bottom: 30px;
+}
+
+.post-wrapper .body ol li:last-child
+{
   padding-bottom: 20px;
 }
 
