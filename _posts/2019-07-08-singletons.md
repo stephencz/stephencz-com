@@ -101,7 +101,6 @@ We also declare as final, and instantiate a new `Singleton` object immediately.
 
 
 
-
 ~~~java
 Logger logger = logger.getInstance();
 logger.log("Hello, World!");
@@ -175,6 +174,7 @@ In the case of a logger none of these solutions are great. {% cite --file single
 ## Should I Use a Singleton?
 
 The short answer to that question is: *Maybe*.
+
 
 ## References
 {% bibliography --file singleton %}

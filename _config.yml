@@ -18,25 +18,23 @@ kramdown:
       line_numbers: true
 
 scholar:
-  style: apa
+  style: _bibliography/apa
   locale: en
 
-  sort_by: author
+  sort_by: author, day, month, year
   order: ascending
 
   source: ./_bibliography
-  bibliography: bibliography.bib
-  bibliography_template: bib
+  bibliography: references.bib
+  bibliography_template: "{{ reference }}"
 
   replace_strings: true
   join_strings:    true
 
-  details_dir:    bibliography
-  details_layout: bibtex.html
-  details_link:   Details
+  bibtex_filters:
+    - href
 
   query: "@*"
-
 
 permalink: /posts/:title
 
