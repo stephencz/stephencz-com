@@ -137,6 +137,11 @@
   padding-left: $body-elem-left-pad;
 }
 
+.post-wrapper .body a.citation
+{
+  font-size: 0.8em;
+}
+
 .post-wrapper .body sup::before
 {
   color: $link-color;
@@ -147,13 +152,6 @@
 {
   color: $link-color;
   content: "]";
-}
-
-.post-wrapper .body .footnotes
-{
-  border-top: 1px dotted #000;
-  margin-top: 30px;
-  padding-top: 20px;
 }
 
 .post-wrapper .body ul
@@ -172,85 +170,95 @@
   padding-bottom: 20px;
 }
 
-.post-wrapper .body ol.numbered, 
-.post-wrapper .body ol.sources 
-{
-  list-style: none;
-  counter-reset: ol-number-counter;
-  padding-left: 0px;
-}
-
-.post-wrapper .body ol.numbered li
-{
-  padding-bottom: 30px;
-}
-
-.post-wrapper .body ol.sources li
-{
-  padding-bottom: 10px;
-}
-
-.post-wrapper .body ol.numbered li:last-child
-.post-wrapper .body ol.sources li:last-child
-{
-  padding-bottom: 20px;
-}
-
-.post-wrapper .body ol.numbered li::before,
-.post-wrapper .body ol.sources li::before
-{
-  font-weight: 700;
-
-  counter-increment: ol-number-counter;
-  content: "[" counter(ol-number-counter) "]";
-
-  padding-right: 10px;
-}
-
 .post-wrapper .body ol
 {
-  font-size: 1.8em;
+  font-size: 1.8rem;
   list-style-position: inside;
   padding-left: $body-elem-left-pad;
 }
 
 .post-wrapper .body ol li
 {
-  padding-bottom: 30px;
-}
-
-.post-wrapper .body ol li:last-child
-{
-  padding-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .post-wrapper .body ol.alpha 
 {
-  list-style: none;
   counter-reset: ol-alpha-counter;
+  list-style: none;
 }
 
 .post-wrapper .body ol.alpha li::before
 {
-  font-weight: 700;
-
   counter-increment: ol-alpha-counter;
   content: "(" counter(ol-alpha-counter, lower-alpha) ")";
 
+  font-weight: 700;
   padding-right: 10px;
+}
+
+.post-wrapper .body ol.numbered
+{
+  list-style: none;
+  counter-reset: ol-number-counter;
+  padding-left: 0px;
+}
+
+.post-wrapper .body ol.numbered li::before
+{
+  counter-increment: ol-number-counter;
+  content: "[" counter(ol-number-counter) "]";
+
+  font-weight: 700;
+  padding-right: 10px;
+}
+
+.post-wrapper .body ol.bibliography 
+{
+  border-top: 1px dotted #000;
+  line-height: 1.3em;
+
+  padding-left: 0px;
+  padding-top: 20px;
+}
+
+
+.post-wrapper .body ol li:last-child,
+.post-wrapper .body ol.numbered li:last-child,
+.post-wrapper .body ol.bibliography li:last-child
+{
+  margin-bottom: 20px;
+}
+
+.post-wrapper .body .footnotes
+{
+  border-top: 1px dotted #000;
+  padding-top: 30px;
 }
 
 .post-wrapper .body .footnotes ol
 {
-  padding-left: 20px;
+  counter-reset: ol-footnote-counter;
+  list-style: none;
+  padding-left: 0px;
 }
 
 .post-wrapper .body .footnotes ol li
 {
-  font-size: 1.6em;
+  margin-bottom: 30px;
+}
+
+.post-wrapper .body .footnotes ol li p::before
+{
+  counter-increment: ol-footnote-counter;
+  content: "[" counter(ol-footnote-counter) "]:";
+  
+  font-weight: 700;
+  padding-right: 10px;
 }
 
 .post-wrapper .body .footnotes ol li p
 {
-  font-size: 1em;
+  font-size: 1.0em;
+  margin-bottom: 0px;
 }

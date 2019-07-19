@@ -1,4 +1,25 @@
 .footer-wrapper
 {
-  height: 360px;
+  font-size: 1.4em;
+  font-weight: 700;
+  text-align: center;
+
+  height: 240px;
+}
+
+.footer-wrapper footer
+{
+  padding-top: 25%;
+}
+
+.footer-wrapper a:link,
+.footer-wrapper a:active,
+.footer-wrapper a:visited
+{
+  color: $link-color;
+}
+
+.footer-wrapper a:hover
+{
+  color: $link-hover;
 }

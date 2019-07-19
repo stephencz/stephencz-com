@@ -33,6 +33,8 @@ The intent of the Singleton pattern, as originally stated, is to:
 
 >  Ensure a class only has one instance, and provides a global point of access to it.
 
+Traditionally, 
+
 This is as concise a definition you will ever find for the Singleton.
 Just remember that a Singleton does two things:
 
@@ -150,7 +152,15 @@ But why *might* that be useful?
 The classic use case for a Singleton is logging.
 When building an application it is often useful to have information about the status and behavior of its systems outputted in some way.
 For simple programs outputting a couple lines to a console might help debug a problem, but as applications grow in complexity they require more complete solutions.
-Widespread logging is often that solution. 
+Widespread logging is often that solution.
+
+<blockquote class="cited-quote">
+<p>The classic use case for a Singleton is logging.
+When building an application it is often useful to have information about the status and behavior of its systems outputted in some way.
+For simple programs outputting a couple lines to a console might help debug a problem, but as applications grow in complexity they require more complete solutions.
+Widespread logging is often that solution. <cite>{% cite Densmore:2004 --file singleton %}</cite>
+</p>
+</blockquote>
 
 Put yourself in the shoes of someone who has to implement a logger.
 Consider some of your options:
@@ -160,16 +170,11 @@ Consider some of your options:
 * You could create a single instance of your Logger class and pass it down a chain of constructors to every class that needs it.
 * You could create a static class.
 
-In the case of a logger none of these solutions are great.
+In the case of a logger none of these solutions are great. {% cite --file singleton Densmore:2004 %}
 
 ## Should I Use a Singleton?
 
 The short answer to that question is: *Maybe*.
 
-## Sources and Additional Reading
-
-{:.sources}
-1. [Wikipedia: Singleton Pattern](https://en.wikipedia.org/wiki/Singleton_pattern) 
-2. [Singletons Are Evil by Scott](https://blogs.msdn.microsoft.com/scottdensmore/2004/05/25/why-singletons-are-evil/)
-3. [Are Singletons Bad by Bart Jacobs](https://cocoacasts.com/are-singletons-bad)
-4. [Stackoverflow - When to Use a Singleton and When to Use a Static Class](https://softwareengineering.stackexchange.com/questions/235527/when-to-use-a-singleton-and-when-to-use-a-static-class) 
+## References
+{% bibliography --file singleton %}

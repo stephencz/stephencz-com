@@ -17,6 +17,27 @@ kramdown:
     block:
       line_numbers: true
 
+scholar:
+  style: apa
+  locale: en
+
+  sort_by: author
+  order: ascending
+
+  source: ./_bibliography
+  bibliography: bibliography.bib
+  bibliography_template: bib
+
+  replace_strings: true
+  join_strings:    true
+
+  details_dir:    bibliography
+  details_layout: bibtex.html
+  details_link:   Details
+
+  query: "@*"
+
+
 permalink: /posts/:title
 
 sass:
@@ -30,6 +51,7 @@ collections:
 plugins:
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-scholar
 
 exclude:
   - /scripts
