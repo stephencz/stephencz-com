@@ -215,6 +215,9 @@
 
 .post-wrapper .body ol.bibliography 
 {
+  counter-reset: ol-bib-counter;
+  list-style: none;
+
   border-top: 1px dotted #000;
   line-height: 1.3em;
 
@@ -222,6 +225,22 @@
   padding-top: 20px;
 }
 
+.post-wrapper .body li p
+{
+  font-size: 1em;
+  line-height: 1.2em;
+  text-indent: -3em;
+  margin-left: 3em;
+}
+
+.post-wrapper .body li p::before
+{
+  counter-increment: ol-bib-counter;
+  content: counter(ol-bib-counter) ".";
+  
+  font-weight: 700;
+  padding-right: 10px;
+}
 
 .post-wrapper .body ol li:last-child,
 .post-wrapper .body ol.numbered li:last-child,

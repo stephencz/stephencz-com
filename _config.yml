@@ -28,6 +28,8 @@ scholar:
   bibliography: references.bib
   bibliography_template: "{{ reference }}"
 
+  reference_tagname: "p"
+
   replace_strings: true
   join_strings:    true
 
