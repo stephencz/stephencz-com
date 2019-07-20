@@ -3,7 +3,7 @@
 
 $pixel-size: 10px;
 $font-size: 2em;
-$line-height: 1.8em;
+$line-height: 1.6em;
 
 $sans-serif-stack: 'Open Sans', sans-serif;
 $serif-stack: 'Crimson Text', serif;
@@ -31,8 +31,12 @@ $metadata-info-color: #4e4e4e;
 $metadata-link-color: #d80000;
 $metadata-link-hover: #840000;
 
+$blockquote-color: #3e3e3e;
+$blockquote-border: #d80000;
+
 $wrapper-top-margin: 50px;
 $body-elem-left-pad: 20px;
+$body-elem-bottom-margin: 30px;
 
 @import "bootstrap";
 @import "normalize";
