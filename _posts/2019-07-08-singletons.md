@@ -45,32 +45,38 @@ Just remember that the pattern does two things:
 1. It ensures that a class has only a single instance.
 2. It provides a global point of access to that instance.
 
-But what does that mean and why *might* that be useful?
 
 ### A Car With Two Steering Systems
+We know that the singleton does two things: It ensures a class is limited to a single instance, and it provides a global point of access to that instance.
+But what does that mean and why *might* that be useful?
+
 In our universe, when you're driving a car and want to turn, you turn in the direction you want the car to go.
 If the supermarket is to the right, you turn right.
 If you want to see a movie and the movie theater is to the left, you turn left.
 Your car's steering system is more or less a Singleton: There is a single instance of it, and it provides a global point of access through the steering wheel. [^1]
 
 Now, let's imagine a universe where every car has two steering systems and two steering wheels.
+The first steering system will control the wheels on the left side of the car, while the second will control the wheels on the right side.
 In this universe, when you're driving a car and want to turn, both drivers must turn in the direction they want the car to go.
 If you want to go to the supermarket, both drivers must turn right.
 If you want to go to the movie theater, both drivers must turn left.
 
 What happens when there is a conflict of interest?
 What happens when you want to go to the supermarket, but the other driver wants to go to the movie theater? 
-You'll turn right, they'll turn left, and the car will probably crash.
+You'll turn right, they'll turn left, and the car will skid to a stop.
 
-Because the the cars direction is shared between two steering sytems, any differences between these systems has the potential to introduce an error. [^2] 
+Because the direction the car is moving is shared between two steering sytems, any differences between these systems has the potential to introduce an error.
 The Singleton design pattern offers up a fix: Limit your car to a single steering system. 
 
-### Logger Example
-In analogous terms, classes that are not limited to a single instance, but share some form of state or behavior, might also have the potential for error.
+By limiting our cars to a single steering system, and a single steering wheel, or a single instance with a global access point, we remove the possibility for error.
+The direction the car is trying to move in will never conflict with itself.
+
+### A Real World Example
+In analogous terms, classes that are not limited to a single instance, but share some form of state or behavior, might also introduce the potential for error.
 The classic example of such a situation is a Logger.
 
-The purpose of a Logger is to record information about a program's runtime.
-This is typically done by writing important information to a text file
+The purpose of a Logger is to make a record of a program's runtime behavior.
+This is typically done by writing important information to a file.
 Here is what the content of a video game's log file might look like:
 
 ~~~plaintext
@@ -96,14 +102,9 @@ And we also know that the graphic asset `sword.png`  failed to load.
 Rendering and audio system initialization?
 Window creation?
 Graphic asset loading?
-I'm not sure what any of that means, but what they show us is that this program's logging facilities are widely available.
-
-In this example let's assume that our logging facilities are provided by a class called `Logger`.
-How can such a class 
-
-When they try to access the same file unsuccessfuly. And successfully overwriting each other. 
-
-Starting at different times. etc.
+It doesn't matter what these different systems are or what the messages mean.
+What's important is seeing that all these systems have access to some kind of logging facilities.
+And that those logging facilities successful output text to a file.
 
 
 ### The Singleton Solution
@@ -184,6 +185,4 @@ public class Singleton {
 ## References
 {% bibliography --file singleton %}
 
-[^1]: While the Singleton pattern calls for a global point of access, a car's steering wheel is not really a global point of access. In the computing world, a global point of access is a point that can be accessed everywhere and by anything. In the physical world such points of access do not exist. In this example the word *global* is relative to the setting i.e. the car. Anyone inside the car can access the steering system through the steering wheel. Accordingly, the steering wheel is the global point of access within our setting.
-
-[^2]: This is assuming that the correct behavior of a car in a universe where every car has two steering systems is to drive like our cars do.
+[^1]: While the Singleton pattern calls for a global point of access, a car's steering wheel is not really a global point of access. In the computing world, a global point of access is a point that can be accessed everywhere and by anything. In the physical world such points of access do not exist. In this example the word *global* is relative to the setting i.e. the car. Anyone inside the car can access the steering system through the steering wheel.

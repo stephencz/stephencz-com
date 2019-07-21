@@ -1,24 +1,11 @@
-
 {% if include.is_home == false %}
-
   <ul class="metadata">
     <li class="info">
-      {% assign author_found = false %}
-      {% for author in site.authors %}
-        {% if author.full_name == page.author %}
+      {% if page.updated %}
+        updated by Stephen Czekalski on {{ page.updated | date: "%m/%-d/%Y"}}
 
-          {% if page.updated %}
-            updated by <a href="{{ author.url }}">{{ author.full_name }}</a> on {{ page.updated | date: "%m/%-d/%Y"}}
-
-          {% else %}
-            published by <a href="{{ author.url }}">{{ author.full_name }}</a> on {{ page.date | date: "%m/%-d/%Y"}}
-          {% endif %}
-          {% assign author_found = true %}
-        {% endif %}
-      {% endfor %}
-
-      {% if author_found == false %}
-        published by {{ page.author }} on {{ page.date | date: "%m/%-d/%Y"}}
+      {% else %}
+        published by Stephen Czekalski on {{ page.date | date: "%m/%-d/%Y"}}
       {% endif %}
     </li>
 
@@ -27,37 +14,20 @@
       <li class="category"><a href="/categories/{{ url_part }}">[{{ category }}]</a></li>
     {% endfor %}
   </ul>
-
 {% else %}
-
-  {% comment %} Keeps track of whether or not an author for a post has been found. {% endcomment%}
-  {% assign author_found = false %}
   <ul class="metadata">
     <li class="info">
-      {% for author in site.authors %}
-        {% if author.full_name == post.author %}
-          {% if post.updated %}
-            updated by <a href="{{ author.url }}">{{ author.full_name }}</a> on {{ post.updated | date: "%m/%-d/%Y"}}
+      {% if post.updated %}
+        updated by Stephen Czekalski on {{ post.updated | date: "%m/%-d/%Y"}}
 
-          {% else %}
-            published by <a href="{{ author.url }}">{{ author.full_name }}</a> on {{ post.date | date: "%m/%-d/%Y"}}
-              
-          {% endif %}
-
-          {% assign author_found = true %}
-        {% endif %}
-      {% endfor %}
-
-      {% if author_found == false %}
-        published by {{ post.author }} on {{ post.date | date: "%m/%-d/%Y"}}
+      {% else %}
+        published by Stephen Czekalski on {{ post.date | date: "%m/%-d/%Y"}}
       {% endif %}
     </li>
 
     {% for category in post.categories %} 
-      {% assign url_part = category[0] | replace: " ", "-" %}
+    {% assign url_part = category[0] | replace: " ", "-" %}
       <li class="category"><a href="/categories/{{ url_part }}">[{{ category }}]</a></li>
     {% endfor %}
   </ul>
-  {% assign author_found = false %}
-
 {% endif %}

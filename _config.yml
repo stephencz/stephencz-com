@@ -21,7 +21,7 @@ scholar:
   style: _bibliography/apa
   locale: en
 
-  sort_by: author, day, month, year
+  sort_by: author, year, month, day
   order: ascending
 
   source: ./_bibliography
@@ -42,11 +42,6 @@ permalink: /posts/:title
 
 sass:
   style: compressed
-
-collections:
-  authors:
-    collections_dir: _authors
-    output: true
 
 plugins:
   - jekyll-sitemap
