@@ -2,20 +2,20 @@
 ---
 
 $pixel-size: 10px;
-$font-size: 2em;
+$font-size: 2.4em;
 $line-height: 1.6em;
 
 $sans-serif-stack: 'Open Sans', sans-serif;
 $serif-stack: 'Crimson Text', serif;
 
 $h1-size: 3.0em;
-$h2-size: 2.5em;
+$h2-size: 2.25em;
 $h3-size: 2.0em;
 $h4-size: 1.6em;
 $h5-size: 1.4em;
 $h6-size: 1em;
 
-$header-color: #d4d4d4;
+$header-color: #000;
 
 $title-link-color: #000;
 $title-link-hover: #000;
@@ -46,7 +46,7 @@ $body-elem-bottom-margin: 30px;
 @import "util";
 
 @import "header";
-@import "sidebar";
+@import "nav";
 @import "footer";
 
 @import "post";

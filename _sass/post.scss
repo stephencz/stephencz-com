@@ -106,7 +106,7 @@
 
 .post-wrapper .body h1 { font-size: $h1-size; }
 
-.post-wrapper .body h2 { font-size: $h2-size; margin-top: 70px; border-bottom: 1px dotted #000; padding-bottom: 5px; }
+.post-wrapper .body h2 { font-size: $h2-size; margin-top: 70px;}
 
 .post-wrapper .body h3 { font-size: $h3-size; margin-top: 50px; }
 
@@ -187,6 +187,7 @@
 .post-wrapper .body ul
 {
   font-size: 1.8em;
+  line-height: 1.3em;
   padding-top: 10px;
 }
 
@@ -199,6 +200,22 @@
 {
   padding-bottom: $body-elem-bottom-margin;
 }
+
+/* ===== Key Points Unordered List Styles ===== */
+.post-wrapper .body ul.key-points
+{
+  list-style: none;
+  padding-left: 0px;
+}
+
+.post-wrapper .body ul.key-points li
+{
+  border-left: 3px solid #0bb10b;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  margin-bottom: 30px;
+}
+
 
 /* ===== General Ordered List Styles ===== */
 .post-wrapper .body ol

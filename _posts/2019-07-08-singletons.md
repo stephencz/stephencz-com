@@ -15,20 +15,21 @@ excerpt_separator: <!--more-->
 The **Singleton** design pattern is among the easiest design patterns to understand. 
 It is also among the most controversial.
 
-In this article, I present an overview of the Singleton.
-I begin by defining it, and outlining a common use case.
-I then cover how it is implemented in Java.
-And, finally, I explore the controversy behind the pattern and answer the vital question: *Should I use a Singleton?*
-<!--more-->
+The goal of this article is to present an overview of the Singleton pattern. 
+I begin by defining the pattern itself, and then explore why it might be useful.
+I then demostrate how to implement the pattern in Java.
+Finally, I delve into the controversy behind the pattern and ask the vital question: *Should I use a Singleton?*
 
 {: .small-note }
-This post belongs to [a series of posts on design patterns]().
+This post belongs to [a series of posts on design patterns](/posts/design-patterns).
+
+<!--more-->
 
 ## What is a Singleton?
 The Singleton is one of twenty-three design patterns originally outlined in the famous book: [*Design Patterns: Elements of Reusable Object-Oriented Software*](https://en.wikipedia.org/wiki/Design_Patterns).
 The pattern is classifed as a creational pattern, meaning it is a pattern that manages the creation of objects.
-
 Specifically, the Singleton manages the creation of a single object: Itself. 
+
 The intent of the Singleton pattern, as originally stated, is to:
 
 <blockquote>
@@ -38,79 +39,79 @@ Ensure a class only has one instance, and provides a global point of access to i
 </p>
 </blockquote>
 
-This is as concise a definition you will ever find for the Singleton.
-Just remember that the pattern does two things:
+The Singleton pattern is used when you want to limit a class to a single instance.
+The full details of how this is done are covered in the [Implementing a Singleton]() section.
+Whether or not you'd want to do it is covered in [The Controversy]() section.
 
-{: .alpha }
-1. It ensures that a class has only a single instance.
-2. It provides a global point of access to that instance.
+In any case, the basic idea is to eliminate the ability for the class to be instantiated through a constructor, and instead have the class handle its own instantiation.
+A Singleton class keeps track of a single instance of itself, and provides a global point of access to that instance.
 
+But why would you want to do this? 
+Why would you want to limit a class to a single instance?
 
-### A Car With Two Steering Systems
-We know that the singleton does two things: It ensures a class is limited to a single instance, and it provides a global point of access to that instance.
-But what does that mean and why *might* that be useful?
-
+### A Car With Two Drivers
 In our universe, when you're driving a car and want to turn, you turn in the direction you want the car to go.
-If the supermarket is to the right, you turn right.
-If you want to see a movie and the movie theater is to the left, you turn left.
+If you want to go to the supermarket, and the supermarket is to the right, you turn the car right.
+If you want to see a movie and the movie theater is to the left, you turn the car left.
 Your car's steering system is more or less a Singleton: There is a single instance of it, and it provides a global point of access through the steering wheel. [^1]
 
-Now, let's imagine a universe where every car has two steering systems and two steering wheels.
-The first steering system will control the wheels on the left side of the car, while the second will control the wheels on the right side.
-In this universe, when you're driving a car and want to turn, both drivers must turn in the direction they want the car to go.
-If you want to go to the supermarket, both drivers must turn right.
-If you want to go to the movie theater, both drivers must turn left.
+Now, let's imagine a universe where every car has two steering systems.
+The first steering system controls the wheels on the left side of the car, while the second steering system controls the wheels on the right side of the car.
+In this universe, when you're driving a car and want to make a turn, both drivers must turn in the direction they want the car to go.
+If they want to go to the supermarket, both drivers must turn right.
+If they want to go to the movie theater, both drivers must turn left.
 
-What happens when there is a conflict of interest?
+But, what happens when there is a conflict of interest?
 What happens when you want to go to the supermarket, but the other driver wants to go to the movie theater? 
 You'll turn right, they'll turn left, and the car will skid to a stop.
 
-Because the direction the car is moving is shared between two steering sytems, any differences between these systems has the potential to introduce an error.
-The Singleton design pattern offers up a fix: Limit your car to a single steering system. 
+<img src="https://i.imgur.com/mRF7pEW.png" class="img-fluid">
 
-By limiting our cars to a single steering system, and a single steering wheel, or a single instance with a global access point, we remove the possibility for error.
-The direction the car is trying to move in will never conflict with itself.
+Because the angle of the car's wheels, and, by extension, the direction the car is moving, is shared between two steering sytems, any differences between these systems has the potential to introduce an error.
+The Singleton design pattern offers up a fix: Limit car steering systems to a single instance.
 
-### A Real World Example
-In analogous terms, classes that are not limited to a single instance, but share some form of state or behavior, might also introduce the potential for error.
-The classic example of such a situation is a Logger.
+By limiting our car's steering system to a single instance we remove the possibility for error.
+The direction the car is trying to move will never conflict with itself.
 
-The purpose of a Logger is to make a record of a program's runtime behavior.
-This is typically done by writing important information to a file.
-Here is what the content of a video game's log file might look like:
+In analogous terms, classes that are not limited to a single instance, but share some form of state or behavior across instances, might also introduce the potential for error.
+The classic real-world example to demostrate this is a logger.
 
-~~~plaintext
-log.txt
-===================================================================================
-[July 20, 2019 10:43:32 AM] [INFO] Initializing rendering system.
-[July 20, 2019 10:43:35 AM] [INFO] Rendering system successfully initialized.
-[July 20, 2019 10:43:37 AM] [INFO] Initializing audio system.
-[July 20, 2019 10:43:40 AM] [INFO] Audio system successfully initialized.
-[July 20, 2019 10:43:41 AM] [INFO] Creating window.
-[July 20, 2019 10:43:42 AM] [INFO] Window successfully created.
-[July 20, 2019 10:43:43 AM] [INFO] Loading graphic assets.
-[July 20, 2019 10:43:48 AM] [ERROR] Failed to load sword.png.
-[July 20, 2019 10:43:50 AM] [INFO] Terminating execution.
-===================================================================================
+The purpose of a logger is to make a chronological record of a program's behavior.
+Having a record of what happened during a program's execution making debugging problems easier.
+
+Typically, a logger does this by writing important information to a log file.
+
+Here is an example of what the log file of a video game might look like:
+
+~~~
+log-07-20-2019.txt
+==========================================================================
+[07-20-19 5:32:03] [INFO] Creating new window.
+[07-20-19 5:32:04] [INFO] New window successfully created.
+[07-20-19 5:32:03] [INFO] Initializing rendering system.
+[07-20-19 5:32:03] [INFO] Rendering system successfully initialized.
+[07-20-19 5:32:03] [INFO] Initializing audio system.
+[07-20-19 5:32:03] [INFO] Audio system successfully initialized.
+[07-20-19 5:32:03] [INFO] Loading game graphic assets.
+[07-20-19 5:32:03] [INFO] Loaded graphic asset "/assets/sprites/player.png".
+[07-20-19 5:32:03] [ERROR] Failed to load graphic asset "/assets/sprites/sword.png".
+[07-20-19 5:32:03] [INFO] Terminating program.
+==========================================================================
 ~~~
 
-By reading the logger's output we can piece together went right and wrong during the video game's execution.
-We know that the rendering and audio systems were successfully initalized. 
-We know that a window was successfully created.
-And we also know that the graphic asset `sword.png`  failed to load.
+By reviewing this log file we can piece together an image of what went right and wrong.
+We know that the window was successfully created.
+We know that the rendering and audio systems were successfully initialized.
+And we know that the game terminated after failing to load a graphic asset called `sword.png`.
 
-Rendering and audio system initialization?
-Window creation?
-Graphic asset loading?
-It doesn't matter what these different systems are or what the messages mean.
-What's important is seeing that all these systems have access to some kind of logging facilities.
-And that those logging facilities successful output text to a file.
-
-
-### The Singleton Solution
+Basic reasoning
 
 ## Implementing a Singleton
 
+We know that the Singleton should do two things:
+
+{: .alpha }
+1. It should limit the 
 
 ~~~java
 public class Singleton {
@@ -180,9 +181,14 @@ public class Singleton {
 }
 ~~~
 
+## The Controversy
+
+
 
 
 ## References
 {% bibliography --file singleton %}
 
 [^1]: While the Singleton pattern calls for a global point of access, a car's steering wheel is not really a global point of access. In the computing world, a global point of access is a point that can be accessed everywhere and by anything. In the physical world such points of access do not exist. In this example the word *global* is relative to the setting i.e. the car. Anyone inside the car can access the steering system through the steering wheel.
+
+[^2]: It is important to understand that the logger isn't strictly limited to the choices of a single instance that is globally available, or multiples instances. It is perfectly possible to have a single logger that is not globally available, but is instead passed around to where it is needed. I will talk about this later on in the article.

@@ -1,0 +1,46 @@
+.nav-wrapper
+{
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.nav-wrapper > .navigation
+{
+  text-transform: lowercase;
+  margin-top: 25px;
+}
+
+.nav-wrapper > .navigation > ul
+{
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+  list-style: none;
+  padding: 0px;
+}
+
+.nav-wrapper nav.navigation ul li
+{
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.nav-wrapper > .navigation > ul li a:link,
+.nav-wrapper > .navigation > ul li a:active,
+.nav-wrapper > .navigation > ul li a:visited
+{
+  color: $nav-color;
+  text-decoration: none;
+}
+
+.nav-wrapper > .navigation > ul li a:hover
+{
+  color: $nav-hover;
+}
+
+@media (max-width: 991.98px)
+{
+    
+
+    
+}

@@ -25,11 +25,15 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-6 "> {% include header.html %} </div>
+      <div class="col-lg-8 mx-auto"> {% include header.html %} </div>
     </div>
     <div class="row">
-      <div class="col-lg-2"> {% include sidebar.html %} </div>
-      <div class="col-lg-8 "> {{ content }} {% include footer.html %} </div>
+      <div class="col-lg-8 mx-auto"> {% include nav.html %}</div>
+    </div>
+    <div class="row">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-8"> {{ content }} {% include footer.html %} </div>
+      <div class="col-lg-2"></div>
     </div>
   </div>
 

@@ -1,7 +1,7 @@
 require 'jekyll/scholar'
 require 'uri'
 
-URL_PATTERN = Regexp.compile(['\\\\href\\\\{([^\\\\}]+)\\\\}\\\\{([^\\\\}]+)\\\\}', URI.regexp(['http', 'https', 'ftp'])].join('|'))
+HREF_PATTERN = Regexp.compile(['\\\\href\\\\{([^\\\\}]+)\\\\}\\\\{([^\\\\}]+)\\\\}', URI.regexp(['http', 'https', 'ftp'])].join('|'))
 
 module Jekyll
   class Scholar
