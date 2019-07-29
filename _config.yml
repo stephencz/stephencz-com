@@ -8,6 +8,19 @@ url: "https://www.creamofpotato.com" # the base hostname & protocol for your sit
 twitter_username: creamofpotato
 github_username:  stephencz
 
+permalink: /posts/:title
+
+sass:
+  style: compressed
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      is_post: true
+
 markdown: kramdown
 kramdown:
   input: GFM
@@ -37,11 +50,6 @@ scholar:
     - href
 
   query: "@*"
-
-permalink: /posts/:title
-
-sass:
-  style: compressed
 
 plugins:
   - jekyll-sitemap

@@ -1,12 +1,17 @@
 /* ===== General Post Styles ===== */
-.post-wrapper
-{
-  margin-top: $wrapper-top-margin;
-}
+.post-wrapper {  }
 
 .trailing
 {
   margin-top: 120px;
+}
+
+.post-wrapper .affiliate
+{
+  color: hsl(0, 0%, 31%);
+  font-size: 0.7em;
+  line-height: 1.4em;
+  text-align: center;
 }
 
 /* ===== Title Styles ===== */
@@ -171,13 +176,13 @@
 
 
 /* ===== Super Script Styles ===== */
-.post-wrapper .body sup::before
+.post-wrapper .body sup a::before
 {
   color: $link-color;
   content: "[";
 }
 
-.post-wrapper .body sup::after
+.post-wrapper .body sup a::after
 {
   color: $link-color;
   content: "]";
@@ -272,6 +277,8 @@
 /* ===== Bibliography Styles ===== */
 .post-wrapper .body ol.bibliography 
 {
+  border-top: 1px dotted #000;
+
   counter-reset: ol-bib-counter;
   list-style: none;
 

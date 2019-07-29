@@ -18,14 +18,13 @@ It is also among the most controversial.
 The goal of this article is to present an overview of the Singleton pattern. 
 I begin by defining the pattern itself, and then explore why it might be useful.
 I then demostrate how to implement the pattern in Java.
-Finally, I delve into the controversy behind the pattern and ask the vital question: *Should I use a Singleton?*
-
-{: .small-note }
-This post belongs to [a series of posts on design patterns](/posts/design-patterns).
+And finally, I delve into the controversy behind the pattern and ask the vital question: *Should I use a Singleton?*
 
 <!--more-->
 
-## What is a Singleton?
+{% include disclosure.html %}
+
+## What is the Singleton?
 The Singleton is one of twenty-three design patterns originally outlined in the famous book: [*Design Patterns: Elements of Reusable Object-Oriented Software*](https://en.wikipedia.org/wiki/Design_Patterns).
 The pattern is classifed as a creational pattern, meaning it is a pattern that manages the creation of objects.
 Specifically, the Singleton manages the creation of a single object: Itself. 
@@ -43,8 +42,8 @@ The Singleton pattern is used when you want to limit a class to a single instanc
 The full details of how this is done are covered in the [Implementing a Singleton]() section.
 Whether or not you'd want to do it is covered in [The Controversy]() section.
 
-In any case, the basic idea is to eliminate the ability for the class to be instantiated through a constructor, and instead have the class handle its own instantiation.
-A Singleton class keeps track of a single instance of itself, and provides a global point of access to that instance.
+In any case, the basic idea is to eliminate the ability for the class to be instantiated directly, and instead have the class handle instantiation internally.
+A Singleton class creates and keeps track of a single instance of itself, and provides a global point of access to that instance.
 
 But why would you want to do this? 
 Why would you want to limit a class to a single instance?
@@ -67,20 +66,21 @@ You'll turn right, they'll turn left, and the car will skid to a stop.
 
 <img src="https://i.imgur.com/mRF7pEW.png" class="img-fluid">
 
-Because the angle of the car's wheels, and, by extension, the direction the car is moving, is shared between two steering sytems, any differences between these systems has the potential to introduce an error.
+Because the angle of the car's wheels, and, by extension, the direction the car is moving, is shared between two steering sytems any differences between these systems have the potential to cause problems.
 The Singleton design pattern offers up a fix: Limit car steering systems to a single instance.
 
 By limiting our car's steering system to a single instance we remove the possibility for error.
-The direction the car is trying to move will never conflict with itself.
+The direction the car is trying to move can never conflict with itself, because the system which controls the car's direction is limited to a single instance. [^2]
 
 In analogous terms, classes that are not limited to a single instance, but share some form of state or behavior across instances, might also introduce the potential for error.
-The classic real-world example to demostrate this is a logger.
+The classic computing example to demostrate this is a logger.
 
 The purpose of a logger is to make a chronological record of a program's behavior.
 Having a record of what happened during a program's execution making debugging problems easier.
 
-Typically, a logger does this by writing important information to a log file.
 
+
+Typically, a logger does this by writing important information to a log file.
 Here is an example of what the log file of a video game might look like:
 
 ~~~
@@ -104,7 +104,11 @@ We know that the window was successfully created.
 We know that the rendering and audio systems were successfully initialized.
 And we know that the game terminated after failing to load a graphic asset called `sword.png`.
 
-Basic reasoning
+Window creation? 
+Rendering and audio system initialization?
+Graphic asset loading?
+We don't know what any of these things do, or how they work, but they do tell us something important.
+The fact that each of them 
 
 ## Implementing a Singleton
 
@@ -189,6 +193,6 @@ public class Singleton {
 ## References
 {% bibliography --file singleton %}
 
-[^1]: While the Singleton pattern calls for a global point of access, a car's steering wheel is not really a global point of access. In the computing world, a global point of access is a point that can be accessed everywhere and by anything. In the physical world such points of access do not exist. In this example the word *global* is relative to the setting i.e. the car. Anyone inside the car can access the steering system through the steering wheel.
+[^1]: While the Singleton pattern calls for a global point of access, a car's steering wheel is not really a global point of access. In the computing world, a global point of access is a point that can be accessed everywhere and by anything. In the physical world such points of access do not exist. In this example the word *global* is relative to the setting i.e. the car. When someone inside the car wants to access the single instance of the steering system, they do so through the steering wheel.
 
-[^2]: It is important to understand that the logger isn't strictly limited to the choices of a single instance that is globally available, or multiples instances. It is perfectly possible to have a single logger that is not globally available, but is instead passed around to where it is needed. I will talk about this later on in the article.
+[^2]: Obviously, following the Singleton pattern is not the only solution to the problem of conflicting state and behavior. Software design is can be as endlessly complex as we want it to be. A scenario in which a car has multiple steering systems could undoubtly be made to work without using a Singleton. However, the Singleton pattern represents *a* solution to the problem. A solution which is fairly simple and straightforward.
