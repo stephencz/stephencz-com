@@ -54,7 +54,7 @@ Where a category is a mere listing of related articles, a guide is a structured 
 A list of guides can be found on the [Guides](/guides) page.
 
 ### Advertising and Affiliate Disclosure
-Running a website isn't free or effortless.
+Running a website isn't free.
 Accordingly, some pages on this website may display ads and/or affiliate links.
 
 Because my primary concern is creating high-quality content I've taken measures to minimize the impact of ads on the user experience.

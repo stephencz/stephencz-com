@@ -61,6 +61,8 @@
 
   padding: 0px;
   margin: 0px;
+
+  padding-left: 2px;
 }
 
 .post-wrapper ul.metadata li
@@ -111,7 +113,7 @@
 
 .post-wrapper .body h1 { font-size: $h1-size; }
 
-.post-wrapper .body h2 { font-size: $h2-size; margin-top: 70px;}
+.post-wrapper .body h2 { font-size: $h2-size; margin-top: 100px;}
 
 .post-wrapper .body h3 { font-size: $h3-size; margin-top: 50px; }
 

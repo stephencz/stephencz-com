@@ -2,11 +2,15 @@
   <ul class="metadata">
     <li class="info">
       {% if page.updated %}
-        updated on {{ page.updated | date: "%m/%-d/%Y"}}
+        updated: {{ page.updated | date: "%m/%-d/%Y"}}
 
       {% else %}
-        published on {{ page.date | date: "%m/%-d/%Y"}}
+        published: {{ page.date | date: "%m/%-d/%Y"}}
       {% endif %}
+    </li>
+
+    <li class="info">
+      {{page.reading_time}} minutes ({{page.word_count}} words)
     </li>
 
     {% for category in page.categories %} 
@@ -18,11 +22,15 @@
   <ul class="metadata">
     <li class="info">
       {% if post.updated %}
-        updated on {{ post.updated | date: "%m/%-d/%Y"}}
+        updated: {{ post.updated | date: "%m/%-d/%Y"}}
 
       {% else %}
-        published on {{ post.date | date: "%m/%-d/%Y"}}
+        published: {{ post.date | date: "%m/%-d/%Y"}}
       {% endif %}
+    </li>
+
+    <li class="info">
+      {{post.reading_time}} minutes ({{post.word_count}} words)
     </li>
 
     {% for category in post.categories %} 

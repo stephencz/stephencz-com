@@ -20,6 +20,9 @@ defaults:
       type: "posts"
     values:
       is_post: true
+      reading_time: 0
+      word_count: 0
+      excerpt_separator: <!--more-->
 
 markdown: kramdown
 kramdown:
