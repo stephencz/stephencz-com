@@ -3,13 +3,7 @@ layout: page
 title: About
 ---
 
-*Cream of Potato* is a programming blog which focuses on publishing complete, scholarly-like, articles.
-
-I've found that the Internet is becoming an increasingly useless tool.
-The daily upload of short, unhelpful, incomplete, low-quality content is more or less the slowest DDOS attack ever performed.
-The fantastic content, which I know is out there, gets lost in a sea of... well... shit.
-
-This website is an attempt at producing fantastic content.
+*Cream of Potato*  is an attempt at producing fantastic content.
 My goal is to produce articles which are useful to the reader.
 I want articles to be complete in the sense that they answer more questions than they create.
 And high-quality in the sense that they produce a new understanding within the mind of the reader.

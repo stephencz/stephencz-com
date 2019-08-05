@@ -1,6 +1,7 @@
 .category-wrapper
 {
   font-family: $sans-serif-stack;
+  text-align: center;
   margin-top: $wrapper-top-margin;
   margin-bottom: 80px;
 }
@@ -41,6 +42,8 @@ ul.category-list
 {
   font-size: 1.8em;
   margin-bottom: 40px;
+  list-style: none;
+  padding-left: 0px;
 }
 
 ul.category-list li

@@ -9,8 +9,8 @@
       {% endif %}
     </li>
 
-    <li class="info">
-      {{page.reading_time}} minutes ({{page.word_count}} words)
+    <li class="info" style="color: #bd0000;">
+      {{page.reading_time}} minutes 
     </li>
 
     {% for category in page.categories %} 
@@ -29,10 +29,10 @@
       {% endif %}
     </li>
 
-    <li class="info">
-      {{post.reading_time}} minutes ({{post.word_count}} words)
+    <li class="info" style="color: #bd0000;">
+      {{post.reading_time}} minutes 
     </li>
-
+    
     {% for category in post.categories %} 
     {% assign url_part = category[0] | replace: " ", "-" %}
       <li class="category"><a href="/categories/{{ url_part }}">[{{ category }}]</a></li>

@@ -24,6 +24,7 @@ defaults:
       word_count: 0
       excerpt_separator: <!--more-->
 
+
 markdown: kramdown
 kramdown:
   input: GFM
