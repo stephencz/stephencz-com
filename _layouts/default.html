@@ -17,7 +17,7 @@
     
   <link rel=”canonical” href=”https://creamofpotato.com/” />
     
-  <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,600|Open+Sans:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather|Source+Sans+Pro:700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/base.css">
 
 </head>
@@ -25,28 +25,21 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 mx-auto"> {% include header.html %} </div>
+      <div class="col-lg-7 mx-auto"> {% include header.html %} </div>
     </div>
+    
     <div class="row">
-      <div class="col-lg-8 mx-auto"> {% include nav.html %}</div>
+      <div class="col-lg-7 mx-auto"> {% include nav.html %}</div>
     </div>
+
     <div class="row">
-
-      <div class="col-lg-2">
-        <div class="sidebar-wrapper">
-          
-        </div> 
-      </div>
-
-      <div class="col-lg-8"> {{ content }} {% include footer.html %} </div>
-
-      <div class="col-lg-2">
-        <div class="sidebar-wrapper">
-        
-        </div>
-      </div>
-
+      <div class="col-lg-7 mx-auto"> {{ content }} </div>
     </div>
+  
+    <div class="row">
+      <div class="col-lg-7 mx-auto"> {% include footer.html %} </div>
+    </div>
+
   </div>
 
   <div class="container-fluid" style="position: relative;">
@@ -55,6 +48,15 @@
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/6.0.3/typeit.min.js"></script>
+
+  {% if page.url == "/" %}
+    <script>
+      new TypeIt('#header', { speed: 110}, function(){
+        $('.ti-cursor').remove(); 
+      }).go();
+    </script>
+  {% endif %}
 
 </body>
 </html>

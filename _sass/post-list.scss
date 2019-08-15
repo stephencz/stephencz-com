@@ -1,0 +1,134 @@
+.post-wrapper .body ul
+{
+  font-size: 1em;
+  line-height: 1.3em;
+}
+
+.post-wrapper .body ul li
+{
+  padding-bottom: 30px;
+}
+
+.post-wrapper .body ul li:last-child
+{
+  padding-bottom: $body-elem-bottom-margin;
+}
+
+/* ===== Key Points Unordered List Styles ===== */
+.post-wrapper .body ul.key-points
+{
+  list-style: none;
+  padding-left: 0px;
+}
+
+.post-wrapper .body ul.key-points li
+{
+  border-left: 3px solid #0bb10b;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  margin-bottom: 30px;
+}
+
+
+/* ===== General Ordered List Styles ===== */
+.post-wrapper .body ol
+{
+  font-size: 1em;
+  list-style-position: inside;
+  padding-left: $body-elem-left-pad;
+}
+
+.post-wrapper .body ol li
+{
+  margin-bottom: 30px;
+}
+
+.post-wrapper .body ol li:last-child
+{
+  margin-bottom: $body-elem-bottom-margin;
+}
+
+/* ===== Lowercase Alphabet Ordered List Styles ===== */
+.post-wrapper .body ol.alpha 
+{
+  counter-reset: ol-alpha-counter;
+  list-style: none;
+}
+
+.post-wrapper .body ol.alpha li::before
+{
+  counter-increment: ol-alpha-counter;
+  content: "(" counter(ol-alpha-counter, lower-alpha) ")";
+
+  font-weight: 700;
+  padding-right: 10px;
+}
+
+/* ===== Numbered Ordered List Styles ===== */
+.post-wrapper .body ol.numbered
+{
+  list-style: none;
+  counter-reset: ol-number-counter;
+  padding-left: 0px;
+}
+
+.post-wrapper .body ol.numbered li::before
+{
+  counter-increment: ol-number-counter;
+  content: "[" counter(ol-number-counter) "]";
+
+  font-weight: 700;
+  padding-right: 10px;
+}
+
+/* ===== Bibliography Styles ===== */
+.post-wrapper .body ol.bibliography 
+{
+  counter-reset: ol-bib-counter;
+  list-style: none;
+
+  line-height: 1.3em;
+
+  padding-left: 0px;
+  padding-top: 20px;
+}
+
+.post-wrapper .body ol.bibliography li
+{
+  margin-bottom: 20px;
+}
+
+.post-wrapper .body ol.bibliography li p
+{
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  text-indent: -3.5rem;
+  margin-left: 3.5rem;
+  margin-bottom: 0px;
+}
+
+.post-wrapper .body ol.bibliography li p a:link
+{
+  word-break: break-all;
+}
+
+.post-wrapper .body ol.bibliography li p::before
+{
+  counter-increment: ol-bib-counter;
+  content: counter(ol-bib-counter) ".";
+  
+  font-weight: 700;
+  padding-right: 10px;
+}
+
+.post-wrapper .body ol.bibliography li p a:link,
+.post-wrapper .body ol.bibliography li p a:active,
+.post-wrapper .body ol.bibliography li p a:visited
+{
+  color: $link-hover;
+}
+
+.post-wrapper .body ol.bibliography li p a:hover
+{
+  color: $link-color;
+}

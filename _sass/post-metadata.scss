@@ -1,0 +1,38 @@
+.post-wrapper ul.metadata
+{
+  display: block;
+  list-style: none;
+  
+  font-size: $metadata-size;
+  font-family: $header-font;
+
+  padding: 0px;
+  margin: 0px;
+
+  padding-left: 2px;
+}
+
+.post-wrapper ul.metadata li
+{
+  display: inline-block;
+  margin-bottom: 10px;
+  padding-right: 10px;
+}
+
+.post-wrapper ul.metadata li.info { color: $metadata-info-color; }
+
+.post-wrapper ul.metadata li.category { }
+
+.post-wrapper ul.metadata li a:link,
+.post-wrapper ul.metadata li a:active,
+.post-wrapper ul.metadata li a:visited
+{
+  color: $metadata-link-color;
+  text-decoration: none;
+}
+
+.post-wrapper ul.metadata li.category a:hover
+{
+  color: $metadata-link-hover;
+  text-decoration: none;
+}

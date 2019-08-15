@@ -1,0 +1,35 @@
+.post-wrapper h1.title
+{
+  font-size: $h1-size;
+  font-weight: 700;
+  font-family: $header-font;
+
+  margin-bottom: 0px;
+}
+
+.post-wrapper span.title-arrow
+{
+  color: $link-color;
+  font-size: 0.4em;
+  vertical-align: middle;
+}
+
+.post-wrapper span.title-arrow:hover
+{
+  color: $link-hover;
+}
+
+.post-wrapper h1.title a:link,
+.post-wrapper h1.title a:active,
+.post-wrapper h1.title a:visited
+{
+  color: $title-link-color;
+  text-decoration: none;
+}
+
+.post-wrapper h1.title a:hover
+{
+  color: $title-link-hover;
+  text-decoration: none;
+}
+

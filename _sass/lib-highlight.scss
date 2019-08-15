@@ -1,5 +1,5 @@
 .highlight .hll { background-color: #ffffcc }
-.highlight  { background: #fffbfb; color: #000000;   }
+.highlight  { background: #fdfdfd; color: #000000;   }
 .highlight .c { color: #999988;   } /* Comment */
 .highlight .err { color: #000000;   } /* Error */
 .highlight .g { color: #000000;   } /* Generic */
@@ -69,55 +69,3 @@
 .highlight .vi { color: #0086B3;   } /* Name.Variable.Instance */
 .highlight .il { color: #1C9898;   } /* Literal.Number.Integer.Long */
 
-code.highlighter-rouge
-{
-  border: none;
-  background-color: transparent;
-
-  color: #9b0000;
-  font-size: 0.7em;
-}
-
-.highlighter-rouge
-{
-  border: 1px dotted #a0a0a0;
-
-  font-size: 1.2rem;
-  line-height: 1.6em;
-
-  margin-bottom: 30px;
-}
-
-pre.highlight
-{
-  margin-bottom: 0px;
-}
-
-td.rouge-gutter.gl
-{
-  border-right: 1px dotted #c5c5c5;
-  
-  text-align: center;
-
-  padding-top: 12px;
-  padding-left: 3px;
-  padding-right: 3px;
-}
-
-td.rouge-code
-{
-  padding-left: 5px;
-  padding-top: 12px;
-}
-
-.large-code
-{
-  font-size: 1.4rem;
-  line-height: 1.6em;
-}
-
-.small-code
-{
-  font-size: 1.2rem;
-  line-height: 1.6em;
-}

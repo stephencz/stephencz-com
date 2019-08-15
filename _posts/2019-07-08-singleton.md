@@ -8,22 +8,30 @@ categories: [design patterns]
 updated:
 ---
 
-The **Singleton** design pattern is one of the easiest design patterns to understand. 
+The Singleton design pattern is one of the easiest design patterns to understand. 
 It is also one of the most controversial.
-In this article, I attempt to breakdown the pattern in its entirety.
 
+The goal of this article is to present a general overview of the pattern.
 In the [What is the Singleton](/posts/the-singleton#what-is-the-singleton) section I define the pattern and explore when and why you *might* consider using it.
 In the [Implementing the Singleton](#implementing-the-singleton) section I walk through several examples of how the pattern is commonly implemented in Java.
-Finally, in [The Controversy](#the-controversy) section I examine some of the arguments for and against the pattern, and answer the vital question: *Should I use the Singleton?*
+Finally, in [The Controversy](#the-controversy) section, I examine some of the arguments for and against the pattern, and answer the vital question: *Should I use the Singleton?*
 
 <!--more-->
 
 ## What is the Singleton?
-The Singleton is one of twenty-three design patterns originally outlined in the famous book [*Design Patterns: Elements of Reusable Object-Oriented Software*](https://en.wikipedia.org/wiki/Design_Patterns).
-The pattern is classifed as a creational pattern, meaning it is a pattern that manages the creation of objects.
-Specifically, the Singleton manages the creation of a single object: Itself. 
+The Singleton is one of twenty-three [design patterns](https://en.wikipedia.org/wiki/Software_design_pattern){:target="_blank"} originally outlined in the famous book [*Design Patterns: Elements of Reusable Object-Oriented Software*](https://en.wikipedia.org/wiki/Design_Patterns){:target="_blank"}.
 
-The intent of the Singleton pattern, as originally stated, is to:
+The purpose of a design pattern is to act as a reuseable solution to some commonly occuring problem.
+The problem the Singleton pattern attempts to solve is that of limiting a class to a single instance.
+
+Object-Oriented Programming is built around the ideas of the class and the object.
+At a very high-level, a **class** is more or less the template of an idea. 
+And an **object** is the literal manifestation of that idea in bits and bytes.
+
+In the majority of cases, classes are design to be reused.
+When simulating an ocean we want it to populated with many fish, not just one.
+
+The intent of the Singleton pattern, as original stated by the book, is to:
 
 <blockquote>
 <p>
@@ -32,13 +40,12 @@ Ensure a class only has one instance, and provides a global point of access to i
 </p>
 </blockquote>
 
-**The Singleton pattern is used when you want to limit a class to a single instance.**
-
-The full details of how this is done are covered in the [Implementing a Singleton](#implementing-the-singleton) section.
-Whether or not you should use the Singleton is covered in [The Controversy](#the-controversy) section.
-The why and when of the Singleton is covered below. 
+{: .key}
+The Singleton pattern is used when you want to limit a class to a single instance.
+Put another way, it is used when you only ever want there to be *exactly* one of something.
 
 ### A Car With Two Drivers
+
 In our universe, when you're driving a car and want to turn, you turn in the direction you want the car to go.
 If you want to go to the supermarket, and the supermarket is to the right, you turn the car right.
 If you want to see a movie, and the movie theater is to the left, you turn the car left.
@@ -57,27 +64,25 @@ If they want to go to the movie theater, both drivers must turn left.
 What happens when there is a conflict of interest?
 What happens when you want to go to the supermarket, but the other driver wants to go to the movie theater? 
 
-You'll turn right, they'll turn left, and the car will skid to a stop.
+You'll turn right, they'll turn left, and the car will skid to a stop or crash.
 
-<img src="https://i.imgur.com/mRF7pEW.png" class="img-fluid" alt="An image depicting the two scenarios described above. One car has one steering system and is successfully turning right. Another car has two steering systems which are turning in conflicting direction i.e. towards or away from one another.">
+<img src="/assets/images/singleton/singleton-2.png" class="img-fluid" alt="An image depicting the two scenarios described above. One car has one steering system and is successfully turning right. Another car has two steering systems which are turning in conflicting direction i.e. towards or away from one another.">
 
-In this fictional universe the direction the car is trying to move is shared between two steering systems.
-When there are differences between these two systems there is a significant potential for problems to occur.
+Situations such as these, where having more than one of something gives rise to a conflict, are prime examples of when using the Singleton pattern *might* make sense.
 
-The solution the Singleton pattern offers up is to limit our cars to a single steering system.
-
-By limiting our cars to a single steering system we eliminate the possibility for conflicting states and behaviors. 
-If the direction the car is trying to move is controlled by a single steering system then, under normal circumstances, the direction the car is trying to move should never conflict with itself. [^2]
+The purpose of the Singleton pattern is to limit a class to a single instance.
+We use it when we want there to only ever be one of something.
+And we use it to protect against against conflicts of state and behavior.
 
 ### In Analogous Terms
 In analogous terms, a class that is not limited to a single instance, but shares some form of state or behavior across instances, might also introduce the potential for error.
 The examples where this might happen in software design are endless.
 
-<img src="https://i.imgur.com/cb7NtjL.png" class="img-fluid" alt="An image depicting the two scenarios described above. One car has one steering system and is successfully turning right. Another car has two steering systems which are turning in conflicting direction i.e. towards or away from one another.">
+<img src="/assets/images/singleton/singleton-3.png" class="img-fluid" alt="An image depicting the two scenarios described above. One car has one steering system and is successfully turning right. Another car has two steering systems which are turning in conflicting direction i.e. towards or away from one another.">
 
 One of the classic examples is a logging system.
 The purpose of logging is to make a record of a program's runtime behavior.
-This is usually done by having each distinct part of a program output important messages to a log file.
+This is usually done by having each distinct part of the program output important messages to a log file.
 
 Here is a what the log file for a video game might look like:
 
@@ -117,21 +122,24 @@ Is it possible for the loggers to accidently overwrite each other's output?
 These are all vaild and important questions to ask.
 A logger which overwrites its own output, or doesn't present its output in chronological order, is a useless logger.
 
-In the same way that we used the Singleton pattern to eliminate the conflict of direction in our car example, we could make our logger class a Singleton to eliminate the potential conflicts that might come with multiples instances.
+In the same way that we used the Singleton pattern to eliminate the conflict of direction in our car example, we could make our logger class a Singleton to eliminate the potential conflicts that might come with multiples instances of a class.
 
-<img src="https://i.imgur.com/CDK9uEP.png" class="img-fluid" alt="An image of two ways that the logging class might be used. One shows a single instance of a Logger class being accessed by several different systems. While the other scenario shows a new instance of the logger class being instantiated everywhere it is needed.">
+<img src="/assets/images/singleton/singleton-4.png" class="img-fluid" alt="An image of two ways that the logging class might be used. One shows a single instance of a Logger class being accessed by several different systems. While the other scenario shows a new instance of the logger class being instantiated everywhere it is needed.">
 
 The Singleton pattern would limit our logger to a single instance and provide a global point of access to that instance.
 When a portion of the program needs to log information to a file it simple accesses our single instance of the logging class through the global access point and then uses the logger's functionality. [^3]
 
+
+<div class="key-section">
 ### The Big Idea
 
 The big idea here is that the Singleton pattern is used when we want a class to be limited to a single instance.
 
 There are many situations in which using the Singleton pattern *might* be wise.
 However, in general terms, situations where multiple instances of a class would cause a conflict of state or behavior are prime use cases for the Singleton pattern.
+</div>
 
-## Implementing the Singleton
+## Implementing the Singleton 
 
 The Singleton pattern has two responsibilities: It limits a class to a single instance, and it provides a global point of access to that instance.
 Accordingly, when implementing the Singleton pattern we have to ask and answer two questions:
@@ -172,8 +180,8 @@ In Java, the conventional way for creating an instance of a class is with the `n
 The above line creates an object of type `SomeClass` and stores it in the variable `instance`.
 
 The Singleton pattern requires us to limit our class to a single instance.
-To do this, we have to make sure our Singleton class can't be instantiated directly.
-This can be achieved with a private constructor.
+To do this, we have to make sure our Singleton can't be instantiated outside of its class.
+We can achieved this with a private constructor:
 
 ~~~java
     private Singleton() { 
@@ -187,7 +195,6 @@ Attempting to instantiate our class outside of itself with the `new` keyword is 
 ### The Single Instance
 By making our constructor private, we've solved half of the "how do I limit a class to a single instance" problem.
 The next step is to create a way for our Singleton class to keep track of its single instance.
-
 
 ~~~java
     private static final Singleton INSTANCE = new Singleton();
@@ -223,7 +230,7 @@ Its only purpose is to return the instance of our class held in the `INSTANCE` f
 
 ### Putting It All Together
 
-If we combine our private constructor, private static final `INSTANCE` field, and our public static `getInstance()` method, we get a bare bones Singleton:
+If we combine our private constructor, private static final field `INSTANCE`, and our public static method `getInstance()`, we've built a bare bones Singleton:
 
 ~~~java
 public class Singleton {
@@ -240,7 +247,7 @@ public class Singleton {
 }
 ~~~
 
-Together the private constructor and private static final field satisfy the requirment of limiting the class to a single instance.
+Together the private constructor and private static final field `INSTANCE` satisfy the requirment of limiting the class to a single instance.
 And the `getInstance()` method fulfils the requirement of providing a global point of access to that instance.
 
 Using the Singleton is straightfoward:
@@ -253,16 +260,62 @@ All you have to do is store the results of the `getInstance()` method in a varia
 You now have a working Singleton.
 
 
+### A Basic, But More Concrete Example
+
+In the [What is the Singleton]() section we used the example of a logging class.
+Here is what a primitive logging class that uses the Singleton pattern might look like:
+
+~~~java
+public Logger {
+
+    private static final Logger INSTANCE = new Logger();
+
+    private Logger() {
+
+    }
+
+    public static Logger getInstance() {
+        return INSTANCE;
+    }
+
+    public void log(String message) {
+        System.out.println(message);
+    }
+
+    public void info(String message) {
+        this.log("[INFO] " + message);
+    }
+
+    public void error(String message) {
+        this.log("[ERROR] " + message);
+    }
+}
+~~~
+
+Our `Logger` class has all the parts of the Singleton pattern that we covered in the previous sections.
+It has a private static final field `INSTANCE`, a private construtor, and a public static method `getInstance()`.
+
+Additionally, it has three other methods.
+To keep things simple this logger doesn't output to a log file, but, instead, outputs to a console.
+To use these methods, we must retrieve the instance of our `Logger` class using the `getInstance()` method:
+
+~~~java
+    Logger logger = Logger.getInstance();
+    logger.info("Here is our singleton logger in action!!!");
+~~~
+
+And then we simply call the methods we want.
+
 ### Eager vs. Lazy Initialization
-In the previous example, we created the single instance of our class immediately:
+In the previous examples, we created the single instance of our classes immediately:
 
 ~~~java
     private static final Singleton INSTANCE = new Singleton();
 ~~~
 
-This technique is called *Eager Initialization*, and it is one of two ways the Singleton pattern is commonly implemented.
+This is called *Eager Initialization*, and it is one of two ways the Singleton pattern is commonly implemented.
 The other way is called *Lazy Initialization*.
-This is what a "lazy singleton" looks like:
+This is what a Singleton that uses *Lazy Initialization* looks like:
 
 ~~~java
 public class LazySingleton {
@@ -281,16 +334,13 @@ public class LazySingleton {
 }
 ~~~
 
-If you compare this implementation with the previous, you should noticed two key differences.
-
-Firstly, instead of creating the single instance of our class immediately and assigning it to a private static final field, we declare a private static field and set it equal to `null`.
+If you compare this implementation with the previous examples, you should noticed two key differences.
 
 ~~~java
     private static LazySingleton instance = null;
 ~~~
 
-Secondly, the `getInstance()` method is slightly more complex.
-Unlike the previous example, where we returned our instance immediately, we first check if the `instance` field is equal to `null`, create our single instance if it is, and then return that instance.
+Firstly, instead of creating the single instance of our class immediately and assigning it to a private static final field, we declare a private static field and set it equal to `null`.
 
 ~~~java
     public static LazySingleton getInstance() {
@@ -302,17 +352,24 @@ Unlike the previous example, where we returned our instance immediately, we firs
     }
 ~~~
 
-Combined, these two changes delay the creation of our class instance, until we need it.
+Secondly, the `getInstance()` method is slightly more complex.
+Now, the method will check if the `instance` field is equal to `null`, create the single instance if it is, and return that instance.
 
-So, what's the big deal? Why would I use *Eager Initialization* over *Lazy Initialization*, or vice versa?
+The effect of these two changes is that the creation of the single instance of our class is deferred until it is needed.
 
+*Eager Initialization* is used when the Singleton class should be available immediately to the program.
+*Lazy Initialization* is used when the Singleton should be created when it is first needed.
 
+Whether you should use *Eager Initialization* or *Lazy Initialization* comes down to the design of the class and your software.
 
-It should be noted that this implementation of a Singleton is not thread safe.
-
-
+Is the class lightweight, or used every time the program is executed?
+Maybe use *Eager Initialization*.
+Is the class large, complex, or only used some of the time?
+Maybe use *Lazy Initialization*.
 
 ### Thread Safety
+
+This section will be brief.
 
 ~~~java
 public class Singleton {
@@ -353,38 +410,6 @@ public class Logger {
 }
 ~~~
 
-
-### A Concrete Example
-Something something about applying the pattern to a real world example.
-
-~~~java
-public class Logger {
-
-    private static final Logger INSTANCE = new Logger();
-
-    private Logger() { }
-
-    public static Logger getInstance() {
-        return this.INSTANCE;
-    }
-
-    public void log(String message) {
-        System.out.println(message)
-    }
-
-}
-~~~
-
-~~~java
-public class Driver {
-
-    public static void main(String[] args) {
-        Logger logger = Logger.getInstance();
-        logger.log("Hello, World!");
-    }
-
-}
-~~~
 
 ## The Controversy
 

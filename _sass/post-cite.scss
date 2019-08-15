@@ -1,0 +1,82 @@
+.post-wrapper .body blockquote
+{
+  color: $blockquote-color;
+  border-left: 3px solid $blockquote-border;
+
+  font-size: 1em;
+  font-style: italic;
+  
+  padding-bottom: 5px;
+  padding-left: $body-elem-left-pad;
+  margin-bottom: $body-elem-bottom-margin;
+}
+
+.post-wrapper .body blockquote p
+{
+  margin-bottom: 0px;
+}
+
+.post-wrapper .body cite a.citation
+{
+  display: block;
+  font-size: 0.8em;
+  text-align: right;
+}
+
+
+.post-wrapper .body sup a:link,
+.post-wrapper .body sup a:active,
+.post-wrapper .body sup a:visited
+{
+  color: $link-hover;
+}
+
+.post-wrapper .body sup a:hover
+{
+  color: $link-color;
+}
+
+
+.post-wrapper .body sup a::before
+{
+  color: $link-hover;
+  content: "[";
+}
+
+.post-wrapper .body sup a::after
+{
+  color: $link-hover;
+  content: "]";
+}
+
+.post-wrapper .body .footnotes
+{
+  border-top: 1px dotted #000;
+  padding-top: 20px;
+}
+
+.post-wrapper .body .footnotes ol
+{
+  counter-reset: ol-footnote-counter;
+  list-style: none;
+  padding-left: 0px;
+}
+
+.post-wrapper .body .footnotes ol li
+{
+  margin-bottom: 40px;
+}
+
+.post-wrapper .body .footnotes ol li p::before
+{
+  counter-increment: ol-footnote-counter;
+  content: "[" counter(ol-footnote-counter) "]:";
+  
+  padding-right: 10px;
+}
+
+.post-wrapper .body .footnotes ol li p
+{
+  font-size: 1rem;
+  margin-bottom: 0px;
+}

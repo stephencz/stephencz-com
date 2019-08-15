@@ -1,8 +1,8 @@
 .header-wrapper
 {
-  font-size: 5em;
+  font-size: $main-header-size;
   font-weight: 600;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $header-font;
   text-transform: lowercase;
   text-align: center;
   line-height: 1em;
