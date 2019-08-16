@@ -4,8 +4,8 @@ title: An Overview of the Singleton
 description: >- 
   The Singleton is one of the easiest, and most controversial, design patterns to understand. 
   In this article, I attempt to breakdown the pattern in its entirety.
-categories: [design patterns]
 updated:
+categories: [design patterns]
 ---
 
 The Singleton design pattern is one of the easiest design patterns to understand. 
@@ -66,7 +66,7 @@ What happens when you want to go to the supermarket, but the other driver wants 
 
 You'll turn right, they'll turn left, and the car will skid to a stop or crash.
 
-<img src="/assets/images/singleton/singleton-2.png" class="img-fluid" alt="An image depicting the two scenarios described above. One car has one steering system and is successfully turning right. Another car has two steering systems which are turning in conflicting direction i.e. towards or away from one another.">
+<img src="/assets/images/singleton/singleton-2.png" class="img-fluid mx-auto" alt="An image depicting the two scenarios described above. One car has one steering system and is successfully turning right. Another car has two steering systems which are turning in conflicting direction i.e. towards or away from one another.">
 
 Situations such as these, where having more than one of something gives rise to a conflict, are prime examples of when using the Singleton pattern *might* make sense.
 
@@ -78,7 +78,7 @@ And we use it to protect against against conflicts of state and behavior.
 In analogous terms, a class that is not limited to a single instance, but shares some form of state or behavior across instances, might also introduce the potential for error.
 The examples where this might happen in software design are endless.
 
-<img src="/assets/images/singleton/singleton-3.png" class="img-fluid" alt="An image depicting the two scenarios described above. One car has one steering system and is successfully turning right. Another car has two steering systems which are turning in conflicting direction i.e. towards or away from one another.">
+<img src="/assets/images/singleton/singleton-3.png" class="img-fluid mx-auto" alt="An image depicting the two scenarios described above. One car has one steering system and is successfully turning right. Another car has two steering systems which are turning in conflicting direction i.e. towards or away from one another.">
 
 One of the classic examples is a logging system.
 The purpose of logging is to make a record of a program's runtime behavior.
@@ -124,7 +124,7 @@ A logger which overwrites its own output, or doesn't present its output in chron
 
 In the same way that we used the Singleton pattern to eliminate the conflict of direction in our car example, we could make our logger class a Singleton to eliminate the potential conflicts that might come with multiples instances of a class.
 
-<img src="/assets/images/singleton/singleton-4.png" class="img-fluid" alt="An image of two ways that the logging class might be used. One shows a single instance of a Logger class being accessed by several different systems. While the other scenario shows a new instance of the logger class being instantiated everywhere it is needed.">
+<img src="/assets/images/singleton/singleton-4.png" class="img-fluid mx-auto" alt="An image of two ways that the logging class might be used. One shows a single instance of a Logger class being accessed by several different systems. While the other scenario shows a new instance of the logger class being instantiated everywhere it is needed.">
 
 The Singleton pattern would limit our logger to a single instance and provide a global point of access to that instance.
 When a portion of the program needs to log information to a file it simple accesses our single instance of the logging class through the global access point and then uses the logger's functionality. [^3]
@@ -151,6 +151,7 @@ Accordingly, when implementing the Singleton pattern we have to ask and answer t
 Luckily for us, this turns out to be incredibly simple.
 Here is a bare bones implementation of the Singleton pattern in Java:
 
+{:.line-numbers}
 ~~~java
 public class Singleton {
 
@@ -416,6 +417,7 @@ public class Logger {
 
 
 
+{:.bib-header}
 ## References
 {% bibliography --file singleton %}
 

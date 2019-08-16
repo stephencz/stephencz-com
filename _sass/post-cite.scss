@@ -1,18 +1,25 @@
 .post-wrapper .body blockquote
 {
+  background-color: $blockquote-background;
+
   color: $blockquote-color;
   border-left: 3px solid $blockquote-border;
 
   font-size: 1em;
   font-style: italic;
   
-  padding-bottom: 5px;
   padding-left: $body-elem-left-pad;
   margin-bottom: $body-elem-bottom-margin;
+
+  border-radius: 8px;
 }
 
 .post-wrapper .body blockquote p
 {
+  font-size: 1em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
   margin-bottom: 0px;
 }
 
@@ -21,6 +28,7 @@
   display: block;
   font-size: 0.8em;
   text-align: right;
+  padding-top: 15px;
 }
 
 
@@ -28,31 +36,43 @@
 .post-wrapper .body sup a:active,
 .post-wrapper .body sup a:visited
 {
-  color: $link-hover;
+  color: $footnote-sup;
+  text-decoration: none;
 }
 
 .post-wrapper .body sup a:hover
 {
-  color: $link-color;
+  color: $footnote-hover;
 }
-
 
 .post-wrapper .body sup a::before
 {
-  color: $link-hover;
+  color: $footnote-sup;
   content: "[";
 }
 
 .post-wrapper .body sup a::after
 {
-  color: $link-hover;
+  color: $footnote-sup;
+  content: "]";
+}
+
+.post-wrapper .body sup a:hover::before
+{
+  color: $footnote-hover;
+  content: "[";
+}
+
+.post-wrapper .body sup a:hover::after
+{
+  color: $footnote-hover;
   content: "]";
 }
 
 .post-wrapper .body .footnotes
 {
   border-top: 1px dotted #000;
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 .post-wrapper .body .footnotes ol
@@ -64,7 +84,7 @@
 
 .post-wrapper .body .footnotes ol li
 {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .post-wrapper .body .footnotes ol li p::before
@@ -79,4 +99,60 @@
 {
   font-size: 1rem;
   margin-bottom: 0px;
+}
+
+h2.bib-header
+{
+  border-bottom: 1px dotted #000;
+}
+
+.post-wrapper .body ol.bibliography 
+{
+  counter-reset: ol-bib-counter;
+  list-style: none;
+
+  line-height: 1.3em;
+
+  padding-left: 0px;
+  margin-top: 30px;
+}
+
+.post-wrapper .body ol.bibliography li
+{
+  margin-bottom: 30px;
+}
+
+.post-wrapper .body ol.bibliography li p
+{
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  text-indent: -3.5rem;
+  margin-left: 3.5rem;
+  margin-bottom: 0px;
+}
+
+.post-wrapper .body ol.bibliography li p a:link
+{
+  word-break: break-all;
+}
+
+.post-wrapper .body ol.bibliography li p::before
+{
+  counter-increment: ol-bib-counter;
+  content: counter(ol-bib-counter) ".";
+  
+  font-weight: 700;
+  padding-right: 10px;
+}
+
+.post-wrapper .body ol.bibliography li p a:link,
+.post-wrapper .body ol.bibliography li p a:active,
+.post-wrapper .body ol.bibliography li p a:visited
+{
+  color: $link-hover;
+}
+
+.post-wrapper .body ol.bibliography li p a:hover
+{
+  color: $link-color;
 }

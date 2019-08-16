@@ -2,11 +2,11 @@
 ---
 
 $pixel-size: 100%;
-$font-size: 1em;
-$line-height: 2em;
+$font-size: 1.125em;
+$line-height: 1.875em;
 
 $header-font: 'Source Sans Pro', sans-serif;
-$body-font: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+$body-font: 'PT Serif', serif;
 
 $h1-size: 2em;
 $h2-size: 1.875em;
@@ -15,13 +15,17 @@ $h4-size: 0.75em;
 $h5-size: 0.5em;
 $h6-size: 0.25em;
 
+$body-text-color: #000;
+
 $main-header-size: 3em;
 $navigation-size: 1em;
 
 $metadata-size: 1em;
 $footer-size: 0.875em;
 
-$header-color: #000;
+$header-background: #f9f9f9;
+$header-border: #b7b7b7;
+$header-color: #8c8c8c;
 
 $title-link-color: #000;
 $title-link-hover: #000;
@@ -38,11 +42,17 @@ $metadata-link-color: #d80000;
 $metadata-link-hover: #d80000;
 
 $blockquote-color: #404040;
-$blockquote-border: #d80000;
+$blockquote-background: #f9f9f9;
+$blockquote-border: #f1f1f1;
+
+$footnote-sup: #8c8c8c;
+$footnote-hover: #d80000;
+
+$inline-code-color: #990000;
 
 $wrapper-top-margin: 50px;
 $body-elem-left-pad: 40px;
-$body-elem-bottom-margin: 40px;
+$body-elem-bottom-margin: 30px;
 
 @import "lib-bootstrap";
 @import "lib-normalize";
