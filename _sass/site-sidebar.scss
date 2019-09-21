@@ -1,0 +1,126 @@
+.sidebar-wrapper
+{
+  margin-top: 70px;
+}
+
+.sidebar-wrapper .about
+{
+  border-bottom: 1px dotted rgb(165, 165, 165);
+
+  margin-top: 15px;
+}
+
+.sidebar-wrapper .about h1.title
+{
+  font-size: $font-size;
+  font-weight: 700;
+  letter-spacing: 0.5px;  
+}
+
+.sidebar-wrapper .about .body 
+{ 
+  color: rgb(165, 165, 165);
+}
+
+.sidebar-wrapper nav
+{
+  border-bottom: 1px dotted rgb(165, 165, 165);
+  padding-top: 15px;
+}
+
+.sidebar-wrapper nav ul
+{
+  list-style: none;
+
+  padding-left: 0px;
+}
+
+.sidebar-wrapper nav ul li
+{
+  margin-bottom: 15px;
+}
+
+.sidebar-wrapper nav ul li:last-child
+{
+  margin-bottom: 0px;
+}
+
+.sidebar-wrapper nav ul li a:link,
+.sidebar-wrapper nav ul li a:active,
+.sidebar-wrapper nav ul li a:visited
+{
+  color: $nav-color;
+  text-decoration: none;
+}
+
+.sidebar-wrapper nav ul li a:hover
+{
+  color: $nav-hover;
+}
+
+.sidebar-wrapper .toc
+{ 
+  padding-top: 15px;
+}
+
+.sidebar-wrapper .toc ul
+{
+  font-size: 0.75em;
+  line-height: 2em;
+  list-style: none;
+
+  padding: 0px;
+}
+
+.sidebar-wrapper .toc ul li {  }
+
+.sidebar-wrapper .toc ul li a:link,
+.sidebar-wrapper .toc ul li a:active,
+.sidebar-wrapper .toc ul li a:visited
+{
+  color: $nav-color;
+  text-decoration: none;
+}
+
+.sidebar-wrapper .toc ul li a:hover
+{
+  color: $nav-hover;
+}
+
+.sidebar-wrapper .toc ul li.depth-h1 { padding-left: 0px; font-weight: 700; }
+.sidebar-wrapper .toc ul li.depth-h2 { padding-left: 0px; font-weight: 700; }
+.sidebar-wrapper .toc ul li.depth-h3 { padding-left: 5px; }
+.sidebar-wrapper .toc ul li.depth-h4 { padding-left: 10px; }
+.sidebar-wrapper .toc ul li.depth-h5 { padding-left: 15px; }
+.sidebar-wrapper .toc ul li.depth-h6 { padding-left: 15px; }
+
+@media (max-width: 991.98px) 
+{
+
+  .sidebar-wrapper .about
+  {
+    width: 0px;
+    height: 0px;
+    
+    padding: 0px;
+    margin: 0px;
+
+    visibility: hidden;
+  }
+
+  .sidebar-wrapper nav ul li
+  {
+    display: inline;
+    padding-right: 15px;
+  }
+  .sidebar-wrapper .toc
+  {
+    width: 0px;
+    height: 0px;
+    
+    padding: 0px;
+    margin: 0px;
+
+    visibility: hidden;
+  }
+}

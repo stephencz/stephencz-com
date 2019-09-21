@@ -1,15 +1,15 @@
 ---
 ---
-
 $pixel-size: 100%;
-$font-size: 1.125em;
+$font-size: 1em;
 $line-height: 1.875em;
 
-$header-font: 'Source Sans Pro', sans-serif;
-$body-font: 'PT Serif', serif;
+$header-font: 'Roboto', sans-serif;
+$body-font: 'Roboto', sans-serif;
+$monospace-font: monospace;
 
 $h1-size: 2em;
-$h2-size: 1.875em;
+$h2-size: 1.75em;
 $h3-size: 1.25em;
 $h4-size: 0.75em;
 $h5-size: 0.5em;
@@ -23,7 +23,7 @@ $navigation-size: 1em;
 $metadata-size: 1em;
 $footer-size: 0.875em;
 
-$header-background: #f9f9f9;
+$header-background: #fafafa;
 $header-border: #b7b7b7;
 $header-color: #8c8c8c;
 
@@ -31,24 +31,24 @@ $title-link-color: #000;
 $title-link-hover: #000;
 
 $nav-color: #8c8c8c;
-$nav-hover: #d80000;
+$nav-hover: #d63434;
 
-$link-color: #8c8c8c;
-$link-hover: #d80000;
+$link-color: #d63434;
+$link-hover: #8c8c8c;
 
-$metadata-info-color: #8c8c8c;
+$metadata-info-color: #a5a5a5;
 
-$metadata-link-color: #d80000;
-$metadata-link-hover: #d80000;
+$metadata-link-color: #d63434;
+$metadata-link-hover: #a5a5a5;
 
 $blockquote-color: #404040;
 $blockquote-background: #f9f9f9;
 $blockquote-border: #f1f1f1;
 
-$footnote-sup: #8c8c8c;
-$footnote-hover: #d80000;
+$footnote-sup: #d63434;
+$footnote-hover: #a5a5a5;
 
-$inline-code-color: #990000;
+$inline-code-color: #d63434;
 
 $wrapper-top-margin: 50px;
 $body-elem-left-pad: 40px;
@@ -59,8 +59,8 @@ $body-elem-bottom-margin: 30px;
 @import "lib-highlight";
 
 @import "site-html";
-@import "site-header";
 @import "site-nav";
+@import "site-sidebar";
 
 @import "post-title";
 @import "post-metadata";

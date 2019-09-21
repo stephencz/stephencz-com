@@ -9,14 +9,14 @@
 
 .post-wrapper span.title-arrow
 {
-  color: $link-color;
+  color: $link-hover;
   font-size: 0.4em;
   vertical-align: middle;
 }
 
 .post-wrapper span.title-arrow:hover
 {
-  color: $link-hover;
+  color: $link-color;
 }
 
 .post-wrapper h1.title a:link,

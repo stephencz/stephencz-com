@@ -2,9 +2,7 @@
   link: /
 - name: About
   link: /about
-- name: Archive
-  link: /archive
+- name: History
+  link: /history
 - name: Categories
   link: /categories
-- name: Guides
-  link: /guides

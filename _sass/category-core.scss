@@ -1,20 +1,23 @@
+$category-title-size: 2em;
+$category-item-size: 1.125em;
+
 .category-wrapper
 {
   font-family: $body-font;
-  text-align: center;
   margin-top: $wrapper-top-margin;
   margin-bottom: 80px;
 }
 
 .category-wrapper .category-title
 {  
-  font-size: 3em;
+  font-size: $category-title-size;
   font-weight: 700;
+  margin-top: 60px;
 }
 
 .category-wrapper ul.category-post-list
 {
-  font-size: 1.8em;
+  font-size: $category-item-size;
   list-style: none;
 
   padding: 0px;
@@ -23,7 +26,7 @@
 .category-wrapper ul.category-post-list li
 {
   font-weight: 400;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .category-wrapper ul.category-post-list li a:link,
@@ -40,15 +43,18 @@
 
 ul.category-list
 {
-  font-size: 1.8em;
-  margin-bottom: 40px;
+  font-size: $category-item-size;
+  margin-bottom: 60px;
   list-style: none;
   padding-left: 0px;
 }
 
 ul.category-list li
 {
-  padding-bottom: 20px;
+  display: inline-block;
+
+  padding-bottom: 15px;
+  padding-right: 40px;
 }
 
 ul.category-list li a:link,

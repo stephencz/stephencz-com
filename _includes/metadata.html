@@ -9,13 +9,13 @@
       {% endif %}
     </li>
 
-    <li class="info" style="color: #bd0000;">
+    <li class="info" style="color: #a5a5a5;">
       {{page.reading_time}} minutes 
     </li>
 
     {% for category in page.categories %} 
-    {% assign url_part = category[0] | replace: " ", "-" %}
-      <li class="category"><a href="/categories/{{ url_part }}">[{{ category }}]</a></li>
+    {% assign url = category | replace: " ", "-" %}
+      <li class="category"><a href="/categories/{{ url }}">[{{ category }}]</a></li>
     {% endfor %}
   </ul>
 {% else %}
@@ -29,13 +29,13 @@
       {% endif %}
     </li>
 
-    <li class="info" style="color: #bd0000;">
+    <li class="info" style="color: #a5a5a5;">
       {{post.reading_time}} minutes 
     </li>
     
     {% for category in post.categories %} 
-    {% assign url_part = category[0] | replace: " ", "-" %}
-      <li class="category"><a href="/categories/{{ url_part }}">[{{ category }}]</a></li>
+    {% assign url = category | replace: " ", "-" %}
+      <li class="category"><a href="/categories/{{ url }}">[{{ category }}]</a></li>
     {% endfor %}
   </ul>
 {% endif %}

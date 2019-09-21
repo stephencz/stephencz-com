@@ -1,0 +1,33 @@
+<div class="sidebar-wrapper">
+  <div class="about">
+    <div class="body">
+      <p>
+        <b>Welcome to the website of Stephen Czekalski.</b> 
+      </p>
+
+      <p>
+        The purpose of this website is to act as a repository for my writings and works on topics which interest me.
+      </p>
+
+      <p>
+        My two main areas of interest are Computer Science and Philosophy. 
+      </p>
+
+      <p>
+        Currently, I am a student at Rowan University studying Computing and Informatics.
+      </p>
+    </div>
+  </div>
+
+  <nav>
+    <ul>
+    {% for nav in site.data.navigation %}
+      <li><a href="{{ nav.link }}" {% if page.url == nav.link %} style="color: #d80000; font-weight: 700;"  {% endif %}>{{ nav.name }}</a></li>
+    {% endfor %}
+    </ul>
+  </nav>
+
+  {% if page.toc == true%}
+    {% table_of_contents %}
+  {% endif %}
+</div>

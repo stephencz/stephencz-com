@@ -2,9 +2,10 @@
 layout: default
 ---
 <article class="post-wrapper">
-  <h1 class="title">{{ page.title }}</h1>
+  <h1 id="{{ page.title | downcase | replace: ' ', '-' }}" class="title">{{ page.title }}</h1>
   {% include metadata.html is_home=false %}
   <div class="body"> 
     {{ page.content }} 
   </div>
 </article>
+

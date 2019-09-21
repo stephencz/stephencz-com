@@ -1,11 +1,9 @@
-title: Cream of Potato
-email: admin@creamofpotato.com
-description: >-
-  Cream of Potato is a programming blog with a focus on in-depth articles about specific topics. 
-  Our goal to promote a culture of critical and high level abstractiong thinking when it comes to software design.
+title: Stephen Czekalski
+email: admin@stephencz.com
+description: The personal website of Stephen Czekalski. A place for me to store my writings and works on the topics which interest me.
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://www.creamofpotato.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: creamofpotato
+url: "https://www.stephencz.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: stephencz
 github_username:  stephencz
 
 permalink: /posts/:title
@@ -22,8 +20,16 @@ defaults:
       is_post: true
       reading_time: 0
       word_count: 0
+      toc: true
       excerpt_separator: <!--more-->
 
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      is_page: true
+      toc: true
 
 markdown: kramdown
 kramdown:
