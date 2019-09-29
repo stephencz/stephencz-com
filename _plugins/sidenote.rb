@@ -1,18 +1,35 @@
 require 'nokogiri'
 
 module Jekyll
-  class SidenoteTag < Liquid::Tag
+  class SidenoteBlock < Liquid::Block
 
-    def initialize(tag_name, text, tokens)
+    def initialize(name, args, tokens)
       super
       @tokens = tokens
+      @args = args
+      @direction = args.split[0]
+      @classes = args.split.drop(1)
+      @counter = 0;
     end
 
     def render(context)
-      return '<div class="toc"><ul>' + generate_toc(html) + '</ul></div>'
+      body = super(context)
+      
+      #Increment the sidenote counter
+      counter += 1
+
+
+      return build_marker(counter)
+    end
+
+    def build_sidenote()
+
     end
     
+    def build_marker(counter)
+      return '<div class="sidenote-marker" id="sn-' + counter + '"></div>'
+    end 
   end
 end
 
-Liquid::Template.register_tag('sidenote', Jekyll::TableOfContentsTag)
+Liquid::Template.register_tag('sidenote', Jekyll::SidenoteBlock)

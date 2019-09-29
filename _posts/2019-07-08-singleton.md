@@ -5,11 +5,13 @@ description: >-
   The Singleton is one of the easiest, and most controversial, design patterns to understand. 
   In this article, I attempt to breakdown the pattern in its entirety.
 updated:
+toc_text: "The five W's of Singletons."
 categories: [design patterns]
 ---
 
 The Singleton design pattern is one of the easiest design patterns to understand. 
 It is also one of the most controversial.
+
 
 The goal of this article is to present a general overview of the pattern.
 In the [What is the Singleton](/posts/the-singleton#what-is-the-singleton) section I define the pattern and explore when and why you *might* consider using it.
@@ -306,6 +308,405 @@ To use these methods, we must retrieve the instance of our `Logger` class using 
 ~~~
 
 And then we simply call the methods we want.
+
+
+### Eager vs. Lazy Initialization
+In the previous examples, we created the single instance of our classes immediately:
+
+~~~java
+    private static final Singleton INSTANCE = new Singleton();
+~~~
+
+This is called *Eager Initialization*, and it is one of two ways the Singleton pattern is commonly implemented.
+The other way is called *Lazy Initialization*.
+This is what a Singleton that uses *Lazy Initialization* looks like:
+
+~~~java
+public class LazySingleton {
+
+    private static LazySingleton instance = null;
+
+    private LazySingleton() { }
+
+    public static LazySingleton getInstance() {
+        if(instance == null) {
+            instance = new LazySingleton();
+        }
+
+        return instance;
+    }
+}
+~~~
+
+If you compare this implementation with the previous examples, you should noticed two key differences.
+
+~~~java
+    private static LazySingleton instance = null;
+~~~
+
+Firstly, instead of creating the single instance of our class immediately and assigning it to a private static final field, we declare a private static field and set it equal to `null`.
+
+~~~java
+    public static LazySingleton getInstance() {
+        if(instance == null) {
+            instance = new LazySingleton();
+        }
+
+        return instance;
+    }
+~~~
+
+Secondly, the `getInstance()` method is slightly more complex.
+Now, the method will check if the `instance` field is equal to `null`, create the single instance if it is, and return that instance.
+
+The effect of these two changes is that the creation of the single instance of our class is deferred until it is needed.
+
+*Eager Initialization* is used when the Singleton class should be available immediately to the program.
+*Lazy Initialization* is used when the Singleton should be created when it is first needed.
+
+Whether you should use *Eager Initialization* or *Lazy Initialization* comes down to the design of the class and your software.
+
+Is the class lightweight, or used every time the program is executed?
+Maybe use *Eager Initialization*.
+Is the class large, complex, or only used some of the time?
+Maybe use *Lazy Initialization*.
+
+### The Constructor
+Let's start with the constructor.
+In Java, the conventional way for creating an instance of a class is with the `new` keyword:
+
+~~~java
+    SomeClass instance = new SomeClass();
+~~~
+
+The above line creates an object of type `SomeClass` and stores it in the variable `instance`.
+
+The Singleton pattern requires us to limit our class to a single instance.
+To do this, we have to make sure our Singleton can't be instantiated outside of its class.
+We can achieved this with a private constructor:
+
+~~~java
+    private Singleton() { 
+
+    }
+~~~
+
+By declaring our constructor as `private` we make it so that the class can only be instantiated within itself.
+Attempting to instantiate our class outside of itself with the `new` keyword is no longer valid.
+
+### The Single Instance
+By making our constructor private, we've solved half of the "how do I limit a class to a single instance" problem.
+The next step is to create a way for our Singleton class to keep track of its single instance.
+
+~~~java
+    private static final Singleton INSTANCE = new Singleton();
+~~~
+
+The above line declares a private static final field of type `Singleton` called `INSTANCE`.
+This is where we create and store the single instance of our class.
+
+We declare `INSTANCE` as `private` so that it isn't directly exposed to the outside world.
+We make it `static` so that the field belongs to the class itself.
+And we make it `final` so that it can only be assigned once.
+
+The result is a private static final field which hold the one and only instance of our class.
+
+### A Global Point of Access
+The final ingredient of in Singleton pattern is a global point of access.
+Because the classes constructor and `INSTANCE` field are private, we cannot get an instance of our class without some help.
+
+The help we need is a public static method:
+
+~~~java
+    public static Singleton getInstance() {
+        return INSTANCE;
+    }
+~~~
+
+The convention is to call this method `getInstance()`.
+We declare it as `public` so that it can be accessed directly through the class.
+And we declare it as `static` so that it belongs to the class itself. [^4]
+
+This method is more a less a getter.
+Its only purpose is to return the instance of our class held in the `INSTANCE` field.
+
+### Putting It All Together
+
+If we combine our private constructor, private static final field `INSTANCE`, and our public static method `getInstance()`, we've built a bare bones Singleton:
+
+~~~java
+public class Singleton {
+
+    private static final Singleton INSTANCE = new Singleton();
+
+    private Singleton() { 
+
+    }
+
+    public static Singleton getInstance() {
+        return INSTANCE;
+    }
+}
+~~~
+
+Together the private constructor and private static final field `INSTANCE` satisfy the requirment of limiting the class to a single instance.
+And the `getInstance()` method fulfils the requirement of providing a global point of access to that instance.
+
+Using the Singleton is straightfoward:
+
+~~~java
+    Singleton instance = Singleton.getInstance();
+~~~
+
+All you have to do is store the results of the `getInstance()` method in a variable.
+You now have a working Singleton.
+
+
+### A Basic, But More Concrete Example
+
+In the [What is the Singleton]() section we used the example of a logging class.
+Here is what a primitive logging class that uses the Singleton pattern might look like:
+
+~~~java
+public Logger {
+
+    private static final Logger INSTANCE = new Logger();
+
+    private Logger() {
+
+    }
+
+    public static Logger getInstance() {
+        return INSTANCE;
+    }
+
+    public void log(String message) {
+        System.out.println(message);
+    }
+
+    public void info(String message) {
+        this.log("[INFO] " + message);
+    }
+
+    public void error(String message) {
+        this.log("[ERROR] " + message);
+    }
+}
+~~~
+
+Our `Logger` class has all the parts of the Singleton pattern that we covered in the previous sections.
+It has a private static final field `INSTANCE`, a private construtor, and a public static method `getInstance()`.
+
+Additionally, it has three other methods.
+To keep things simple this logger doesn't output to a log file, but, instead, outputs to a console.
+To use these methods, we must retrieve the instance of our `Logger` class using the `getInstance()` method:
+
+~~~java
+    Logger logger = Logger.getInstance();
+    logger.info("Here is our singleton logger in action!!!");
+~~~
+
+And then we simply call the methods we want.
+
+
+### Eager vs. Lazy Initialization
+In the previous examples, we created the single instance of our classes immediately:
+
+~~~java
+    private static final Singleton INSTANCE = new Singleton();
+~~~
+
+This is called *Eager Initialization*, and it is one of two ways the Singleton pattern is commonly implemented.
+The other way is called *Lazy Initialization*.
+This is what a Singleton that uses *Lazy Initialization* looks like:
+
+~~~java
+public class LazySingleton {
+
+    private static LazySingleton instance = null;
+
+    private LazySingleton() { }
+
+    public static LazySingleton getInstance() {
+        if(instance == null) {
+            instance = new LazySingleton();
+        }
+
+        return instance;
+    }
+}
+~~~
+
+If you compare this implementation with the previous examples, you should noticed two key differences.
+
+~~~java
+    private static LazySingleton instance = null;
+~~~
+
+Firstly, instead of creating the single instance of our class immediately and assigning it to a private static final field, we declare a private static field and set it equal to `null`.
+
+~~~java
+    public static LazySingleton getInstance() {
+        if(instance == null) {
+            instance = new LazySingleton();
+        }
+
+        return instance;
+    }
+~~~
+
+Secondly, the `getInstance()` method is slightly more complex.
+Now, the method will check if the `instance` field is equal to `null`, create the single instance if it is, and return that instance.
+
+The effect of these two changes is that the creation of the single instance of our class is deferred until it is needed.
+
+*Eager Initialization* is used when the Singleton class should be available immediately to the program.
+*Lazy Initialization* is used when the Singleton should be created when it is first needed.
+
+Whether you should use *Eager Initialization* or *Lazy Initialization* comes down to the design of the class and your software.
+
+Is the class lightweight, or used every time the program is executed?
+Maybe use *Eager Initialization*.
+Is the class large, complex, or only used some of the time?
+Maybe use *Lazy Initialization*.
+
+### The Constructor
+Let's start with the constructor.
+In Java, the conventional way for creating an instance of a class is with the `new` keyword:
+
+~~~java
+    SomeClass instance = new SomeClass();
+~~~
+
+The above line creates an object of type `SomeClass` and stores it in the variable `instance`.
+
+The Singleton pattern requires us to limit our class to a single instance.
+To do this, we have to make sure our Singleton can't be instantiated outside of its class.
+We can achieved this with a private constructor:
+
+~~~java
+    private Singleton() { 
+
+    }
+~~~
+
+By declaring our constructor as `private` we make it so that the class can only be instantiated within itself.
+Attempting to instantiate our class outside of itself with the `new` keyword is no longer valid.
+
+### The Single Instance
+By making our constructor private, we've solved half of the "how do I limit a class to a single instance" problem.
+The next step is to create a way for our Singleton class to keep track of its single instance.
+
+~~~java
+    private static final Singleton INSTANCE = new Singleton();
+~~~
+
+The above line declares a private static final field of type `Singleton` called `INSTANCE`.
+This is where we create and store the single instance of our class.
+
+We declare `INSTANCE` as `private` so that it isn't directly exposed to the outside world.
+We make it `static` so that the field belongs to the class itself.
+And we make it `final` so that it can only be assigned once.
+
+The result is a private static final field which hold the one and only instance of our class.
+
+### A Global Point of Access
+The final ingredient of in Singleton pattern is a global point of access.
+Because the classes constructor and `INSTANCE` field are private, we cannot get an instance of our class without some help.
+
+The help we need is a public static method:
+
+~~~java
+    public static Singleton getInstance() {
+        return INSTANCE;
+    }
+~~~
+
+The convention is to call this method `getInstance()`.
+We declare it as `public` so that it can be accessed directly through the class.
+And we declare it as `static` so that it belongs to the class itself. [^4]
+
+This method is more a less a getter.
+Its only purpose is to return the instance of our class held in the `INSTANCE` field.
+
+### Putting It All Together
+
+If we combine our private constructor, private static final field `INSTANCE`, and our public static method `getInstance()`, we've built a bare bones Singleton:
+
+~~~java
+public class Singleton {
+
+    private static final Singleton INSTANCE = new Singleton();
+
+    private Singleton() { 
+
+    }
+
+    public static Singleton getInstance() {
+        return INSTANCE;
+    }
+}
+~~~
+
+Together the private constructor and private static final field `INSTANCE` satisfy the requirment of limiting the class to a single instance.
+And the `getInstance()` method fulfils the requirement of providing a global point of access to that instance.
+
+Using the Singleton is straightfoward:
+
+~~~java
+    Singleton instance = Singleton.getInstance();
+~~~
+
+All you have to do is store the results of the `getInstance()` method in a variable.
+You now have a working Singleton.
+
+
+### A Basic, But More Concrete Example
+
+In the [What is the Singleton]() section we used the example of a logging class.
+Here is what a primitive logging class that uses the Singleton pattern might look like:
+
+~~~java
+public Logger {
+
+    private static final Logger INSTANCE = new Logger();
+
+    private Logger() {
+
+    }
+
+    public static Logger getInstance() {
+        return INSTANCE;
+    }
+
+    public void log(String message) {
+        System.out.println(message);
+    }
+
+    public void info(String message) {
+        this.log("[INFO] " + message);
+    }
+
+    public void error(String message) {
+        this.log("[ERROR] " + message);
+    }
+}
+~~~
+
+Our `Logger` class has all the parts of the Singleton pattern that we covered in the previous sections.
+It has a private static final field `INSTANCE`, a private construtor, and a public static method `getInstance()`.
+
+Additionally, it has three other methods.
+To keep things simple this logger doesn't output to a log file, but, instead, outputs to a console.
+To use these methods, we must retrieve the instance of our `Logger` class using the `getInstance()` method:
+
+~~~java
+    Logger logger = Logger.getInstance();
+    logger.info("Here is our singleton logger in action!!!");
+~~~
+
+And then we simply call the methods we want.
+
 
 ### Eager vs. Lazy Initialization
 In the previous examples, we created the single instance of our classes immediately:

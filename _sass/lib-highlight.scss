@@ -81,7 +81,7 @@ code.highlighter-rouge
 {
   font-size: 0.75em;
   line-height: 1.75em;
-  margin-bottom: $body-elem-bottom-margin;
+  margin-bottom: 30px;
 }
 
 pre.lineno
@@ -99,4 +99,25 @@ pre.lineno
   padding-right: 10px;
 
   visibility: visible;
+}
+
+/* width */
+.highlight::-webkit-scrollbar {
+  height: 8px;
+}
+
+/* Track */
+.highlight::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+/* Handle */
+.highlight::-webkit-scrollbar-thumb
+{
+  background: #bbbbbb; 
+}
+
+.highlight::-webkit-scrollbar-thumb:hover
+{
+  background: #929292; 
 }

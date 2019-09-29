@@ -8,8 +8,9 @@
   font-size: 1em;
   font-style: italic;
   
-  padding-left: $body-elem-left-pad;
-  margin-bottom: $body-elem-bottom-margin;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 30px;
 
   border-radius: 8px;
 }
@@ -149,10 +150,10 @@ h2.bib-header
 .post-wrapper .body ol.bibliography li p a:active,
 .post-wrapper .body ol.bibliography li p a:visited
 {
-  color: $link-hover;
+  color: $link-color;
 }
 
 .post-wrapper .body ol.bibliography li p a:hover
 {
-  color: $link-color;
+  color: $link-hover;
 }

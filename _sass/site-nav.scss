@@ -12,17 +12,18 @@
 {
   font-size: 1.125em;
   font-weight: 700;
-  text-align: center;
-  list-style: none;
-  padding: 0px;
   letter-spacing: 0.01em;
+
+  list-style: none;
+
+  padding: 0px;
+  margin-bottom: 0px;
 }
 
 .nav-wrapper nav.navigation ul li
 {
     display: inline-block;
     padding-right: 20px;
-    margin-bottom: 10px;
 }
 
 .nav-wrapper > .navigation > ul li a:link,
@@ -36,11 +37,4 @@
 .nav-wrapper > .navigation > ul li a:hover
 {
   color: $nav-hover;
-}
-
-@media (max-width: 991.98px)
-{
-    
-
-    
 }

@@ -11,7 +11,7 @@
 
 .post-wrapper .body ul li:last-child
 {
-  padding-bottom: $body-elem-bottom-margin;
+  padding-bottom: 30px;
 }
 
 /* ===== Key Points Unordered List Styles ===== */
@@ -35,7 +35,7 @@
 {
   font-size: 1em;
   list-style-position: inside;
-  padding-left: $body-elem-left-pad;
+  padding-left: 20px;
 }
 
 .post-wrapper .body ol li
@@ -45,7 +45,7 @@
 
 .post-wrapper .body ol li:last-child
 {
-  margin-bottom: $body-elem-bottom-margin;
+  margin-bottom: 30px;
 }
 
 /* ===== Lowercase Alphabet Ordered List Styles ===== */

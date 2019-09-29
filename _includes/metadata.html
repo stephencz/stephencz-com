@@ -2,14 +2,14 @@
   <ul class="metadata">
     <li class="info">
       {% if page.updated %}
-        updated: {{ page.updated | date: "%m/%-d/%Y"}}
+        updated: {{ page.updated | date: "%B %d, %Y"}}
 
       {% else %}
-        published: {{ page.date | date: "%m/%-d/%Y"}}
+        {{ page.date | date: "%B %d, %Y"}}
       {% endif %}
     </li>
 
-    <li class="info" style="color: #a5a5a5;">
+    <li class="info" style="color: #636363;">
       {{page.reading_time}} minutes 
     </li>
 
@@ -22,10 +22,10 @@
   <ul class="metadata">
     <li class="info">
       {% if post.updated %}
-        updated: {{ post.updated | date: "%m/%-d/%Y"}}
+        updated: {{ post.updated | date: "%B %d, %Y"}}
 
       {% else %}
-        published: {{ post.date | date: "%m/%-d/%Y"}}
+        {{ page.date | date: "%B %d, %Y"}}
       {% endif %}
     </li>
 

@@ -1,0 +1,97 @@
+
+.sn-row
+{
+  display: -ms-flexbox;
+  display: flex;
+
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  width: 100%;
+  height: 100%;
+
+  top: 0px;
+  left: 0px;
+}
+
+.sn-col-left
+{
+  display: flex;
+  position: absolute;
+  
+  flex: 0 0 calc((100vw - (1176px / 2)) / 2);
+  flex-direction: column;
+
+  height: auto;
+  width: 100%;
+  
+  max-width: calc((100vw - (1176px / 2)) / 2);
+
+  top: 580px;
+
+  padding: 10px 40px 10px 20px;
+}
+
+.sn-col-right
+{
+  display: flex;
+  position: absolute;
+
+  flex: 0 0 calc((100vw - (1176px / 2)) / 2);
+  flex-direction: column;
+
+  height: auto;
+  width: 100%;
+
+  max-width: calc((100vw - (1176px / 2)) / 2);
+
+  top: 0px;
+  right: 0px;
+
+  padding: 10px 20px 10px 40px;
+}
+
+.sn-col-left .sidenote,
+.sn-col-right .sidenote
+{
+  display: block;
+  font-size: 0.9em;
+
+  width: auto;
+  max-width: 580px;
+}
+
+.sn-col-left .sidenote
+{
+  margin-left: auto;
+}
+
+.sn-col-right .sidenote
+{
+  margin-right: auto;
+}
+
+.sidenote-marker
+{
+  visibility: hidden;
+
+  width: 0px;
+  height: 0px;
+
+  margin: 0px;
+  padding: 0px;
+}
+
+@media (max-width: 1279.98px) 
+{
+  .sn-row
+  {
+    visibility: hidden;
+
+    width: 0px;
+    height: 0px;
+
+    margin: 0px;
+    padding: 0px;
+  }
+}
