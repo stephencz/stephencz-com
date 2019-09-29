@@ -1,125 +1,89 @@
-/** The maximum width of a sidenote. */
-var MAX_WIDTH = 600;
-
-/** The minimum width of a sidenote. */
-var MIN_WIDTH = 340;
-
-var PADDING = 40;
-
-/** Get the size of the left gutter. */
-function _getLeftGutterSize() {
-  return $(".col-lg-6").offset().left;
+/** Returns an array of left sidenote markers. */
+function getLeftSidenoteMarkers() {
+  return $(".sn-marker-left");
 }
 
-/** Get the width of the right gutter. */
-function _getRightGutterSize() {
-  return $(window).width() - ($(".col-lg-6").offset().left + $(".col-lg-6").width());
+/** Returns an array of right sidenote markers. */
+function getRightSidenoteMarkers() {
+  return $(".sn-marker-right");
 }
 
-/** Get the width of the center column. */
-function _getCenterColSize() {
-  return $(".col-lg-6").width();
+/** Returns an array of sidenotes in the left sidenote column. */
+function getLeftSidenotes() {
+  return $(".sn-col-left").children(".sidenote");
 }
 
-/** Positions sidenote-left divs horizontally. */
-function _positionLeftSidenotesHorizontally(sidenote) {
-  let gutter = _getLeftGutterSize();
-  if(gutter >= MAX_WIDTH ) {
-    sidenote.css("left", -(MAX_WIDTH + PADDING));
-    sidenote.css("width", MAX_WIDTH);
-    sidenote.css("visibility", "visible");
-
-  } else if(gutter <= MAX_WIDTH && gutter >= MIN_WIDTH ) {
-    sidenote.css("width", gutter);
-    sidenote.css("left", -(gutter + PADDING));
-    sidenote.css("visibility", "visible");
-
-  } else {
-    sidenote.css("visibility", "hidden");
-
-  }
+/** Returns an array of sidenotes in the right sidenote column. */
+function getRightSidenotes() {
+  return $(".sn-col-right").children(".sidenote");
 }
 
-/** Positions sidenote-right divs horizontally. */
-function _positionRightSidenotesHorizontally(sidenote) {
-  let gutter = _getRightGutterSize();
-  if(gutter >= MAX_WIDTH) {
-    sidenote.css("left", _getCenterColSize());
-    sidenote.css("width", gutter - 40);
-    sidenote.css("visibility", "visible");
-
-  } else if(gutter <= MAX_WIDTH && gutter >= MIN_WIDTH) {
-    sidenote.css("left", _getCenterColSize());
-    sidenote.css("width", gutter - 40);
-    sidenote.css("visibility", "visible");
-
-  } else {
-    sidenote.css("visibility", "hidden");
-    
-  }
+/** Populates the left sidenote column with sidenotes. */
+function createLeftSidenotes() {
+  let left_col = $(".sn-col-left");
+  getLeftSidenoteMarkers().each(function(index, value) {
+    left_col.append('<div class="sidenote">' + $(this).html() + '</div>');
+  });
 }
 
-function _positionLeftSidenotesVertically(previous, sidenote) {
-  if(previous == null)
-  {
-    let toc = $(".toc-wrapper");
-    if(_doDivsOverlap(toc, sidenote)) {
-      console.log(_getBottomOffset(toc) - sidenote.height());
-      sidenote.css("top", _getBottomOffset(toc) - sidenote.height());
+/** Populates the right sidenote oclumn with sidenotes. */
+function createRightSidenotes() {
+  let right_col = $(".sn-col-right");
+  getRightSidenoteMarkers().each(function(index, value) {
+    right_col.append('<div class="sidenote">' + $(this).html() + '</div>');
+  });
+}
+
+/** Sets the top margins of sidenotes in the left sidenote column
+ *  so that the sidenotes are aligned with their respective markers.
+ */
+function setLeftSidenoteTopMargins() {
+  let markers = getLeftSidenoteMarkers();
+  let sidenotes = getLeftSidenotes();
+
+  previous = null
+  markers.each(function(index, value) {
+    marker_offset = $(this).offset().top
+    sidenote_offset = $(sidenotes[index]).offset().top;
+    margin = marker_offset - sidenote_offset;
+    if(margin > 0) {
+      $(sidenotes[index]).css("margin-top", margin);
     }
-  } else {
-    sidenote.css("top", _getBottomOffset(previous) - sidenote.height());
-  }
-}
-
-function _positionRightSidenotesVertically(previous, sidenote) {
-}
-
-function _doDivsOverlap(div1, div2) {
-
-  if(div2.offset().top <= _getBottomOffset(div1))
-  {
-    return true;
-
-  } else {
-    return false;
-  
-  }
-
-  return false;
-}
-
-function _getBottomOffset(div) {
-  return div.offset().top + div.height(); 
-}
-
-function _positionLeftSidenotes() {
-  let previous = null;
-  $(".sidenote-left").each(function (index) {
-    _positionLeftSidenotesHorizontally($(this))
-    _positionLeftSidenotesVertically(previous, $(this));
-    previous = $(this); 
   });
 }
 
-function _positionRightSidenotes() {
-  let previous = null;
-  $(".sidenote-right").each(function (index) {
-    _positionRightSidenotesHorizontally($(this));
-    _positionRightSidenotesVertically(previous, $(this));
-    previous = null
-  });
-}
+/** Sets the top margins of the sidenotes in the right sidenote column
+ *  so that the sidenotes are aligned with their respective markers.
+ */
+function setRightSidenoteTopMargins() {
+  let markers = getRightSidenoteMarkers();
+  let sidenotes = getRightSidenotes();
 
-function _positionSidenotes() {
-  _positionLeftSidenotes();
-  _positionRightSidenotes();
+  previous = null
+  markers.each(function(index, value) {
+    marker_offset = $(this).offset().top
+    sidenote_offset = $(sidenotes[index]).offset().top;
+    margin = marker_offset - sidenote_offset;
+    if(margin > 0) {
+      $(sidenotes[index]).css("margin-top", margin);
+    }
+  });
 }
 
 $( document ).ready(function() {
-  _positionSidenotes();
+
+  //Create sidenotes
+  createLeftSidenotes();
+  createRightSidenotes();
+
+  //Set the sidenote top margins.
+  setLeftSidenoteTopMargins();
+  setRightSidenoteTopMargins();
 });
 
 $(window).on('resize', function(){
-  _positionSidenotes();
+
+  //Set sidenote margins on resize.
+  setLeftSidenoteTopMargins();
+  setRightSidenoteTopMargins();
 });

@@ -7,28 +7,20 @@ module Jekyll
       super
       @tokens = tokens
       @args = args
-      @direction = args.split[0]
-      @classes = args.split.drop(1)
-      @counter = 0;
+      @direction = args.split[0].downcase.strip
     end
 
     def render(context)
-      body = super(context)
-      
-      #Increment the sidenote counter
-      counter += 1
-
-
-      return build_marker(counter)
+      block_body = super(context)
+      return build_marker(block_body)
     end
 
-    def build_sidenote()
-
-    end
-    
-    def build_marker(counter)
-      return '<div class="sidenote-marker" id="sn-' + counter + '"></div>'
+    # Places a sidenote marker element in the document.
+    # This is used for mantaining vertical positioning.
+    def build_marker(block_body)
+      return '<div class="sn-marker-' +  @direction + '">' + block_body + '</div>'
     end 
+
   end
 end
 

@@ -71,7 +71,8 @@
   margin-right: auto;
 }
 
-.sidenote-marker
+.sn-marker-left,
+.sn-marker-right
 {
   visibility: hidden;
 
@@ -82,7 +83,7 @@
   padding: 0px;
 }
 
-@media (max-width: 1279.98px) 
+@media (max-width: 1199.98px) 
 {
   .sn-row
   {
