@@ -43,10 +43,13 @@ function setLeftSidenoteTopMargins() {
 
   previous = null
   markers.each(function(index, value) {
+
+    $(sidenotes[index]).css("margin-top", 0);
+
     marker_offset = $(this).offset().top
     sidenote_offset = $(sidenotes[index]).offset().top;
     margin = marker_offset - sidenote_offset;
-    if(margin > 0) {
+    if($(sidenotes[index]).css("visibility") != "hidden" && margin > 0) {
       $(sidenotes[index]).css("margin-top", margin);
     }
   });
@@ -61,9 +64,20 @@ function setRightSidenoteTopMargins() {
 
   previous = null
   markers.each(function(index, value) {
+    
+    $(sidenotes[index]).css("margin-top", 0);
+
     marker_offset = $(this).offset().top
     sidenote_offset = $(sidenotes[index]).offset().top;
     margin = marker_offset - sidenote_offset;
+
+
+    if($(sidenotes[index]).css("visibility") != "hidden" && index == 0 ) {
+      console.log("MOF: " + marker_offset);
+      console.log("SNOF: " + sidenote_offset);
+      console.log("MAR: " + margin + "\n\n");
+    }
+
     if(margin > 0) {
       $(sidenotes[index]).css("margin-top", margin);
     }
@@ -81,7 +95,7 @@ $( document ).ready(function() {
   setRightSidenoteTopMargins();
 });
 
-$(window).on('resize', function(){
+$( window ).on('resize', function(){
 
   //Set sidenote margins on resize.
   setLeftSidenoteTopMargins();
