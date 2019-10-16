@@ -1,12 +1,12 @@
 .post-wrapper .body ul
 {
   font-size: 1em;
-  line-height: 1.3em;
+  line-height: 1.875em;
 }
 
 .post-wrapper .body ul li
 {
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 
 .post-wrapper .body ul li:last-child
@@ -26,7 +26,7 @@
   border-left: 3px solid #0bb10b;
   padding-bottom: 5px;
   padding-left: 5px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 
@@ -34,13 +34,14 @@
 .post-wrapper .body ol
 {
   font-size: 1em;
+  line-height: 1.875em;
   list-style-position: inside;
   padding-left: 20px;
 }
 
 .post-wrapper .body ol li
 {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .post-wrapper .body ol li:last-child

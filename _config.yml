@@ -1,36 +1,39 @@
+# Basic information for site
 title: Stephen Czekalski
 email: admin@stephencz.com
 description: The personal website of Stephen Czekalski. A place for me to store my writings and works on the topics which interest me.
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://www.stephencz.com" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" 
+url: "https://www.stephencz.com" 
 twitter_username: stephencz
 github_username:  stephencz
-
 permalink: /posts/:title
 
-sass:
-  style: compressed
-
+# Default variables
 defaults:
   -
     scope:
       path: ""
       type: "posts"
     values:
-      is_post: true
-      reading_time: 0
-      word_count: 0
-      toc: true
-      excerpt_separator: <!--more-->
+      is_post: true         # DO NOT EDIT: True to indicate is a post.
+      toc: true             # True when a table of contents should be generated. Otherwise false.
+      show_home: true       # True when the post should be displayed on the home page feed. Otherwise false.
+      display_time: true    # True when the reading time for the post should be displayed.
+      reading_time: 0       # DO NOT EDIT: The average time in minutes it takes to read the page
+      word_count: 0         # DO NOT EDIT: The number of words on the page.
+      
+      excerpt_separator: <!--more--> # This symbol will stop the excerpt. Used to control excerpt length.
 
   -
     scope:
       path: ""
       type: "pages"
     values:
-      is_page: true
-      toc: true
+      is_page: true         # DO NOT EDIT: True to indicate is a page.
+      toc: true             # True when a table of contents should be generated. Otherwise false.
+      display_time: true    # True when the reading time for the post should be displayed.
 
+# Markdown and Kramdown configuration.
 markdown: kramdown
 kramdown:
   input: GFM
@@ -40,6 +43,11 @@ kramdown:
     block:
       line_numbers: true
 
+# Sass configuration
+sass:
+  style: compressed
+
+#Jekyll Scholar configuration
 scholar:
   style: _bibliography/apa
   locale: en
@@ -61,11 +69,13 @@ scholar:
 
   query: "@*"
 
+# Plugins used by this site
 plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-scholar
 
+# Folders and files to exclude from the site build
 exclude:
   - /scripts
   - /vendor

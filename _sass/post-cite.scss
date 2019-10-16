@@ -91,14 +91,15 @@
 .post-wrapper .body .footnotes ol li p::before
 {
   counter-increment: ol-footnote-counter;
-  content: "[" counter(ol-footnote-counter) "]:";
+  content: counter(ol-footnote-counter) ":";
   
+  font-weight: 700;
   padding-right: 10px;
 }
 
 .post-wrapper .body .footnotes ol li p
 {
-  font-size: 1rem;
+  font-size: 0.85rem;
   margin-bottom: 0px;
 }
 

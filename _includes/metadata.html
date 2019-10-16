@@ -9,9 +9,11 @@
       {% endif %}
     </li>
 
+    {% if page.display_time %}
     <li class="info" style="color: #636363;">
-      {{page.reading_time}} minutes 
+      {{ page.content | number_of_words }} words
     </li>
+    {% endif %}
 
     {% for category in page.categories %} 
     {% assign url = category | replace: " ", "-" %}
@@ -25,13 +27,15 @@
         updated: {{ post.updated | date: "%B %d, %Y"}}
 
       {% else %}
-        {{ page.date | date: "%B %d, %Y"}}
+        {{ post.date | date: "%B %d, %Y"}}
       {% endif %}
     </li>
 
-    <li class="info" style="color: #a5a5a5;">
-      {{post.reading_time}} minutes 
+    {% if post.display_time %}
+    <li class="info" style="color: #636363;">
+      {{ post.content | number_of_words }} words
     </li>
+    {% endif %}
     
     {% for category in post.categories %} 
     {% assign url = category | replace: " ", "-" %}
