@@ -18,11 +18,16 @@ function getRightSidenotes() {
   return $(".sn-col-right").children(".sidenote");
 }
 
+function createInnerSidenotes() {
+  let left_markers = getLeftSidenoteMarkers();
+  let right_markers = getRightSidenoteMarkers();
+}
+
 /** Populates the left sidenote column with sidenotes. */
 function createLeftSidenotes() {
   let left_col = $(".sn-col-left");
   getLeftSidenoteMarkers().each(function(index, value) {
-    left_col.append('<div class="sidenote">' + $(this).html() + '</div>');
+    left_col.append('<div class="sidenote ">' + $(this).html() + '</div>');
   });
 }
 
@@ -52,6 +57,12 @@ function setLeftSidenoteTopMargins() {
     if($(sidenotes[index]).css("visibility") != "hidden" && margin > 0) {
       $(sidenotes[index]).css("margin-top", margin);
     }
+
+    // ADD ADDITIONAL CLASSES
+    let marker_classes = String($(markers[index]).attr("class")).replace(/,/g, '').split(/\s+/);
+    marker_classes.shift();
+    
+    $(sidenotes[index]).addClass(marker_classes.join(" "))
   });
 }
 
@@ -63,24 +74,23 @@ function setRightSidenoteTopMargins() {
   let sidenotes = getRightSidenotes();
 
   previous = null
+  
   markers.each(function(index, value) {
-    
     $(sidenotes[index]).css("margin-top", 0);
 
     marker_offset = $(this).offset().top
     sidenote_offset = $(sidenotes[index]).offset().top;
     margin = marker_offset - sidenote_offset;
 
-
-    if($(sidenotes[index]).css("visibility") != "hidden" && index == 0 ) {
-      console.log("MOF: " + marker_offset);
-      console.log("SNOF: " + sidenote_offset);
-      console.log("MAR: " + margin + "\n\n");
-    }
-
     if(margin > 0) {
       $(sidenotes[index]).css("margin-top", margin);
     }
+
+    // ADD ADDITIONAL CLASSES
+    let marker_classes = String($(markers[index]).attr("class")).replace(/,/g, '').split(/\s+/);
+    marker_classes.shift();
+
+    $(sidenotes[index]).addClass(marker_classes.join(" "))
   });
 }
 

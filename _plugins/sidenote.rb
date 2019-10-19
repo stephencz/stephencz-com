@@ -8,6 +8,8 @@ module Jekyll
       @tokens = tokens
       @args = args
       @direction = args.split[0].downcase.strip
+      @classes = args.split(" ")
+      @classes.delete_at(0)
     end
 
     def render(context)
@@ -18,7 +20,7 @@ module Jekyll
     # Places a sidenote marker element in the document.
     # This is used for mantaining vertical positioning.
     def build_marker(block_body)
-      return '<div class="sn-marker-' +  @direction + '">' + block_body + '</div>'
+      return '<div class="sn-marker-' +  @direction + ' ' + @classes.join(' ') + '">' + block_body + '</div>'
     end 
 
   end

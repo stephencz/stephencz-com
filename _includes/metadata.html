@@ -9,12 +9,6 @@
       {% endif %}
     </li>
 
-    {% if page.display_time %}
-    <li class="info" style="color: #636363;">
-      {{ page.content | number_of_words }} words
-    </li>
-    {% endif %}
-
     {% for category in page.categories %} 
     {% assign url = category | replace: " ", "-" %}
       <li class="category"><a href="/categories/{{ url }}">[{{ category }}]</a></li>
@@ -30,12 +24,6 @@
         {{ post.date | date: "%B %d, %Y"}}
       {% endif %}
     </li>
-
-    {% if post.display_time %}
-    <li class="info" style="color: #636363;">
-      {{ post.content | number_of_words }} words
-    </li>
-    {% endif %}
     
     {% for category in post.categories %} 
     {% assign url = category | replace: " ", "-" %}

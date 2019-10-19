@@ -82,6 +82,15 @@
   padding: 0px;
 }
 
+
+.sn-marker-left.center,
+.sn-marker-right.center,
+.sn-col-left .sidenote.center,
+.sn-col-left .sidenote.center
+{
+  text-align: center;
+}
+
 @media (max-width: 1199.98px) 
 {
   .sn-row
@@ -93,5 +102,14 @@
 
     margin: 0px;
     padding: 0px;
+  }
+
+  .sn-marker-left.collapsible,
+  .sn-marker-right.collapsible
+  {
+    visibility: visible;
+
+    height: auto;
+    width: auto;
   }
 }

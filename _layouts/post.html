@@ -4,6 +4,8 @@ layout: default
 {% assign title = 'test' %}
 
 <article class="post-wrapper">
+
+  {% include series.html is_home=false %}
   <h1 id="{{ page.title | downcase | replace: ' ', '-' }}" class="title">{{ page.title }}</h1>
   {% include metadata.html is_home=false %}
   <div class="body"> 
