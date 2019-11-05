@@ -2,12 +2,8 @@
 layout: home
 title: Home
 description: >-
-  Put description here!
+  The personal website of Stephen Czekalski. I created this website to to act as a
+  repository for my thoughts, ideas, and projects. The bulk of the website's content
+  are posts about topics I find interesting, or projects I'm working on. 
 toc: false
-toc_text: >-
-  <p><b>Welcome to the website of Stephen Czekalski.</b></p>
-  <p>
-    I created this website because I wanted a place to 
-  </p>
-  <p></p>
 ---

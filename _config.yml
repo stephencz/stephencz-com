@@ -38,9 +38,9 @@ defaults:
       path: ""
       type: "pages"
     values:
-      is_page: true         # DO NOT EDIT: True to indicate is a page.
-      toc: false             # True when a table of contents should be generated. Otherwise false.
-      display_time: true    # True when the reading time for the post should be displayed.
+      is_page: true                     # DO NOT EDIT: True to indicate is a page.
+      toc: false                        # True when a table of contents should be generated. Otherwise false.
+      display_time: true                # True when the reading time for the post should be displayed.
       reading_time: 0                   # DO NOT EDIT: The average time in minutes it takes to read the page
       word_count: 0                     # DO NOT EDIT: The number of words on the page.
 
