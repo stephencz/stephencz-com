@@ -37,6 +37,7 @@ function incrementTag(tag) {
 
   if(tag == "h1" || tag == "h2") {
     prefix += 1.0;
+    prefix = Math.floor(prefix);
     prefix = String(prefix) + ".0";
 
   } else if(tag == "h3") {

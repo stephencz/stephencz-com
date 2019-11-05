@@ -845,6 +845,23 @@ public class Logger {
 
 ## The Controversy
 
+## The Controversy
+
+## The Controversy
+
+## The Controversy
+
+## The Controversy
+
+## The Controversy
+
+## The Controversy
+
+## The Controversy
+
+## The Controversy
+
+
 {:.bib-header}
 ## References
 {% bibliography --file singleton %}
