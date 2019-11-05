@@ -1,5 +1,6 @@
 $category-title-size: 2em;
-$category-item-size: 1.125em;
+$category-post-size: 1em;
+$category-cat-size: 1em;
 
 .category-wrapper
 {
@@ -14,9 +15,16 @@ $category-item-size: 1.125em;
   font-weight: 700;
 }
 
+.category-wrapper .category-title-small
+{  
+  font-size: $h2-size;
+  font-weight: 700;
+}
+
+
 .category-wrapper ul.category-post-list
 {
-  font-size: $category-item-size;
+  font-size: $category-post-size;
   list-style: none;
 
   padding: 0px;
@@ -42,7 +50,7 @@ $category-item-size: 1.125em;
 
 ul.category-list
 {
-  font-size: $category-item-size;
+  font-size: $category-cat-size;
   margin-bottom: 30px;
   list-style: none;
   padding-left: 0px;
@@ -51,9 +59,7 @@ ul.category-list
 ul.category-list li
 {
   display: inline-block;
-
-  padding-bottom: 15px;
-  padding-right: 40px;
+  padding-right: 20px;
 }
 
 ul.category-list li a:link,

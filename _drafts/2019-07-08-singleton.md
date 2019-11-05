@@ -5,8 +5,16 @@ description: >-
   The Singleton is one of the easiest, and most controversial, design patterns to understand. 
   In this article, I attempt to breakdown the pattern in its entirety.
 updated:
-categories: [design patterns]
+categories: [Design Patterns]
 ---
+
+{% sidenote left collapsible %}
+<p>POOPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+{% endsidenote %}
+
+{% sidenote right %}
+<p>POOPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+{% endsidenote %}
 
 The Singleton design pattern is one of the easiest design patterns to understand. 
 It is also one of the most controversial.
@@ -57,6 +65,10 @@ Now, let's imagine a universe where every car has two steering systems.
 The first steering system controls the wheels on the left side of the car, while the second steering system controls the wheels on the right side of the car.
 To drive a car in this universe you require two drivers, each controlling a side of the car.
 
+{% sidenote right collapsible center %}
+<img class="img-fluid" src="https://media.giphy.com/media/UqZ4imFIoljlr5O2sM/giphy.gif">
+{% endsidenote %}
+
 When they want to make a turn, both drivers must turn in the direction they want the car to go.
 If they want to go to the supermarket, both drivers must turn right.
 If they want to go to the movie theater, both drivers must turn left.
@@ -65,7 +77,6 @@ What happens when there is a conflict of interest?
 What happens when you want to go to the supermarket, but the other driver wants to go to the movie theater? 
 
 You'll turn right, they'll turn left, and the car will skid to a stop or crash.
-
 <img src="/assets/images/singleton/singleton-2.png" class="img-fluid mx-auto" alt="An image depicting the two scenarios described above. One car has one steering system and is successfully turning right. Another car has two steering systems which are turning in conflicting direction i.e. towards or away from one another.">
 
 Situations such as these, where having more than one of something gives rise to a conflict, are prime examples of when using the Singleton pattern *might* make sense.
@@ -108,6 +119,24 @@ Graphic asset loading?
 It doesn't matter what these different systems do, what matters is understanding that each has the capacity to log information.
 Or, in other words, each system has access to some kind of logging class.
 
+{% sidenote right %}
+<p>POOPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+{% endsidenote %}
+
+
+
+{% sidenote left %}
+<p>POOPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+{% endsidenote %}
+
+{% sidenote left %}
+<p>POOPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+{% endsidenote %}
+
+{% sidenote left %}
+<p>POOPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+{% endsidenote %}
+
 How do we provide access to a logging class to a large portion of a program?
 
 One way is to create a new instance of the logger class everywhere it is needed.
@@ -119,6 +148,10 @@ Perhaps the act of attempting to access the same file is enough to cause an erro
 How do all the seperate instances of the logger class keep track of which line in the file is the next line to write to?
 Is it possible for the loggers to accidently overwrite each other's output?
 
+{% sidenote right %}
+<p>POOPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+{% endsidenote %}
+
 These are all vaild and important questions to ask.
 A logger which overwrites its own output, or doesn't present its output in chronological order, is a useless logger.
 
@@ -128,7 +161,6 @@ In the same way that we used the Singleton pattern to eliminate the conflict of 
 
 The Singleton pattern would limit our logger to a single instance and provide a global point of access to that instance.
 When a portion of the program needs to log information to a file it simple accesses our single instance of the logging class through the global access point and then uses the logger's functionality. [^3]
-
 
 <div class="key-section">
 ### The Big Idea
@@ -307,6 +339,405 @@ To use these methods, we must retrieve the instance of our `Logger` class using 
 
 And then we simply call the methods we want.
 
+
+### Eager vs. Lazy Initialization
+In the previous examples, we created the single instance of our classes immediately:
+
+~~~java
+    private static final Singleton INSTANCE = new Singleton();
+~~~
+
+This is called *Eager Initialization*, and it is one of two ways the Singleton pattern is commonly implemented.
+The other way is called *Lazy Initialization*.
+This is what a Singleton that uses *Lazy Initialization* looks like:
+
+~~~java
+public class LazySingleton {
+
+    private static LazySingleton instance = null;
+
+    private LazySingleton() { }
+
+    public static LazySingleton getInstance() {
+        if(instance == null) {
+            instance = new LazySingleton();
+        }
+
+        return instance;
+    }
+}
+~~~
+
+If you compare this implementation with the previous examples, you should noticed two key differences.
+
+~~~java
+    private static LazySingleton instance = null;
+~~~
+
+Firstly, instead of creating the single instance of our class immediately and assigning it to a private static final field, we declare a private static field and set it equal to `null`.
+
+~~~java
+    public static LazySingleton getInstance() {
+        if(instance == null) {
+            instance = new LazySingleton();
+        }
+
+        return instance;
+    }
+~~~
+
+Secondly, the `getInstance()` method is slightly more complex.
+Now, the method will check if the `instance` field is equal to `null`, create the single instance if it is, and return that instance.
+
+The effect of these two changes is that the creation of the single instance of our class is deferred until it is needed.
+
+*Eager Initialization* is used when the Singleton class should be available immediately to the program.
+*Lazy Initialization* is used when the Singleton should be created when it is first needed.
+
+Whether you should use *Eager Initialization* or *Lazy Initialization* comes down to the design of the class and your software.
+
+Is the class lightweight, or used every time the program is executed?
+Maybe use *Eager Initialization*.
+Is the class large, complex, or only used some of the time?
+Maybe use *Lazy Initialization*.
+
+### The Constructor
+Let's start with the constructor.
+In Java, the conventional way for creating an instance of a class is with the `new` keyword:
+
+~~~java
+    SomeClass instance = new SomeClass();
+~~~
+
+The above line creates an object of type `SomeClass` and stores it in the variable `instance`.
+
+The Singleton pattern requires us to limit our class to a single instance.
+To do this, we have to make sure our Singleton can't be instantiated outside of its class.
+We can achieved this with a private constructor:
+
+~~~java
+    private Singleton() { 
+
+    }
+~~~
+
+By declaring our constructor as `private` we make it so that the class can only be instantiated within itself.
+Attempting to instantiate our class outside of itself with the `new` keyword is no longer valid.
+
+### The Single Instance
+By making our constructor private, we've solved half of the "how do I limit a class to a single instance" problem.
+The next step is to create a way for our Singleton class to keep track of its single instance.
+
+~~~java
+    private static final Singleton INSTANCE = new Singleton();
+~~~
+
+The above line declares a private static final field of type `Singleton` called `INSTANCE`.
+This is where we create and store the single instance of our class.
+
+We declare `INSTANCE` as `private` so that it isn't directly exposed to the outside world.
+We make it `static` so that the field belongs to the class itself.
+And we make it `final` so that it can only be assigned once.
+
+The result is a private static final field which hold the one and only instance of our class.
+
+### A Global Point of Access
+The final ingredient of in Singleton pattern is a global point of access.
+Because the classes constructor and `INSTANCE` field are private, we cannot get an instance of our class without some help.
+
+The help we need is a public static method:
+
+~~~java
+    public static Singleton getInstance() {
+        return INSTANCE;
+    }
+~~~
+
+The convention is to call this method `getInstance()`.
+We declare it as `public` so that it can be accessed directly through the class.
+And we declare it as `static` so that it belongs to the class itself. [^4]
+
+This method is more a less a getter.
+Its only purpose is to return the instance of our class held in the `INSTANCE` field.
+
+### Putting It All Together
+
+If we combine our private constructor, private static final field `INSTANCE`, and our public static method `getInstance()`, we've built a bare bones Singleton:
+
+~~~java
+public class Singleton {
+
+    private static final Singleton INSTANCE = new Singleton();
+
+    private Singleton() { 
+
+    }
+
+    public static Singleton getInstance() {
+        return INSTANCE;
+    }
+}
+~~~
+
+Together the private constructor and private static final field `INSTANCE` satisfy the requirment of limiting the class to a single instance.
+And the `getInstance()` method fulfils the requirement of providing a global point of access to that instance.
+
+Using the Singleton is straightfoward:
+
+~~~java
+    Singleton instance = Singleton.getInstance();
+~~~
+
+All you have to do is store the results of the `getInstance()` method in a variable.
+You now have a working Singleton.
+
+
+### A Basic, But More Concrete Example
+
+In the [What is the Singleton]() section we used the example of a logging class.
+Here is what a primitive logging class that uses the Singleton pattern might look like:
+
+~~~java
+public Logger {
+
+    private static final Logger INSTANCE = new Logger();
+
+    private Logger() {
+
+    }
+
+    public static Logger getInstance() {
+        return INSTANCE;
+    }
+
+    public void log(String message) {
+        System.out.println(message);
+    }
+
+    public void info(String message) {
+        this.log("[INFO] " + message);
+    }
+
+    public void error(String message) {
+        this.log("[ERROR] " + message);
+    }
+}
+~~~
+
+Our `Logger` class has all the parts of the Singleton pattern that we covered in the previous sections.
+It has a private static final field `INSTANCE`, a private construtor, and a public static method `getInstance()`.
+
+Additionally, it has three other methods.
+To keep things simple this logger doesn't output to a log file, but, instead, outputs to a console.
+To use these methods, we must retrieve the instance of our `Logger` class using the `getInstance()` method:
+
+~~~java
+    Logger logger = Logger.getInstance();
+    logger.info("Here is our singleton logger in action!!!");
+~~~
+
+And then we simply call the methods we want.
+
+
+### Eager vs. Lazy Initialization
+In the previous examples, we created the single instance of our classes immediately:
+
+~~~java
+    private static final Singleton INSTANCE = new Singleton();
+~~~
+
+This is called *Eager Initialization*, and it is one of two ways the Singleton pattern is commonly implemented.
+The other way is called *Lazy Initialization*.
+This is what a Singleton that uses *Lazy Initialization* looks like:
+
+~~~java
+public class LazySingleton {
+
+    private static LazySingleton instance = null;
+
+    private LazySingleton() { }
+
+    public static LazySingleton getInstance() {
+        if(instance == null) {
+            instance = new LazySingleton();
+        }
+
+        return instance;
+    }
+}
+~~~
+
+If you compare this implementation with the previous examples, you should noticed two key differences.
+
+~~~java
+    private static LazySingleton instance = null;
+~~~
+
+Firstly, instead of creating the single instance of our class immediately and assigning it to a private static final field, we declare a private static field and set it equal to `null`.
+
+~~~java
+    public static LazySingleton getInstance() {
+        if(instance == null) {
+            instance = new LazySingleton();
+        }
+
+        return instance;
+    }
+~~~
+
+Secondly, the `getInstance()` method is slightly more complex.
+Now, the method will check if the `instance` field is equal to `null`, create the single instance if it is, and return that instance.
+
+The effect of these two changes is that the creation of the single instance of our class is deferred until it is needed.
+
+*Eager Initialization* is used when the Singleton class should be available immediately to the program.
+*Lazy Initialization* is used when the Singleton should be created when it is first needed.
+
+Whether you should use *Eager Initialization* or *Lazy Initialization* comes down to the design of the class and your software.
+
+Is the class lightweight, or used every time the program is executed?
+Maybe use *Eager Initialization*.
+Is the class large, complex, or only used some of the time?
+Maybe use *Lazy Initialization*.
+
+### The Constructor
+Let's start with the constructor.
+In Java, the conventional way for creating an instance of a class is with the `new` keyword:
+
+~~~java
+    SomeClass instance = new SomeClass();
+~~~
+
+The above line creates an object of type `SomeClass` and stores it in the variable `instance`.
+
+The Singleton pattern requires us to limit our class to a single instance.
+To do this, we have to make sure our Singleton can't be instantiated outside of its class.
+We can achieved this with a private constructor:
+
+~~~java
+    private Singleton() { 
+
+    }
+~~~
+
+By declaring our constructor as `private` we make it so that the class can only be instantiated within itself.
+Attempting to instantiate our class outside of itself with the `new` keyword is no longer valid.
+
+### The Single Instance
+By making our constructor private, we've solved half of the "how do I limit a class to a single instance" problem.
+The next step is to create a way for our Singleton class to keep track of its single instance.
+
+~~~java
+    private static final Singleton INSTANCE = new Singleton();
+~~~
+
+The above line declares a private static final field of type `Singleton` called `INSTANCE`.
+This is where we create and store the single instance of our class.
+
+We declare `INSTANCE` as `private` so that it isn't directly exposed to the outside world.
+We make it `static` so that the field belongs to the class itself.
+And we make it `final` so that it can only be assigned once.
+
+The result is a private static final field which hold the one and only instance of our class.
+
+### A Global Point of Access
+The final ingredient of in Singleton pattern is a global point of access.
+Because the classes constructor and `INSTANCE` field are private, we cannot get an instance of our class without some help.
+
+The help we need is a public static method:
+
+~~~java
+    public static Singleton getInstance() {
+        return INSTANCE;
+    }
+~~~
+
+The convention is to call this method `getInstance()`.
+We declare it as `public` so that it can be accessed directly through the class.
+And we declare it as `static` so that it belongs to the class itself. [^4]
+
+This method is more a less a getter.
+Its only purpose is to return the instance of our class held in the `INSTANCE` field.
+
+### Putting It All Together
+
+If we combine our private constructor, private static final field `INSTANCE`, and our public static method `getInstance()`, we've built a bare bones Singleton:
+
+~~~java
+public class Singleton {
+
+    private static final Singleton INSTANCE = new Singleton();
+
+    private Singleton() { 
+
+    }
+
+    public static Singleton getInstance() {
+        return INSTANCE;
+    }
+}
+~~~
+
+Together the private constructor and private static final field `INSTANCE` satisfy the requirment of limiting the class to a single instance.
+And the `getInstance()` method fulfils the requirement of providing a global point of access to that instance.
+
+Using the Singleton is straightfoward:
+
+~~~java
+    Singleton instance = Singleton.getInstance();
+~~~
+
+All you have to do is store the results of the `getInstance()` method in a variable.
+You now have a working Singleton.
+
+
+### A Basic, But More Concrete Example
+
+In the [What is the Singleton]() section we used the example of a logging class.
+Here is what a primitive logging class that uses the Singleton pattern might look like:
+
+~~~java
+public Logger {
+
+    private static final Logger INSTANCE = new Logger();
+
+    private Logger() {
+
+    }
+
+    public static Logger getInstance() {
+        return INSTANCE;
+    }
+
+    public void log(String message) {
+        System.out.println(message);
+    }
+
+    public void info(String message) {
+        this.log("[INFO] " + message);
+    }
+
+    public void error(String message) {
+        this.log("[ERROR] " + message);
+    }
+}
+~~~
+
+Our `Logger` class has all the parts of the Singleton pattern that we covered in the previous sections.
+It has a private static final field `INSTANCE`, a private construtor, and a public static method `getInstance()`.
+
+Additionally, it has three other methods.
+To keep things simple this logger doesn't output to a log file, but, instead, outputs to a console.
+To use these methods, we must retrieve the instance of our `Logger` class using the `getInstance()` method:
+
+~~~java
+    Logger logger = Logger.getInstance();
+    logger.info("Here is our singleton logger in action!!!");
+~~~
+
+And then we simply call the methods we want.
+
+
 ### Eager vs. Lazy Initialization
 In the previous examples, we created the single instance of our classes immediately:
 
@@ -413,9 +844,6 @@ public class Logger {
 
 
 ## The Controversy
-
-
-
 
 {:.bib-header}
 ## References

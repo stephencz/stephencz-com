@@ -1,15 +1,26 @@
 ---
 layout: default
 ---
-<article>
-  <div class="category-wrapper">
-      <h1 class="category-title">History</h1>
+<div class="col-xl-3"> {% include toc.html %} </div>
+
+<div class="col-xl-6">
+  <article class="category-wrapper">
+      <h1 class="category-title"> {{ page.title }}</h1>
       <ul class="category-post-list">
       {% for post in site.posts %}
         <li><span> {{post.date | date: "%B %-d, %Y"}} - </span> <a href="{{post.url}}">{{post.title}}</a></li>
       {% endfor %}
       </ul>
-  </div>
-</article>
 
-  
+    <h2 class="category-title margin-top-60">Categories</h2>
+    <ul class="category-list">
+      {% assign sorted_categories = site.categories | sort %}
+      {% for category in sorted_categories %}
+        {% assign url_part = category[0] | replace: " ", "-" %}
+        <li><a href="/categories/{{ url_part }}">{{ category[0] }}</a></li>
+      {% endfor %}
+    </ul>
+    </article> 
+</div>
+
+<div class="col-xl-3"></div>  

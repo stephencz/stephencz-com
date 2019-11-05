@@ -15,13 +15,23 @@ defaults:
       path: ""
       type: "posts"
     values:
+      toc: true                         # True when a table of contents should be generated. Otherwise false.
+
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
       is_post: true                     # DO NOT EDIT: True to indicate is a post.
       show_home: true                   # True when the post should be displayed on the home page feed. Otherwise false.
       toc: true                         # True when a table of contents should be generated. Otherwise false.
       display_time: true                # True when the reading time for the post should be displayed.
       reading_time: 0                   # DO NOT EDIT: The average time in minutes it takes to read the page
       word_count: 0                     # DO NOT EDIT: The number of words on the page.
-      excerpt_separator: <!--more-->    # This symbol will stop the excerpt. Used to control excerpt length.
+      is_series: false                  # True when the post is a part of a series. 
+      series_name: "untitled"           # The name of the series the post is a part of.
+      series_number: 0                  # The number of the post within the series. Used for ordering purposes
+      excerpt_separator: <!--more-->    # DO NOT EDIT: This symbol will stop the excerpt. Used to control excerpt length.
 
   -
     scope:
@@ -29,8 +39,10 @@ defaults:
       type: "pages"
     values:
       is_page: true         # DO NOT EDIT: True to indicate is a page.
-      toc: true             # True when a table of contents should be generated. Otherwise false.
+      toc: false             # True when a table of contents should be generated. Otherwise false.
       display_time: true    # True when the reading time for the post should be displayed.
+      reading_time: 0                   # DO NOT EDIT: The average time in minutes it takes to read the page
+      word_count: 0                     # DO NOT EDIT: The number of words on the page.
 
 # Markdown and Kramdown configuration.
 markdown: kramdown
