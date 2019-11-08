@@ -8,12 +8,13 @@ layout: default
       <h1 id="{{ page.title | downcase | replace: ' ', '-' }}" class="title">{{ page.title }}</h1>
 
       <div class="body series-wrapper">
-          {{ page.content | markdownify }}
+          {{ content }}
       
           {% assign sorted_posts = site.posts | group_by: "series_number" | sort_natural %}
           {% for series in site.data.series %}
     
-            <h2 class="series-title">{{ series.name }}</h2>
+            {% assign header_id = series.name | downcase | replace: " ", "-" %}
+            <h2 class="series-title" id="{{ header_id }}">{{ series.name }}</h2>
             <p>{{ series.description }}</p>
             <ul class="series-post-list">
             {% for post_group in sorted_posts %}

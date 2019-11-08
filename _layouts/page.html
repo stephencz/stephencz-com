@@ -8,7 +8,7 @@ layout: default
   {% assign title = page.title %}
   <article class="post-wrapper">
     <h1 id="{{ page.title | downcase | replace: ' ', '-' }}" class="title">{{ page.title }}</h1>
-    <div class="body">{{ page.content | markdownify }}</div>
+    <div class="body">{{ content | markdownify }}</div>
   </article>
 </div>
 

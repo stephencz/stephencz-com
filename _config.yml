@@ -4,7 +4,7 @@ email: admin@stephencz.com
 description: The personal website of Stephen Czekalski. A place for me to store my writings and works on the topics which interest me.
 baseurl: "/" 
 url: "https://www.stephencz.com" 
-twitter_username: stephencz
+twitter_username: stephencz_
 github_username:  stephencz
 permalink: /posts/:title
 

@@ -70,6 +70,19 @@
   margin-right: auto;
 }
 
+
+//SIDENOTE COL STYLES
+.sidenote.center-col
+{
+  margin-left: auto;
+}
+
+.sidenote.width-300
+{
+  width: 300px;
+}
+
+// SIDENOTE MARKER STYLES
 .sn-marker-left,
 .sn-marker-right
 {
@@ -82,14 +95,12 @@
   padding: 0px;
 }
 
-
 .sn-marker-left.center,
-.sn-marker-right.center,
-.sn-col-left .sidenote.center,
-.sn-col-left .sidenote.center
+.sn-marker-right.center
 {
   text-align: center;
 }
+
 
 @media (max-width: 1199.98px) 
 {

@@ -8,17 +8,20 @@
   font-size: $metadata-size;
 
   padding: 0px 0px 0px 0.5px;
-  margin: 0px 0px 0px 0px;
+  margin: 0px 0px 15px 0px;
 }
 
 .post-wrapper ul.metadata li
 {
   display: inline-block;
-  margin-bottom: 15px;
   padding-right: 10px;
 }
 
-.post-wrapper ul.metadata li.info { color: $metadata-info-color; }
+.post-wrapper ul.metadata li.info 
+{ 
+  color: $metadata-info-color; 
+  padding-right: 0px;
+}
 
 .post-wrapper ul.metadata li.category { }
 
@@ -34,4 +37,29 @@
 {
   color: $metadata-link-hover;
   text-decoration: none;
+}
+
+.post-wrapper ul.metadata li.series
+{
+  color: #636363; 
+  display: inline-block;
+}
+
+.post-wrapper ul.metadata li.series a:link,
+.post-wrapper ul.metadata li.series a:active,
+.post-wrapper ul.metadata li.series a:visited
+{
+  color: #636363;
+  text-decoration: underline;
+}
+
+.post-wrapper ul.metadata li.series a:hover
+{
+  color: $metadata-link-hover;
+  text-decoration: none;
+}
+
+.post-wrapper .meta-block
+{
+  display: block;
 }
