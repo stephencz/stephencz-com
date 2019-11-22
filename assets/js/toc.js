@@ -17,9 +17,7 @@ function populateTableOfContents() {
     let tag = $(this).prop('tagName').toLowerCase();
     let anchor = $(this).attr('id');
     let text = $(this).text();
-
-    console.log($(this));
-
+    
     incrementTag(tag);
 
     if(tag == "h1" || tag == "h2" || tag == "h3" || tag == "h4") {

@@ -70,7 +70,6 @@
   margin-right: auto;
 }
 
-
 //SIDENOTE COL STYLES
 .sidenote.center-col
 {
@@ -101,7 +100,6 @@
   text-align: center;
 }
 
-
 @media (max-width: 1199.98px) 
 {
   .sn-row
@@ -123,4 +121,31 @@
     height: auto;
     width: auto;
   }
+
+  .sn-marker-left.collapsible.obvious,
+  .sn-marker-right.collapsible.obvious
+  {
+    color: #6b6b6b;
+
+    font-style: italic;
+    font-size: 0.9em;
+  }
+}
+
+/* width */
+.sidenote::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+/* Track */
+.sidenote::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+/* Handle */
+.sidenote::-webkit-scrollbar-thumb,
+.sidenote::-webkit-scrollbar-thumb:hover
+{
+  background: #afafaf; 
 }

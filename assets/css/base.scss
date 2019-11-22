@@ -59,6 +59,7 @@ $inline-code-color: #9a0a0a;
 @import "site-toc";
 @import "site-footer";
 @import "site-util";
+@import "site-assistant";
 
 @import "post-title";
 @import "post-metadata";
@@ -69,6 +70,5 @@ $inline-code-color: #9a0a0a;
 @import "post-sidenote";
 @import "post-breakout";
 @import "post-banner";
-
-@import "category-core";
-@import "series-core";
+@import "post-category";
+@import "post-series";

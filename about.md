@@ -27,7 +27,7 @@ I don't need a comment section.
 I don't need a media library.
 And need to support multiple types of content.
 
-{% sidenote left collapsible center width-300 %}
+{% sidenote left center width-300 %}
 **Did you know:** Prior to switching to Jekyll, this website regularly had load times of over 10 seconds? 
 {% endsidenote %}
 
@@ -43,7 +43,7 @@ Static web pages are fixed (except for what can be changed with client side lang
 Whereas dynamic web pages are... dynamic. 
 The use of server sided languages, PHP in the case of WordPress, gives them their flexibility.
 
-{% sidenote right collapsible center width-300 %}
+{% sidenote right center width-300 %}
 **Did you know:** The bare-bones size of this website is less than 300KB? WordPress Core is roughly 30MB.
 {% endsidenote %}
 

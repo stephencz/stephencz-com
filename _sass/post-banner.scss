@@ -1,10 +1,28 @@
-.banner p img
+.breakout.banner p img
 {
   width: 100%;
 }
 
-.banner.outline p img
+.breakout.banner.outline p img
 {
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
+  border-top: 1px solid #6d6d6d;
+  border-bottom: 1px solid #6d6d6d;
+}
+
+.breakout.banner.uncollapsible
+{
+  visibility: visible;
+}
+
+@media (max-width: 1199.98px) 
+{
+  .breakout.banner.uncollapsible
+  {
+    visibility: hidden;
+
+    margin: 0px;
+    padding: 0px;
+    width: 0px;
+    height: 0px;
+  }
 }

@@ -94,6 +94,40 @@ function setRightSidenoteTopMargins() {
   });
 }
 
+/**
+ * Returns a list of breakout elements. These are elements which respect the flow
+ * of the main content body, but break out of the body container itself. An example
+ * of this is a banner image which, despite being apart of the main content body and
+ * not apart from it like a sidenote (i.e existing within its on flow structure), is 
+ * displayed over the sidenote columns.
+ */
+function getBreakouts()
+{
+  return $(".breakout");
+}
+
+/**
+ * Fix sidenote overlaps.
+ */
+function fixSidenoteOverlap() {
+  let sidenotes = $.merge(getLeftSidenotes(), getRightSidenotes());
+  console.log(sidenotes);
+  let breakouts = getBreakouts();
+  sidenotes.each(function(i1, v1) {
+    var $this = $(this);
+    breakouts.each(function(i2, v2) {
+      let breakoutTopOffset = $(this).offset().top;
+      let sidenoteTopOffset = $this.offset().top;
+      let sidenoteHeight = $this.height();
+
+      if((sidenoteTopOffset + sidenoteHeight) >= breakoutTopOffset && !(sidenoteTopOffset >= breakoutTopOffset)) {
+        $this.css("height", breakoutTopOffset - sidenoteTopOffset);
+        $this.css("overflow-y", "scroll")
+      }
+    });
+  });
+}
+
 $( document ).ready(function() {
 
   //Create sidenotes
@@ -103,6 +137,10 @@ $( document ).ready(function() {
   //Set the sidenote top margins.
   setLeftSidenoteTopMargins();
   setRightSidenoteTopMargins();
+
+  //Fix overlaps
+  fixSidenoteOverlap();
+  
 });
 
 $( window ).on('resize', function(){
@@ -110,4 +148,6 @@ $( window ).on('resize', function(){
   //Set sidenote margins on resize.
   setLeftSidenoteTopMargins();
   setRightSidenoteTopMargins();
+  
+  fixSidenoteOverlap();
 });

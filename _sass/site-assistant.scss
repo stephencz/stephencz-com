@@ -1,0 +1,35 @@
+.assistant-wrapper
+{
+  background-color: #000;
+
+  position: fixed;
+
+  top: 0px;
+  left: 0px;
+
+  width: 100vw;
+  height: 30px;
+
+  visibility: hidden;
+
+  z-index: 100;
+}
+
+.assistant
+{
+
+}
+
+.assistant .page-navigator
+{
+
+}
+
+@media (max-width: 767.98px) 
+{
+  .assistant-wrapper
+  { 
+    height: 0px;
+    visibility: hidden; 
+  }
+}
