@@ -16,17 +16,19 @@
   display: flex;
   position: absolute;
   
-  flex: 0 0 calc((100vw - (1176px / 2)) / 2);
+  //flex: 0 0 calc((100vw - (1176px / 2)) / 2);
+  flex: 0 0 calc((100vw - (1205px / 2)) / 2);
   flex-direction: column;
 
   height: auto;
   width: 100%;
   
-  max-width: calc((100vw - (1176px / 2)) / 2);
+  //max-width: calc((100vw - (1176px / 2)) / 2);
+  max-width: calc((100vw - (1205px / 2)) / 2);
 
   top: 580px;
 
-  padding: 10px 40px 10px 20px;
+  padding: 10px 15px 10px 10px;
 }
 
 .sn-col-right
@@ -34,18 +36,20 @@
   display: flex;
   position: absolute;
 
-  flex: 0 0 calc((100vw - (1176px / 2)) / 2);
+  //flex: 0 0 calc((100vw - (1176px / 2)) / 2);
+  flex: 0 0 calc((100vw - (1205px / 2)) / 2);
   flex-direction: column;
 
   height: auto;
   width: 100%;
 
-  max-width: calc((100vw - (1176px / 2)) / 2);
+  //max-width: calc((100vw - (1176px / 2)) / 2);
+  max-width: calc((100vw - (1205px / 2)) / 2);
 
   top: 0px;
   right: 0px;
 
-  padding: 10px 20px 10px 40px;
+  padding: 10px 10px 10px 15px;
 }
 
 .sn-col-left .sidenote,

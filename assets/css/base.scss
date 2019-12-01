@@ -15,7 +15,7 @@ $h4-size: 1em;
 $h5-size: 0.85em;
 $h6-size: 0.75em;
 
-$body-text-color: #000;
+$body-text-color: #222;
 
 $main-header-size: 3em;
 $navigation-size: 1em;
@@ -27,25 +27,25 @@ $header-background: #fafafa;
 $header-border: #b7b7b7;
 $header-color: #8c8c8c;
 
-$title-link-color: #000;
-$title-link-hover: #000;
+$title-link-color: #222;
+$title-link-hover: #222;
 
 $nav-color: #636363;
-$nav-hover: #d63434;
+$nav-hover: #c71212;
 
-$link-color: #d63434;
+$link-color: #c71212;
 $link-hover: #636363;
 
 $metadata-info-color: #636363;
 
-$metadata-link-color: #d63434;
+$metadata-link-color: #c71212;
 $metadata-link-hover: #636363;
 
 $blockquote-color: #404040;
 $blockquote-background: #f9f9f9;
 $blockquote-border: #f1f1f1;
 
-$footnote-sup: #d63434;
+$footnote-sup: #c71212;
 $footnote-hover: #636363;
 
 $inline-code-color: #9a0a0a;
@@ -59,14 +59,12 @@ $inline-code-color: #9a0a0a;
 @import "site-toc";
 @import "site-footer";
 @import "site-util";
-@import "site-assistant";
 
 @import "post-title";
 @import "post-metadata";
 @import "post-core";
 @import "post-list";
 @import "post-cite";
-@import "post-util";
 @import "post-sidenote";
 @import "post-breakout";
 @import "post-banner";
