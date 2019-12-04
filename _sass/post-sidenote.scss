@@ -9,6 +9,7 @@
 
   top: 0px;
   left: 0px;
+
 }
 
 .sn-col-left
@@ -16,19 +17,17 @@
   display: flex;
   position: absolute;
   
-  //flex: 0 0 calc((100vw - (1176px / 2)) / 2);
   flex: 0 0 calc((100vw - (1205px / 2)) / 2);
   flex-direction: column;
 
   height: auto;
   width: 100%;
   
-  //max-width: calc((100vw - (1176px / 2)) / 2);
   max-width: calc((100vw - (1205px / 2)) / 2);
 
   top: 580px;
 
-  padding: 10px 15px 10px 10px;
+  padding: 0px 15px 0px 10px;
 }
 
 .sn-col-right
@@ -36,20 +35,36 @@
   display: flex;
   position: absolute;
 
-  //flex: 0 0 calc((100vw - (1176px / 2)) / 2);
   flex: 0 0 calc((100vw - (1205px / 2)) / 2);
   flex-direction: column;
 
   height: auto;
   width: 100%;
 
-  //max-width: calc((100vw - (1176px / 2)) / 2);
   max-width: calc((100vw - (1205px / 2)) / 2);
 
   top: 0px;
   right: 0px;
 
-  padding: 10px 10px 10px 15px;
+  padding: 0px 10px 0px 15px;
+}
+
+// SIDENOTE MARKER STYLES
+.sn-marker-left,
+.sn-marker-right
+{
+  visibility: hidden;
+
+  height: 0px;
+
+  margin: 0px;
+  padding: 0px;
+}
+
+.sn-marker-left.center,
+.sn-marker-right.center
+{
+  text-align: center;
 }
 
 .sn-col-left .sidenote,
@@ -60,8 +75,6 @@
 
   width: auto;
   max-width: 580px;
-
-  margin-bottom: 10px;
 }
 
 .sn-col-left .sidenote
@@ -80,33 +93,93 @@
   margin-left: auto;
 }
 
-.sidenote.width-300
-{
-  width: 300px;
+.sidenote { z-index: 1; }
+
+/* width */
+.sidenote::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
 }
 
-// SIDENOTE MARKER STYLES
-.sn-marker-left,
-.sn-marker-right
-{
-  visibility: hidden;
-
-  width: 0px;
-  height: 0px;
-
-  margin: 0px;
-  padding: 0px;
+/* Track */
+.sidenote::-webkit-scrollbar-track {
+  background: #f1f1f1; 
 }
 
-.sn-marker-left.center,
-.sn-marker-right.center
+/* Handle */
+.sidenote::-webkit-scrollbar-thumb,
+.sidenote::-webkit-scrollbar-thumb:hover
 {
-  text-align: center;
+  background: #afafaf; 
 }
 
-@media (max-width: 1199.98px) 
+.sidenote p img
 {
-  .sn-row
+  max-width: 100%;
+}
+
+.sidenote p img 
+{
+  padding-top: 30px;
+}
+
+.sidenote.centered
+{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sidenote.width-100 { width: 100px; }
+.sidenote.width-200 { width: 200px; }
+.sidenote.width-300 { width: 300px; }
+.sidenote.width-400 { width: 400px; }
+.sidenote.width-500 { width: 500px; }
+
+.sidenote.height-100 { max-height: 100px; overflow-y: auto; }
+.sidenote.height-150 { max-height: 150px; overflow-y: auto; }
+.sidenote.height-200 { max-height: 200px; overflow-y: auto; }
+.sidenote.height-250 { max-height: 250px; overflow-y: auto; }
+.sidenote.height-300 { max-height: 300px; overflow-y: auto; }
+.sidenote.height-350 { max-height: 350px; overflow-y: auto; }
+.sidenote.height-400 { max-height: 400px; overflow-y: auto; }
+.sidenote.height-450 { max-height: 450px; overflow-y: auto; }
+.sidenote.height-500 { max-height: 500px; overflow-y: auto; }
+.sidenote.height-550 { max-height: 550px; overflow-y: auto; }
+.sidenote.height-600 { max-height: 600px; overflow-y: auto; }
+.sidenote.height-650 { max-height: 650px; overflow-y: auto; }
+.sidenote.height-700 { max-height: 700px; overflow-y: auto; }
+.sidenote.height-750 { max-height: 750px; overflow-y: auto; }
+.sidenote.height-800 { max-height: 800px; overflow-y: auto; }
+.sidenote.height-850 { max-height: 850px; overflow-y: auto; }
+.sidenote.height-900 { max-height: 900px; overflow-y: auto; }
+.sidenote.height-950 { max-height: 950px; overflow-y: auto; }
+
+.sidenote.unbounded
+{
+  max-height: none !important;
+  overflow-y: visible !important;
+}
+
+@media (max-width: 1400.98px) 
+{
+  .sn-col-right,
+  .sn-col-left
+  {
+    visibility: hidden;
+
+    width: 0px;
+    height: 0px;
+
+    margin: 0px;
+    padding: 0px;
+
+    left: 0px;
+    overflow: hidden;
+  }
+
+  .sn-row,
+  .sn-col-left .sidenote,
+  .sn-col-right .sidenote
   {
     visibility: hidden;
 
@@ -134,22 +207,6 @@
     font-style: italic;
     font-size: 0.9em;
   }
+
 }
 
-/* width */
-.sidenote::-webkit-scrollbar {
-  width: 3px;
-  height: 3px;
-}
-
-/* Track */
-.sidenote::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-}
-
-/* Handle */
-.sidenote::-webkit-scrollbar-thumb,
-.sidenote::-webkit-scrollbar-thumb:hover
-{
-  background: #afafaf; 
-}

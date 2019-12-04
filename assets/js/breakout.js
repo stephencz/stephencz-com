@@ -1,10 +1,9 @@
-
 /** Position breakout elements to compensate for container's left margin. */
 function setBreakoutPosition() {
   let bodyLeftOffset = $(".body").offset().left;
   $(".breakout").each(function(index, value) {
-    let leftOffset = bodyLeftOffset * -1;
-    $(this).css("left", leftOffset);
+    let leftOffset = (bodyLeftOffset) * -1;
+    $(this).css("left", leftOffset );
   });
 }
 

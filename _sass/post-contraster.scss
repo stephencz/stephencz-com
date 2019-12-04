@@ -1,0 +1,25 @@
+.contraster-start-marker,
+.contraster-end-marker,
+{
+  width: 0px;
+  height: 0px;
+  
+  padding: 0px;
+  margin: 0px;
+
+  visibility: hidden;
+}
+
+.contraster-end-marker
+{
+  padding-bottom: 15px;
+}
+
+.contraster
+{
+  position: absolute;
+  width: 100vw;
+  max-width: 100%;
+  z-index: 0;
+  padding-bottom: 15px;
+}

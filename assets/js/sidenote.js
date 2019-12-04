@@ -25,17 +25,36 @@ function createInnerSidenotes() {
 
 /** Populates the left sidenote column with sidenotes. */
 function createLeftSidenotes() {
+  let markers = getLeftSidenoteMarkers();
   let left_col = $(".sn-col-left");
+
   getLeftSidenoteMarkers().each(function(index, value) {
-    left_col.append('<div class="sidenote ">' + $(this).html() + '</div>');
+    let sidenote = $('<div class="sidenote ">' + $(this).html() + '</div>')
+    left_col.append(sidenote);
+
+    let marker_classes = String($(markers[index]).attr("class")).replace(/,/g, '').split(/\s+/);
+    marker_classes.shift();
+    
+    sidenote.addClass(marker_classes.join(" "));
+    sidenote.attr("style", $(this).attr("style"));
   });
 }
 
 /** Populates the right sidenote oclumn with sidenotes. */
 function createRightSidenotes() {
+  let markers = getRightSidenoteMarkers();
   let right_col = $(".sn-col-right");
+
   getRightSidenoteMarkers().each(function(index, value) {
-    right_col.append('<div class="sidenote">' + $(this).html() + '</div>');
+    let sidenote = $('<div class="sidenote ">' + $(this).html() + '</div>')
+    right_col.append(sidenote);
+
+    let marker_classes = String($(markers[index]).attr("class")).replace(/,/g, '').split(/\s+/);
+    marker_classes.shift();
+
+    sidenote.addClass(marker_classes.join(" "));
+    sidenote.attr("style", $(this).attr("style"));
+
   });
 }
 
@@ -51,18 +70,22 @@ function setLeftSidenoteTopMargins() {
 
     $(sidenotes[index]).css("margin-top", 0);
 
-    marker_offset = $(this).offset().top
-    sidenote_offset = $(sidenotes[index]).offset().top;
-    margin = marker_offset - sidenote_offset;
+    let margin = 0;
+
+    if(previous != null) {
+      previousBottom = previous.offset().top + previous.height();
+      markerOffset = $(this).offset().top;
+      margin = markerOffset - previousBottom;
+
+    } else {
+      margin = $(this).offset().top - $(".sn-col-left").offset().top;
+    }
+
     if($(sidenotes[index]).css("visibility") != "hidden" && margin > 0) {
       $(sidenotes[index]).css("margin-top", margin);
     }
 
-    // ADD ADDITIONAL CLASSES
-    let marker_classes = String($(markers[index]).attr("class")).replace(/,/g, '').split(/\s+/);
-    marker_classes.shift();
-    
-    $(sidenotes[index]).addClass(marker_classes.join(" "))
+    previous = $(sidenotes[index]);
   });
 }
 
@@ -74,57 +97,27 @@ function setRightSidenoteTopMargins() {
   let sidenotes = getRightSidenotes();
 
   previous = null
-  
   markers.each(function(index, value) {
+
     $(sidenotes[index]).css("margin-top", 0);
 
-    marker_offset = $(this).offset().top
-    sidenote_offset = $(sidenotes[index]).offset().top;
-    margin = marker_offset - sidenote_offset;
+    let margin = 0;
 
-    if(margin > 0) {
+    if(previous != null) {
+
+      previousBottom = previous.offset().top + previous.height();
+      markerOffset = $(this).offset().top;
+      margin = markerOffset - previousBottom;
+
+    } else {
+      margin = $(this).offset().top - $(".sn-col-right").offset().top;
+    }
+
+    if($(sidenotes[index]).css("visibility") != "hidden" && margin > 0) {
       $(sidenotes[index]).css("margin-top", margin);
     }
 
-    // ADD ADDITIONAL CLASSES
-    let marker_classes = String($(markers[index]).attr("class")).replace(/,/g, '').split(/\s+/);
-    marker_classes.shift();
-
-    $(sidenotes[index]).addClass(marker_classes.join(" "))
-  });
-}
-
-/**
- * Returns a list of breakout elements. These are elements which respect the flow
- * of the main content body, but break out of the body container itself. An example
- * of this is a banner image which, despite being apart of the main content body and
- * not apart from it like a sidenote (i.e existing within its on flow structure), is 
- * displayed over the sidenote columns.
- */
-function getBreakouts()
-{
-  return $(".breakout");
-}
-
-/**
- * Fix sidenote overlaps.
- */
-function fixSidenoteOverlap() {
-  let sidenotes = $.merge(getLeftSidenotes(), getRightSidenotes());
-  console.log(sidenotes);
-  let breakouts = getBreakouts();
-  sidenotes.each(function(i1, v1) {
-    var $this = $(this);
-    breakouts.each(function(i2, v2) {
-      let breakoutTopOffset = $(this).offset().top;
-      let sidenoteTopOffset = $this.offset().top;
-      let sidenoteHeight = $this.height();
-
-      if((sidenoteTopOffset + sidenoteHeight) >= breakoutTopOffset && !(sidenoteTopOffset >= breakoutTopOffset)) {
-        $this.css("height", breakoutTopOffset - sidenoteTopOffset);
-        $this.css("overflow-y", "scroll")
-      }
-    });
+    previous = $(sidenotes[index]);
   });
 }
 
@@ -138,9 +131,6 @@ $( document ).ready(function() {
   setLeftSidenoteTopMargins();
   setRightSidenoteTopMargins();
 
-  //Fix overlaps
-  fixSidenoteOverlap();
-  
 });
 
 $( window ).on('resize', function(){
@@ -148,6 +138,86 @@ $( window ).on('resize', function(){
   //Set sidenote margins on resize.
   setLeftSidenoteTopMargins();
   setRightSidenoteTopMargins();
-  
-  fixSidenoteOverlap();
 });
+
+$(document).imagesLoaded( function() {
+  //Set sidenote margins on resize.
+  setLeftSidenoteTopMargins();
+  setRightSidenoteTopMargins();
+
+
+});
+
+// /**
+//  * Determines if the first element in overlapping the second element.
+//  * @param {*} e1 
+//  * @param {*} e2 
+//  */
+// function isYOverlap(e1, e2) {
+//   let firstTopOffset = $(e1).offset().top;
+//   let firstHeight = $(e1).height();
+
+//   let secondTopOffset = $(e2).offset().top;
+
+//   if(!(firstTopOffset >= secondTopOffset)) {
+//     if((firstTopOffset + firstHeight) >= secondTopOffset) {
+//       return true;
+//     }
+//   }
+
+//   return false;
+// }
+
+// /**
+//  * Determines if an element which exists within another, for example a sidenote
+//  * inside a contraster, is overlapping outside of the it (sidenote leaking out of
+//  * the bottom of the contraster for example).
+//  * @param {*} e1 
+//  * @param {*} e2 
+//  */
+// function isYExitLap(e1, e2) {
+//   let firstTopOffset = $(e1).offset().top;
+//   let firstHeight = $(e1).height();
+
+//   let secondTopOffset = $(e2).offset().top;
+//   let secondHeight = $(e2).height();
+
+//   if(((firstTopOffset + firstHeight) >= (secondTopOffset + secondHeight)) && firstTopOffset < (secondTopOffset + secondHeight)) {
+//     return true;
+//   }
+
+//   return false;
+// }
+
+// function getPreOverlapHeight() {
+
+// }
+
+// function getPostExitlapHeight() {
+  
+// }
+
+
+// function fixOverlap(sidenotes) {
+
+//   //Arrays of the things a sidenote could overlap
+//   let contrasters = $(".contraster");
+
+//   //Merge the potential victims 
+//   //NOT NEEDED YET
+
+//   //Check for overlap and handle it.
+//   sidenotes.each(function(i1, v1) {
+//     contrasters.each(function(i2, v2) {
+//       if(isYOverlap(sidenotes[i1], contrasters[i2]))
+//       {
+//         $(sidenotes[i1]).css("color", "#0f0");
+//       }
+
+//       if(isYExitLap(sidenotes[i1], contrasters[i2]))
+//       {
+//         $(sidenotes[i1]).css("color", "#0f0");
+//       }
+//     });
+//   });
+// }

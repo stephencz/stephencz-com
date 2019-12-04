@@ -1,7 +1,7 @@
 require 'nokogiri'
 
 module Jekyll
-  class BannerTag < Liquid::Tag
+  class BreakoutBlock < Liquid::Block
 
     def initialize(name, args, tokens)
       super
@@ -13,10 +13,11 @@ module Jekyll
     end
 
     def render(context)
-      return '<div class="breakout banner ' + @classes.join(' ') + '"><p>![](' + @url + ')</p></div>'
+      block_body = super(context)
+      return '<div class="breakout ' + @classes.join(' ') + '">' + block_body + '</div>'
     end
 
   end
 end
 
-Liquid::Template.register_tag('banner', Jekyll::BannerTag)
+Liquid::Template.register_tag('breakout', Jekyll::BreakoutBlock)

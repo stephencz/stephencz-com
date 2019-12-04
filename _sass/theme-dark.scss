@@ -1,0 +1,88 @@
+$dark-theme-bg-color: #232323;
+$dark-theme-font-color: #9c9c9c;
+
+$dark-theme-inline-color: #58b314;
+$dark-theme-link-color: #58b314;
+$dark-theme-link-hover-color: #366e0a;
+
+$dark-theme-sidenote-bg-color: #232323;
+$dark-theme-sidenote-scroll-bg-color: #585858;
+$dark-theme-sidenote-scroll-thumb-color: #a6a6a6 ;
+
+.contraster.dark-theme
+{
+  background-color: $dark-theme-bg-color;
+}
+
+.dark-theme
+{
+  color: $dark-theme-font-color;
+}
+
+.dark-theme code.highlighter-rouge
+{
+  color: $dark-theme-inline-color;
+  font-size: 0.875em;
+}
+
+.post-wrapper .body p.dark-theme sup a:link, 
+.post-wrapper .body p.dark-theme sup a:active, 
+.post-wrapper .body p.dark-theme sup a:visited
+{
+  color: $dark-theme-link-color;
+}
+
+.post-wrapper .body p.dark-theme sup a:hover
+{
+  color: $dark-theme-link-hover-color;
+}
+
+.post-wrapper .body p.dark-theme sup a::before
+{
+  color: $dark-theme-link-color;
+  content: "[";
+}
+
+.post-wrapper .body p.dark-theme sup a::after
+{
+  color: $dark-theme-link-color;
+  content: "]";
+}
+
+.post-wrapper .body p.dark-theme sup a:hover::before
+{
+  color: $dark-theme-link-hover-color;
+  content: "[";
+}
+
+.post-wrapper .body p.dark-theme sup a:hover::after
+{
+  color: $dark-theme-link-hover-color;
+  content: "]";
+}
+
+
+.sidenote.dark-theme 
+{
+  background-color: $dark-theme-sidenote-bg-color;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* width */
+.sidenote.dark-theme::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+/* Track */
+.sidenote.dark-theme::-webkit-scrollbar-track {
+  background: $dark-theme-sidenote-scroll-bg-color; 
+}
+
+/* Handle */
+.sidenote.dark-theme::-webkit-scrollbar-thumb,
+.sidenote.dark-theme::-webkit-scrollbar-thumb:hover
+{
+  background: $dark-theme-sidenote-scroll-thumb-color; 
+}

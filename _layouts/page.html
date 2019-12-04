@@ -6,13 +6,9 @@ layout: default
 
 <div class="col-xl-6">
   <article class="post-wrapper">
-    <h1 id="{{ page.title | downcase | replace: ' ', '-' }}" class="title">{{ page.title }}</h1>
+    <h1 id="{{ page.title | downcase | replace: ' ', '-' }}" class="title no-metadata">{{ page.title }}</h1>
     <div class="body">{{ content | markdownify }}</div>
   </article>
 </div>
 
 <div class="col-xl-3"></div>
-
-{% if page.show_assistant %}
-  {% include assistant.html %}
-{% endif %}
