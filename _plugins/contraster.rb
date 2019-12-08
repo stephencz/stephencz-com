@@ -22,10 +22,11 @@ module Jekyll
       super
       @tokens = tokens
       @args = args
+      @classes = args.split(" ")
     end
 
     def render(context)
-      return '<div class="contraster-end-marker"></div>'
+      return '<div class="contraster-end-marker ' + @classes.join(' ') + '"></div>'
     end
 
   end

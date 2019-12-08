@@ -16,6 +16,7 @@ defaults:
       type: "posts"
     values:
       toc: true                         # True when a table of contents should be generated. Otherwise false.
+      scripts: []
 
   -
     scope:

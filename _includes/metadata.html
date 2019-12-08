@@ -2,7 +2,7 @@
   <ul class="metadata">
     <li class="info">
       {% if page.updated %}
-        updated: {{ page.updated | date: "%B %d, %Y"}}
+        Updated: {{ page.updated | date: "%B %d, %Y"}}
 
       {% else %}
         {{ page.date | date: "%B %d, %Y"}}
@@ -27,7 +27,7 @@
   <ul class="metadata">
     <li class="info">
       {% if post.updated %}
-        updated: {{ post.updated | date: "%B %d, %Y"}}
+        Updated: {{ post.updated | date: "%B %d, %Y"}}
 
       {% else %}
         {{ post.date | date: "%B %d, %Y"}}

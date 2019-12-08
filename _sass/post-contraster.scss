@@ -10,10 +10,14 @@
   visibility: hidden;
 }
 
-.contraster-end-marker
-{
-  padding-bottom: 15px;
-}
+.contraster-start-marker { padding-top: 120px; }
+.contraster-end-marker { padding-bottom: 120px; }
+
+.contraster-start-marker.spacing-60 { padding-top: 60px; }
+.contraster-end-marker.spacing-60 { padding-bottom: 60px; }
+
+.contraster-start-marker.spacing-120 { padding-top: 120px; }
+.contraster-end-marker.spacing-120 { padding-bottom: 120px; }
 
 .contraster
 {
@@ -21,5 +25,4 @@
   width: 100vw;
   max-width: 100%;
   z-index: 0;
-  padding-bottom: 15px;
 }

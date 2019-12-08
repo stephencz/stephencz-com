@@ -43,14 +43,21 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/6.0.3/typeit.min.js"></script>
 
   {% if page.toc == true %}
-  <script src="/assets/js/toc.js"></script>
+  <script src="/assets/js/plugins/toc.js"></script>
   {% endif %}
 
   {% if page.layout == 'page' or page.layout == 'post' %}
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <script src="/assets/js/contraster.js"></script>
-  <script src="/assets/js/breakout.js"></script>
-  <script defer src="/assets/js/sidenote.js"></script>
+  <script src="/assets/js/plugins/contraster.js"></script>
+  <script src="/assets/js/plugins/breakout.js"></script>
+  <script defer src="/assets/js/plugins/sidenote.js"></script>
+  {% endif %}
+
+  {% assign scripts_size = site.posts | size %}
+  {% if scripts_size > 0 %}
+    {% for script in page.scripts %}
+      {{ script }}
+    {% endfor %}
   {% endif %}
 
   <script>
