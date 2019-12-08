@@ -90,6 +90,27 @@ function setContrasterSizes(contrasters, starts, ends, firsts, lasts) {
   }
 }
 
+function getChildrenRecursively(parent) {
+  $found = $();
+
+  if(parent.children().length > 0) {
+    $(parent).children().each(function(index, value) {
+      $.merge($found, getChildrenRecursively($(this))); 
+    });
+
+    $found.push($(parent));
+  
+  } else {
+    $found.push($(parent));
+
+  }
+
+  console.log($found);
+
+
+  return $.merge([], $found);
+}
+
 /** Applies the contraster theme to every element between the start and end markers in the body. */
 function applyThemeToBody(contrasters, starts, ends) {
   if(contrasters.length !== 0) {
@@ -97,11 +118,26 @@ function applyThemeToBody(contrasters, starts, ends) {
       let startMarker = $(starts[index]);
       let endMarker = $(ends[index]);
       let theme = $(this).attr("class").split(" ")[1];
-      startMarker.nextUntil(endMarker).addClass(theme);
-      
+
+
+      var $siblings = startMarker.nextUntil(endMarker);
+      var $children = $();
+
+      $siblings.each(function(i2, v2) {
+        $children = $(v2).find("*");
+      });
+
+      $.merge($siblings, $children).each(function(i2, v2){
+        $(v2).addClass(theme);
+      });
+
+      startMarker.addClass(theme);
+      endMarker.addClass(theme);
     });
   }
 }
+
+
 
 /** Applies the contraster theme to every sidenote between the start and end markers. */
 function applyThemeToSidenotes(contrasters, starts, ends) {

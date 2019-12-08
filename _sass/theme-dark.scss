@@ -1,9 +1,9 @@
 $dark-theme-bg-color: #232323;
 $dark-theme-font-color: #9c9c9c;
 
-$dark-theme-inline-color: #58b314;
-$dark-theme-link-color: #58b314;
-$dark-theme-link-hover-color: #366e0a;
+$dark-theme-inline-color: #e6db74;
+$dark-theme-link-color: #f92672;
+$dark-theme-link-hover-color: #a6e22e;
 
 $dark-theme-sidenote-bg-color: #232323;
 $dark-theme-sidenote-scroll-bg-color: #585858;
@@ -61,6 +61,18 @@ $dark-theme-sidenote-scroll-thumb-color: #a6a6a6 ;
   content: "]";
 }
 
+.post-wrapper .body .dark-theme a:link, 
+.post-wrapper .body .dark-theme a:active, 
+.post-wrapper .body .dark-theme a:visited
+{
+  color: $dark-theme-link-color;
+}
+
+.post-wrapper .body .dark-theme a:hover
+{
+  color: $dark-theme-link-hover-color;
+
+}
 
 .sidenote.dark-theme 
 {
@@ -85,4 +97,237 @@ $dark-theme-sidenote-scroll-thumb-color: #a6a6a6 ;
 .sidenote.dark-theme::-webkit-scrollbar-thumb:hover
 {
   background: $dark-theme-sidenote-scroll-thumb-color; 
+}
+
+.post-wrapper .body table.table.dark-theme
+{
+    background-color: #4c4c4c;
+    width: 100%;
+}
+
+.post-wrapper .body table.table.dark-theme tr:nth-child(odd)
+{
+    background-color: #444444;
+}
+
+
+.dark-theme pre
+{
+  color: #c7c7c7;
+}
+
+.dark-theme .highlight .c, 
+.dark-theme .highlight .ch, 
+.dark-theme .highlight .cd, 
+.dark-theme .highlight .cpf {
+  color: #c7c7c7;
+  font-style: italic;
+}
+.dark-theme .highlight .cm {
+  color: #c7c7c7;
+  font-style: italic;
+}
+.dark-theme .highlight .c1 {
+  color: #c7c7c7;
+  font-style: italic;
+}
+.dark-theme .highlight .cp {
+  color: #c7c7c7;
+  font-weight: bold;
+}
+.dark-theme .highlight .cs {
+  color: #c7c7c7;
+  font-weight: bold;
+  font-style: italic;
+}
+.dark-theme .highlight .err {
+  color: #960050;
+  background-color: #1e0010;
+}
+.dark-theme .highlight .gi {
+  color: #ffffff;
+  background-color: #324932;
+}
+.dark-theme .highlight .gd {
+  color: #ffffff;
+  background-color: #493131;
+}
+.dark-theme .highlight .ge {
+  color: #000000;
+  font-style: italic;
+}
+.dark-theme .highlight .gr {
+  color: #aa0000;
+}
+.dark-theme .highlight .gt {
+  color: #aa0000;
+}
+.dark-theme .highlight .gh {
+  color: #999999;
+}
+.dark-theme .highlight .go {
+  color: #888888;
+}
+.dark-theme .highlight .gp {
+  color: #555555;
+}
+.dark-theme .highlight .gs {
+  font-weight: bold;
+}
+.dark-theme .highlight .gu {
+  color: #aaaaaa;
+}
+.dark-theme .highlight .k, .dark-theme .highlight .kv {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.dark-theme .highlight .kc {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.dark-theme .highlight .kd {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.dark-theme .highlight .kp {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.dark-theme .highlight .kr {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.dark-theme .highlight .kt {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.dark-theme .highlight .kn {
+  color: #f92672;
+  font-weight: bold;
+}
+.dark-theme .highlight .ow {
+  color: #f92672;
+  font-weight: bold;
+}
+.dark-theme .highlight .o {
+  color: #f92672;
+  font-weight: bold;
+}
+.dark-theme .highlight .mf {
+  color: #ae81ff;
+}
+.dark-theme .highlight .mh {
+  color: #ae81ff;
+}
+.dark-theme .highlight .il {
+  color: #ae81ff;
+}
+.dark-theme .highlight .mi {
+  color: #ae81ff;
+}
+.dark-theme .highlight .mo {
+  color: #ae81ff;
+}
+.dark-theme .highlight .m, 
+.dark-theme .highlight .mb, 
+.dark-theme .highlight .mx {
+  color: #ae81ff;
+}
+.dark-theme .highlight .se {
+  color: #ae81ff;
+}
+.dark-theme .highlight .sb {
+  color: #e6db74;
+}
+.dark-theme .highlight .sc {
+  color: #e6db74;
+}
+.dark-theme .highlight .sd {
+  color: #e6db74;
+}
+.dark-theme .highlight .s2 {
+  color: #e6db74;
+}
+.dark-theme .highlight .sh {
+  color: #e6db74;
+}
+.dark-theme .highlight .si {
+  color: #e6db74;
+}
+.dark-theme .highlight .sx {
+  color: #e6db74;
+}
+.dark-theme .highlight .sr {
+  color: #e6db74;
+}
+.dark-theme .highlight .s1 {
+  color: #e6db74;
+}
+.dark-theme .highlight .ss {
+  color: #e6db74;
+}
+.dark-theme .highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.dark-theme .highlight .na {
+  color: #a6e22e;
+}
+.dark-theme .highlight .nc {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.dark-theme .highlight .nd {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.dark-theme .highlight .ne {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.dark-theme .highlight .nf, 
+.dark-theme .highlight .fm {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.dark-theme .highlight .no {
+  color: #66d9ef;
+}
+.dark-theme .highlight .bp {
+  color: #f8f8f2;
+}
+.dark-theme .highlight .nb {
+  color: #f8f8f2;
+}
+.dark-theme .highlight .ni {
+  color: #f8f8f2;
+}
+.dark-theme .highlight .nn {
+  color: #f8f8f2;
+}
+.dark-theme .highlight .vc {
+  color: #f8f8f2;
+}
+.dark-theme .highlight .vg {
+  color: #f8f8f2;
+}
+.dark-theme .highlight .vi {
+  color: #f8f8f2;
+}
+.dark-theme .highlight .nv, 
+.dark-theme .highlight .vm {
+  color: #f8f8f2;
+}
+.dark-theme .highlight .w {
+  color: #f8f8f2;
+}
+.dark-theme .highlight .nl {
+  color: #f8f8f2;
+  font-weight: bold;
+}
+.dark-theme .highlight .nt {
+  color: #f92672;
+}
+.dark-theme .highlight {
+  color: #f8f8f2;
+  background-color: #49483e;
 }

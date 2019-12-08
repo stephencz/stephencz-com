@@ -1,0 +1,20 @@
+.post-wrapper .body table.table
+{
+    background-color: #f7f7f7;
+    width: 100%;
+}
+
+.post-wrapper .body table.table tr:nth-child(odd)
+{
+    background-color: #fff;
+}
+
+.post-wrapper .body table.table th
+{
+    padding: 10px;
+}
+
+.post-wrapper .body table.table td
+{
+    padding: 5px 10px 5px 10px;
+}

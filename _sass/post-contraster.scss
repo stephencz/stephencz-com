@@ -1,3 +1,11 @@
+.contraster
+{
+  position: absolute;
+  width: 100vw;
+  max-width: 100%;
+  z-index: 0;
+}
+
 .contraster-start-marker,
 .contraster-end-marker,
 {
@@ -13,16 +21,39 @@
 .contraster-start-marker { padding-top: 120px; }
 .contraster-end-marker { padding-bottom: 120px; }
 
+.contraster-start-marker.spacing-10 { padding-top: 10px; }
+.contraster-end-marker.spacing-10 { padding-bottom: 10px; }
+
+.contraster-start-marker.spacing-20 { padding-top: 20px; }
+.contraster-end-marker.spacing-20 { padding-bottom: 20px; }
+
+.contraster-start-marker.spacing-30 { padding-top: 30px; }
+.contraster-end-marker.spacing-30 { padding-bottom: 30px; }
+
+.contraster-start-marker.spacing-40 { padding-top: 40px; }
+.contraster-end-marker.spacing-40 { padding-bottom: 40px; }
+
+.contraster-start-marker.spacing-50 { padding-top: 50px; }
+.contraster-end-marker.spacing-50 { padding-bottom: 50px; }
+
 .contraster-start-marker.spacing-60 { padding-top: 60px; }
 .contraster-end-marker.spacing-60 { padding-bottom: 60px; }
+
+.contraster-start-marker.spacing-70 { padding-top: 70px; }
+.contraster-end-marker.spacing-70 { padding-bottom: 70px; }
+
+.contraster-start-marker.spacing-80 { padding-top: 80px; }
+.contraster-end-marker.spacing-80 { padding-bottom: 80px; }
+
+.contraster-start-marker.spacing-90 { padding-top: 90px; }
+.contraster-end-marker.spacing-90 { padding-bottom: 90px; }
+
+.contraster-start-marker.spacing-100 { padding-top: 100px; }
+.contraster-end-marker.spacing-100 { padding-bottom: 100px; }
+
+.contraster-start-marker.spacing-110 { padding-top: 110px; }
+.contraster-end-marker.spacing-110 { padding-bottom: 110px; }
 
 .contraster-start-marker.spacing-120 { padding-top: 120px; }
 .contraster-end-marker.spacing-120 { padding-bottom: 120px; }
 
-.contraster
-{
-  position: absolute;
-  width: 100vw;
-  max-width: 100%;
-  z-index: 0;
-}
