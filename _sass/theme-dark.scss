@@ -105,6 +105,16 @@ $dark-theme-sidenote-scroll-thumb-color: #a6a6a6 ;
     width: 100%;
 }
 
+.post-wrapper .body table.table.dark-theme thead th
+{
+  border-bottom: 2px solid #5a5a5a;
+}
+
+.post-wrapper .body table.table.dark-theme td
+{
+  border-bottom: 2px solid #5a5a5a;
+}
+
 .post-wrapper .body table.table.dark-theme tr:nth-child(odd)
 {
     background-color: #444444;

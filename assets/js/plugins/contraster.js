@@ -62,26 +62,7 @@ function setContrasterSizes(contrasters, starts, ends, firsts, lasts) {
 
       let firstElem = $(firsts[index]);
       let lastElem = $(lasts[index]);
-
-      // if(parseInt(firstElem.css("margin-top"), 10) > 0) {
-        
-      //   let offset = lastElem.offset().top - firstElem.offset().top;
-      //   let marginFix = parseInt(firstElem.css("margin-top"), 10);
-      //   let height =  + lastElem.height() + offset + marginFix;
-
-      //   endMarker.css("padding-bottom", marginFix / 2);
-      //   $(this).css("height", height);
-
-
-      // } else {
-      //   let offset = lastElem.offset().top - firstElem.offset().top;
-      //   let marginFix = parseInt(firstElem.css("margin-bottom"), 10);
-      //   let height =  + lastElem.height() + offset + marginFix;
-
-      //   endMarker.css("padding-bottom", marginFix / 2);
-      //   $(this).css("height", height);
-      // }
-
+      
       endMarker.next().css("margin-top", parseInt(endMarker.css("padding-bottom"), 10));
       lastElem.css("margin-bottom", 0);
       $(this).css("height", (endMarker.offset().top - startMarker.offset().top) + parseInt(endMarker.css("padding-bottom"), 10));
@@ -119,18 +100,19 @@ function applyThemeToBody(contrasters, starts, ends) {
       let endMarker = $(ends[index]);
       let theme = $(this).attr("class").split(" ")[1];
 
-
       var $siblings = startMarker.nextUntil(endMarker);
       var $children = $();
-
+      console.log($siblings)
       $siblings.each(function(i2, v2) {
-        $children = $(v2).find("*");
+        let more = $(v2).find('*');
+        $.merge($children, more);        
       });
 
       $.merge($siblings, $children).each(function(i2, v2){
         $(v2).addClass(theme);
       });
 
+      console.log($siblings);
       startMarker.addClass(theme);
       endMarker.addClass(theme);
     });

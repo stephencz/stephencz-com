@@ -117,7 +117,7 @@ This leads to consistent spacing.
 {% breakout %}
 
 <div markdown="0" class="row">
-<div markdown="0" class="col-xl-7 mx-auto">
+<div markdown="0" class="col-xl-6 mx-auto">
 
 {: .table style="margin-left: auto; margin-right: auto; margin-top: 30px; margin-bottom: 30px; "}
 | Rule           | Effect                            |
@@ -139,5 +139,9 @@ This leads to consistent spacing.
 </div>
 
 {% endbreakout %}
+
+
+
+<p>Test</p>
 
 {% endcontraster spacing-60 %}
