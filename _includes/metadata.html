@@ -14,12 +14,12 @@
     <li class="series">from <a href="/series#{{ link }}">{{ page.series_name }}</a></li>
       {% for category in page.categories %} 
       {% assign url = category | replace: " ", "-" %}
-        <li class="category"><a href="/categories/{{ url }}">[{{ category }}]</a></li>
+        <li class="category"><a href="/categories/{{ url }}">[{{ category | downcase }}]</a></li>
       {% endfor %}
     {% else %}
       {% for category in page.categories %} 
       {% assign url = category | replace: " ", "-" %}
-        <li class="category"><a href="/categories/{{ url }}">[{{ category }}]</a></li>
+        <li class="category"><a href="/categories/{{ url }}">[{{ category | downcase }}]</a></li>
       {% endfor %}
     {% endif %}
   </ul>
@@ -39,12 +39,12 @@
       <li class="series">from <a href="/series#{{ link }}">{{ post.series_name }}</a></li>
         {% for category in post.categories %} 
         {% assign url = category | replace: " ", "-" %}
-          <li class="category"><a href="/categories/{{ url }}">[{{ category }}]</a></li>
+          <li class="category"><a href="/categories/{{ url }}">[{{ category | downcase }}]</a></li>
         {% endfor %}
     {% else %}
       {% for category in post.categories %} 
       {% assign url = category | replace: " ", "-" %}
-        <li class="category"><a href="/categories/{{ url }}">[{{ category }}]</a></li>
+        <li class="category"><a href="/categories/{{ url }}">[{{ category | downcase }}]</a></li>
       {% endfor %}
     {% endif %}
 

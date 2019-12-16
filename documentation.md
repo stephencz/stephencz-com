@@ -12,39 +12,53 @@ This is a test. This is a test. This is a test. This is a test. This is a test. 
 This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. 
 This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. 
 
-## Plugins
+## Breakouts
 
-### Breakouts
+Breakouts are used to let content escape the main column. For example:
 
-Breakouts are
+{% breakout %}
 
-```html
-<div class="contraster-start-marker dark-theme spacing-60"></div>
-<!-- Everything between the contraster and endcontraster tags -->
-<div class="contraster-end-marker spacing-60"></div>
+<p>Check out this ugly sentence. Why is it all the way over here? Because its inside a breakout! Seriously, inspect the source code. Are you inspecting it yet? How about now? Are you doing it now? Pssst! It doesn't actually matter what I'm saying here. This is just an example. Are you still reading this? You are? Okay... well... move on now.</p>
+
+{% endbreakout %}
+
+You see how the paragraph no longer respects the boundary of the main column, but still respects the flow?
+That is the entire point of breakouts.
+They may seem simple and useless upon first glance, but they are one of the most powerful tools I have.
+
+A breakout can contain any valid HTML. Any. This means that they can be used to display tables, images, javascript programs, etc.
+
+Here is the syntax for a breakout: 
+
+{% raw %}
+```plaintext
+{% breakout <additional classes> %}
+  //Content
+{% endbreakout %}
 ```
+{% endraw %}
 
-{: .table style="margin-left: auto; margin-right: auto; margin-top: 30px; margin-bottom: 30px; "}
-| Rule           | Effect                            |
-|----------------|-----------------------------------|
-| `.spacing-10`  | Sets a total margin of 10px.      |
-| `.spacing-20`  | Sets a total margin of 20px.      |
-| `.spacing-30`  | Sets a total margin of 30px.      |
-| `.spacing-40`  | Sets a total margin of 40px.      |
-| `.spacing-50`  | Sets a total margin of 50px.      |
-| `.spacing-60`  | Sets a total margin of 60px.      |
-| `.spacing-70`  | Sets a total margin of 70px.      |
-| `.spacing-80`  | Sets a total margin of 80px.      |
-| `.spacing-90`  | Sets a total margin of 90px.      |
-| `.spacing-100` | Sets a total margin of 100px.     |
-| `.spacing-110` | Sets a total margin of 110px.     |
-| `.spacing-120` | Sets a total margin of 120px.     |
 
-### Sidenotes
+## Banners
+
+Banners are a special type of breakout.
+They are used to display images that are the full width of the browser window.
+
+{% banner /assets/img/banner-example.gif %}
+
+That is a breakout.
+
+{% raw %}
+```plaintext
+{% banner <image/url> <additional classes> %}
+```
+{% endraw %}
+
+## Sidenotes
 
 {% contraster dark-theme spacing-60 %}
 
-### Contrasters
+## Contrasters
 
 I create contrasters to break up the visual monotony of long posts.
 Contrasters work by applying a theme, represented by a series of CSS rules, to every element within a section of a post.
@@ -98,13 +112,13 @@ This can lead to some ugly clashing of themes.
 One solution is to apply one of the `.height-xxx` classes to sidenotes in danger of spilling into or out of a contraster. 
 See sidenote's [Additional Classes]() for more information.
 
-#### Themes
+### Themes
 
 Currently there is one theme for contrasters: `dark-theme`.
 
-#### Additional Classes
+### Additional Classes
 
-While contrasters can except any number of additional CSS classes, there is only one series of additional classes
+While contrasters can accept any number of additional CSS classes, there is only one series of additional classes
 made specifically for contrasters. These classes take the form of `.spacing-xxx`. 
 
 The standard spacing of a contraster is `120px`. 
@@ -112,12 +126,6 @@ This value is divided in half and applied to the element before the contraster, 
 
 In other words, there is a 60px margin at the top and bottom of the contraster. A 60px bottom margin on the first element before the contraster. And a 60px margin on first element after the contraster.
 This leads to consistent spacing.
-
-{: style="overflow-x: hidden"}
-{% breakout %}
-
-<div markdown="0" class="row">
-<div markdown="0" class="col-xl-6 mx-auto">
 
 {: .table style="margin-left: auto; margin-right: auto; margin-top: 30px; margin-bottom: 30px; "}
 | Rule           | Effect                            |
@@ -134,14 +142,5 @@ This leads to consistent spacing.
 | `.spacing-100` | Sets a total margin of 100px.     |
 | `.spacing-110` | Sets a total margin of 110px.     |
 | `.spacing-120` | Sets a total margin of 120px.     |
-
-</div>
-</div>
-
-{% endbreakout %}
-
-
-
-<p>Test</p>
 
 {% endcontraster spacing-60 %}

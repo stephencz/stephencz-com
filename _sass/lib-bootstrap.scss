@@ -554,27 +554,33 @@
     margin-left: auto;
   }
   
+  @media (min-width: 440px) {
+    .container {
+      max-width: 440px;;
+    }
+  }
+
   @media (min-width: 576px) {
     .container {
-      max-width: 540px;
+      max-width: 440px;
     }
   }
   
   @media (min-width: 768px) {
     .container {
-      max-width: 540px;
+      max-width: 440px;
     }
   }
   
   @media (min-width: 992px) {
     .container {
-      max-width: 540px;
+      max-width: 440px;
     }
   }
   
   @media (min-width: 1200px) {
     .container {
-      max-width: 1176px;
+      max-width: 976px;
     }
   }
   

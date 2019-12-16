@@ -1,5 +1,5 @@
 $dark-theme-bg-color: #232323;
-$dark-theme-font-color: #9c9c9c;
+$dark-theme-font-color: #d4d4d4;
 
 $dark-theme-inline-color: #e6db74;
 $dark-theme-link-color: #f92672;
@@ -108,6 +108,11 @@ $dark-theme-sidenote-scroll-thumb-color: #a6a6a6 ;
 .post-wrapper .body table.table.dark-theme thead th
 {
   border-bottom: 2px solid #5a5a5a;
+}
+
+.post-wrapper .body table.table.dark-theme th
+{
+  border-bottom: none;
 }
 
 .post-wrapper .body table.table.dark-theme td
@@ -339,5 +344,5 @@ $dark-theme-sidenote-scroll-thumb-color: #a6a6a6 ;
 }
 .dark-theme .highlight {
   color: #f8f8f2;
-  background-color: #49483e;
+  background-color: #333333;
 }

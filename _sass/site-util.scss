@@ -88,6 +88,12 @@
 
 .center-text { text-align: center; }
 
+.initial-letter::first-letter 
+{ 
+    font-family: "calendas_plusbold", "calendas_plusregular", Georgia, Times, Times New Roman, serif; 
+    font-size: 1.875em; 
+}
+
 // POST SPECIFIC UTILITIES
 .post-wrapper .body p.big-text
 { 

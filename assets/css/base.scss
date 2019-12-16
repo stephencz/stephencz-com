@@ -1,34 +1,35 @@
 ---
 ---
 $pixel-size: 100%;
-$font-size: 1em;
-$line-height: 1.875em;
+$font-size: 0.875em;
+$line-height: 1.65em;
 
-$header-font: 'Roboto', sans-serif;
-$body-font: 'Roboto', sans-serif;
+$header-font: 'Roboto', Calibri, Candara, Segoe, Segoe UI, Optima, Arial,sans-serif;
+$body-font: 'calendas_plusregular', Georgia, Times, Times New Roman, serif;
 $monospace-font: monospace;
 
-$h1-size: 1.5em;
-$h2-size: 1.5em;
-$h3-size: 1.25em;
-$h4-size: 1em;
-$h5-size: 0.85em;
-$h6-size: 0.75em;
+$h1-size: 1.25em;
+$h2-size: 1.25em;
+$h3-size: 1em;
+$h4-size: 0.875em;
+$h5-size: 0.75em;
+$h6-size: 0.625em;
 
-$body-text-color: #222;
+$body-text-color: #000;
+$background-color: #fff;
 
 $main-header-size: 3em;
 $navigation-size: 1em;
 
-$metadata-size: 1em;
+$metadata-size: 0.875em;
 $footer-size: 0.875em;
 
 $header-background: #fafafa;
 $header-border: #b7b7b7;
 $header-color: #8c8c8c;
 
-$title-link-color: #222;
-$title-link-hover: #222;
+$title-link-color: #000;
+$title-link-hover: #000;
 
 $nav-color: #636363;
 $nav-hover: #c71212;

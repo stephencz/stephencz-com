@@ -3,7 +3,6 @@
   border-bottom: 1px dotted #a5a5a5; 
   position: relative;
   z-index: 1;
-  margin-top: 30px; 
 }
 
 .trailing
@@ -34,7 +33,7 @@
 
 .post-wrapper .body h2 + .post-wrapper .body { margin-top: 30px; }
 
-.post-wrapper .body h3 { font-size: $h3-size; margin-top: 120px; }
+.post-wrapper .body h3 { font-size: $h3-size; margin-top: 90px; }
 
 .post-wrapper .body h2 + h3 { margin-top: 30px; }
 
@@ -49,7 +48,6 @@
   font-size: $font-size;
   line-height: $line-height;
   margin-bottom: 30px;
-  letter-spacing: .1px;
 }
 
 .post-wrapper .body a:link,
