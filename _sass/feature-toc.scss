@@ -1,7 +1,11 @@
 .toc-wrapper 
 {
-  font-family: 'Roboto', sans-serif;
+  font-family: $sans-serif-font;
   margin-bottom: 30px;
+  position: absolute;
+  left: -90px;
+  width: calc(100% + 80px);
+
 }
 
 .toc-wrapper .header
@@ -72,12 +76,14 @@
   color: #a5a5a5;
 }
 
-@media (max-width: 991.98px) 
+@media (max-width: 1199.98px) 
 {
 
-  .toc-wrapper
+  .toc-wrapper 
   {
-    margin-top: 30px;
+    position: relative;
+    left: 0px;
+    width: 100%;
   }
 
   .toc-wrapper .toc

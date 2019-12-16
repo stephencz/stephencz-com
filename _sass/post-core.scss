@@ -17,9 +17,9 @@
 .post-wrapper .body h5,
 .post-wrapper .body h6
 {
-  font-family: $header-font;
-  font-weight: 700;
+  font-family: $serif-font;
   margin-bottom: 15px;
+  letter-spacing: -0.03em;
 }
 
 .post-wrapper .body h1 { font-size: $h1-size; }
@@ -67,4 +67,5 @@
 {
   margin-bottom: 30px;
   margin-top: 30px;
+  max-width: 100%;
 }

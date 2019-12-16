@@ -1,24 +1,21 @@
-$category-title-size: 1.5em;
-$category-post-size: 1em;
-$category-cat-size: 1em;
+$category-title-size: 1.25em;
+$category-post-size: 0.875em;
+$category-cat-size: 0.875em;
 
 .category-wrapper
 {
-  font-family: $body-font;
-  margin-top: 30px;
+  font-family: $serif-font;
   margin-bottom: 80px;
 }
 
 .category-wrapper .category-title
 {  
   font-size: $category-title-size;
-  font-weight: 700;
 }
 
 .category-wrapper .category-title-small
 {  
   font-size: $h2-size;
-  font-weight: 700;
 }
 
 

@@ -17,13 +17,13 @@
   display: flex;
   position: absolute;
   
-  flex: 0 0 calc((100vw - (1105px / 2)) / 2);
+  flex: 0 0 calc((100vw - (1005px / 2)) / 2);
   flex-direction: column;
 
   height: auto;
   width: 100%;
   
-  max-width: calc((100vw - (1105px / 2)) / 2);
+  max-width: calc((100vw - (1005px / 2)) / 2);
 
   top: 580px;
 
@@ -35,13 +35,13 @@
   display: flex;
   position: absolute;
 
-  flex: 0 0 calc((100vw - (1105px / 2)) / 2);
+  flex: 0 0 calc((100vw - (1005px / 2)) / 2);
   flex-direction: column;
 
   height: auto;
   width: 100%;
 
-  max-width: calc((100vw - (1105px / 2)) / 2);
+  max-width: calc((100vw - (1005px / 2)) / 2);
 
   top: 0px;
   right: 0px;
@@ -160,7 +160,7 @@
   overflow-y: visible !important;
 }
 
-@media (max-width: 1250.98px) 
+@media (max-width: 1199.98px) 
 {
   .sn-col-right,
   .sn-col-left

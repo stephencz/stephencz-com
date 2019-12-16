@@ -1,0 +1,38 @@
+ 
+.post-wrapper .breakout
+{
+    position: relative;
+    
+    width: calc(100vw - 15px);
+
+    padding: 0;
+    margin: 0;
+}
+
+.post-wrapper .breakout .controlled-breakout-500,
+.post-wrapper .breakout .controlled-breakout-550,
+.post-wrapper .breakout .controlled-breakout-600,
+.post-wrapper .breakout .controlled-breakout-650,
+.post-wrapper .breakout .controlled-breakout-700,
+.post-wrapper .breakout .controlled-breakout-750,
+.post-wrapper .breakout .controlled-breakout-800,
+.post-wrapper .breakout .controlled-breakout-850,
+.post-wrapper .breakout .controlled-breakout-900,
+.post-wrapper .breakout .controlled-breakout-950,
+.post-wrapper .breakout .controlled-breakout-1000,
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-wrapper .breakout .controlled-breakout-500 { max-width: 500px; }
+.post-wrapper .breakout .controlled-breakout-550 { max-width: 550px; }
+.post-wrapper .breakout .controlled-breakout-600 { max-width: 600px; }
+.post-wrapper .breakout .controlled-breakout-650 { max-width: 650px; }
+.post-wrapper .breakout .controlled-breakout-700 { max-width: 700px; }
+.post-wrapper .breakout .controlled-breakout-750 { max-width: 750px; }
+.post-wrapper .breakout .controlled-breakout-800 { max-width: 800px; }
+.post-wrapper .breakout .controlled-breakout-850 { max-width: 850px; }
+.post-wrapper .breakout .controlled-breakout-900 { max-width: 900px; }
+.post-wrapper .breakout .controlled-breakout-950 { max-width: 950px; }
+.post-wrapper .breakout .controlled-breakout-1000 { max-width: 1000px; }
