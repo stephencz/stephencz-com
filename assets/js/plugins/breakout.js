@@ -12,7 +12,7 @@ $( document ).ready(function() {
   setBreakoutPosition();
 });
 
-//Positioning after resize
-$( window ).on('resize', function(){
+
+$(window).resize(function() {
   setBreakoutPosition();
 });

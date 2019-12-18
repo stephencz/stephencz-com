@@ -159,8 +159,15 @@ function createContrasters(starts, ends)
       let contraster = $('<div class="contraster"></div>');
       let contraster_theme = $(this).attr("class").split(" ")[1];
       contraster.addClass(contraster_theme);
+      applyLimitedColor($(this), contraster);
       $("body").append(contraster);
     });
+  }
+}
+
+function applyLimitedColor(start, contraster) {
+  if($(start).hasClass("limited-contraster")) {
+    $(contraster).css("background-color", $(start).css("background-color"))
   }
 }
 
@@ -189,9 +196,7 @@ $( document ).ready(function() {
 
 });
 
-//Positioning after resize
-$( window ).on('resize', function(){
-
+$(window).resize(function() {
   let startMarkers = getContrasterStartMarkers();
   let endMarkers = getContrasterEndMarkers();
   let firstElems = getFirstElements();
@@ -200,8 +205,6 @@ $( window ).on('resize', function(){
 
   setContrasterPositions(contrasters, startMarkers, endMarkers, firstElems, lastElems);
   setContrasterSizes(contrasters, startMarkers, endMarkers, firstElems, lastElems);
-
-
 });
 
 $(document).imagesLoaded( function() {

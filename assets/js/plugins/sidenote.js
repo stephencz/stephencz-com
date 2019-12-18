@@ -67,7 +67,7 @@ function setLeftSidenoteTopMargins() {
 
   let left_col = $(".sn-col-left");
   let toc_wrapper = $(".toc-wrapper");
-  left_col.css("top", toc_wrapper.offset().top + toc_wrapper.height() + 30);
+  left_col.css("top", toc_wrapper.offset().top + toc_wrapper.height() + 42);
 
   previous = null
   markers.each(function(index, value) {
@@ -137,9 +137,7 @@ $( document ).ready(function() {
 
 });
 
-$( window ).on('resize', function(){
-
-  //Set sidenote margins on resize.
+$(window).resize(function() {
   setLeftSidenoteTopMargins();
   setRightSidenoteTopMargins();
 });
@@ -148,6 +146,5 @@ $(document).imagesLoaded( function() {
   //Set sidenote margins on resize.
   setLeftSidenoteTopMargins();
   setRightSidenoteTopMargins();
-
 
 });
