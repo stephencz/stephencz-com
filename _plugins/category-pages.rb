@@ -21,6 +21,7 @@ module Jekyll
 
           self.process(@name)
           self.read_yaml(File.join(base, '_layouts'), 'category.html')
+          self.data['title'] = category.split(' ').map(&:capitalize).join(' ');
           self.data['category'] = category
           self.data['category-name'] = "#{category}"
       end

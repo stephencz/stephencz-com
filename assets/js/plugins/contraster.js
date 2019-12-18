@@ -102,7 +102,6 @@ function applyThemeToBody(contrasters, starts, ends) {
 
       var $siblings = startMarker.nextUntil(endMarker);
       var $children = $();
-      console.log($siblings)
       $siblings.each(function(i2, v2) {
         let more = $(v2).find('*');
         $.merge($children, more);        
@@ -112,7 +111,6 @@ function applyThemeToBody(contrasters, starts, ends) {
         $(v2).addClass(theme);
       });
 
-      console.log($siblings);
       startMarker.addClass(theme);
       endMarker.addClass(theme);
     });

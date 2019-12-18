@@ -9,6 +9,9 @@ function getHeaders() {
 //Creates the table of contents list.
 function createTableOfContents() {
   $('.toc-wrapper').append('<div class="toc"><ul></ul></div>');
+  if($('.toc-wrapper').hasClass('toc-grow')) {
+    $('.toc').addClass('grow');
+  }
 }
 
 //Populates the table of contents list with entries.

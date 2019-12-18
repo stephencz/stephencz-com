@@ -16,7 +16,7 @@ $h5-size: 0.75em;
 $h6-size: 0.625em;
 
 $body-text-color: #000;
-$background-color: #fff;
+$background-color: #f9f9f9;
 
 $main-header-size: 3em;
 $navigation-size: 1em;
@@ -31,7 +31,7 @@ $header-color: #8c8c8c;
 $title-link-color: #000;
 $title-link-hover: #000;
 
-$nav-color: #636363;
+$nav-color: #a2a2a2;
 $nav-hover: #c71212;
 
 $link-color: #c71212;
@@ -79,3 +79,4 @@ $inline-code-color: #9a0a0a;
 @import "feature-banner";
 
 @import "theme-dark";
+@import "theme-black";
