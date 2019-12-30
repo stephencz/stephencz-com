@@ -1,3 +1,18 @@
+/**
+ * A banner is a special type of breakout which is used to display an
+ * image that is the full width of the browser window.
+ *
+ * Liquid Usage:
+ *
+ *    {%  banner [url or image path] [additional classes] %}
+ *
+ *
+ * Additional Classes:
+ *
+ *    .uncollapsible - Makes the banner image invisible when the layout collapses.
+ *
+ */
+
 .breakout.banner p img
 {
   width: 100%;

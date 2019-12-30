@@ -1,3 +1,26 @@
+/**
+ * Contrasters apply a theme to a section of a post or page.
+ *
+ * Liquid Usage:
+ *
+ *    {% contraster [theme] [additional classes] %}
+ *        //Everything the theme should be applied to.
+ *    {% endcontraster %}
+ *
+ *
+ * Additonal Classes:
+ *
+ *     .spacing-xx - Spacing classes exist to control the spacing at the start
+ *                   and the end of a contraster. They exist from 10 to 120 at 10
+ *                   pixel increments i.e. 10, 20, 30... 100, 110, 120.
+ *
+ *
+ * Existing Themes:
+ *  
+ *    - dark-theme
+ *    - black-theme
+ */
+
 .contraster
 {
   position: absolute;

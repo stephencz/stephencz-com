@@ -1,5 +1,5 @@
 .highlight .hll { background-color: #ffffcc }
-.highlight  { background: #f7f7f7; color: #000000; padding-top: 8px; border-radius: 8px;  }
+.highlight  { background: #fff; color: #000000; padding-top: 8px; border-radius: 8px;  }
 .highlight .c { color: #999988;   } /* Comment */
 .highlight .err { color: #000000;   } /* Error */
 .highlight .g { color: #000000;   } /* Generic */
@@ -84,6 +84,16 @@ code.highlighter-rouge
   margin-bottom: 30px;
 }
 
+div.highlight
+{
+  border: 1px solid #e6e6e6
+}
+
+pre.highlight
+{
+  margin-bottom: 0px;
+}
+
 pre.lineno
 {
   visibility: hidden;
@@ -91,7 +101,7 @@ pre.lineno
 
 .line-numbers pre.lineno
 {
-  color: #b1b1b1;
+  color: #a26767;
   font-weight: 700;
   text-align: left;
     

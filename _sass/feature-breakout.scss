@@ -1,4 +1,35 @@
- 
+ /**
+ * Breakouts are versatile structures used to break content out of
+ * the bounds of the main bootstrap content column. They are immensely
+ * useful for creating new types of content on the fly.
+ *
+ * Liquid Usage:
+ *
+ *    {%  breakout [additional classes] %}
+ *      //CONTENT
+ *    {% endbreakout %}
+ *
+ * Additional Classes:
+ *
+ *    .responsive - Makes the breakout responsive in the same way that the bootstrap columns are.
+ *                  I.e. when the columns collapse the breakout will return to the normal flow. This
+ *                  is useful in select cases such as when you want to display two columns of text
+ *                  side-by-side, or when used in conjunction with controlled breakouts.
+ *
+ *    .controlled-breakout-xxx - Controlled breakouts are useful structures for breakout content
+ *                  out of the flow of the main column, but only to a slight degree. For example, because
+ *                  the main column is so narrow displaying code snippets isn't always practical. A
+ *                  controlled breakout of of say 800 could be used in this case. Controlled breakouts
+ *                  comes in sizes 500 to 1000 at 50 px increments so: 500, 550, 600, 650, ... 900, 950, 1000.
+ *
+ *                  A liquid shorthand exists for controlled breakouts.
+ *
+ *                  {% controlledbreakout [size] [additonal classes] %}
+ *                      //Content
+ *                  {% endcontrolledbreakout %}
+ *
+ */
+
 .post-wrapper .breakout
 {
     position: relative;
@@ -7,6 +38,15 @@
 
     padding: 0;
     margin: 0;
+}
+
+@media (max-width:  1199.98px) 
+{
+    .post-wrapper .breakout.responsive
+    {
+        position: static;
+        width: auto;
+    }
 }
 
 .post-wrapper .breakout .controlled-breakout-500,
@@ -19,7 +59,7 @@
 .post-wrapper .breakout .controlled-breakout-850,
 .post-wrapper .breakout .controlled-breakout-900,
 .post-wrapper .breakout .controlled-breakout-950,
-.post-wrapper .breakout .controlled-breakout-1000,
+.post-wrapper .breakout .controlled-breakout-1000
 {
     margin-left: auto;
     margin-right: auto;
