@@ -25,9 +25,10 @@ defaults:
     values:
       is_post: true                     # DO NOT EDIT: True to indicate is a post.
       show_home: true                   # True when the post should be displayed on the home page feed. Otherwise false.
-      show_assistant: true              # True when the 'assistant bar' should be shown.
       toc: true                         # True when a table of contents should be generated. Otherwise false.
-      toc_grow: false                   # True when the TOC should grow instead of scroll.
+      toc_grow: true                    # True when the TOC should grow instead of scroll.
+      metadata: true
+      metadata_grow: true
       is_series: false                  # True when the post is a part of a series. 
       series_name: "untitled"           # The name of the series the post is a part of.
       series_number: 0                  # The number of the post within the series. Used for ordering purposes
@@ -39,7 +40,6 @@ defaults:
       type: "pages"
     values:
       is_page: true                     # DO NOT EDIT: True to indicate is a page.
-      show_assistant: true              # True when the 'assistant bar' should be shown.
       toc: false                        # True when a table of contents should be generated. Otherwise false.
       toc_grow: false                   # True when the TOC should grow instead of scroll.
 

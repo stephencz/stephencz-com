@@ -10,6 +10,20 @@
   margin-top: 120px;
 }
 
+.post-wrapper .post-date
+{
+  font-family: $sans-serif-font;
+  font-size: $date-size;
+
+  color: $post-date-color;
+}
+
+.post-wrapper h1.title
+{
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
 .post-wrapper .body h1,
 .post-wrapper .body h2,
 .post-wrapper .body h3,
@@ -22,7 +36,10 @@
   letter-spacing: -0.03em;
 }
 
-.post-wrapper .body h1 { font-size: $h1-size; }
+.post-wrapper .body h1 
+{ 
+  font-size: $h1-size; 
+}
 
 .post-wrapper .body h2 
 { 

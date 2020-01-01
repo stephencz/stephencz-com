@@ -1,0 +1,89 @@
+.metadata-wrapper 
+{
+  font-size: $font-size;
+  font-family: $sans-serif-font;
+  margin-bottom: 30px;
+  position: absolute;
+  right: -90px; 
+  width: calc(100% + 60px);
+  padding-top: 12px;
+}
+
+.metadata-wrapper .header
+{
+  color: #a2a2a2;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.metadata-wrapper .metadata
+{
+  max-height: 400px;
+  overflow-y: scroll;
+  scrollbar-color: #d63434 #f1f1f1;
+  scrollbar-width: thin;
+}
+
+.metadata-wrapper .metadata .metadata-info
+{
+  color: $metadata-info-color;
+}
+
+/* width */
+.metadata-wrapper .metadata::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+/* Track */
+.metadata-wrapper .metadata::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+/* Handle */
+.metadata-wrapper .metadata::-webkit-scrollbar-thumb,
+.metadata-wrapper .metadata::-webkit-scrollbar-thumb:hover
+{
+  background: #d5d5d5; 
+}
+
+.metadata-wrapper .metadata.grow
+{
+  overflow-y: visible;
+  max-height: 100%;
+}
+
+/* width */
+.metadata-wrapper .metadata.grow::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+/* Track */
+.metadata-wrapper .metadata.grow::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+/* Handle */
+.metadata-wrapper .metadata.grow::-webkit-scrollbar-thumb,
+.metadata-wrapper .metadata.grow::-webkit-scrollbar-thumb:hover
+{
+  background: #d5d5d5; 
+}
+
+@media (max-width: 1199.98px) 
+{
+
+  .metadata-wrapper
+  {
+    position: relative;
+    left: 0px;
+    width: 100%;
+  }
+
+  .metadata-wrapper .metadata
+  {
+    max-height: 300px;
+    padding: 0px 0px 15px 0px;
+  }
+}

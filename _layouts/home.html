@@ -9,9 +9,9 @@ layout: default
 {% for post in site.posts limit: 10 %}
   {% if post.show_home %}
     <article class="post-wrapper {%if counter != 0 %} trailing {% endif %}">
-        <h1 class="title"><a href="{{ post.url }}">{{ post.title }} <span class="title-arrow">[↩]</span></a></h1>
-        {% include metadata.html is_home=true %}
-        <div class="body">{{ post.excerpt }}</div>
+      {% include date.html is_home=true %}
+      <h1 class="title"><a href="{{ post.url }}">{{ post.title }} <span class="title-arrow">[↩]</span></a></h1>
+      <div class="body">{{ post.excerpt }}</div>
     </article>
     {% assign counter = counter | plus: 1 %}
   {% endif %}

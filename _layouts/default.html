@@ -46,14 +46,18 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
   {% if page.toc == true %}
-  <script src="/assets/js/plugins/toc.js"></script>
+  <script src="/assets/js/features/toc.js"></script>
+  {% endif %}
+
+  {% if page.metadata == true %}
+  <script src="/assets/js/features/metadata.js"></script>
   {% endif %}
 
   {% if page.layout == 'page' or page.layout == 'post' %}
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <script src="/assets/js/plugins/contraster.js"></script>
-  <script src="/assets/js/plugins/breakout.js"></script>
-  <script defer src="/assets/js/plugins/sidenote.js"></script>
+  <script src="/assets/js/features/contraster.js"></script>
+  <script src="/assets/js/features/breakout.js"></script>
+  <script defer src="/assets/js/features/sidenote.js"></script>
   {% endif %}
 
   {% assign scripts_size = site.posts | size %}

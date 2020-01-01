@@ -1,8 +1,9 @@
 - name: Home
   link: /
-- name: About
-  link: /about
 - name: Archive
   link: /archive
-- name: Series
-  link: /series
+- name: Resume
+  link: /resume
+- name: Feed
+  link: /feed
+

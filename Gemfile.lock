@@ -20,6 +20,7 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7)
+    facets (3.1.0)
     ffi (1.11.1)
     forwardable-extended (2.6.0)
     http_parser.rb (0.6.0)
@@ -94,6 +95,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  facets
   jekyll (~> 3.8.6)
   jekyll-feed (~> 0.6)
   jekyll-scholar
@@ -105,4 +107,4 @@ DEPENDENCIES
   wdm (~> 0.1.0)
 
 BUNDLED WITH
-   2.0.1
+   2.0.2

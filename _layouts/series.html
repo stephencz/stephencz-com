@@ -5,17 +5,19 @@ layout: default
 
 <div class="col-xl-6">
   <article class="post-wrapper">
-      <h1 id="{{ page.title | downcase | replace: ' ', '-' }}" class="title">{{ page.title }}</h1>
+      <h1 class="title" id="{{ page.title | downcase | replace: ' ', '-' }}" class="title">{{ page.series_title }}</h1>
 
-      <div class="body series-wrapper">
-          {{ content }}
-      
-          {% assign sorted_posts = site.posts | group_by: "series_number" | sort_natural %}
+      <div class="body"> 
+        <p>
+          {{ page.series_description }}
+        </p>
+
+        {% assign sorted_posts = site.posts | group_by: "series_number" | sort_natural %}
           {% for series in site.data.series %}
-    
+
+            {% assign fixed_series_name = series.name | downcase %}
+            {% if fixed_series_name == page.series_name %}
             {% assign header_id = series.name | downcase | replace: " ", "-" %}
-            <h2 class="series-title" id="{{ header_id }}">{{ series.name }}</h2>
-            <p>{{ series.description }}</p>
             <ul class="series-post-list">
             {% for post_group in sorted_posts %}
               {% for post in post_group.items %}
@@ -29,8 +31,8 @@ layout: default
               {% endfor %}
             {% endfor %}
             </ul>
+            {% endif %}
           {% endfor %}
-      
       </div>
     </article> 
 </div>

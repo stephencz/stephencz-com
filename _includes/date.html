@@ -1,0 +1,17 @@
+{% if include.is_home == false %}
+    <div class="post-date">
+      {% if page.updated %}
+        Updated: {{ page.updated | date: "%B %d, %Y"}}
+      {% else %}
+        {{ page.date | date: "%B %d, %Y"}}
+      {% endif %}
+    </div>
+{% else %}
+    <div class="post-date">
+    {% if post.updated %}
+        Updated: {{ post.updated | date: "%B %d, %Y"}}
+    {% else %}
+        {{ post.date | date: "%B %d, %Y"}}
+    {% endif %}
+    </div>
+{% endif %}
