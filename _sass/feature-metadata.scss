@@ -7,6 +7,7 @@
   right: -90px; 
   width: calc(100% + 60px);
   padding-top: 12px;
+  z-index: 100;
 }
 
 .metadata-wrapper .header
@@ -24,9 +25,56 @@
   scrollbar-width: thin;
 }
 
-.metadata-wrapper .metadata .metadata-info
+.metadata-wrapper .metadata .metadata-series
 {
-  color: $metadata-info-color;
+  color: $metadata-text-color;
+  margin-bottom: 15px;
+}
+
+.metadata-wrapper .metadata .metadata-series a:link,
+.metadata-wrapper .metadata .metadata-series a:active,
+.metadata-wrapper .metadata .metadata-series a:visited
+{
+  color: $metadata-series-color;
+}
+
+.metadata-wrapper .metadata .metadata-series a:hover
+{
+  color: $metadata-series-hover;
+}
+
+
+.metadata-wrapper .metadata ul.metadata-categories
+{
+  list-style: none;
+  padding-left: 0px;
+  margin-bottom: 15px;
+}
+
+
+.metadata-wrapper .metadata ul.metadata-categories li
+{
+  display: inline-block;
+  padding-right: 15px;
+}
+
+.metadata-wrapper .metadata ul.metadata-categories li.category-header
+{
+  color: $metadata-text-color;
+  padding-right: 0px;
+}
+
+
+.metadata-wrapper .metadata ul.metadata-categories li a:link,
+.metadata-wrapper .metadata ul.metadata-categories li a:active,
+.metadata-wrapper .metadata ul.metadata-categories li a:visited
+{
+  color: $metadata-category-color;
+}
+
+.metadata-wrapper .metadata ul.metadata-categories li a:hover
+{
+  color: $metadata-category-hover;
 }
 
 /* width */

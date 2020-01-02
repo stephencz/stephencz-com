@@ -1,0 +1,48 @@
+ul.archive-list
+{
+    list-style: none;
+    padding-left: 0px;
+}
+
+
+
+ul.archive-list li
+{
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+
+ul.archive-list.category
+{
+    list-style: none;
+    padding-left: 0px;
+}
+
+ul.archive-list.category li
+{
+    display: inline-block;
+    padding-right: 15px;
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+ul.archive-list.series
+{
+    list-style: none;
+    padding-left: 0px;
+}
+
+ul.archive-list.series li
+{
+
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+ul.archive-list.series li a span
+{
+    color: $body-text-color;
+    display: block;
+    margin-bottom: 30px;
+}

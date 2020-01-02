@@ -1,12 +1,24 @@
 {% if page.metadata == true %}
 <div class="metadata-wrapper">
   <div class="metadata {% if page.metadata_grow == true %}grow{% endif %}">
-    <div class="metadata-info">
+    
+    {% if page.is_series %} 
+    <div class="metadata-series">      
       Series: 
-      {% if page.is_series %} 
-      <a href="/series/{{ page.series_name | downcase | repalce: ' ', '-' }}"> {{ page.series_name }} </a> 
-      {% endif %}
+      <a href="/series/{{ page.series_name | downcase | replace: ' ', '-' }}"> {{ page.series_name }} </a> 
     </div>
+    {% endif %}
+
+
+    {% assign category_size = page.categories | size %}
+    {% if category_size > 0%}
+    <ul class="metadata-categories">
+      <li class="category-header">Categories:</li>
+      {% for category in page.categories %}
+      <li><a href="/categories/{{ category | downcase | replace: ' ', '-' }}">[{{category}}]</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
 
   </div>
 </div>

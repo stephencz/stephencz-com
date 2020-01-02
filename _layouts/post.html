@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="col-xl-3"> {% include toc.html %} </div>
 
-<div class="col-xl-6">
+<div class="col-xl-6 order-xl-1 order-sm-12 order-12">
   <article class="post-wrapper">
     {% include date.html is_home=false %}
     <h1 id="{{ page.title | downcase | replace: ' ', '-' }}" class="title">{{ page.title }}</h1>
@@ -13,4 +13,4 @@ layout: default
   </article>
 </div>
 
-<div class="col-xl-3"> {% include metadata.html %} </div>
+<div class="col-xl-3 order-xl-12 order-sm-1 order-1"> {% include metadata.html %} </div>

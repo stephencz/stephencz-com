@@ -7,8 +7,11 @@ module Jekyll
       def generate(site)
           if site.layouts.key? 'series'
               dir = site.config['series_dir'] || 'series'
-              site.data['series'].each do |series|
-                  site.pages << SeriesPage.new(site, site.source, dir, series['name'].downcase(), series)
+              p site.data['series']
+                if site.data['series']
+                site.data['series'].each do |series|
+                    site.pages << SeriesPage.new(site, site.source, dir, series['name'].downcase(), series)
+                end
               end
           end
       end

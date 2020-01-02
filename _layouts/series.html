@@ -5,7 +5,7 @@ layout: default
 
 <div class="col-xl-6">
   <article class="post-wrapper">
-      <h1 class="title" id="{{ page.title | downcase | replace: ' ', '-' }}" class="title">{{ page.series_title }}</h1>
+      <h1 class="title" id="#{{ page.title | downcase | replace: ' ', '-' }}" class="title">{{ page.series_title }}</h1>
 
       <div class="body"> 
         <p>
@@ -18,13 +18,13 @@ layout: default
             {% assign fixed_series_name = series.name | downcase %}
             {% if fixed_series_name == page.series_name %}
             {% assign header_id = series.name | downcase | replace: " ", "-" %}
-            <ul class="series-post-list">
+            <ul class="archive-list">
             {% for post_group in sorted_posts %}
               {% for post in post_group.items %}
              
               {% if post.is_series %}
                 {% if post.series_name == series.name %}
-                <li></span> <a href="{{post.url}}">{{post.title}}</a></li>
+                <li><span> {{post.date | date: "%B %-d, %Y"}} - </span> <a href="{{post.url}}">{{ post.title }}</a></li>
                 {% endif %}
               {% endif %}
     

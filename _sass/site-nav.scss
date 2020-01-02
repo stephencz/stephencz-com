@@ -40,3 +40,11 @@
 {
   color: $nav-hover;
 }
+
+.nav-wrapper > .navigation > ul li.divider
+{
+  position: relative;
+  left: -10px;
+  padding-left: 10px;
+  border-left: 1px dotted #d0d0d0;
+}

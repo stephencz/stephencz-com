@@ -1,8 +1,3 @@
-- name: Design Patterns Are Fun
-  description: A series of posts that follows the development of my game Wolf TSOC.
+#- name: The name of the series
+#  description: A description of the series.
 
-- name: Birds and DOgs
-  description: A series of posts that follows the development of my game Wolf TSOC.
-
-- name: Yummy Ice Cream and Poopy
-  description: A series of posts that follows the development of my game Wolf TSOC.
