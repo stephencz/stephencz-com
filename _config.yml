@@ -53,6 +53,11 @@ kramdown:
     block:
       line_numbers: true
 
+collections:
+  feed_posts:
+    permalink: /feed/:year/:month/:title
+    output: true
+
 # Sass configuration
 sass:
   style: compressed

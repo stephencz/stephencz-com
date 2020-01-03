@@ -1,3 +1,4 @@
 ---
 layout: feed
+title: Feed
 ---

@@ -1,0 +1,24 @@
+.feed-wrapper
+{
+  margin-bottom: 120px;
+}
+
+.feed-wrapper .feed-date
+{
+  color: #a2a2a2;
+  font-family: $sans-serif-font;
+  font-size: $font-size;
+  margin-bottom: 15px;
+}
+
+.feed-wrapper .feed-date a:link,
+.feed-wrapper .feed-date a:active,
+.feed-wrapper .feed-date a:visited
+{
+  color: $link-color;
+}
+
+.feed-wrapper .feed-date a:hover
+{
+  color: $link-hover;
+}

@@ -32,6 +32,14 @@ layout: default
       {% endfor %}
       </ul>
 
+      <h2 id="categories">Feed</h2>
+      <ul class="archive-list">
+      {% assign sorted_categories = site.categories | sort %}
+      {% for feed_post in site.feed_posts %}
+        <li><a href="{{ feed_post.url }}">{{feed_post.title}}</a></li>
+      {% endfor %}
+      </ul>
+
     </div>
     </article> 
 </div>

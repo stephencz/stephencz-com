@@ -2,13 +2,22 @@
 layout: default
 ---
 
-<div class="col-xl-3"> {% include toc.html %} </div>
+<div class="col-xl-3"></div>
 
 <div class="col-xl-6">
-  <article class="post-wrapper">
-    <h1 id="{{ page.title | downcase | replace: ' ', '-' }}" class="title no-metadata">{{ page.title }}</h1>
-    <div class="body">{{ content | markdownify }}</div>
-  </article>
+  {% assign sorted_feed_posts = site.feed_posts | sort: 'date' | reverse %}
+  {% for feed_post in sorted_feed_posts %}
+  <div class="post-wrapper feed-wrapper">
+    <div class="feed-date">
+      <a href="{{feed_post.url}}">
+        {{ feed_post.date | date: "%B %-d, %Y"}}<span style="margin-left: 10px;">{{ feed_post.date | date: "%l:%M %p"}}</span>
+      </a>
+    </div>
+    <div class="body">
+    {{ feed_post.content }}
+    </div>
+  </div>
+  {% endfor %}
 </div>
 
 <div class="col-xl-3"></div>
