@@ -15,10 +15,15 @@
   border-radius: 8px;
 }
 
+.post-wrapper .body blockquote.not-italic
+{
+  font-style: normal;
+}
+
 .post-wrapper .body blockquote p
 {
   font-size: 0.875em;
-  padding-top: 10px;
+  padding-top: 15px;
   padding-bottom: 10px;
   padding-right: 10px;
   margin-bottom: 0px;

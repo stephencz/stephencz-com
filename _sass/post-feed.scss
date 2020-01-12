@@ -6,7 +6,7 @@
 .feed-wrapper
 {
   border-bottom: 1px dotted #a2a2a2;
-  margin-bottom: 60px;
+  margin-bottom: 120px;
 }
 
 .feed-wrapper.pinned
@@ -16,6 +16,7 @@
 
 .feed-wrapper .feed-date
 {
+  position: relative;
   color: #a2a2a2;
   font-family: $sans-serif-font;
   font-size: $font-size;

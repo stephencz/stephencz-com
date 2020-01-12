@@ -25,7 +25,7 @@ layout: default
   </div>
 
 
-  {% for feed_post in sorted_feed_posts %}
+  {% for feed_post in sorted_feed_posts limit:100 %}
     {% if feed_post.pinned == false %}
     <div class="post-wrapper feed-wrapper">
     <div class="feed-date">
