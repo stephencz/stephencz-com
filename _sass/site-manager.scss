@@ -1,0 +1,106 @@
+$nav-background-color: #efefef;
+$nav-border-color: #afafaf;
+
+$nav-link-color: #636363;
+$nav-link-hover: #c71212;
+
+$preview-background-color: #efefef;
+
+.manager-wrapper
+{
+  display: flex;
+  flex-direction: row;
+
+  font-family: $sans-serif-font;
+ 
+  min-height: 100%;
+  height: auto;
+}
+
+.manager-wrapper .manager-nav-wrapper
+{
+  padding: 10px 20px 10px 10px;
+}
+
+.manager-wrapper .manager-page-wrapper
+{
+  padding: 10px 10px 10px 30px;
+}
+
+.manager-wrapper .manager-nav-wrapper
+{
+  background-color: $nav-background-color; 
+  border-right: 1px solid $nav-border-color;
+  flex-basis: 160px;
+}
+
+.manager-wrapper .manager-nav-wrapper ul
+{
+  list-style: none;
+  font-weight: 700;
+  padding-left: 0px;
+  text-align: right;
+}
+
+.manager-wrapper .manager-nav-wrapper ul li
+{
+  margin-bottom: 15px;
+}
+
+.manager-wrapper .manager-nav-wrapper ul li a:link,
+.manager-wrapper .manager-nav-wrapper ul li a:active,
+.manager-wrapper .manager-nav-wrapper ul li a:visited
+{
+  color: $nav-link-color;
+}
+
+.manager-wrapper .manager-nav-wrapper ul li a:hover
+{
+  color: $nav-link-hover;
+  text-decoration: none;
+}
+
+.manager-wrapper .manager-page-wrapper
+{
+  flex-basis: 800px;
+}
+
+.manager-wrapper .manager-page-wrapper .manager-page-title
+{
+  margin: 0px;
+}
+
+.manager-wrapper .manager-page-wrapper .manager-page-body
+{
+  font-size: $font-size;
+}
+.manager-wrapper .manager-page-wrapper form textarea, 
+.manager-wrapper .manager-page-wrapper form select, .manager-wrapper .manager-page-wrapper form input, 
+.manager-wrapper .manager-page-wrapper form button 
+{ 
+  outline: none; 
+}
+
+.manager-wrapper .manager-page-wrapper form#creator-form textarea
+{
+  height: 400px;
+  width: 100%;
+}
+
+.manager-wrapper .manager-page-wrapper form#creator-form input#creator-title
+{
+  width: 100%;
+  padding: 3px;
+  margin-bottom: 5px;
+}
+
+.post-preview
+{
+  background-color: f5f5f5;
+  max-width: 480px;
+  margin-top: 30px;
+  font-family: $serif-font;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+}

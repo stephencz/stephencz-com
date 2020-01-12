@@ -1,10 +1,13 @@
 ---
 layout: feed-single
-date: 2020-01-03T6:20AM
+date: 2020-01-03T11:20AM
 title: Introducing the Feed
+pinned: true
 ---
 
 {:.initial-letter}
-Welcome to the feed.
-I created "the feed" because I wanted a social-media-like alternative to the main content system.
-Feed posts are not suppose to be entire articles, but are more like tweets.
+Welcome. 
+I created "the feed" to act as a catch-all for content that didn't fit into the normal post system.
+Where normal posts are meant to be focused and comprehensive articles, feed posts are more like tweets.
+
+

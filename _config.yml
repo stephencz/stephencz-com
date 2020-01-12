@@ -29,9 +29,6 @@ defaults:
       toc_grow: true                    # True when the TOC should grow instead of scroll.
       metadata: true
       metadata_grow: true
-      is_series: false                  # True when the post is a part of a series. 
-      series_name: "untitled"           # The name of the series the post is a part of.
-      series_number: 0                  # The number of the post within the series. Used for ordering purposes
       excerpt_separator: <!--more-->    # DO NOT EDIT: This symbol will stop the excerpt. Used to control excerpt length.
 
   -
@@ -55,7 +52,8 @@ kramdown:
 
 collections:
   feed_posts:
-    permalink: /feed/:year/:month/:title
+    pinned: false
+    permalink: /feed-posts/:year/:month/:title
     output: true
 
 # Sass configuration
@@ -104,4 +102,3 @@ exclude:
   - .vendor/cache/
   - .vendor/gems/
   - .vendor/ruby/
-  - /assets/php/

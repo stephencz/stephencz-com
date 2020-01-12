@@ -1,0 +1,10 @@
+<div class="feed-pinned-wrapper">
+  <div class="pinned-title">Pinned</div>
+  <ul class="pinned-list">
+    {% for feed_post in site.feed_posts %}
+      {% if feed_post.pinned %}
+        <li><a href="{{ feed_post.url }}">{{ feed_post.title }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>

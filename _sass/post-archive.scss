@@ -4,12 +4,16 @@ ul.archive-list
     padding-left: 0px;
 }
 
-
-
 ul.archive-list li
 {
+    color: #a2a2a2;
+
     padding-bottom: 0px !important;
     margin-bottom: 0px !important;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 

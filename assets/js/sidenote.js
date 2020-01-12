@@ -67,7 +67,10 @@ function setLeftSidenoteTopMargins() {
 
   let left_col = $(".sn-col-left");
   let toc_wrapper = $(".toc-wrapper");
-  left_col.css("top", toc_wrapper.offset().top + toc_wrapper.height() + 42);
+
+  if(toc_wrapper.length > 0) {
+    left_col.css("top", toc_wrapper.offset().top + toc_wrapper.height() + 42);
+  }
 
   previous = null
   markers.each(function(index, value) {

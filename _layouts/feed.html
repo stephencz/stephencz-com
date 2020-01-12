@@ -4,10 +4,30 @@ layout: default
 
 <div class="col-xl-3"></div>
 
-<div class="col-xl-6">
+<div class="col-xl-6 order-xl-1 order-sm-12 order-12">
   {% assign sorted_feed_posts = site.feed_posts | sort: 'date' | reverse %}
+
+  <div class="pinned-wrapper">
+  {% for feed_post in site.feed_posts %}
+    {% if feed_post.pinned %}
+    <div class="post-wrapper feed-wrapper pinned">
+      <div class="feed-date">
+        <a href="{{feed_post.url}}">
+          {{ feed_post.date | date: "%B %-d, %Y"}}<span style="margin-left: 10px;">{{ feed_post.date | date: "%l:%M %p"}}</span>
+        </a>
+      </div>
+      <div class="body">
+      {{ feed_post.content }}
+      </div>
+    </div>
+    {% endif %}
+  {% endfor %}
+  </div>
+
+
   {% for feed_post in sorted_feed_posts %}
-  <div class="post-wrapper feed-wrapper">
+    {% if feed_post.pinned == false %}
+    <div class="post-wrapper feed-wrapper">
     <div class="feed-date">
       <a href="{{feed_post.url}}">
         {{ feed_post.date | date: "%B %-d, %Y"}}<span style="margin-left: 10px;">{{ feed_post.date | date: "%l:%M %p"}}</span>
@@ -16,8 +36,9 @@ layout: default
     <div class="body">
     {{ feed_post.content }}
     </div>
-  </div>
+    </div>
+    {% endif %}
   {% endfor %}
 </div>
 
-<div class="col-xl-3"></div>
+<div class="col-xl-3 order-xl-12 order-sm-1 order-1">{% include feed/feed-pinned.html %}</div>

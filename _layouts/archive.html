@@ -7,38 +7,17 @@ layout: default
   <article class="post-wrapper">
     <h1 class="title" class="title">Archive</h1>
     <div class="body">
-      <ul class="archive-list">
-      {% for post in site.posts %}
-        <li><span> {{post.date | date: "%B %-d, %Y"}} - </span> <a href="{{post.url}}">{{ post.title }}</a></li>
-      {% endfor %}
-      </ul>
+      <h2 id="posts" style="margin-top: 30px;">Posts</h2>
+      {% include archive/list-posts.html %}
 
       <h2 id="archive ">Series</h2>
-      <ul class="archive-list series">
-      {% assign sorted_posts = site.posts | group_by: "series_number" | sort_natural %}
-      {% if site.data.series %}  
-        {% for series in site.data.series %}
-        <li><a href="/series/{{ series.name | downcase | replace: ' ', '-' }}">{{series.name}} <span>{{ series.description}}</span></a></li>
-        {% endfor %}
-      {% endif %}
-      </ul>
+      {% include archive/list-series.html %}
 
       <h2 id="categories">Categories</h2>
-      <ul class="archive-list category">
-      {% assign sorted_categories = site.categories | sort %}
-      {% for category in sorted_categories %}
-        {% assign url_part = category[0] | replace: " ", "-" %}
-        <li><a href="/categories/{{ url_part }}">{{ category[0]}}</a></li>
-      {% endfor %}
-      </ul>
+      {% include archive/list-categories.html %}
 
-      <h2 id="categories">Feed</h2>
-      <ul class="archive-list">
-      {% assign sorted_categories = site.categories | sort %}
-      {% for feed_post in site.feed_posts %}
-        <li><a href="{{ feed_post.url }}">{{feed_post.title}}</a></li>
-      {% endfor %}
-      </ul>
+      <h2 id="feed">Feed</h2>
+      {% include archive/list-feed.html %}
 
     </div>
     </article> 

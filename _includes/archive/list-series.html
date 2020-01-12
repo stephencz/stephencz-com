@@ -1,0 +1,5 @@
+<ul class="archive-list series">
+  {% for series in site.data.series %}
+    <li><a href="{{ series['series']['url'] }}">{{series['series']['name']}} <span>{{ series['series']['description'] }}</span></a></li>
+  {% endfor %}
+</ul>
