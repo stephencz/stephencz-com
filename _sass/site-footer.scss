@@ -1,15 +1,14 @@
 .footer-wrapper
 {
   font-size: $footer-size;
-  font-weight: 700;
+  font-weight: 500;
   text-align: center;
-
-  height: 240px;
 }
 
 .footer-wrapper footer
 {
-  padding-top: 25%;
+  padding-top: 25px;
+  padding-bottom: 125px;
 }
 
 .footer-wrapper a:link,

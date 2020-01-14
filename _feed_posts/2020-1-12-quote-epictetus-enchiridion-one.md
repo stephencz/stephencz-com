@@ -5,7 +5,6 @@ title: "Epictetus Quote from The Enchiridion I. "
 pinned: true
 ---
 
-{% controlledbreakout 450 %}
 <blockquote class="not-italic">
   <p>
     Of things some are in our power, and others are not. In our power are opinion,
@@ -19,5 +18,4 @@ pinned: true
   </p>
   <cite><a class="citation" href="#">from The Enchiridion by Epictetus</a></cite>
 </blockquote>
-{% endcontrolledbreakout %}
 

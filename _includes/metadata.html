@@ -5,7 +5,7 @@
     {% for series in site.data.series %}
       {% for series_post_url in series['series']['posts'] %}
         {% if page.url == series_post_url['url'] %}
-          <div class="metadata-series">      
+          <div class="metadata-series padding-bottom-15">      
             Series: 
             <a href="{{ series['series']['url'] }}"> {{ series['series']['name'] }} </a> 
           </div>
@@ -15,10 +15,20 @@
 
     {% assign category_size = page.categories | size %}
     {% if category_size > 0%}
-    <ul class="metadata-categories">
-      <li class="category-header">Categories:</li>
+    <div class="metadata-header">Categories</div>
+    <ul class="metadata-categories padding-bottom-15">
       {% for category in page.categories %}
       <li><a href="/categories/{{ category | downcase | replace: ' ', '-' }}">[{{category}}]</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% assign related_links_size = page.related_links | size %}
+    {% if related_links_size > 0 %}
+    <div class="metadata-header">Related/Useful Links</div>
+    <ul class="metadata-related-links">
+      {% for related_link in page.related_links %}
+      <li><a href="{{ related_link }}" target="_blank">{{ related_link }}</a></li>
       {% endfor %}
     </ul>
     {% endif %}

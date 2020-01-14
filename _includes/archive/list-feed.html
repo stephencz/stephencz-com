@@ -1,6 +1,6 @@
 <ul class="archive-list">
-  {% assign sorted_categories = site.categories | sort %}
-  {% for feed_post in site.feed_posts %}
+  {% assign sorted_feed_posts = site.feed_posts | sort: 'date' | reverse %}
+  {% for feed_post in sorted_feed_posts %}
     <li><a href="{{ feed_post.url }}">{{ feed_post.date | date: "%B %-d, %Y %l:%M %p"}} - {{feed_post.title}}</a></li>
   {% endfor %}
 </ul>

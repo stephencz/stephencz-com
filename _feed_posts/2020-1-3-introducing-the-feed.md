@@ -9,5 +9,5 @@ pinned: true
 Welcome. 
 I created "the feed" to act as a catch-all for content that didn't fit into the normal post system.
 Where normal posts are meant to be focused and comprehensive articles, feed posts are more like tweets.
-
+Things that I find useful, interesting, or funny, but don't deserve a full length post, will be posted here.
 

@@ -29,6 +29,7 @@ defaults:
       toc_grow: true                    # True when the TOC should grow instead of scroll.
       metadata: true
       metadata_grow: true
+      related_links: []
       excerpt_separator: <!--more-->    # DO NOT EDIT: This symbol will stop the excerpt. Used to control excerpt length.
 
   -
@@ -55,6 +56,7 @@ collections:
     pinned: false
     permalink: /feed-posts/:year/:month/:title
     output: true
+    date_shift: 0
 
 # Sass configuration
 sass:

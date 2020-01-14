@@ -1,6 +1,8 @@
+$metadata-font-size: 0.75em;
+
 .metadata-wrapper 
 {
-  font-size: $font-size;
+  font-size: $metadata-font-size;
   font-family: $sans-serif-font;
   margin-bottom: 30px;
   position: absolute;
@@ -10,11 +12,10 @@
   z-index: 100;
 }
 
-.metadata-wrapper .header
+.metadata-wrapper .metadata-header
 {
-  color: #a2a2a2;
-  font-weight: 700;
-  text-decoration: underline;
+  color: #7d7d7d;
+  border-bottom: 1px dotted #a2a2a2;
 }
 
 .metadata-wrapper .metadata
@@ -117,6 +118,32 @@
 .metadata-wrapper .metadata.grow::-webkit-scrollbar-thumb:hover
 {
   background: #d5d5d5; 
+}
+
+.metadata-wrapper ul.metadata-related-links
+{
+  list-style: none;
+  padding-left: 0px;
+
+}
+
+.metadata-wrapper ul.metadata-related-links li
+{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.metadata-wrapper ul.metadata-related-links li a:link,
+.metadata-wrapper ul.metadata-related-links li a:active,
+.metadata-wrapper ul.metadata-related-links li a:visited
+{
+  color: $link-color;
+}
+
+.metadata-wrapper ul.metadata-related-links li a:hover
+{
+  color: $link-hover;
 }
 
 @media (max-width: 1199.98px) 
