@@ -146,6 +146,24 @@ $metadata-font-size: 0.75em;
   color: $link-hover;
 }
 
+.metadata-wrapper ul.metadata-notes
+{
+  padding-left: 20px;
+  color: $metadata-text-color;
+}
+
+.metadata-wrapper ul.metadata-notes li a:link,
+.metadata-wrapper ul.metadata-notes li a:active,
+.metadata-wrapper ul.metadata-notes li a:visited
+{
+  color: $link-color;
+}
+
+.metadata-wrapper ul.metadata-notes li a:hover
+{
+  color: $link-hover;
+}
+
 @media (max-width: 1199.98px) 
 {
 

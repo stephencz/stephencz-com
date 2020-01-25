@@ -27,9 +27,11 @@ defaults:
       show_home: true                   # True when the post should be displayed on the home page feed. Otherwise false.
       toc: true                         # True when a table of contents should be generated. Otherwise false.
       toc_grow: true                    # True when the TOC should grow instead of scroll.
-      metadata: true
-      metadata_grow: true
-      related_links: []
+      metadata: true                    # True when the metadata section should be shown.
+      metadata_grow: true               # True when the metadata section should grow instead of scroll.
+      related_links: []                 # A list of links that will be displayed in the metadata section.
+      metadata_notes: []                # A list of notes that will be displayed in the metadata section.
+      living_document: true             # True when the post should be labeled a 'living document'. Aesthetic thingy for metadata.
       excerpt_separator: <!--more-->    # DO NOT EDIT: This symbol will stop the excerpt. Used to control excerpt length.
 
   -
@@ -57,10 +59,19 @@ collections:
     permalink: /feed-posts/:year/:month/:title
     output: true
     date_shift: 0
+  other:
+    permalink: /other/:title
+    output: true
 
 # Sass configuration
 sass:
   style: compressed
+
+feed:
+  collections:
+    feed_posts:
+      path: "/feed-posts/feed.xml"
+
 
 #Jekyll Scholar configuration
 scholar:
@@ -84,11 +95,16 @@ scholar:
 
   query: "@*"
 
+jekyll-minifier:
+  uglifier_args:
+    harmony: true
+
 # Plugins used by this site
 plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-scholar
+  - jekyll-minifier
 
 # Folders and files to exclude from the site build
 exclude:
@@ -104,3 +120,4 @@ exclude:
   - .vendor/cache/
   - .vendor/gems/
   - .vendor/ruby/
+  - .vendor

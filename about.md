@@ -2,7 +2,7 @@
 layout: page
 title: About
 description: >-
-  Information about Stephen Czekalski and this website.
+  Information about stephencz.com.
 toc: true
 toc_grow: true
 ---

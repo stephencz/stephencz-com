@@ -1,0 +1,20 @@
+{% assign sorted_by_month = site.data.reading-list | sort: 'title' %}
+<ul style="padding-left: 15px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; list-style: none;">
+{% for hash in  sorted_by_month %}
+  <li>
+    {% if hash['url'].size > 0 %}
+      <a href="{{ hash['url'] }}">
+    {% endif %}
+    
+    {{ hash['title']}}
+
+    <span style="display: block; font-size: 0.8em;">
+      by {{ hash['author'] }}
+    </span>
+
+    {% if hash['book']['url'].size > 0 %}
+      </a>
+    {% endif %}
+  </li>
+{% endfor %}
+</ul>

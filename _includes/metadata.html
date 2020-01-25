@@ -1,7 +1,7 @@
 {% if page.metadata == true %}
 <div class="metadata-wrapper">
   <div class="metadata {% if page.metadata_grow == true %}grow{% endif %}">
-    
+
     {% for series in site.data.series %}
       {% for series_post_url in series['series']['posts'] %}
         {% if page.url == series_post_url['url'] %}
@@ -23,6 +23,16 @@
     </ul>
     {% endif %}
 
+    {% assign notes_links_size = page.metadata_notes | size %}
+    {% if notes_links_size > 0 %}
+    <div class="metadata-header">Notes</div>
+    <ul class="metadata-notes">
+      {% for note in page.metadata_notes %}
+      <li>{{ note }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
     {% assign related_links_size = page.related_links | size %}
     {% if related_links_size > 0 %}
     <div class="metadata-header">Related/Useful Links</div>
@@ -31,6 +41,12 @@
       <li><a href="{{ related_link }}" target="_blank">{{ related_link }}</a></li>
       {% endfor %}
     </ul>
+    {% endif %}
+
+    {% if page.living_document %}
+    <div class="metadata-series padding-bottom-15">      
+     This is a <a href="https://en.wikipedia.org/wiki/Living_document" target="_blank">living document.</a> 
+    </div>
     {% endif %}
 
   </div>
