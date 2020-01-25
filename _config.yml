@@ -31,7 +31,7 @@ defaults:
       metadata_grow: true               # True when the metadata section should grow instead of scroll.
       related_links: []                 # A list of links that will be displayed in the metadata section.
       metadata_notes: []                # A list of notes that will be displayed in the metadata section.
-      living_document: true             # True when the post should be labeled a 'living document'. Aesthetic thingy for metadata.
+      living_document: false            # True when the post should be labeled a 'living document'. Aesthetic thingy for metadata.
       excerpt_separator: <!--more-->    # DO NOT EDIT: This symbol will stop the excerpt. Used to control excerpt length.
 
   -

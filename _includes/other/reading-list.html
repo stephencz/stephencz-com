@@ -1,5 +1,5 @@
 {% assign sorted_by_month = site.data.reading-list | sort: 'title' %}
-<ul style="padding-left: 15px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; list-style: none;">
+<ul style="padding-left: 5px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; list-style: none;">
 {% for hash in  sorted_by_month %}
   <li>
     {% if hash['url'].size > 0 %}
