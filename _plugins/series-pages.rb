@@ -24,8 +24,6 @@ module Jekyll
       @url = url
       @hash = hash
 
-      p @hash
-
       self.process(@url)
       self.read_yaml(File.join(base, '_layouts'), 'series.html')
       self.data['title'] = @url.split(' ').map(&:capitalize).join(' ');

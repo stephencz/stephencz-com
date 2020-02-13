@@ -1,16 +1,16 @@
-# - series:
-#     name: 'An Introduction to Programming'
-#     url: '/series/an-intro-to-programming.html'
-#     description: 'This is a mock description'
-#     posts:
-#       - url: '/posts/an-introduction-to-programming'
-#       - url: '/posts/singleton'
-#       - url: '/posts/dogs'
+- series:
+    name: 'An Introduction to Programming'
+    url: '/series/an-intro-to-programming.html'
+    description: 'This is a mock description'
+    posts:
+      - url: '/posts/an-introduction-to-programming'
+      - url: '/posts/singleton'
+      - url: '/posts/dogs'
 
 
-# - series:
-#     name: 'An Introduction to Pooping'
-#     url: '/series/an-intro-to-pooping.html'
-#     description: 'THis is a mock description'
-#     posts:
-#       - url: '/posts/an-introduction-to-programming'
+- series:
+    name: 'An Introduction to Pooping'
+    url: '/series/an-intro-to-pooping.html'
+    description: 'THis is a mock description'
+    posts:
+      - url: '/posts/an-introduction-to-programming'

@@ -2,10 +2,11 @@
 <div class="metadata-wrapper">
   <div class="metadata {% if page.metadata_grow == true %}grow{% endif %}">
 
+    {% comment %} Provide a link to the series page. {% endcomment %}
     {% for series in site.data.series %}
       {% for series_post_url in series['series']['posts'] %}
         {% if page.url == series_post_url['url'] %}
-          <div class="metadata-series padding-bottom-15">      
+          <div class="metadata-series">      
             Series: 
             <a href="{{ series['series']['url'] }}"> {{ series['series']['name'] }} </a> 
           </div>
@@ -13,16 +14,18 @@
       {% endfor %}
     {% endfor %}
 
+    {% comment %} Provide a links to the categories the post belongs to. {% endcomment %}
     {% assign category_size = page.categories | size %}
     {% if category_size > 0%}
     <div class="metadata-header">Categories</div>
-    <ul class="metadata-categories padding-bottom-15">
+    <ul class="metadata-categories">
       {% for category in page.categories %}
       <li><a href="/categories/{{ category | downcase | replace: ' ', '-' }}">[{{category}}]</a></li>
       {% endfor %}
     </ul>
     {% endif %}
 
+    {% comment %} Show extra notes {% endcomment %}
     {% assign notes_links_size = page.metadata_notes | size %}
     {% if notes_links_size > 0 %}
     <div class="metadata-header">Notes</div>
@@ -33,6 +36,7 @@
     </ul>
     {% endif %}
 
+    {% comment %} Show related links. {% endcomment %}
     {% assign related_links_size = page.related_links | size %}
     {% if related_links_size > 0 %}
     <div class="metadata-header">Related/Useful Links</div>
@@ -43,6 +47,7 @@
     </ul>
     {% endif %}
 
+    {% comment %} Notify the user that the page is a living document {% endcomment %}
     {% if page.living_document %}
     <div class="metadata-series padding-bottom-15">      
      This is a <a href="https://en.wikipedia.org/wiki/Living_document" target="_blank">living document.</a> 
