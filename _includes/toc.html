@@ -1,5 +1,11 @@
 {% if page.toc == true %}
-<div class="toc-wrapper {% if page.toc_grow == true %}toc-grow{% endif %}">
-  <div class="header">Table of Contents</div>
-</div>
+  <div class="toc-wrapper">
+    <div class="header">
+      <a href="#{{ page.title | downcase | replace: ' ', '-' }}">{{ page.title }}</a>
+    </div>
+
+    <div class="toc {% if page.toc_grow == true %}grow{% endif %}">
+      {% table_of_contents %}
+    </div>
+  </div>
 {% endif %}

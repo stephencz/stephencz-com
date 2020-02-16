@@ -2,7 +2,7 @@
   <nav class="navigation">
     <ul>
     {% for nav in site.data.navigation %}
-      <li {% if nav.name == "Feed" %} class="divider" {% endif %}><a href="{{ nav.link }}" {% if page.url == nav.link %} style="color: #c71212; font-weight: 700;"  {% endif %}>{{ nav.name }}</a></li>
+      <li><a href="{{ nav.link }}" {% if page.url == nav.link %} style="color: #c71212; font-weight: 700;"  {% endif %}>{{ nav.name }}</a></li>
     {% endfor %}
     </ul>
   </nav>

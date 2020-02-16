@@ -14,6 +14,7 @@ gem "jekyll", "~> 3.8.6"
 gem "minima", "~> 2.0"
 
 gem "nokogiri"
+gem "html-proofer"
 gem "facets"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and

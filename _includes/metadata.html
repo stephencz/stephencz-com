@@ -4,14 +4,23 @@
 
     {% comment %} Provide a link to the series page. {% endcomment %}
     {% for series in site.data.series %}
+
+      {% assign found = false %}
+
       {% for series_post_url in series['series']['posts'] %}
         {% if page.url == series_post_url['url'] %}
           <div class="metadata-series">      
-            Series: 
-            <a href="{{ series['series']['url'] }}"> {{ series['series']['name'] }} </a> 
+            Series: <a href="{{ series['series']['url'] }}"> {{ series['series']['name'] }} </a> 
+
           </div>
+          {% assign found = true %}
+          {% break %}
         {% endif %}
       {% endfor %}
+
+      {% if found %} 
+        {% break %} 
+      {% endif %}
     {% endfor %}
 
     {% comment %} Provide a links to the categories the post belongs to. {% endcomment %}
@@ -21,17 +30,6 @@
     <ul class="metadata-categories">
       {% for category in page.categories %}
       <li><a href="/categories/{{ category | downcase | replace: ' ', '-' }}">[{{category}}]</a></li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-
-    {% comment %} Show extra notes {% endcomment %}
-    {% assign notes_links_size = page.metadata_notes | size %}
-    {% if notes_links_size > 0 %}
-    <div class="metadata-header">Notes</div>
-    <ul class="metadata-notes">
-      {% for note in page.metadata_notes %}
-      <li>{{ note }}</li>
       {% endfor %}
     </ul>
     {% endif %}
