@@ -77,6 +77,12 @@ $date-color: #5a5a5a;
   color: $link-hover;
 }
 
+.content-wrapper ul.chronolog 
+{
+  list-style: none;
+  padding-left: 0px;
+}
+
 .content-wrapper figure
 {
   margin-bottom: $unit-one;

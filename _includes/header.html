@@ -1,6 +1,6 @@
 <div class="header-wrapper">
   <div class="header">
-    <div class="brand">{{ site.title }}</div>
+    <div class="brand"><a href="/">{{ site.title }}</a></div>
     <nav>
       <ul>
         {% for nav in site.data.navigation %}<li><a href="{{ nav.link }}">{{ nav.name }}</a></li>{% endfor %}

@@ -1,7 +1,7 @@
-- name: Home
-  link: /
-- name: Projects
-  link: /projects
+- name: About
+  link: /about
+- name: Archives
+  link: /archives
 - name: Chronolog
   link: /chronolog
 

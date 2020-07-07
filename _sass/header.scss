@@ -31,6 +31,15 @@ $nav-hover: #0d54c1;
   padding-right: 10px;
 }
 
+.header .brand a:link,
+.header .brand a:active,
+.header .brand a:visited,
+.header .brand a:hover
+{
+  color: #000;
+  text-decoration: none;
+}
+
 .header nav
 {
   display: inline-block;
@@ -83,6 +92,7 @@ $nav-hover: #0d54c1;
   {
     display: block;
     text-align: left;
+    padding-left: 0;
   }
 
 }
