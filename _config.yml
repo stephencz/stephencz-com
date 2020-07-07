@@ -1,0 +1,38 @@
+
+
+title: Stephen Czekalski
+email: admin@stephencz.com
+description: >- # this means to ignore newlines until "baseurl:"
+  The personal website of Stephen Czekalski
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+github_username: stephencz
+permalink: /posts/:title
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  highlighter: rouge
+  parse_block_html: true
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-feed
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

@@ -1,0 +1,22 @@
+.breakout
+{
+  position: relative;
+  left: calc(((100vw - 100%) / -2) + 7.5px);
+  width: calc(100vw - 15px);
+  margin-top: $unit-one;
+  margin-bottom: $unit-one
+}
+
+.breakout.banner
+{
+  margin-top: $unit-two;
+  margin-bottom: $unit-two
+}
+
+.breakout.banner p img
+{
+  border-top: 1px solid #a5a5a5;
+  border-bottom: 1px solid #a5a5a5;
+
+  width: 100%;
+}

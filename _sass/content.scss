@@ -1,0 +1,84 @@
+
+$bottom-border-color: #f7f7f7;
+
+$h1-font-size: 1.5rem;
+
+$link-base: #0d54c1;
+$link-hover: #94a7c3;
+
+$date-color: #5a5a5a;
+
+.content-wrapper
+{
+  border-bottom: 1px solid $bottom-border-color;
+  margin-bottom: $unit-one;
+}
+
+.content-wrapper + .content-wrapper
+{
+  margin-top: $unit-four;
+}
+
+.content-wrapper .date
+{
+  display: block;
+  color: $date-color;
+  text-align: center;
+
+  width: 100%;
+  
+  margin-bottom: $unit-one;
+}
+
+.content-wrapper h1.title
+{
+  margin-bottom: $unit-quarter;
+}
+
+.content-wrapper h1.title a:link,
+.content-wrapper h1.title a:active,
+.content-wrapper h1.title a:visited,
+.content-wrapper h1.title a:hover
+{
+  color: #000;
+  text-decoration: none;
+}
+
+.content-wrapper h1
+{
+  font-size: $h1-font-size;
+}
+
+.content-wrapper h1,
+.content-wrapper h2,
+.content-wrapper h3,
+.content-wrapper h4,
+.content-wrapper h5,
+.content-wrapper h6
+{
+  margin-bottom: $unit-one;
+}
+
+.content-wrapper p
+{
+  margin-bottom: $unit-one;
+}
+
+.content-wrapper a:link,
+.content-wrapper a:active,
+.content-wrapper a:visited
+{
+  color: $link-base;
+  text-decoration: underline;
+}
+
+.content-wrapper a:hover
+{
+  color: $link-hover;
+}
+
+.content-wrapper figure
+{
+  margin-bottom: $unit-one;
+}
+
