@@ -2,6 +2,11 @@
 $bottom-border-color: #f7f7f7;
 
 $h1-font-size: 1.5rem;
+$h2-font-size: 1.35rem;
+$h3-font-size: 1.2rem;
+$h4-font-size: 1rem;
+$h5-font-size: 0.85rem;
+$h6-font-size: 0.75rem;
 
 $link-base: #0d54c1;
 $link-hover: #94a7c3;
@@ -44,19 +49,57 @@ $date-color: #5a5a5a;
   text-decoration: none;
 }
 
-.content-wrapper h1
-{
-  font-size: $h1-font-size;
+.content-wrapper h1 
+{ 
+  font-size: $h1-font-size; 
+  margin-bottom: $unit-quarter;
 }
 
-.content-wrapper h1,
-.content-wrapper h2,
-.content-wrapper h3,
-.content-wrapper h4,
-.content-wrapper h5,
-.content-wrapper h6
+.content-wrapper h2 
+{ 
+  font-size: $h2-font-size; 
+  margin-top: $unit-two;
+  margin-bottom: $unit-quarter;
+}
+
+.content-wrapper h3 
+{ 
+  font-size: $h3-font-size; 
+  margin-top: $unit-two;
+  margin-bottom: $unit-quarter;
+}
+
+.content-wrapper h4 
+{ 
+  font-size: $h4-font-size; 
+  margin-top: $unit-two;
+  margin-bottom: $unit-quarter;
+}
+
+.content-wrapper h5 
+{ 
+  font-size: $h5-font-size; 
+  margin-top: $unit-one;
+  margin-bottom: $unit-quarter;
+}
+
+.content-wrapper h6 
+{ 
+  font-size: $h6-font-size; 
+  margin-top: $unit-one;
+  margin-bottom: $unit-quarter;
+}
+
+.content-wrapper h1 + h2 { margin-top: $unit-one;}
+
+.content-wrapper h1 + p,
+.content-wrapper h2 + p,
+.content-wrapper h3 + p,
+.content-wrapper h4 + p,
+.content-wrapper h5 + p,
+.content-wrapper h6 + p
 {
-  margin-bottom: $unit-one;
+  margin-top: 0;
 }
 
 .content-wrapper p
