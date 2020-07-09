@@ -15,10 +15,10 @@ Most modern websites exist as masses of abstraction.
 They rely upon layers and layers of frameworks and third-party code to accomplish their tasks.
 This website consists of static content.
 Most blogs do.
-I don't need a monstrous content management system or a complex web of javascript frameworks to deliver HTML and CSS.
+I don't need a monstrous content management system or a complex web of javascript frameworks to serve HTML and CSS.
 
-Throughout the entire design process I tried to keep things simple.
-Currently, I use [Jekyll](https://jekyllrb.com/), a static site generator, to manage this websites content.
+Currently, I use [Jekyll](https://jekyllrb.com/), a static site generator, to manage this website's content.
+Jekyll is 
 
 ### Source
 This website's source code can be found on [GitHub](https://github.com/stephencz/stephencz-com).
