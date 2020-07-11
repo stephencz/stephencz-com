@@ -6,22 +6,23 @@ permalink: /about/
 
 This is the personal website/blog of Stephen Czekalski.
 I've had a website, in some form or another, for several years.
-It wasn't until the mid 2020s that I decided to start publishing content to it.
+I didn't start creating content for it until mid 2020's.
 
-## Design 
+## Design
 
-The major goal of my website's design is **simplicity**.
-Most modern websites exist as masses of abstraction.
-They rely upon layers and layers of frameworks and third-party code to accomplish their tasks.
-This website consists of static content.
-Most blogs do.
-I don't need a monstrous content management system or a complex web of javascript frameworks to serve HTML and CSS.
+The objective of this website's design, both aesthetic and technical, is **simplicity**.
 
-Currently, I use [Jekyll](https://jekyllrb.com/), a static site generator, to manage this website's content.
-Jekyll is 
+As a programmer I prefer the comprehensible to the incomprehensible.
+I hate to use tools without understanding how they work.
+In applications of any complexity this can't be avoided.
+Using abstractions created by other programmers, and not fully understanding them, is a basic requirement of being a productive programmer.
 
-### Source
-This website's source code can be found on [GitHub](https://github.com/stephencz/stephencz-com).
+However, despite the complexity they are prone to, website's can be simple and comprehensible.
+
+
+
+### Source Code
+You can find this website's source code on [GitHub](https://github.com/stephencz/stephencz-com).
 
 
 
