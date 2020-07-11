@@ -1,5 +1,5 @@
 
-$bottom-border-color: #f7f7f7;
+$bottom-border-color: #cecece;
 
 $h1-font-size: 1.5rem;
 $h2-font-size: 1.35rem;
@@ -67,14 +67,14 @@ $left-spacing: 20px;
 .content-wrapper h3 
 { 
   font-size: $h3-font-size; 
-  margin-top: $unit-two;
+  margin-top: $unit-one-half;
   margin-bottom: $unit-quarter;
 }
 
 .content-wrapper h4 
 { 
   font-size: $h4-font-size; 
-  margin-top: $unit-two;
+  margin-top: $unit-one;
   margin-bottom: $unit-quarter;
 }
 
@@ -93,6 +93,7 @@ $left-spacing: 20px;
 }
 
 .content-wrapper h1 + h2 { margin-top: $unit-one;}
+.content-wrapper h2 + h3 {margin-top: $unit-half;}
 
 .content-wrapper h1 + p,
 .content-wrapper h2 + p,
