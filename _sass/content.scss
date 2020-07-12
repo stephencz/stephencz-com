@@ -3,7 +3,7 @@ $bottom-border-color: #cecece;
 
 $h1-font-size: 1.5rem;
 $h2-font-size: 1.35rem;
-$h3-font-size: 1.2rem;
+$h3-font-size: 1.15rem;
 $h4-font-size: 1rem;
 $h5-font-size: 0.85rem;
 $h6-font-size: 0.75rem;
@@ -60,14 +60,14 @@ $left-spacing: 20px;
 .content-wrapper h2 
 { 
   font-size: $h2-font-size; 
-  margin-top: $unit-two;
+  margin-top: $unit-four;
   margin-bottom: $unit-quarter;
 }
 
 .content-wrapper h3 
 { 
   font-size: $h3-font-size; 
-  margin-top: $unit-one-half;
+  margin-top: $unit-two;
   margin-bottom: $unit-quarter;
 }
 
