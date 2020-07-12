@@ -23,7 +23,6 @@ When designing this website I took most of my inspiration from the simplicity of
 A narrow column of small serif font looks good and is easily read.
 I tried to modernize his design by using less yellow, centering the column of text, and adding a header.
 
-
 ### Technical 
 
 The technical requirements I have for this website are it should be small and fast.
