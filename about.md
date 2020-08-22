@@ -5,6 +5,14 @@ permalink: /about/
 ---
 
 This is the personal website/blog of Stephen Czekalski.
+I've had a website, in some for or another, for several years.
+
+## Self
+
+## Site
+
+{% comment %}
+This is the personal website/blog of Stephen Czekalski.
 I've had a website, in some form or another, for several years.
 I didn't start creating content for it until mid 2020's.
 
@@ -38,5 +46,5 @@ Jekyll helps retain some of the conveniences, such as layouts and the ability to
 
 You can find this website's source code on [GitHub](https://github.com/stephencz/stephencz-com).
 
-
+{% endcomment %}
 

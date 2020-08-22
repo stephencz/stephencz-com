@@ -10,12 +10,27 @@
 .breakout.banner
 {
   margin-top: $unit-two;
-  margin-bottom: $unit-two
+  margin-bottom: $unit-two;
 }
 
+.breakout.banner img,
 .breakout.banner p img
 {
   border-top: 1px solid #a5a5a5;
+  border-bottom: 1px solid #a5a5a5;
+
+  width: 100%;
+}
+
+.breakout.banner-post
+{
+  margin-top: 0;
+  margin-bottom: $unit-two;
+}
+
+.breakout.banner-post img,
+.breakout.banner-post p img
+{
   border-bottom: 1px solid #a5a5a5;
 
   width: 100%;
