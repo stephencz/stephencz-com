@@ -7,9 +7,13 @@ layout: default
 <div class="container">
   <div class="content-wrapper">
     <h1 class="title">{{ page.title }}</h1>
+    <div class="metadata">
+      <div class="date">{% if page.updated %}{{ page.updated | date: "%B %d, %Y"}}{% else %}{{ page.date | date: "%B %d, %Y"}}{% endif %}</div>
+      {% assign category_size = page.categories | size %}
+      <div class="primary-category">{% if category_size > 0 %}<a href="/categories/{{ page.categories[0] | downcase | replace: ' ', '-' }}">[{{ page.categories[0] }}]</a>{% endif %}</div>
+    </div>
     {{ content }}
 
-    <div class="date">{% if page.updated %}{{ page.updated | date: "%B %d, %Y"}}{% else %}{{ page.date | date: "%B %d, %Y"}}{% endif %}</div>
   </div>
 </div>
 

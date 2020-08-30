@@ -26,15 +26,21 @@ $left-spacing: 20px;
   margin-top: $unit-four;
 }
 
-.content-wrapper .date
+.content-wrapper .metadata .date
 {
-  display: block;
+  display: inline;
   color: $date-color;
-  text-align: center;
+  text-align: left;
 
   width: 100%;
   
   margin-bottom: $unit-one;
+}
+
+.content-wrapper .metadata .primary-category
+{
+  display: inline;
+  padding-left: 10px;
 }
 
 .content-wrapper h1.title
