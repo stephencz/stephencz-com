@@ -25,6 +25,12 @@ sass:
 plugins:
   - jekyll-feed
 
+collections:
+  notes:
+    output: true
+    title: "Untitled Note"
+    updated: "2020-09-21"
+
 exclude:
   - .sass-cache/
   - .jekyll-cache/
