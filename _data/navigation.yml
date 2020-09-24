@@ -1,8 +1,8 @@
 - name: Home
   link: /
-- name: Chronolog
-  link: /chronolog
-- name: Archives
-  link: /archives
+- name: Archive
+  link: /archive
+- name: Projects
+  link: /projects
 - name: Notes
   link: /notes
