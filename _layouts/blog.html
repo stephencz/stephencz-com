@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+{% include header.html %}
+
+<div class="container">
+  {% for post in site.posts limit: 5 %}
+  <div class="content-wrapper">
+    <h1 class="title"><a href="{{post.url}}">{{ post.title }}</a></h1>
+    <div class="metadata">
+      <div class="date">{% if post.updated %}{{ post.updated | date: "%B %d, %Y"}}{% else %}{{ post.date | date: "%B %d, %Y"}}{% endif %}</div>
+      {% assign category_size = post.categories | size %}
+      <div class="primary-category">{% if category_size > 0 %}<a href="/categories/{{ post.categories[0] | downcase | replace: ' ', '-' }}">[{{ post.categories[0] }}]</a>{% endif %}</div>
+    </div>
+    {{ post.content }}
+  </div>
+  {% endfor %}
+</div>
+
+{% include footer.html %}
