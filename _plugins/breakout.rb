@@ -32,6 +32,26 @@ module Jekyll
     end
 
   end
+
+  class BreakoutFixedBlock < Liquid::Block
+
+    def initialize(name, args, tokens)
+      super
+      @tokens = tokens
+      @args = args
+      @classes = args.split(" ")
+      @breakout_size = @classes[0]
+      @classes.shift(1)
+    end
+
+    def render(context)
+      block_body = super(context)
+      return '<div class="breakout ' + @classes.join(' ') + '">' + '<div style="max-width: ' + @breakout_size.to_s + '; margin-left: auto; margin-right: auto;">' + block_body + '</div></div>'
+    end
+
+  end
 end
 
 Liquid::Template.register_tag('breakout', Jekyll::BreakoutBlock)
+Liquid::Template.register_tag('breakoutfixed', Jekyll::BreakoutFixedBlock)
+
