@@ -13,9 +13,6 @@ The notes are organized into topics, and the topics are ordered logically.
 ## Mental Health
 * [Mindfulness Based Stress Reduction](/notes/mindfulness-based-stress-reduction)
 
-## Computer Science
-
-### Design Patterns
 
 ## Philosophy and Religion
 * [Buddhism](/notes/buddhism)
