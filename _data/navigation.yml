@@ -1,8 +1,9 @@
-- name: About
-  link: /about
 - name: Blog
   link: /blog
 - name: Archive
   link: /archive
 - name: Notes
   link: /notes
+- name: Wiki
+  link: /wiki
+

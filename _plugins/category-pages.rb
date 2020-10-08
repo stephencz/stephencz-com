@@ -17,7 +17,7 @@ module Jekyll
           @site = site
           @base = base
           @dir = dir
-          @name =  category.gsub(" ", "-") + '.html'
+          @name =  category.downcase.gsub(" ", "-") + '.html'
 
           self.process(@name)
           self.read_yaml(File.join(base, '_layouts'), 'category.html')

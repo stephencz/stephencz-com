@@ -1,8 +1,8 @@
 .breakout
 {
   position: relative;
-  left: calc(((100vw - 100%) / -2) + 7.5px);
-  width: calc(100vw - 15px);
+  left: calc(((100vw - 100%) / -2) + 60px);
+  width: calc(100vw - 120px);
   margin-top: $unit-one;
   margin-bottom: $unit-one
 }
