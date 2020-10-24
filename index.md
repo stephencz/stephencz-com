@@ -16,3 +16,7 @@ If you would like to know more me then check out the [about page](/about).
 The rest of the content is organized into three groups: The [weblog](/weblog), my [notes](/notes), and [other](/other) stuff.
 Feel free to explore, or check out the featured content below:
 
+{% include featured.html %}
+
+Email: [*admin@stephencz.com*](mailto:admin@stephencz.com) <br>
+Discord: [https://discord.gg/6bvR5Kc](https://discord.gg/6bvR5Kc)

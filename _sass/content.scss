@@ -161,6 +161,15 @@ $left-spacing: 20px;
   margin-left: $left-spacing;
 }
 
+.content-wrapper ul.featured
+{
+  list-style: none;
+  padding-left: 0px;
+
+  margin-top: $unit-two;
+  margin-bottom: $unit-two;
+}
+
 .content-wrapper blockquote
 {
   font-style: italic;
