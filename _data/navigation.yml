@@ -1,9 +1,10 @@
-- name: Blog
-  link: /blog
-- name: Archive
-  link: /archive
-- name: Notes
+- name: home
+  link: /
+- name: about
+  link: /about
+- name: weblog
+  link: /weblog
+- name: notes
   link: /notes
-- name: Wiki
-  link: "https://www.wiki.stephencz.com"
-
+- name: other
+  link: /other

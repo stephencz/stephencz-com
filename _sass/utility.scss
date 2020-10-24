@@ -41,3 +41,9 @@
 .margin-bottom-unit-nine { margin-bottom: $unit-nine !important; }
 .margin-bottom-unit-nine-half { margin-bottom: $unit-nine-half !important; }
 .margin-bottom-unit-ten { margin-bottom: $unit-ten !important; }
+
+.drop-cap::first-letter
+{
+    font-size: 1.65rem;
+    line-height: 1.15rem;
+}
