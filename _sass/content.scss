@@ -66,7 +66,7 @@ $left-spacing: 20px;
 .content-wrapper h2 
 { 
   font-size: $h2-font-size; 
-  margin-top: $unit-four;
+  margin-top: $unit-three;
   margin-bottom: $unit-quarter;
 }
 
@@ -168,6 +168,12 @@ $left-spacing: 20px;
 
   margin-top: $unit-two;
   margin-bottom: $unit-two;
+}
+
+.content-wrapper ul.weblog-list
+{
+  list-style: none;
+  padding-left: 0px;
 }
 
 .content-wrapper blockquote
