@@ -1,0 +1,7 @@
+{
+  "websites": [
+    {"name": "Reddit", "date": "10-15-2020", "times-failed": 0},
+    {"name": "Youtube", "date": "10-15-2020", "times-failed": 0},
+    {"name": "Netflix", "date": "10-15-2020", "times-failed": 0}
+  ]
+}
