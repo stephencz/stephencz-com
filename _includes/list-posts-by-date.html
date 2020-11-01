@@ -1,7 +1,7 @@
 <ul class="weblog-list">
     {% for post in site.posts %}
     <li>
-        <span class="date">{% if post.updated %}{{ post.updated | date: "%m-%d-%Y"}}{% else %}{{ post.date | date: "%m-%d-%Y"}}{% endif %}:</span>
+        <span class="date">{% if post.updated %}{{ post.updated | date: "%m-%d-%Y"}}{% else %}{{ post.date | date: "%m-%d-%Y"}}{% endif %}: </span>
         <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
     {% endfor %}
