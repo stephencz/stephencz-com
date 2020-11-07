@@ -5,5 +5,11 @@ title: Notes
 
 Here is an organized collection of all my notes:
 
+## Books
+* [The Gathering Storm - Winston Churchill](/notes/the-gathering-storm)
+
+## Language
+* [Patterns and Methods In Writing](/notes/patterns-and-methods-in-writing)
+
 ## Misc
-* [Things I Do When Bored](/notes/bored)
+* [Browser Home](/notes/browser-home)
