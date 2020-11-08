@@ -3,11 +3,13 @@ layout: note
 title: Browser Home
 ---
 
+## 
+
 ## Habits to Monitor
-* **Not counting calories.** Oi! Fatty! What's that you are about to eat? Two fried eggs and comes carrots? Make sure you log those calories using your favorite [calorie tracker](https://loseit.com/).
+* **Not counting calories.** Oi! Fatty! What's that you are about to eat? Two fried eggs and some carrots? Make sure you log those calories using your favorite [calorie tracker](https://loseit.com/).
 * **Mindlessly browsing the Internet.** Get off Youtube! Get off Reddit! Stop refreshing the front page of the New York Times! Go do something productive you idiot!
 * **Playing an excess of video games.** What's that coming out your ears? Your mushy brains that is what! Video games are fun, but they can also be highly addictive and anti-social. Maybe go do something else you couch potato?
-* **Watching an excess of television/movies.** See above bullet point. Seriously, at this point you've seen ever plot possible. Go do something else.
+* **Watching an excess of television/movies.** See above bullet point. Seriously, at this point you've seen every plot possible. Go do something else.
 * **Being a recluse.** I know you don't like social interaction much buddy, but why don't you step out of your comfort zone a little? Sometimes its just what you need.
 * **Being grumpy.** What's with the pouty face? Something got you pissed off? Or feeling a bit down perhaps? Just take it easy man. Use that mush between your ears and stop, reflect, and, most importantly, relax.
 
@@ -17,14 +19,14 @@ I know its an interesting concept, but trust me I'm not lying. I swear I'm not..
 Still don't believe me?
 Well here is a list of some productive and healthy things you can do when bored:
 
-* **Exercise.** Go lift something heavy or run around really fast. Exercise is an essentially component of being healthy, and has several benefits such as improved cognitive and mood.
+* **Exercise.** Go lift something heavy or run around really fast. Exercise is an essential component of being healthy, and has several benefits such as improved cognition and mood.
 * **Read a book.** Books are these papery things which can transport you to unbelievable worlds and introduce you to new ideas. Reading is good for your brain.
 * **Write.** You remember those book things I was just talking about? You can also write them! For free. At home. Or maybe start with something shorter?
 * **Play or compose music.** I know you got a couple instruments. Go play a song you like. Or maybe write your own?
 * **Play a board game.** Board games are like video games except they don't require a computer, are less addictive, are more social, and smell better. Carcassonne is one of your favorites so why don't you go play that?
 * **Take care of your dog.** Dogs are man's best friend. If you still have one why not go play fetch with the thing? Or maybe brush it and trim its nails? Or give it a bath? Rub its belly?
 * **Clean something up.** I'm sure the dishes are dirty or your bedroom needs to be vacuumed. Go dust something.
-* **Declaim poetry at people.** Go get your copy of *Leaves of Grass* and read it at someone.
+* **Declaim poetry at people.** Go get your copy of *Leaves of Grass* and read it *at* someone.
 * **Generic Listing.** Go do something like a hobby or some crap.
 
 ## Quotes and Excerpts I Like
