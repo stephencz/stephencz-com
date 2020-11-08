@@ -3,8 +3,6 @@ layout: note
 title: Browser Home
 ---
 
-## 
-
 ## Habits to Monitor
 * **Not counting calories.** Oi! Fatty! What's that you are about to eat? Two fried eggs and some carrots? Make sure you log those calories using your favorite [calorie tracker](https://loseit.com/).
 * **Mindlessly browsing the Internet.** Get off Youtube! Get off Reddit! Stop refreshing the front page of the New York Times! Go do something productive you idiot!
