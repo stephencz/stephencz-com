@@ -1,0 +1,6 @@
+{% assign filtered = site.posts | where: "group", include.group %}
+<ul class="posts-by-group">
+  {% for post in filtered %}
+  <li><a href="{{post.url}}">{{post.title}}</a></li>
+  {% endfor %} 
+</ul>

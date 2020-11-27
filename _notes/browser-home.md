@@ -1,6 +1,7 @@
 ---
 layout: note
 title: Browser Home
+group: misc
 ---
 
 ## Habits to Monitor

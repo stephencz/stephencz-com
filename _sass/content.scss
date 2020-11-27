@@ -17,9 +17,15 @@ $left-spacing: 20px;
 
 .content-wrapper
 {
-  border-bottom: 1px solid $bottom-border-color;
   margin-bottom: $unit-ten;
 }
+
+.content-wrapper .post-wrapper
+{
+  margin-bottom: $unit-eight;
+  border-bottom: 1px solid $bottom-border-color;
+}
+
 
 .content-wrapper + .content-wrapper
 {
@@ -35,12 +41,14 @@ $left-spacing: 20px;
   width: 100%;
   
   margin-bottom: $unit-one;
+  margin-right: 5px;
 }
 
-.content-wrapper .metadata .primary-category
+.content-wrapper .metadata .primary-category,
+.content-wrapper .metadata .secondary-category
 {
   display: inline;
-  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .content-wrapper h1.title
@@ -175,6 +183,24 @@ $left-spacing: 20px;
   list-style: none;
   padding-left: 0px;
 }
+
+.content-wrapper ul.weblog-list li
+{
+  margin-bottom: $unit-one;
+}
+
+.content-wrapper ul.category-list 
+{
+  padding-left: 0px;
+}
+
+.content-wrapper ul.category-list li
+{
+  display: inline-block;
+  padding-right: 5px;
+
+}
+
 
 .content-wrapper blockquote
 {

@@ -3,5 +3,5 @@ layout: page
 title: Notes
 ---
 
-## Misc
-* [Browser Home](/notes/browser-home)
+{% include note-section.html section="Misc" group="misc" %}
+
