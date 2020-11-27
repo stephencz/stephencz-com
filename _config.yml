@@ -31,9 +31,9 @@ collections:
     title: "Untitled Note"
     updated: "2020-09-21"
 
-  other:
+  projects:
     output: true
-    title: "Untitled Other"
+    title: "Untitled Project"
 
 exclude:
   - .sass-cache/
