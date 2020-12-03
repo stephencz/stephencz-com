@@ -1,6 +1,6 @@
 ---
-layout: page
-title: About
+layout: other
+title: Other
 ---
 
 *There is nothing here.*

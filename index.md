@@ -13,7 +13,7 @@ Feel free to explore, or check out the featured content below:
 *There is no featured content.*
 
 {% comment %}
-{% include featured.html %}
+{% include lists/list_featured.html %}
 {% endcomment %}
 
 Email: [*admin@stephencz.com*](mailto:admin@stephencz.com) <br>

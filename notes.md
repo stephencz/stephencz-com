@@ -3,5 +3,6 @@ layout: page
 title: Notes
 ---
 
-{% include note-section.html section="Misc" group="misc" %}
+Here is a collection of notes I've taken on a variety of topics, or created for different purposes.
+
 

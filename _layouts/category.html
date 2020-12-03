@@ -8,7 +8,7 @@ layout: default
 <div class="container">
   <div class="content-wrapper">
     <h1 class="title">{{ page.title }}</h1>
-    <ul class="weblog-list">
+    <ul class="category-list">
     {% for post in site.posts %}
       {% for cat in post.categories %}
         {% if cat == page.category-name %}

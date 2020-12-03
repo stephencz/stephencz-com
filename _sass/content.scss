@@ -144,7 +144,7 @@ $left-spacing: 20px;
 }
 
 .content-wrapper ul li,
-.content-wrapper ol li,
+.content-wrapper ol li
 {
   margin-bottom: $unit-quarter;
 }
@@ -178,29 +178,26 @@ $left-spacing: 20px;
   margin-bottom: $unit-two;
 }
 
-.content-wrapper ul.weblog-list
+.content-wrapper ul.category-list
 {
   list-style: none;
   padding-left: 0px;
 }
 
-.content-wrapper ul.weblog-list li
+.content-wrapper ul.category-list li
 {
   margin-bottom: $unit-one;
 }
 
-.content-wrapper ul.category-list 
+.content-wrapper ul.weblog-list 
 {
-  padding-left: 0px;
+  padding-left: 20px;
 }
 
-.content-wrapper ul.category-list li
+.content-wrapper ul.weblog-list li
 {
-  display: inline-block;
-  padding-right: 5px;
-
+  margin-bottom: $unit-half;
 }
-
 
 .content-wrapper blockquote
 {
