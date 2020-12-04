@@ -1,13 +1,14 @@
 ---
-layout: custom
+layout: minimal
 title: Books
 group: "trackers"
+return: "/other"
 ---
 
-{% breakoutfixed 960px %}
+{% breakout%}
 <h1 class="title">{{ page.title }}</h1>
 <p>
-  A list of books I've read, who wrote them, and when I finished them.
+  A list of books I've read, who wrote them, when I finished them, and sometimes a relevant link.
 </p>
 <table class="tracker">
   <thead>
@@ -15,6 +16,7 @@ group: "trackers"
       <th>Title</th>
       <th>Author</th>
       <th>Finished Date</th>
+      <th>Link</th>
     </tr>
   </thead>
   {% for book in site.data.books %}
@@ -22,8 +24,9 @@ group: "trackers"
     <td>{{ book.title }}</td>
     <td>{{ book.author }}</td>
     <td>{{ book.date }}</td>
+    <td><a target="_blank" href="{{ book.url }}">Link</a></td>
   </tr>
   {% endfor %}
 </table>
 <p><a href="/csv/books.csv">Download CSV</a></p>
-{% endbreakoutfixed %}
+{% endbreakout %}

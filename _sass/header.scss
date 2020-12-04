@@ -23,6 +23,17 @@ $nav-hover: #0d54c1;
   margin-right: auto;
 }
 
+.header-minimal
+{
+  max-width: $max-container-width;
+
+  width: auto;
+  height: auto;
+
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .header .brand
 {
   display: inline-block;

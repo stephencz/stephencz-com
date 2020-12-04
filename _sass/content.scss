@@ -26,7 +26,6 @@ $left-spacing: 20px;
   border-bottom: 1px solid $bottom-border-color;
 }
 
-
 .content-wrapper + .content-wrapper
 {
   margin-top: $unit-four;
@@ -261,7 +260,7 @@ $left-spacing: 20px;
 
 .content-wrapper table.tracker thead
 {
-  background-color: #bbbbbb;
+  background-color: #e8e8e8;
 }
 
 .content-wrapper table.tracker th,
