@@ -50,6 +50,16 @@ defaults:
   -
     scope:
       path: ""
+      type: "other"
+    values:
+      layout: "page"
+      title: "Untitled Other"
+      author: "Stephen Czekalski"
+      description: "It looks like Stephen forgot to fill out this note's description..."
+      group: default
+  -
+    scope:
+      path: ""
       type: "projects"
     values:
       layout: "project"
@@ -63,6 +73,12 @@ collections:
     output: true
 
   projects:
+    output: true
+
+  other:
+    output: true
+
+  csv:
     output: true
 
 exclude:

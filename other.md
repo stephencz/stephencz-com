@@ -3,4 +3,7 @@ layout: other
 title: Other
 ---
 
-*There is nothing here.*
+All the content that doesn't fit anywhere else or isn't particularly interesting.
+
+{% include sections/section-other.html level="h2" name="Trackers" group="trackers" %}
+{% include sections/section-other.html level="h2" name="Misc" group="misc" %}

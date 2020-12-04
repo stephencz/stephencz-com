@@ -6,9 +6,8 @@ title: Home
 {:.drop-cap}
 Welcome to the personal website of Stephen Czekalski.
 
-If you would like to know more about me or this website then check out the [about page](/about).
-I've organized content into three groups: My [projects](/projects), the [weblog](/weblog), and my [notes](/notes).
-Feel free to explore, or check out the featured content below:
+This website is where I share things that I've done, or which interest me.
+I've divided content into four categories. 
 
 *There is no featured content.*
 

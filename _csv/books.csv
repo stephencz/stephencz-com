@@ -1,0 +1,5 @@
+---
+---
+title,author,date-finished
+{% for book in site.data.books %}{{ book.title }},{{ book.author }},{{ book.date }},
+{% endfor %}

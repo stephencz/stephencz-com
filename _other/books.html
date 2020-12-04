@@ -1,0 +1,29 @@
+---
+layout: custom
+title: Books
+group: "trackers"
+---
+
+{% breakoutfixed 960px %}
+<h1 class="title">{{ page.title }}</h1>
+<p>
+  A list of books I've read, who wrote them, and when I finished them.
+</p>
+<table class="tracker">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Finished Date</th>
+    </tr>
+  </thead>
+  {% for book in site.data.books %}
+  <tr>
+    <td>{{ book.title }}</td>
+    <td>{{ book.author }}</td>
+    <td>{{ book.date }}</td>
+  </tr>
+  {% endfor %}
+</table>
+<p><a href="/csv/books.csv">Download CSV</a></p>
+{% endbreakoutfixed %}
