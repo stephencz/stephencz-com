@@ -8,13 +8,14 @@ return: "/other"
 {% breakout%}
 <h1 class="title">{{ page.title }}</h1>
 <p>
-  A list of books I've read, who wrote them, when I finished them, and sometimes a relevant link.
+  A list of books I've read, their author, genre, when I finished them, and sometimes a relevant link.
 </p>
 <table class="tracker">
   <thead>
     <tr>
       <th>Title</th>
       <th>Author</th>
+      <th>Genre</th>
       <th>Finished Date</th>
       <th>Link</th>
     </tr>
@@ -23,8 +24,9 @@ return: "/other"
   <tr>
     <td>{{ book.title }}</td>
     <td>{{ book.author }}</td>
+    <td>{{ book.genre }}</td>
     <td>{{ book.date }}</td>
-    <td><a target="_blank" href="{{ book.url }}">Link</a></td>
+    <td><a href="{{ book.url }}">Link</a></td>
   </tr>
   {% endfor %}
 </table>
