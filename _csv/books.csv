@@ -1,5 +1,0 @@
----
----
-title,author,genre,date-finished,link
-{% for book in site.data.books %}{{ book.title }},{{ book.author }},{{ book.genre }},{{ book.date }},{{ book.url }}
-{% endfor %}
