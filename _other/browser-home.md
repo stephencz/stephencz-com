@@ -12,11 +12,11 @@ group: "misc"
 * [Google Mail](https://mail.google.com/mail){:target="_blank"}
 * [Google Sheets](https://www.google.com/sheets){:target="_blank"}
 * [Outlook/Hotmail](outlook.live.com/mail){:target="_blank"}
-
-### Life
-* [Lose It!](https://www.loseit.com/){:target="_blank"}
 * [Rowan University](https://www.rowan.edu/){:target="_blank"}
 
+### Goals
+* [Duolingo](https://www.duolingo.com/){:target="_blank"}
+* [Lose It!](https://www.loseit.com/){:target="_blank"}
 
 ### News
 * [BBC](https://www.bbc.com/news){:target="_blank"}
