@@ -1,7 +1,7 @@
 - name: home
   link: /
-- name: projects
-  link: /projects
+- name: showcase
+  link: /showcase
 - name: weblog
   link: /weblog
 - name: notes
