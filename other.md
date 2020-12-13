@@ -3,6 +3,6 @@ layout: other
 title: Other
 ---
 
-All the content that doesn't fit anywhere else or isn't particularly interesting.
+Here is the content that didn't fit into the other categories.
 
 {% include sections/section-other.html level="h2" name="Misc" group="misc" %}

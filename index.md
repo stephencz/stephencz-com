@@ -6,14 +6,19 @@ title: Home
 {:.drop-cap}
 Welcome to the personal website of Stephen Czekalski.
 
-This website is where I share things that I've done, or which interest me.
-I've divided content into four categories. 
+I created this website to share the things I've done, find interesting, or believe to be useful.
+My interests are widespread, however I tend to focus on computer science.
+Currently, I am a senior at Rowan University studying Computing and Informatics.
+
+Feel free to explore my website, or check out the featured content below:
 
 *There is no featured content.*
 
 {% comment %}
 {% include lists/list_featured.html %}
 {% endcomment %}
+
+
 
 Email: [*admin@stephencz.com*](mailto:admin@stephencz.com) <br>
 Discord: [https://discord.gg/6bvR5Kc](https://discord.gg/6bvR5Kc)
