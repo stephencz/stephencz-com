@@ -56,14 +56,10 @@ module Jekyll
                 piece_letter = position[2]
                 piece_number = position[3]
 
-                if (piece_letter == letter)
-                    pp "LETTER MATCH FOUND" + position
-                end
-
                 if (piece_letter == letter) && (piece_number == number.to_s())
                     if color == 'W'
                         output += "white-"
-                        pp "WHITE FOUND WHITE FOUND WHITE FOUND"
+                        
                     elsif color == 'B'
                         output += "black-"
 
@@ -90,8 +86,11 @@ module Jekyll
                     elsif type == "N"
                         output += "knight"
 
+                    elsif type == "M"
+                        output += "marker"
+
                     else
-                        output += "Invalid type at " + posiiton
+                        output += "Invalid type at " + position
                         return output
                     end
 

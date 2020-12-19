@@ -2,6 +2,9 @@ table.chess
 {
     border: 1px solid #463838;
     border-spacing: 0px;
+    margin-bottom: $unit-one;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 table.chess tr td.light,
@@ -54,12 +57,14 @@ table.chess tr td.white-rook,
 table.chess tr td.white-bishop,
 table.chess tr td.white-knight,
 table.chess tr td.white-pawn,
+table.chess tr td.white-marker,
 table.chess tr td.black-king,
 table.chess tr td.black-queen,
 table.chess tr td.black-rook,
 table.chess tr td.black-bishop,
 table.chess tr td.black-knight,
-table.chess tr td.black-pawn
+table.chess tr td.black-pawn,
+table.chess tr td.black-marker
 {
     background-repeat: no-repeat;
     background-size: contain;
@@ -95,6 +100,11 @@ table.chess tr td.white-pawn
     background-image: url(/assets/images/chess/white_pawn.png);
 }
 
+table.chess tr td.white-marker
+{
+    background-image: url(/assets/images/chess/white_marker.png);
+}
+
 table.chess tr td.black-king
 {
     background-image: url(/assets/images/chess/black_king.png);
@@ -123,4 +133,9 @@ table.chess tr td.black-knight
 table.chess tr td.black-pawn
 {
     background-image: url(/assets/images/chess/black_pawn.png);
+}
+
+table.chess tr td.black-marker
+{
+    background-image: url(/assets/images/chess/black_marker.png);
 }
