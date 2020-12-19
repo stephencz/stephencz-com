@@ -7,6 +7,8 @@ stylesheets: ["/assets/css/chess.css"]
 group: games
 ---
 
+*These notes are incomplete and are part of an on-going project.*
+
 ## Basics
 
 Chess is a two player board game which has been played for over a century.
