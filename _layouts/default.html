@@ -10,11 +10,18 @@
   <title>{{page.title}} | {{site.title}}</title>
 
   <link rel="stylesheet" type="text/css" href="/assets/css/base.css" />
+  {% for stylesheet in page.stylesheets %}  
+    <link rel="stylesheet" type="text/css" href="{{ stylesheet }}" />
+  {% endfor %}
 
 </head>
 <body>
   
   {{ content }}
+
+  {% for script in page.scripts %}
+    <script src="{{ script }}"></script>
+  {% endfor %}
 
 </body>
 </html>

@@ -1,0 +1,126 @@
+table.chess
+{
+    border: 1px solid #463838;
+    border-spacing: 0px;
+}
+
+table.chess tr td.light,
+table.chess tr td.dark
+{
+    border: 1px solid #463838;
+
+    width: 30px;
+    height: 30px;
+
+    min-width: 30px;
+    min-height: 30px;
+
+    text-align: center;
+}
+
+table.chess tr td.letter,
+table.chess tr td.number,
+table.chess tr td.corner
+{
+    border: 1px solid #463838;
+
+    background-color: #ddc5b4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+
+    text-align: center;
+}
+
+table.chess tr td.corner
+{
+    width: 20px;
+    height: 20px;
+}
+
+table.chess tr td.light
+{
+    background-color: #ffece1;
+
+}
+
+table.chess tr td.dark
+{
+    background-color: #ae8872;
+}
+
+table.chess tr td.white-king,
+table.chess tr td.white-queen,
+table.chess tr td.white-rook,
+table.chess tr td.white-bishop,
+table.chess tr td.white-knight,
+table.chess tr td.white-pawn,
+table.chess tr td.black-king,
+table.chess tr td.black-queen,
+table.chess tr td.black-rook,
+table.chess tr td.black-bishop,
+table.chess tr td.black-knight,
+table.chess tr td.black-pawn
+{
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+table.chess tr td.white-king
+{
+    background-image: url(/assets/images/chess/white_king.png);
+}
+
+table.chess tr td.white-queen
+{
+    background-image: url(/assets/images/chess/white_queen.png);
+}
+
+table.chess tr td.white-rook
+{
+    background-image: url(/assets/images/chess/white_rook.png);
+}
+
+table.chess tr td.white-bishop
+{
+    background-image: url(/assets/images/chess/white_bishop.png);
+}
+
+table.chess tr td.white-knight
+{
+    background-image: url(/assets/images/chess/white_knight.png);
+}
+
+table.chess tr td.white-pawn
+{
+    background-image: url(/assets/images/chess/white_pawn.png);
+}
+
+table.chess tr td.black-king
+{
+    background-image: url(/assets/images/chess/black_king.png);
+}
+
+table.chess tr td.black-queen
+{
+    background-image: url(/assets/images/chess/black_queen.png);
+}
+
+table.chess tr td.black-rook
+{
+    background-image: url(/assets/images/chess/black_rook.png);
+}
+
+table.chess tr td.black-bishop
+{
+    background-image: url(/assets/images/chess/black_bishop.png);
+}
+
+table.chess tr td.black-knight
+{
+    background-image: url(/assets/images/chess/black_knight.png);
+}
+
+table.chess tr td.black-pawn
+{
+    background-image: url(/assets/images/chess/black_pawn.png);
+}
