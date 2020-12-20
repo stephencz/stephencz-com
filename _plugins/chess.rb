@@ -1,4 +1,3 @@
-
 module Jekyll
 
     #
@@ -29,7 +28,7 @@ module Jekyll
     # a1-h8: See Chess Algebraic Notation for understanding the
     #        chessboard grid.
     #
-    class ChessBoard < Liquid::Tag
+    class Chessboard < Liquid::Tag
   
         def initialize(name, args, tokens)
             super
@@ -176,7 +175,6 @@ module Jekyll
         end
   
     end
-
 end
 
-Liquid::Template.register_tag('chessboard', Jekyll::ChessBoard)
+Liquid::Template.register_tag('chessboard', Jekyll::Chessboard)

@@ -1,21 +1,19 @@
 ---
 layout: note
-title: Chess
+title: Chess Basics
 description: "Notes on the game of Chess ranging from the basics of play to the complexity of tactics."
 author: Stephen Czekalski
 stylesheets: ["/assets/css/chess.css"]
-group: games
+group: chess
 ---
 
 *These notes are incomplete and are part of an on-going project.*
-
-## Basics
 
 Chess is a two player board game which has been played for over a century.
 The objective of the game is to capture the other player's king by positioning your own pieces strategically.
 The game ends when one player captures the other's king, there is a stalemate, or if one player resigns.
 
-### Objective and Setup
+## Objective and Setup
 
 The objective of the game is to capture the other player's king.
 To do this the player must weaken their opponent by capturing their other pieces and outwitting them.
@@ -54,7 +52,7 @@ The player with the light colored pieces is called "**White**".
 And the player with the dark colored pieces is called "**Black**".
 It is standard for White to go first, followed by Black.
 
-### The King
+## The King
 
 The King is your most important piece. 
 If you lose it, you lose the game.
@@ -77,7 +75,7 @@ The King can only move square in any direction.
 * Must be moved in check.
 * You lose if the King is put into checkmate.
 
-### The Queen
+## The Queen
 
 The Queen is the most powerful pieces on the board. 
 It has the combined powers of a [Rook](#rook) and a [Bishop](#bishop).
@@ -98,7 +96,7 @@ Losing this piece can mean the different between victory and defeat.
 * Can move diagonally, horizontally, or vertically as many squares as it wants.
 * Can't jump over other pieces.
 
-### The Rook
+## The Rook
 
 The Rook can move horizontally or vertically as many squares as it wants.
 Like the Queen it **cannot jump over** other pieces.
@@ -113,7 +111,7 @@ If a piece is in its path it must either capture or move it.
 * Can move horizontally or vertically as many squares as it wants.
 * Can't jump over other pieces.
 
-### The Bishop
+## The Bishop
 
 The Bishop can move diagonally as many squares as it wants.
 Like the Queen it **cannot jump over** other pieces.
@@ -128,7 +126,7 @@ If a piece is in its path it must either capture or move it.
 * Can move diagonally as many pieces as it wants.
 * Can't jump over other pieces.
 
-### The Knight
+## The Knight
 
 The Knight moves in a unique "L" shape.
 The Knight is unique in that is **can jump over** other pieces.
@@ -142,7 +140,7 @@ It is the only piece in the game of chess which can jump over other pieces.
 * Moves in an "L" shape.
 * The only piece which can jump over other pieces.
 
-### The Pawn
+## The Pawn
 
 The Pawn is the weakest and least value piece on the board.
 The rules governing the movement of a pawn are slightly more complicated than the other pieces.
@@ -177,7 +175,10 @@ Because pawns can only attack diagonally, it **cannot** capture Black's knight a
 * It can only attack one square diagonally.
 * It can not move back.
 
-### *En Passant*
+## Pawn Promotion
+
+
+## *En Passant*
 
 *En Passant* is a special type of pawn capture which can only occur in a specific situation.
 Consider the following board:
@@ -245,15 +246,10 @@ Here is an example of the same situation but for Black.
 
 * *En Passant*
 
-### Pawn Promotion
+## Castling
 
+## Check and Checkmate
 
-### Castling
+## Stalemate
 
-### Check and Checkmate
-
-### Stalemate
-
-### Resignation
-
-## Chess Notation
+## Resignation

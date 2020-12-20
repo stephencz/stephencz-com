@@ -1,16 +1,14 @@
 ---
 ---
-// Global Variables
-
-
-// Imports
 @import 'global';
-@import 'normalize';
-@import 'highlight';
-@import 'html';
-@import 'structure';
-@import 'breakout';
-@import 'header';
-@import 'content';
-@import 'footer';
-@import 'utility'
+
+@import 'core/normalize';
+@import 'core/html';
+@import 'core/structure';
+@import 'core/header';
+@import 'core/content';
+@import 'core/footer';
+@import 'core/utility';
+
+@import 'plugin/highlight';
+@import 'plugin/breakout';
