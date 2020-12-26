@@ -22,8 +22,6 @@ group: chess
 * If the pawn hasn't moved yet it can move two squares forward.
 * If the pawn has moved it can only move one square forward.
 * The pawn can *only* attack one square diagonally. For example, the black pawn on **e5** could capture the white pawn on **d4**, but not the pawn on **e4**.
-* Relative Value = 1
-
 
 ### The Knight
 {% 
@@ -33,7 +31,6 @@ group: chess
 
 * Moves in an "L" shape.
 * The only piece which can jump over other pieces.
-* Relative Value = 3
 
 ### The Bishop
 {% 
@@ -44,7 +41,6 @@ group: chess
 
 * Can move diagonally as many squares as it wants.
 * Can't jump over other pieces.
-* Relative Value = 3
 
 ### The Rook
 {% 
@@ -55,7 +51,6 @@ group: chess
 
 * Can move horizontally or vertically as many squares as it wants.
 * Can't jump over other pieces.
-* Relative Value = 5
 
 ### The Queen
 {% 
@@ -115,31 +110,3 @@ To castle "queenside" or "long" move the king to **c1** and the left-most rook t
 
 When a pawn reaches the back most rank of its opponent, it is promoted to a better piece.
 It is most common for a player to promote their pawn to a queen.
-
-## Relative Values
-<table class="standard-table">
-    <tr>
-        <td>Piece</td>
-        <td>Relative Value</td>
-    </tr>
-    <tr>
-        <td>Pawn</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>Knight</td>
-        <td>3</td>
-    </tr>
-    <tr>
-        <td>Bishop</td>
-        <td>3</td>
-    </tr>
-    <tr>
-        <td>Rook</td>
-        <td>5</td>
-    </tr>
-    <tr>
-        <td>Queen</td>
-        <td>9</td>
-    </tr>
-</table>
