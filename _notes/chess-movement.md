@@ -1,7 +1,9 @@
 ---
 layout: note
 title: Chess Movement
-description: "The basics of chess created to help teach new players."
+description: "A cheatsheet for beginner's on how each of the pieces 
+              move in chess, and how movement works during special 
+              moves such as castling and en passant."
 author: Stephen Czekalski
 stylesheets: ["/assets/css/chess.css"]
 group: chess
@@ -11,15 +13,16 @@ group: chess
 ### The Pawn
 {% 
     chessboard 
-    WMf4 WMb3 WMb4
-    WPa2 WPb2 WPc2 WPd2 WPe2 WPf3 WPg2 WPh2 
+    WMf4 WMb3 WMb4 BPe5
+    WPa2 WPb2 WPc2 WPd4 WPe4 WPf3 WPg2 WPh2 
     WRa1 WNb1 WBc1 WQd1 WKe1 WBf1 WNg1 WRh1
 %}
 
 * The pawn can never move or attack backwards.
 * If the pawn hasn't moved yet it can move two squares forward.
 * If the pawn has moved it can only move one square forward.
-* The pawn can *only* attack one square diagonally.
+* The pawn can *only* attack one square diagonally. For example, the black pawn on **e5** could capture the white pawn on **d4**, but not the pawn on **e4**.
+* Relative Value = 1
 
 
 ### The Knight
@@ -30,6 +33,7 @@ group: chess
 
 * Moves in an "L" shape.
 * The only piece which can jump over other pieces.
+* Relative Value = 3
 
 ### The Bishop
 {% 
@@ -40,6 +44,7 @@ group: chess
 
 * Can move diagonally as many squares as it wants.
 * Can't jump over other pieces.
+* Relative Value = 3
 
 ### The Rook
 {% 
@@ -50,7 +55,7 @@ group: chess
 
 * Can move horizontally or vertically as many squares as it wants.
 * Can't jump over other pieces.
-* In most cases, it is the second most powerful piece on the board.
+* Relative Value = 5
 
 ### The Queen
 {% 
@@ -73,17 +78,68 @@ group: chess
 
 * Can move one square diagonally in any direction.
 * Can't jump over other pieces.
-* Must be moved in check.
+* If your king is under attack it is put into check, and must be moved or protected.
 * You lose if the King is put into checkmate.
 
 ## Special Moves
 ### Castling
 
-Castling is a special move which let's the player move two pieces at once.
+Castling is the only move in chess where two pieces can move at once.
+The move involves the player's king and either one of his or her rooks.
+
+To castle, the king and rook involve must not have been moved.
+Additionally, the spaces between the king and the rook must be clear.
+
+{%
+    chessboard
+    WKe1 WRh1 WRa1
+%}
+
+To castle "kingside" or "short" move the king to **g1** and the right-most rook to **f1**.
+
+{%
+    chessboard
+    WKg1 WRf1 WRa1
+%}
+
+To castle "queenside" or "long" move the king to **c1** and the left-most rook to **d1**
+
+{%
+    chessboard
+    WKc1 WRh1 WRd1
+%}
 
 ### En passant
 
 ### Pawn promotion
 
-When a pawn reaches the back most rank of its opponent, it can promote the pawn to a better piece.
+When a pawn reaches the back most rank of its opponent, it is promoted to a better piece.
 It is most common for a player to promote their pawn to a queen.
+
+## Relative Values
+<table class="standard-table">
+    <tr>
+        <td>Piece</td>
+        <td>Relative Value</td>
+    </tr>
+    <tr>
+        <td>Pawn</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>Knight</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>Bishop</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>Rook</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>Queen</td>
+        <td>9</td>
+    </tr>
+</table>
