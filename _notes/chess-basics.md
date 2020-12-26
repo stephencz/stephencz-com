@@ -1,10 +1,9 @@
 ---
 layout: note
 title: Chess Basics
-description: "Notes on the game of Chess ranging from the basics of play to the complexity of tactics."
+description: "The basics of chess created to help teach new players."
 author: Stephen Czekalski
 stylesheets: ["/assets/css/chess.css"]
-group: chess
 ---
 
 *These notes are incomplete and are part of an on-going project.*
