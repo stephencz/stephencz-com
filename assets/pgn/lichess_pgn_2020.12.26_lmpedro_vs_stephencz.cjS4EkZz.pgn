@@ -1,0 +1,21 @@
+[Event "Rated Classical game"]
+[Site "https://lichess.org/cjS4EkZz"]
+[Date "2020.12.26"]
+[White "lmpedro"]
+[Black "stephencz"]
+[Result "0-1"]
+[UTCDate "2020.12.26"]
+[UTCTime "03:58:25"]
+[WhiteElo "1025"]
+[BlackElo "958"]
+[WhiteRatingDiff "-7"]
+[BlackRatingDiff "+22"]
+[Variant "Standard"]
+[TimeControl "1800+0"]
+[ECO "A01"]
+[Opening "Nimzo-Larsen Attack"]
+[Termination "Normal"]
+
+1. b3 e6 2. Bb2 Bd6 3. e3 Nc6 4. f4 f6 5. g4 Nh6 6. h3 O-O 7. g5 Nf5 8. gxf6 gxf6 9. e4 Ng3 10. Bg2 Nxh1 11. Bxh1 b6 12. e5 fxe5 13. d3 Qh4+ 14. Kd2 Qxf4+ 15. Ke1 Bc5 16. Ne2 Qf2+ 17. Kd2 Qe3+ 18. Ke1 Rf2 19. Be4 Rh2 20. Nd2 Rh1+ 21. Nf1 Qf2+ 22. Kd2 Bb4+ 23. Kc1 Rxf1 24. Qxf1 Qxf1# 0-1
+
+

@@ -1,0 +1,21 @@
+[Event "Rated Classical game"]
+[Site "https://lichess.org/nmqQIwGM"]
+[Date "2020.12.22"]
+[White "kogden"]
+[Black "stephencz"]
+[Result "0-1"]
+[UTCDate "2020.12.22"]
+[UTCTime "03:22:47"]
+[WhiteElo "801"]
+[BlackElo "896"]
+[WhiteRatingDiff "-8"]
+[BlackRatingDiff "+21"]
+[Variant "Standard"]
+[TimeControl "1800+0"]
+[ECO "A07"]
+[Opening "King's Indian Attack"]
+[Termination "Normal"]
+
+1. Nf3 d5 2. g3 Bf5 3. Bg2 e6 4. O-O Bc5 5. c3 Na6 6. Na3 c6 7. d4 Qa5 8. dxc5 Nxc5 9. b4 Qb5 10. Qc2 Qa6 11. bxc5 Bxc2 12. e3 Bf5 13. h3 O-O-O 14. g4 Be4 15. Nh4 Bd3 16. Rd1 d4 17. Rb1 Bxb1 18. Rxd4 Rxd4 19. exd4 Qxa3 20. Bxa3 Nf6 21. g5 Ng4 22. hxg4 h6 23. g6 fxg6 24. Nxg6 Re8 25. Nf4 Kc7 26. Ne2 Bd3 27. Ng3 e5 28. Be4 Bc4 29. dxe5 Rxe5 30. Bh7 b6 31. Bc1 bxc5 32. Bd2 a5 33. f4 Re8 34. f5 Bxa2 35. Bf4+ Kb6 36. Nf1 Bc4 37. Nd2 Bd3 38. g5 Rh8 39. gxh6 Rxh7 40. Bb8 Rxh6 41. Be5 g6 42. fxg6 Rxg6+ 43. Kf2 Rg5 44. Bf4 Rd5 45. c4 Rd8 46. Nb3 a4 47. Nd2 a3 48. Bg5 Rg8 49. Bf6 Rf8 50. Ke3 Bh7 51. Bc3 a2 52. Nb3 Re8+ 53. Kf4 Rf8+ 54. Kg5 Rf3 55. Kh6 Rxc3 56. Nc1 Rxc1 57. Kxh7 a1=Q 58. Kg6 Rf1 59. Kg5 Qg7+ 60. Kh4 Rg1 61. Kh3 Qh7# 0-1
+
+
