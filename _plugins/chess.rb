@@ -1,5 +1,12 @@
 require 'json'
 
+# OPTIMIZATION NOTES:
+#
+# A possible optimization is making it so the chessboard only ever has
+# to parse the PGN once. Right now I believe it is being parsed for each
+# move.
+#
+
 module Jekyll
 
   #
@@ -213,9 +220,11 @@ module Jekyll
             end
 
             # Extract the PGN move directions and store in the moves Hash
-            extracted_moves = data.gsub!(/^[\[](.*?)]/, "").strip() # Remove Headers
+            extracted_moves = data.gsub!(/^[\[](.*?)\]/, "").strip() # Remove Headers
             extracted_moves = extracted_moves.gsub(/[0-9]*[.]/, "").strip() # Remove Move Numbers
+            extracted_moves = extracted_moves.gsub(/[\+\#]/, "").strip() # Remove checks and checkmate markers.
             extracted_moves = extracted_moves.gsub(/{(.*?)}/, "").strip() # Remove Annotations
+            extracted_moves = extracted_moves.gsub(/[0-1][-][0-1]/, "").strip() # Remove Game Termination Marker
             extracted_moves = extracted_moves.split(' ') 
 
             # The turn the move was on.
@@ -252,7 +261,8 @@ module Jekyll
     end
 
     #
-    #
+    # The Chessboard class provides the functionality for representing
+    # and simulating a game of chess.
     #
     class Chessboard
 
@@ -294,44 +304,104 @@ module Jekyll
             end
         end
 
-        # Returns a String representing the piece at the passed in rank and file.
-        # @param letter A-H
+        # Checks if a piece exists at a given square and returns the piece. Otherwise nil.
+        # @param letter a-h
         # @param number 1-8
-        # @return The piece at that location.
+        # @return The piece at the given location. Otherwise nil.
         def get_square(letter, number)
-            return @board[get_letter_index(letter)][number - 1]
+            if number < 1
+                return nil
+            else
+                if(@board[get_letter_index(letter)][number.to_i() - 1].strip().empty?)
+                    return nil 
+                else
+                    return @board[get_letter_index(letter)][number.to_i() - 1], letter + number.to_s()
+                end
+            end
+
+            return nil
         end
 
+        # Sets the piece that should appear at the given square.
+        # @param piece The piece to place at the square (Ex. Pw, Bb, Qw, etc)
+        # @param letter a-h
+        # @param number 1-8
         def set_square(piece, letter, number)
-            @board[get_letter_index(letter)][number - 1] = piece
+            @board[get_letter_index(letter)][number.to_i() - 1] = piece
         end
 
-        def make_move(key, move)
-            
+        # Moves pieces on the chessboard according to a color and a move in
+        # standardized PGN.
+        # @param color The color, 'W' or 'B', of the player making the move.
+        # @param move A move in standardized PGN.
+        def make_move(color, move)
+            # Convert color to uppercase so that the program doesn't break
+            # if the user passes in a lowercase 'w' or 'b' for the color.
+            color.upcase!
+
             # Kingside Castling
+            # Notation: O-O
             if move == "O-O"
-                kingside_castle(key)
+                kingside_castle(color)
 
             # Queenside Castling
+            # Notation: O-O-O
             elsif move == "O-O-O"
-                queenside_castle(key)
+                queenside_castle(color)
 
             # Pawn promotion
+            # 
             elsif move.include? "="
-                pawn_promotion(key, move)
+                pawn_promotion(color, move)
 
             else
-                # Pawn Moves
+                # Basic Pawn Movement
+                # Notation: d3, c4, g6, etc.
+                if move.length() == 2
+                    move_pawn(color, move)
 
-                # Captures
+                else
+                    # Moves where another pawn is captured.
+                    if move.include? 'x'
 
-                # 
+                        # Move where a pawn is captured, and a clarifier was needed.
+                        # Notation: Qa6xb7 or Nfxd4
+                        if move.length() >= 5
+                            if move.length() == 6
+
+                            else
+
+                            end
+
+                        # Move where a pawn is captured, but a clarifier was NOT needed.
+                        # Notation: Nxd4
+                        elsif move.length() == 4
+
+                        end
+                    else
+                        # Move where there is no capture, but a clarifier was needed.
+                        # Notation: Nfd4 Qa6b7
+                        if move.length() >= 4
+                            if move.length() == 5
+
+                            else
+
+                            end
+                        # Move where ther is no capture, and a clarifier was NOT needed.
+                        # Notation: Nb5
+                        elsif move.length() == 3
+                            parts = move.split(/[a-z].*/)
+
+                        end
+                    end
+                end
 
             end
         end
 
-        def kingside_castle(key)
-            if key.include? 'W'
+        # Handles Kingside/Short Castling Movement
+        def kingside_castle(color)
+            if color.include? 'W'
                 set_square('', 'e', 1)
                 set_square('', 'h', 1)
                 set_square('Rw', 'f', 1)
@@ -344,8 +414,9 @@ module Jekyll
             end
         end
 
-        def queenside_castle(key)
-            if key.include? 'W'
+        # Handles Queenside/Short Castling Movement
+        def queenside_castle(color)
+            if color.include? 'W'
                 set_square('', 'e', 1)
                 set_square('', 'a', 1)
                 set_square('', 'b', 1)
@@ -360,8 +431,48 @@ module Jekyll
             end
         end
 
-        def pawn_promotion(key, move)
+        # Handles pawn promotion.
+        def pawn_promotion(color, move)
+            parts = move.split('=')
+            if color.include? 'W'
+                set_square(parts[1] + 'w', parts[0][0], parts[0][1].to_i())
+                set_square(parts[0][0], parts[0][0], parts[0][1].to_i() - 1)
+            else
+                set_square(parts[1] + 'b', parts[0][0], parts[0][1].to_i())
+                set_square(parts[0][0], parts[0][0], parts[0][1].to_i() + 1)
+            end
+        end
 
+        # Handles basic pawn movement.
+        def move_pawn(color, move)
+            first = nil
+            second = nil
+
+            # Check the possible squares the pawn could have moved from
+            # and store them for moving later.
+            if color.include? 'W'
+                first = get_square(move[0], move[1].to_i() - 1)
+                second = get_square(move[0], move[1].to_i() - 2)
+            else
+                first = get_square(move[0], move[1].to_i() + 1)
+                second = get_square(move[0], move[1].to_i() + 2)
+            end   
+
+            # Check each of the possible move squares, and if a valid square
+            # is found i.e a square containing a pawn, then move the pawn to
+            # its new square. This works because in PGN pawn moves are denoted
+            # with a rank and file such as a3, b4, f8, etc.
+            if !first.nil?
+                if first[0].include? 'P'
+                    set_square('', first[1][0], first[1][1])
+                    set_square('P' + color.downcase, move[0], move[1])
+                end
+            elsif !second.nil?
+                if second[0].include? 'P'
+                    set_square('', second[1][0], second[1][1])
+                    set_square('P' + color.downcase, move[0], move[1])
+                end
+            end
         end
     end
 
@@ -384,37 +495,38 @@ module Jekyll
 
             # Get the square from the chessboard
             square = chessboard.get_square(letter, number)
+            if !square.nil?
+                # Get the square's piece type and the color of the piece
+                piece = square[0][0]
+                color = square[0][1]
 
-            # Get the square's piece type and the color of the piece
-            piece = square[0]
-            color = square[1]
-
-            # Translate color
-            if color == 'w'
-                output += 'white-'
-            elsif color =='b'
-                output += 'black-'
-            else 
-                return ''
-            end
-            
-            # Translate piece
-            if piece == 'P'
-                output += "pawn"
-            elsif piece == 'N'
-                output += "knight"
-            elsif piece == 'B'
-                output += "bishop"
-            elsif piece == 'R'
-                output += "rook"
-            elsif piece == 'Q'
-                output += "queen"
-            elsif piece == 'M'
-                output += "marker"
-            elsif piece =='K'
-                output += "king"
-            else
-                return ''
+                # Translate color
+                if color == 'w'
+                    output += 'white-'
+                elsif color =='b'
+                    output += 'black-'
+                else 
+                    return ''
+                end
+                
+                # Translate piece
+                if piece == 'P'
+                    output += "pawn"
+                elsif piece == 'N'
+                    output += "knight"
+                elsif piece == 'B'
+                    output += "bishop"
+                elsif piece == 'R'
+                    output += "rook"
+                elsif piece == 'Q'
+                    output += "queen"
+                elsif piece == 'M'
+                    output += "marker"
+                elsif piece =='K'
+                    output += "king"
+                else
+                    return ''
+                end
             end
 
             return output
@@ -579,13 +691,12 @@ module Jekyll
 
             # Simulate the chess game up until the desired move.
             pgn['moves'].each do |key, value|
-                @board.make_move(key, value)
+                @board.make_move(key[0], value)
 
                 if key == @turn
                     break
                 end
             end
-
 
             # Pass the simulated board to the ChessboardRenderer
             # and output 'rendered' HTML table.
