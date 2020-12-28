@@ -5,12 +5,11 @@ author: Stephen Czekalski
 categories: [chess, programming]
 ---
 
-{:.drop-cap}
 A few weeks ago I watched *The Queen's Gambit* on Netflix.
 After watching the first two episodes I decided to try my hand at chess.
 I'm not great, but I did have fun.
 Since then, I've been playing regularly against other people on [lichess.org](https://www.lichess.org/).
-I've read, and skimmed, some books on basic tactics, watched some videos, and generally have tried to improve my play.
+I've read, and skimmed, some books on basic tactics, watched some of [John Bartholomew's](https://www.youtube.com/channel/UC6hOVYvNn79Sl1Fc1vx2mYA) fantastic videos, and have generally tried to improve my play.
 
 I saw a post on reddit, supposedly written by a GM, or maybe it was an IM, which said that one of the best ways to improve at chess is to write analyses for you games.
 A standard rule of playing chess is for each player to record their moves.
@@ -101,5 +100,22 @@ Interpreting the meaning of movetext is trivial.
 It is so trivial, that player's are expected to write it as they play chess.
 
 Computer's are stupid.
+Much more stupid than human beings.
 This is a fact any programmer will tell you.
 They can't do anything, without being told how to do it.
+
+A program that tells a computer how to display PGN movetext has three major parts:
+
+1. The [parser](https://en.wikipedia.org/wiki/Parsing) for converting the PGN file, both its headers and movetext, into a data structure which can be used more easily.
+2. The [intepreter](https://en.wikipedia.org/wiki/Interpreter_(computing)) for simulating the moves that took place during the game on a chessboard. 
+3. The renderer for drawing the final chessboard on the screen.
+
+Regular expressions made writing the parser easy.
+In less than an hour I had a parser that was able to store PGN headers and movetext in a [Hash](https://ruby-doc.org/core-2.7.2/Hash.html).
+I was able to retrieve header information at will, and iterate over movetext move by move.
+Likewise, the renderer wasn't a problem.
+A chessboard is an eight by eight grid, so a function which generated an HTML table with some special CSS was all I needed.
+
+The problem came from the intepreter.
+
+
