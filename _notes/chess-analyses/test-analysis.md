@@ -3,9 +3,20 @@ layout: note
 title: Test Analysis
 author: Stephen Czekalski
 description: A collection of analyses I've gone for some of my chess games in an effort to improve.
-group: chess-analyses
-stylesheets: ["/assets/css/chess.css"]
-pgn: "assets/pgn/lichess_pgn_2020.12.22_Redman_Reaper_vs_stephencz.c0X6X15E.pgn"
+group: chess-analysis
+stylesheets: ['https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.css']
+scripts: ['https://unpkg.com/@chrisoakman/chessboardjs@1.0.0/dist/chessboard-1.0.0.min.js']
 ---
 
-{% pgnchessboard W40 %}
+<div id="board" style="width: 400px"></div>
+
+<script>
+var board = Chessboard('board', {
+  draggable: true,
+  dropOffBoard: 'trash',
+  sparePieces: true
+})
+
+$(document).ready(board.start)
+
+</script>
