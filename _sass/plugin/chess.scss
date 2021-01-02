@@ -1,3 +1,9 @@
+$green-light: #DFF7D9;
+$green-dark: #68974d;
+
+$grey-light: #E6E6E6;
+$grey-dark: #9b9b9b;
+
 table.chess
 {
     border-spacing: 0px;
@@ -53,12 +59,12 @@ table.chess tr td.dark
 
 table.chess tr td.light
 {
-    background-color: #FFF;
+    background-color: $grey-light;
 }
 
 table.chess tr td.dark
 {
-    background-color: #68974d;
+    background-color: $grey-dark;
 }
 
 table.chess tr td.white-king,
