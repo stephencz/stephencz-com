@@ -52,5 +52,5 @@ module Jekyll
 end
 
 Liquid::Template.register_tag('breakout', Jekyll::BreakoutBlock)
-Liquid::Template.register_tag('breakoutfixed', Jekyll::BreakoutFixedBlock)
+Liquid::Template.register_tag('fixedbreakout', Jekyll::BreakoutFixedBlock)
 

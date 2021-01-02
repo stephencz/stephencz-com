@@ -31,41 +31,16 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "post"
       title: "Untitled Post"
-      author: "Stephen Czekalski"
-      description: "It looks like Stephen forgot to fill out this post's description..."
       categories: []
       group: default
   -
     scope:
       path: ""
-      type: "showcases"
+      type: "pages"
     values:
-      layout: "showcase"
-      title: "Untitled Showcase"
-      author: "Stephen Czekalski"
-      description: "It looks like Stephen forgot to fill out this showcase's description..."
-      group: default
-  -
-    scope:
-      path: ""
-      type: "notes"
-    values:
-      layout: "note"
-      title: "Untitled Note"
-      author: "Stephen Czekalski"
-      description: "It looks like Stephen forgot to fill out this note's description..."
-      group: default
-  -
-    scope:
-      path: ""
-      type: "other"
-    values:
-      layout: "other"
-      title: "Untitled Other"
-      author: "Stephen Czekalski"
-      description: "It looks like Stephen forgot to fill out this note's description..."
+      title: "Untitled Page"
+      categories: []
       group: default
 
 collections:
