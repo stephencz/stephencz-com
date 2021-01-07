@@ -27,3 +27,7 @@ group: "misc"
 ### Website
 * [Amazon Web Services](https://aws.amazon.com/){:target="_blank"}
 * [DigitalOcean](https://www.digitalocean.com/){:target="_blank"}
+
+### Fun and Games
+* [Netflix](https://www.netflix.com)
+* [Lichess](https://lichess.org/)

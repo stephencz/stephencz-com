@@ -50,9 +50,6 @@ collections:
   notes:
     output: true
 
-  other:
-    output: true
-
 exclude:
   - .sass-cache/
   - .jekyll-cache/
