@@ -96,6 +96,18 @@ module Jekyll
 
     end
 
+    # The Marker class represents a marker with the symbol 'M',
+    # of an arbitrary color.
+    class Marker < Piece
+
+        # Creates a new King piece.
+        # @param color The color of the chess piece.
+        def initialize(color)
+            super('M', color)
+        end
+
+    end
+
     # The Chessboard class represents an 8x8 standard chessboard.
     class Chessboard
 
@@ -190,15 +202,16 @@ module Jekyll
 
         # Generates a row which contains pieces from the chessboard.
         # @param board_row An array from the board, containing the Piece objects on the row.
-        # @param row_number Used for display purposes. The number of the row.
+        # @param row_number Used to alternate even and odd colored rows.
+        # @param display_number The number of the row i.e. 1-8.
         # @return A row containing chess Pieces for an HTML table.
-        def generate_game_row(board_row, row_number)
+        def generate_game_row(board_row, row_number, display_number)
             
             row = '<tr>'
 
             for i in (0..9)
                 if i == 0 || i == 9
-                    row += '<td class="number">' + row_number.to_s() +'</td>' 
+                    row += '<td class="number">' + display_number.to_s() +'</td>' 
                 else
                     if i % 2 == 0 
                         if row_number % 2 == 0
@@ -247,7 +260,7 @@ module Jekyll
             table += generate_letter_row()
 
             for i in (0..7)
-                table += generate_game_row(board.get_board()[i], i + 1)
+                table += generate_game_row(board.get_board()[i], i + 1, 8 - i)
             end
 
             table += generate_letter_row()
@@ -278,13 +291,15 @@ module Jekyll
             data = {}
 
             parts = fen.strip.split(" ")
-
-            data["piece_placement"]       = parts[0] # A FEN piece placement string.
-            data["active_color"]          = parts[1] # The 'active color' or which player's turn it is.           
-            data["castling_availability"] = parts[2] # Which castling moves are still possible.
-            data["en_passant"]            = parts[3] # The target square of En passant in algebraic notation.
-            data["halfmove_clock"]        = parts[4] # Number of half moves since the last capture or pawn advance.
-            data["fullmove_clock"]        = parts[5] # The full move/turn number.
+            part_names = ["piece_placement", "active_color", 
+                          "castling_availability", "en_passant",
+                          "halfmove_clock", "fullmove_clock"]
+            
+            counter = 0
+            for part in parts   
+                data[part_names[counter]] = part
+                counter += 1
+            end
 
             return data
         end
@@ -343,6 +358,8 @@ module Jekyll
                                     board.set_square(Queen.new('b'), row_counter, square_counter)
                                 when 'k'
                                     board.set_square(King.new('b'), row_counter, square_counter)
+                                when 'm'
+                                    board.set_square(Marker.new('b'), row_counter, square_counter)
                                 else
                                     next
                                 end
@@ -360,6 +377,8 @@ module Jekyll
                                     board.set_square(Queen.new('w'), row_counter, square_counter)
                                 when 'K'
                                     board.set_square(King.new('w'), row_counter, square_counter)
+                                when 'M'
+                                    board.set_square(Marker.new('w'), row_counter, square_counter)
                                 else
                                     next
                                 end
@@ -399,9 +418,13 @@ module Jekyll
 
         def render(context)
             parsed = @parser.parse(@fen)
-            board = @interpreter.interpret(parsed)
+            if parsed.length > 0
+                board = @interpreter.interpret(parsed)
+                return @renderer.get_html(board)
+            else
+                return "<b>ERROR: The fenboard requires at least a FEN placement string</b>"
+            end
 
-            return @renderer.get_html(board)
         end
 
     end

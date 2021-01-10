@@ -1,6 +1,0 @@
-{% assign filtered = site.other | where: "group", include.group %}
-<ul class="other-by-group">
-  {% for other in filtered %}
-  <li><a href="{{ other.url }}">{{ other.title }}</a></li>
-  {% endfor %} 
-</ul>
