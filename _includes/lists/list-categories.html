@@ -1,9 +1,0 @@
-<ul class="category-list">
-  {% for cat in site.categories %}
-  <li>
-    <a href="categories/{{ cat[0] | strip | downcase | replace: ' ', '-'}}">
-      {{ cat[0] }}
-    </a>
-  </li>
-  {% endfor %}
-</ul>

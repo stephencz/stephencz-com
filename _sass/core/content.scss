@@ -201,6 +201,12 @@ $left-spacing: 20px;
   margin-bottom: $unit-half;
 }
 
+.content-wrapper ul.clean
+{
+  list-style: none;
+  padding-left: 0px;
+}
+
 .content-wrapper blockquote
 {
   font-style: italic;

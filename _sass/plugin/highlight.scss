@@ -96,4 +96,12 @@ td.rouge-gutter
 {
   color: #bfbfbf;
   padding-right: 10px;
+  text-align: center;
+}
+
+td.rouge-gutter pre.lineno
+{
+  background-color: #1e1e27;
+  width: 100%;
+  height: 100%;
 }
