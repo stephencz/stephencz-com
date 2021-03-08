@@ -44,7 +44,7 @@ defaults:
       group: default
 
 collections:
-  projects:
+  showcases:
     output: true
     
   notes:
@@ -62,3 +62,4 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - connect.sh
+  - vendor
