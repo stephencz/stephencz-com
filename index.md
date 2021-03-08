@@ -18,7 +18,7 @@ Feel free to explore my website, or check out the featured content below:
 {% include lists/list_featured.html %}
 {% endcomment %}
 
+<img src="https://s3.amazonaws.com/cdn.stephencz.com/placeholder-author.jpeg">
 
 
-Email: [*admin@stephencz.com*](mailto:admin@stephencz.com) <br>
-Discord: [https://discord.gg/6bvR5Kc](https://discord.gg/6bvR5Kc)
+Email: [*admin@stephencz.com*](mailto:admin@stephencz.com)
