@@ -1,6 +1,0 @@
-{% assign filtered = site.notes | where: "group", include.group %}
-<ul class="notes-by-group">
-  {% for note in filtered %}
-  <li><a href="{{note.url}}">{{note.title}}</a></li>
-  {% endfor %} 
-</ul>

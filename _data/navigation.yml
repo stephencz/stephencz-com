@@ -2,9 +2,9 @@
   link: /
 - name: about
   link: /about
+- name: posts
+  link: /posts
 - name: showcase
   link: /showcase
-- name: living
-  link: /living
-- name: notes
-  link: /notes
+- name: resume
+  link: https://hire.stephencz.com

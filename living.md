@@ -1,4 +1,0 @@
----
-layout: living
-title: Weblog
----

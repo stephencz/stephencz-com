@@ -2,13 +2,10 @@
 ---
 @import 'global';
 
-@import 'core/normalize';
-@import 'core/html';
-@import 'core/structure';
-@import 'core/header';
-@import 'core/content';
-@import 'core/footer';
-@import 'core/utility';
-
-@import 'plugin/highlight';
-@import 'plugin/breakout';
+@import 'normalize';
+@import 'html';
+@import 'structure';
+@import 'header';
+@import 'content';
+@import 'footer';
+@import 'utility';
