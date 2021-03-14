@@ -47,3 +47,37 @@
     font-size: 1.65rem;
     line-height: 1.15rem;
 }
+
+.center-block
+{
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.breakout 
+{
+    position: relative;
+    left: calc(((100vw - 100%) / -2) + 60px);
+    width: calc(100vw - 120px);
+    margin-top: $unit-one;
+    margin-bottom: $unit-one
+}
+
+.breakout
+{
+    position: relative;
+    left: calc(((100vw - 100%) / -2) + 60px);
+    width: calc(100vw - 120px);
+    margin-top: $unit-one;
+    margin-bottom: $unit-one
+}
+
+.fixed-block
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}

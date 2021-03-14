@@ -1,5 +1,6 @@
 
-$bottom-border-color: #cecece;
+
+$date-color: #5a5a5a;
 
 $h1-font-size: 1.5rem;
 $h2-font-size: 1.35rem;
@@ -11,27 +12,28 @@ $h6-font-size: 0.75rem;
 $link-base: #0d54c1;
 $link-hover: #94a7c3;
 
-$date-color: #5a5a5a;
+$figcaption-color: #9d9d9d;
 
+$bottom-border-color: #cecece;
 $left-spacing: 20px;
 
-.content-wrapper
+.content
 {
   margin-bottom: $unit-ten;
 }
 
-.content-wrapper .post-wrapper
+.content .post-wrapper
 {
   margin-bottom: $unit-eight;
   border-bottom: 1px solid $bottom-border-color;
 }
 
-.content-wrapper + .content-wrapper
+.content + .content
 {
   margin-top: $unit-four;
 }
 
-.content-wrapper .metadata .date
+.content .metadata .date
 {
   display: inline;
   color: $date-color;
@@ -46,132 +48,132 @@ $left-spacing: 20px;
   margin-right: 5px;
 }
 
-.content-wrapper .metadata .primary-category,
-.content-wrapper .metadata .secondary-category
+.content .metadata .primary-category,
+.content .metadata .secondary-category
 {
   display: inline;
   padding-right: 5px;
 }
 
-.content-wrapper h1.title
+.content h1.title
 {
   margin-bottom: $unit-one;
 }
 
-.content-wrapper h1.title a:link,
-.content-wrapper h1.title a:active,
-.content-wrapper h1.title a:visited,
-.content-wrapper h1.title a:hover
+.content h1.title a:link,
+.content h1.title a:active,
+.content h1.title a:visited,
+.content h1.title a:hover
 {
   color: #000;
   text-decoration: none;
 }
 
-.content-wrapper h1 
+.content h1 
 { 
   font-size: $h1-font-size; 
   margin-bottom: $unit-quarter;
 }
 
-.content-wrapper h2 
+.content h2 
 { 
   font-size: $h2-font-size; 
   margin-top: $unit-three;
   margin-bottom: $unit-quarter;
 }
 
-.content-wrapper h3 
+.content h3 
 { 
   font-size: $h3-font-size; 
   margin-top: $unit-two;
   margin-bottom: $unit-quarter;
 }
 
-.content-wrapper h4 
+.content h4 
 { 
   font-size: $h4-font-size; 
   margin-top: $unit-one;
   margin-bottom: $unit-quarter;
 }
 
-.content-wrapper h5 
+.content h5 
 { 
   font-size: $h5-font-size; 
   margin-top: $unit-one;
   margin-bottom: $unit-quarter;
 }
 
-.content-wrapper h6 
+.content h6 
 { 
   font-size: $h6-font-size; 
   margin-top: $unit-one;
   margin-bottom: $unit-quarter;
 }
 
-.content-wrapper h1 + h2 { margin-top: $unit-one;}
-.content-wrapper h2 + h3 {margin-top: $unit-half;}
+.content h1 + h2 { margin-top: $unit-one;}
+.content h2 + h3 {margin-top: $unit-half;}
 
-.content-wrapper h1 + p,
-.content-wrapper h2 + p,
-.content-wrapper h3 + p,
-.content-wrapper h4 + p,
-.content-wrapper h5 + p,
-.content-wrapper h6 + p
+.content h1 + p,
+.content h2 + p,
+.content h3 + p,
+.content h4 + p,
+.content h5 + p,
+.content h6 + p
 {
   margin-top: 0;
 }
 
-.content-wrapper p
+.content p
 {
   margin-bottom: $unit-one;
 }
 
-.content-wrapper a:link,
-.content-wrapper a:active,
-.content-wrapper a:visited
+.content a:link,
+.content a:active,
+.content a:visited
 {
   color: $link-base;
   text-decoration: underline;
 }
 
-.content-wrapper a:hover
+.content a:hover
 {
   color: $link-hover;
 }
 
-.content-wrapper ul, ol
+.content ul, ol
 {
   padding-left: $left-spacing;
   margin-bottom: $unit-one;
 }
 
-.content-wrapper ul li,
-.content-wrapper ol li
+.content ul li,
+.content ol li
 {
   margin-bottom: $unit-quarter;
 }
 
-.content-wrapper dl
+.content dl
 {
   margin-bottom: $unit-one
 }
 
-.content-wrapper dl dt
+.content dl dt
 {
   font-weight: 700;
 }
 
-.content-wrapper dl dd + dt
+.content dl dd + dt
 {
   margin-top: $unit-half;
 }
 
-.content-wrapper dl dd
+.content dl dd
 {
   margin-left: $left-spacing;
 }
 
-.content-wrapper ul.featured
+.content ul.featured
 {
   list-style: none;
   padding-left: 0px;
@@ -180,34 +182,34 @@ $left-spacing: 20px;
   margin-bottom: $unit-two;
 }
 
-.content-wrapper ul.category-list
+.content ul.category-list
 {
   list-style: none;
   padding-left: 0px;
 }
 
-.content-wrapper ul.category-list li
+.content ul.category-list li
 {
   margin-bottom: $unit-one;
 }
 
-.content-wrapper ul.living-list 
+.content ul.living-list 
 {
   padding-left: 20px;
 }
 
-.content-wrapper ul.living-list li
+.content ul.living-list li
 {
   margin-bottom: $unit-half;
 }
 
-.content-wrapper ul.clean
+.content ul.clean
 {
   list-style: none;
   padding-left: 0px;
 }
 
-.content-wrapper blockquote
+.content blockquote
 {
   font-style: italic;
 
@@ -221,24 +223,30 @@ $left-spacing: 20px;
   margin-bottom: $unit-one;
 }
 
-.content-wrapper blockquote cite
+.content blockquote cite
 {
   display: block;
   text-align: right;
   margin-top: $unit-quarter;
 }
 
-.content-wrapper blockquote cite::before
+.content blockquote cite::before
 {
   content: "- "
 }
 
-.content-wrapper figure
+.content figure
 {
   margin-bottom: $unit-one;
 }
 
-.content-wrapper table.standard-table
+.content figure figcaption
+{
+  color: $figcaption-color;
+  text-align: center;
+}
+
+.content table.standard-table
 {
   border: 1px solid #cecece;
   border-spacing: 0px;
@@ -247,33 +255,33 @@ $left-spacing: 20px;
   width: 100%;
 }
 
-.content-wrapper table.standard-table thead
+.content table.standard-table thead
 {
   background-color: #ececec;
 }
 
-.content-wrapper table.standard-table th,
-.content-wrapper table.standard-table td
+.content table.standard-table th,
+.content table.standard-table td
 {
   padding: 5px;
   border: 1px solid #ececec;
 
 }
 
-.content-wrapper table.tracker
+.content table.tracker
 {
   border-spacing: 0px;
   text-align: left;
   width: 100%;
 }
 
-.content-wrapper table.tracker thead
+.content table.tracker thead
 {
   background-color: #e8e8e8;
 }
 
-.content-wrapper table.tracker th,
-.content-wrapper table.tracker td
+.content table.tracker th,
+.content table.tracker td
 {
   border: 1px solid #dfdfdf;
   padding-left: 5px;

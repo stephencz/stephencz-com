@@ -4,9 +4,8 @@ $nav-hover: #0d54c1;
 .header-wrapper
 {
   border-bottom: 1px dotted #cacaca;
-  padding-top: $unit-one;
-  padding-bottom: $unit-half;
   margin-bottom: $unit-two;
+  line-height: 0.75rem;
 }
 
 .header
@@ -37,8 +36,13 @@ $nav-hover: #0d54c1;
 .header .brand
 {
   display: inline-block;
-  font-size: 1rem;
+
   border-right: 1px solid #000;
+
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01rem;
+
   padding-right: 10px;
 }
 
@@ -83,7 +87,7 @@ $nav-hover: #0d54c1;
   color: $nav-hover;
 }
 
-@media (max-width: 768px) 
+@media (max-width: 540px) 
 {
   .header
   {
@@ -93,10 +97,8 @@ $nav-hover: #0d54c1;
   .header .brand
   {
     display: block;
-    font-size: 1.25rem;
-    
     border-right: none;
-    padding-right: 0;
+    padding-top: $unit-one;
   }
   
   .header nav
@@ -104,5 +106,13 @@ $nav-hover: #0d54c1;
     display: block;
     text-align: left;
     padding-left: 0;
+  }
+}
+
+@media (max-width: 300px) 
+{
+  .header-wrapper
+  {
+    line-height: $baseline-line-height;
   }
 }

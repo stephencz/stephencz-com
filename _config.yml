@@ -7,7 +7,7 @@ github_username: stephencz
 
 url: "https://stephencz.com" 
 baseurl: "/" 
-permalink: /blog/:title
+permalink: /docs/:title
 
 # Collection Definitions
 collections:

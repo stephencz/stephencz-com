@@ -2,8 +2,8 @@
   link: /
 - name: about
   link: /about
-- name: posts
-  link: /posts
+- name: docs
+  link: /docs
 - name: showcase
   link: /showcase
 - name: resume
