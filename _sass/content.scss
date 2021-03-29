@@ -17,44 +17,41 @@ $left-spacing: 20px;
 
 .content
 {
-  margin-bottom: $unit-ten;
+    margin-bottom: $unit-ten;
 }
 
 .content .post-wrapper
 {
-  margin-bottom: $unit-eight;
+    margin-bottom: $unit-eight;
 }
 
 .content + .content
 {
-  margin-top: $unit-four;
+    margin-top: $unit-four;
 }
 
 .content .metadata .date
 {
-  display: inline;
-  color: $date-color;
-
-  font-size: 0.9rem;
-  font-family: $sans-serif-ff;
-  text-align: left;
-  
-  width: 100%;
-  
-  margin-bottom: $unit-half;
-  margin-right: 5px;
+    color: $date-color;
+    display: inline;
+    font-family: $sans-serif-ff;
+    font-size: 0.9rem;
+    margin-bottom: $unit-half;
+    margin-right: 5px;
+    text-align: left;
+    width: 100%;
 }
 
 .content .metadata .primary-category,
 .content .metadata .secondary-category
 {
-  display: inline;
-  padding-right: 5px;
+    display: inline;
+    padding-right: 5px;
 }
 
 .content h1.title
 {
-  margin-bottom: $unit-one;
+    margin-bottom: $unit-one;
 }
 
 .content h1.title a:link,
@@ -62,49 +59,49 @@ $left-spacing: 20px;
 .content h1.title a:visited,
 .content h1.title a:hover
 {
-  color: #000;
-  text-decoration: none;
+    color: #000;
+    text-decoration: none;
 }
 
 .content h1 
 { 
-  font-size: $h1-font-size; 
-  margin-bottom: $unit-quarter;
+    font-size: $h1-font-size; 
+    margin-bottom: $unit-quarter;
 }
 
 .content h2 
 { 
-  font-size: $h2-font-size; 
-  margin-top: $unit-three;
-  margin-bottom: $unit-quarter;
+    font-size: $h2-font-size; 
+    margin-top: $unit-three;
+    margin-bottom: $unit-quarter;
 }
 
 .content h3 
 { 
-  font-size: $h3-font-size; 
-  margin-top: $unit-two;
-  margin-bottom: $unit-quarter;
+    font-size: $h3-font-size; 
+    margin-top: $unit-two;
+    margin-bottom: $unit-quarter;
 }
 
 .content h4 
 { 
-  font-size: $h4-font-size; 
-  margin-top: $unit-one;
-  margin-bottom: $unit-quarter;
+    font-size: $h4-font-size; 
+    margin-top: $unit-one;
+    margin-bottom: $unit-quarter;
 }
 
 .content h5 
 { 
-  font-size: $h5-font-size; 
-  margin-top: $unit-one;
-  margin-bottom: $unit-quarter;
+    font-size: $h5-font-size; 
+    margin-top: $unit-one;
+    margin-bottom: $unit-quarter;
 }
 
 .content h6 
 { 
-  font-size: $h6-font-size; 
-  margin-top: $unit-one;
-  margin-bottom: $unit-quarter;
+    font-size: $h6-font-size; 
+    margin-top: $unit-one;
+    margin-bottom: $unit-quarter;
 }
 
 .content h1 + h2 { margin-top: $unit-one;}
@@ -117,169 +114,169 @@ $left-spacing: 20px;
 .content h5 + p,
 .content h6 + p
 {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .content p
 {
-  margin-bottom: $unit-one;
+    margin-bottom: $unit-one;
 }
 
 .content a:link,
 .content a:active,
 .content a:visited
 {
-  color: $link-base;
-  text-decoration: underline;
+    color: $link-base;
+    text-decoration: underline;
 }
 
 .content a:hover
 {
-  color: $link-hover;
+    color: $link-hover;
 }
 
 .content ul, ol
 {
-  padding-left: $left-spacing;
-  margin-bottom: $unit-one;
+    padding-left: $left-spacing;
+    margin-bottom: $unit-one;
 }
 
 .content ul li,
 .content ol li
 {
-  margin-bottom: $unit-quarter;
+    margin-bottom: $unit-quarter;
 }
 
 .content dl
 {
-  margin-bottom: $unit-one
+    margin-bottom: $unit-one
 }
 
 .content dl dt
 {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 .content dl dd + dt
 {
-  margin-top: $unit-half;
+    margin-top: $unit-half;
 }
 
 .content dl dd
 {
-  margin-left: $left-spacing;
+    margin-left: $left-spacing;
 }
 
 .content ul.featured
 {
-  list-style: none;
-  padding-left: 0px;
+    list-style: none;
+    padding-left: 0px;
 
-  margin-top: $unit-two;
-  margin-bottom: $unit-two;
+    margin-top: $unit-two;
+    margin-bottom: $unit-two;
 }
 
 .content ul.category-list
 {
-  list-style: none;
-  padding-left: 0px;
+    list-style: none;
+    padding-left: 0px;
 }
 
 .content ul.category-list li
 {
-  margin-bottom: $unit-one;
+    margin-bottom: $unit-one;
 }
 
 .content ul.living-list 
 {
-  padding-left: 20px;
+    padding-left: 20px;
 }
 
 .content ul.living-list li
 {
-  margin-bottom: $unit-half;
+    margin-bottom: $unit-half;
 }
 
 .content ul.clean
 {
-  list-style: none;
-  padding-left: 0px;
+    list-style: none;
+    padding-left: 0px;
 }
 
 .content blockquote
 {
-  font-style: italic;
+    font-style: italic;
 
-  border-left: 3px solid #d2d2d2;
+    border-left: 3px solid #d2d2d2;
 
-  padding-left: $left-spacing;
-  padding-right: $left-spacing;
+    padding-left: $left-spacing;
+    padding-right: $left-spacing;
 
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-bottom: $unit-one;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: $unit-one;
 }
 
 .content blockquote cite
 {
-  display: block;
-  text-align: right;
-  margin-top: $unit-quarter;
+    display: block;
+    text-align: right;
+    margin-top: $unit-quarter;
 }
 
 .content blockquote cite::before
 {
-  content: "- "
+    content: "- "
 }
 
 .content figure
 {
-  margin-bottom: $unit-one;
+    margin-bottom: $unit-one;
 }
 
 .content figure figcaption
 {
-  color: $figcaption-color;
-  text-align: center;
+    color: $figcaption-color;
+    text-align: center;
 }
 
 .content table.standard-table
 {
-  border: 1px solid #cecece;
-  border-spacing: 0px;
-  text-align: left;
-  margin-bottom: $unit-one;
-  width: 100%;
+    border: 1px solid #cecece;
+    border-spacing: 0px;
+    text-align: left;
+    margin-bottom: $unit-one;
+    width: 100%;
 }
 
 .content table.standard-table thead
 {
-  background-color: #ececec;
+    background-color: #ececec;
 }
 
 .content table.standard-table th,
 .content table.standard-table td
 {
-  padding: 5px;
-  border: 1px solid #ececec;
+    padding: 5px;
+    border: 1px solid #ececec;
 
 }
 
 .content table.tracker
 {
-  border-spacing: 0px;
-  text-align: left;
-  width: 100%;
+    border-spacing: 0px;
+    text-align: left;
+    width: 100%;
 }
 
 .content table.tracker thead
 {
-  background-color: #e8e8e8;
+    background-color: #e8e8e8;
 }
 
 .content table.tracker th,
 .content table.tracker td
 {
-  border: 1px solid #dfdfdf;
-  padding-left: 5px;
+    border: 1px solid #dfdfdf;
+    padding-left: 5px;
 }
