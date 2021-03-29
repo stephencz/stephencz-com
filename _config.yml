@@ -7,13 +7,14 @@ github_username: stephencz
 
 url: "https://stephencz.com" 
 baseurl: "/" 
-permalink: /docs/:title
+
 
 # Collection Definitions
 collections:
   showcases:
     output: true
-    
+  docs:
+    output: true
   other:
     output: true
 
@@ -22,24 +23,19 @@ defaults:
   -
     scope:
       path: ""
-      type: "posts"
-    values:
-      title: "Untitled Post"
-      categories: []
-      group: default
-  -
-    scope:
-      path: ""
       type: "pages"
     values:
       title: "Untitled Page"
+      author: "Stephen Czekalski"
       group: default
   -
     scope:
       path: ""
-      type: "other"
+      type: "docs"
     values:
-      title: "Untitled Other"
+      title: "Untitled Document"
+      description: "Stephen forgot to write a proper description..."
+      author: "Stephen Czekalski"
       group: default
 
 # Build settings

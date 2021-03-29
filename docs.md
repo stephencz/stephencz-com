@@ -1,7 +1,8 @@
 ---
 layout: page
+title: Docs
 ---
 
-{% for post in site.posts %}
-<a href="{{ post.url }}">{{ post.title }} </a>
+{% for doc in site.docs %}
+<a href="{{ doc.url }}">{{ doc.title }} </a>
 {% endfor %}
