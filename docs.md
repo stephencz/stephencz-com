@@ -3,7 +3,6 @@ layout: page
 title: Docs
 ---
 
-{% for doc in site.docs %}
-<a href="{{ doc.url }}">{{ doc.title }} </a>
-{% endfor %}
-
+## Algorithms and Data Structures
+### Sort
+{% include doc-by-group.html group_name="sort" %}

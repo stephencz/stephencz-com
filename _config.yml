@@ -36,7 +36,6 @@ defaults:
       title: "Untitled Document"
       description: "Stephen forgot to write a proper description..."
       author: "Stephen Czekalski"
-      group: default
 
 # Build settings
 markdown: kramdown

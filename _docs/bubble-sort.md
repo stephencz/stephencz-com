@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: doc
 title: Bubble Sort
-group: "sort-algorithms"
+group: "sort"
 ---
 
 Bubble sort is a simple, but inefficient, sorting algorithm.
