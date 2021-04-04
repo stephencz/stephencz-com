@@ -1,0 +1,9 @@
+<div class="sidebar-wrapper">
+    <nav>
+        <ul>
+            {% for nav in site.data.navigation %}
+            <li><a href="{{ nav.link }}" >{{ nav.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+</div>

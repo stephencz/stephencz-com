@@ -1,118 +1,31 @@
-$nav-color: #000;
-$nav-hover: #0d54c1;
+$brand-font-size: 2rem;
 
 .header-wrapper
 {
-    border-bottom: 1px dotted #cacaca;
-    margin-bottom: $unit-two;
-    line-height: 0.75rem;
+    margin-top: $unit-one;
+    margin-bottom: $unit-one;
 }
 
-.header
+.header-wrapper .brand
 {
-    max-width: $max-container-width;
-
-    width: auto;
-    height: auto;
-
-    padding-left: 10px;
-    padding-right: 10px;
-
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.header-minimal
-{
-    max-width: $max-container-width;
-
-    width: auto;
-    height: auto;
-
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.header .brand
-{
-    display: inline-block;
-
-    border-right: 1px solid #000;
-
-    font-size: 1rem;
+    font-size: $brand-font-size;
     font-weight: 700;
     letter-spacing: -0.01rem;
-
-    padding-right: 10px;
 }
 
-.header .brand a:link,
-.header .brand a:active,
-.header .brand a:visited,
-.header .brand a:hover
+.header-wrapper .brand a:link,
+.header-wrapper .brand a:active,
+.header-wrapper .brand a:visited,
+.header-wrapper .brand a:hover
 {
     color: #000;
     text-decoration: none;
 }
 
-.header nav
-{
-    display: inline-block;
-    text-align: right;
-    padding-left: 7px;
-}
-
-.header nav ul
-{
-    list-style: none;
-    padding-left: 0rem;
-}
-
-.header nav ul li
-{
-    display: inline-block;
-    padding-right: 10px;
-}
-
-.header nav ul li a:link,
-.header nav ul li a:active,
-.header nav ul li a:visited
-{
-    color: $nav-color;
-    text-decoration: none;
-}
-
-.header nav ul li a:hover
-{
-    color: $nav-hover;
-}
-
-@media (max-width: 540px) 
-{
-    .header
-    {
-        text-align: left;
-    }
-
-    .header .brand
-    {
-        display: block;
-        border-right: none;
-        padding-top: $unit-one;
-    }
-    
-    .header nav
-    {
-        display: block;
-        text-align: left;
-        padding-left: 0;
-    }
-}
-
-@media (max-width: 300px) 
+@media (max-width: 991.98px)
 {
     .header-wrapper
     {
-        line-height: $baseline-line-height;
+        margin-bottom: $unit-one;
     }
 }

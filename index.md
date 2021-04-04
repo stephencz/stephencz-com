@@ -3,7 +3,6 @@ layout: home
 title: Home
 ---
 
-{:.drop-cap}
 Welcome to the personal website of Stephen Czekalski.
 
 I created this website to share the things I've done, find interesting, or believe to be useful.

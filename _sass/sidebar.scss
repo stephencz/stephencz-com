@@ -1,0 +1,49 @@
+$nav-color: #000;
+$nav-hover: #0d54c1;
+$nav-border: #e6e6e6;
+
+.sidebar-wrapper nav ul
+{
+    border-right: 3px solid $nav-border;
+    list-style: none;
+    padding-left: 0px;
+}
+
+
+.sidebar-wrapper nav ul li
+{
+    display: block;
+    text-align: right;
+
+    padding-right: $unit-half;
+    margin-bottom: $unit-quarter;
+}
+
+.sidebar-wrapper nav ul li.active a { font-weight: 700; }  
+
+.sidebar-wrapper nav ul li a:link,
+.sidebar-wrapper nav ul li a:active,
+.sidebar-wrapper nav ul li a:visited
+{
+    color: $nav-color;
+    text-decoration: none;
+}
+
+.sidebar-wrapper nav ul li a:hover
+{
+    color: $nav-hover;
+}
+
+@media (max-width: 991.98px)
+{
+    .sidebar-wrapper
+    {
+        margin-bottom: $unit-two;
+    }
+
+    .sidebar-wrapper nav ul li
+    {
+        display: inline-block;
+        padding-right: 10px;
+    }
+}
