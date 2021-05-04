@@ -1,22 +1,26 @@
-$nav-color: #000;
 $nav-hover: #0d54c1;
+$nav-color: #000;
 $nav-border: #e6e6e6;
+
+.sidebar-wrapper nav
+{
+    border-right: 3px solid $nav-border;
+}
 
 .sidebar-wrapper nav ul
 {
-    border-right: 3px solid $nav-border;
+    font-weight: 700;    
     list-style: none;
-    padding-left: 0px;
+    margin-right: $unit-half;
+    min-height: 150px;
 }
 
 
 .sidebar-wrapper nav ul li
 {
     display: block;
-    text-align: right;
-
-    padding-right: $unit-half;
     margin-bottom: $unit-quarter;
+    text-align: right;
 }
 
 .sidebar-wrapper nav ul li.active a { font-weight: 700; }  
@@ -39,6 +43,18 @@ $nav-border: #e6e6e6;
     .sidebar-wrapper
     {
         margin-bottom: $unit-two;
+    }
+
+    .sidebar-wrapper nav
+    {
+        border-right: none;
+    }
+
+    .sidebar-wrapper nav ul
+    {
+        border-right: none;
+        min-height: 0px;
+        padding: 0px;
     }
 
     .sidebar-wrapper nav ul li

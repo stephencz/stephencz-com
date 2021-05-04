@@ -12,10 +12,6 @@ permalink: "/"
 
 # Collection Definitions
 collections:
-  showcases:
-    output: true
-  docs:
-    output: true
   other:
     output: true
 
@@ -28,15 +24,18 @@ defaults:
     values:
       title: "Untitled Page"
       author: "Stephen Czekalski"
-      group: default
+      description: "Stephen forgot to write a proper description..."
   -
     scope:
       path: ""
-      type: "docs"
+      type: "posts"
     values:
+      permalink: "posts/:title"
       title: "Untitled Document"
       description: "Stephen forgot to write a proper description..."
       author: "Stephen Czekalski"
+      published: ""
+      updated: ""
 
 # Build settings
 markdown: kramdown

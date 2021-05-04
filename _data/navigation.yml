@@ -2,7 +2,5 @@
   link: /
 - name: about
   link: /about
-- name: docs
-  link: /docs
-- name: showcase
-  link: /showcase
+- name: posts
+  link: /posts

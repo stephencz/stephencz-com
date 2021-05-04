@@ -1,4 +1,7 @@
-$brand-font-size: 2rem;
+$post-brand-link-base: #000;
+$post-brand-link-hover: #94a7c3;
+
+$brand-font-size: 1.5rem;
 
 .header-wrapper
 {
@@ -6,7 +9,8 @@ $brand-font-size: 2rem;
     margin-bottom: $unit-one;
 }
 
-.header-wrapper .brand
+.header-wrapper .brand,
+.header-wrapper .post-brand
 {
     font-size: $brand-font-size;
     font-weight: 700;
@@ -18,7 +22,22 @@ $brand-font-size: 2rem;
 .header-wrapper .brand a:visited,
 .header-wrapper .brand a:hover
 {
-    color: #000;
+    color: $post-brand-link-base;
+    text-decoration: none;
+}
+
+.header-wrapper .post-brand a:link,
+.header-wrapper .post-brand a:active,
+.header-wrapper .post-brand a:visited
+{
+    color: $post-brand-link-base;
+    text-decoration: none;
+}
+
+
+.header-wrapper .post-brand a:hover
+{
+    color: $post-brand-link-hover;
     text-decoration: none;
 }
 
@@ -26,6 +45,6 @@ $brand-font-size: 2rem;
 {
     .header-wrapper
     {
-        margin-bottom: $unit-one;
+        margin-bottom: $unit-half;
     }
 }

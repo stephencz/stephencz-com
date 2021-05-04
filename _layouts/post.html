@@ -9,12 +9,19 @@ layout: default
         <div class="col-lg-3">
             {% include sidebar.html %}
         </div>
-
         <div class="col-lg-6">
             <div class="content-wrapper">
                 <div class="content">
+                    {% if page.updated != "" %}
+                        <div class="date">Updated: {{ page.updated | date: "%b %d, %Y" }}</div>
+                    {% else %}
+                        {% if page.published != "" %}
+                            <div class="date">Published: {{ page.published | date: "%b %d, %Y" }}</div>
+                        {% endif %}
+                    {% endif %}
                     <h1 class="title">{{ page.title }}</h1>
                     {{ content }}
+
                 </div>
             </div>
         </div>
