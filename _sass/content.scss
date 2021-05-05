@@ -7,6 +7,9 @@ $h4-font-size: 0.9rem;
 $h5-font-size: 0.85rem;
 $h6-font-size: 0.75rem;
 
+$header-color: #000;
+$h2-line-color: #9f9f9f;
+
 $link-base: #0d54c1;
 $link-hover: #94a7c3;
 
@@ -52,6 +55,7 @@ $left-spacing: 20px;
 .content h5,
 .content h6
 {
+    color: $header-color;
     font-weight: 700;
 }
 
@@ -64,6 +68,7 @@ $left-spacing: 20px;
 
 .content h2 
 { 
+    border-bottom: 1px solid $h2-line-color;
     font-size: $h2-font-size; 
     margin-top: $unit-three;
     margin-bottom: $unit-quarter;
@@ -72,7 +77,7 @@ $left-spacing: 20px;
 .content h3 
 { 
     font-size: $h3-font-size; 
-    margin-top: $unit-two;
+    margin-top: $unit-four;
     margin-bottom: $unit-quarter;
 }
 
