@@ -4,3 +4,5 @@
   link: /about
 - name: posts
   link: /posts
+- name: search
+  link: /search
