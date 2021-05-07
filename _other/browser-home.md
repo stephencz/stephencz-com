@@ -3,7 +3,6 @@ layout: page
 title: Homepage
 author: Stephen Czekalski
 description: "Stephen's personal browser homepage."
-group: "misc"
 ---
 
 ## Bookmarks

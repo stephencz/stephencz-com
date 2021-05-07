@@ -1,0 +1,5 @@
+<ul>
+{% for note in site.notes %}
+    {% if note.group == include.group %}<li><a href="{{ note.url}}">{{ note.title }}</a></li>{% endif %}
+{% endfor %}
+</ul>

@@ -6,3 +6,5 @@
   link: /posts
 - name: search
   link: /search
+- name: notes
+  link: /notes

@@ -12,6 +12,8 @@ permalink: "/"
 
 # Collection Definitions
 collections:
+  notes:
+    output: true
   other:
     output: true
 
@@ -36,6 +38,16 @@ defaults:
       author: "Stephen Czekalski"
       published: ""
       updated: ""
+  -
+    scope:
+      path: ""
+      type: "notes"
+    values:
+      permalink: "notes/:title"
+      title: "Untitled Note"
+      description: "Stephen forgot to write a proper description..."
+      author: "Stephen Czekalski"
+      group: "ungrouped"
 
 # Build settings
 markdown: kramdown
