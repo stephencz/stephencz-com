@@ -4,7 +4,7 @@
   link: /about
 - name: posts
   link: /posts
-- name: search
-  link: /search
 - name: notes
   link: /notes
+- name: search
+  link: /search

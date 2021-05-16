@@ -1,0 +1,38 @@
+---
+---
+{% assign post_length = site.posts | size -%}
+{% assign note_length = site.notes | size -%}
+{% assign post_counter = 1 -%}
+{%- assign note_counter = 1 -%}
+
+[
+{%- for post in site.posts %}
+    {
+        "type":"post",
+        "title":"{{ post.title }}",
+        "description":"{{ post.description }}",
+        "date":"{{ post.date }}",
+        "updated":{% if post.updated != "" %}"{{ post.updated }}"{% else %}""{% endif %},
+        "url":"{{ post.url }}"
+        "categories":[
+            {%- assign category_length = post.categories | size -%}
+            {%- assign category_counter = 1 -%}
+            {% for category in post.categories %}
+                "{{ category }}"{% if category_counter != category_length %},{% endif %}
+                {%- assign category_counter = category_counter | plus: 1 -%}
+            {% endfor %}
+        ]
+    }{% if note_length != 0 %},{% else %}{% if post_counter != post_length %},{% endif %}{% endif %}
+    {%- assign post_counter = category_counter | plus: 1 -%}
+{% endfor %}
+{%- for note in site.notes %}
+    {
+        "type":"note",
+        "title":"{{ note.title }}",
+        "description":"{{ note.description }}",
+        "group":"{{ note.group }}",
+        "url":"{{ note.url }}"
+    }{% if note_counter != note_length %},{% else %}{% endif %}
+{%- assign note_counter = note_counter | plus: 1 -%}
+{% endfor %}
+]

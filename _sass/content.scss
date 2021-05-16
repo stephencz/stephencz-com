@@ -1,13 +1,14 @@
 $date-color: #5a5a5a;
 
-$h1-font-size: 1.5rem;
-$h2-font-size: 1.25rem;
-$h3-font-size: 1.0rem;
-$h4-font-size: 0.9rem;
-$h5-font-size: 0.85rem;
-$h6-font-size: 0.75rem;
+$h1-font-size: 1.75rem;
+$h2-font-size: 1.5rem;
+$h3-font-size: 1.25rem;
+$h4-font-size: 1.0rem;
+$h5-font-size: 0.9rem;
+$h6-font-size: 0.85rem;
 
 $header-color: #000;
+
 $h2-line-color: #9f9f9f;
 
 $link-base: #0d54c1;
@@ -77,14 +78,14 @@ $left-spacing: 20px;
 .content h3 
 { 
     font-size: $h3-font-size; 
-    margin-top: $unit-four;
+    margin-top: $unit-three;
     margin-bottom: $unit-quarter;
 }
 
 .content h4 
 { 
     font-size: $h4-font-size; 
-    margin-top: $unit-one;
+    margin-top: $unit-two;
     margin-bottom: $unit-quarter;
 }
 
@@ -102,8 +103,9 @@ $left-spacing: 20px;
     margin-bottom: $unit-quarter;
 }
 
-.content h1 + h2 { margin-top: $unit-one;}
-.content h2 + h3 {margin-top: $unit-half;}
+.content h1 + h2 { margin-top: $unit-one; }
+.content h2 + h3 { margin-top: $unit-half; }
+.content h3 + h4 { margin-top: $unit-half; }
 
 .content h1 + p,
 .content h2 + p,

@@ -15,29 +15,13 @@ The purpose of my website is to act as a repository for my thoughts, experiences
 I see this website as a kind of life project.
 It is something I would like to maintain and grow throughout the course of my life.
 
-That being said, the content of my website mainly takes on a blog format: Dated entries about whatever topics I feel like sharing.
+### Content
 
-One thing this website isn't is an Internet resume.
-A common thing programmers do with their personal website is make it an advertisement for employers.
-They say here are the things I know, and here are some examples of my work.
-I don't have any problems with people showing off their work and skills.
-However, making a website solely to convince employers to hire you seems soulless to me.
-
-My interests have always been widespread. 
-While I primarily consider myself a programmer, I have many other hobbies and interests.
-To avoid writing about them, because its not what employers want to see, isn't something I am going to do.
+Content is divided into two section: [Posts](/posts) and [Notes](/notes).
+Posts are traditional blog posts i.e. dated entries on some topic.
+Notes are reference pages I've created primarily for myself.
 
 ### Design
-
-#### Aesthetic and Function
-
-Aesthetically and functionally, my goal is simplicity.
-
-[Research indicates](https://www.nngroup.com/articles/how-users-read-on-the-web/) that the majority of Internet users don't *actually* read.
-They scan for the information they want.
-I try to lean into this fact.
-No fancy colors or complex user interfaces.
-Just an easy to scan column of text and figures.
 
 #### Technical
 
