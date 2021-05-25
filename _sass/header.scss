@@ -6,12 +6,32 @@ $brand-font-size: 1.5rem;
 .header-wrapper
 {
     margin-top: $unit-one;
-    margin-bottom: $unit-one;
+    margin-bottom: $unit-two;
+}
+
+.header-wrapper .logo
+{
+    display: inline-block;
+
+    border-radius: 15px;
+
+    background-image: url('/assets/placeholder-author.jpeg');
+    background-size: 75px;
+
+    width: 75px;
+    height: 75px;
+
+
+    position: relative;
+    top: 28px;
+    
+    margin-right: 20px;
 }
 
 .header-wrapper .brand,
 .header-wrapper .post-brand
 {
+    display: inline-block;
     font-size: $brand-font-size;
     font-weight: 700;
     letter-spacing: -0.01rem;
@@ -41,10 +61,37 @@ $brand-font-size: 1.5rem;
     text-decoration: none;
 }
 
+@media (max-width: 1199.98px)
+{
+    .header-wrapper .logo
+    {
+        right: 20px;
+    }
+}
+
 @media (max-width: 991.98px)
 {
     .header-wrapper
     {
+        margin-bottom: $unit-two;
+    }
+
+    .header-wrapper .logo
+    {
+        right: 0px;
+    }
+}
+
+@media (max-width: 575.98px)
+{
+    .header-wrapper
+    {
         margin-bottom: $unit-half;
+    }
+
+    .header-wrapper .logo
+    {
+        display: none;
+        visibility: hidden;
     }
 }

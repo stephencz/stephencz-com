@@ -38,6 +38,41 @@ $nav-border: #e6e6e6;
     color: $nav-hover;
 }
 
+.sidebar-wrapper .info
+{
+    border-right: 3px solid #e6e6e6;
+    font-size: 0.8rem;
+    text-align: right;
+    padding-right: $unit-half;
+}
+
+.sidebar-wrapper .info .info-section
+{
+    font-weight: 700;
+}
+
+.sidebar-wrapper .info ul
+{
+    list-style: none
+}
+
+.sidebar-wrapper .info ul li a:link
+.sidebar-wrapper .info ul li a:active
+.sidebar-wrapper .info ul li a:visited
+{
+
+}
+
+.sidebar-wrapper .info ul li a:hover
+{
+
+}
+
+.sidebar-wrapper .info .copyright
+{
+    color: #8e8e8e;
+}
+
 @media (max-width: 991.98px)
 {
     .sidebar-wrapper
@@ -61,5 +96,11 @@ $nav-border: #e6e6e6;
     {
         display: inline-block;
         padding-right: 10px;
+    }
+
+    .sidebar-wrapper .info
+    {
+        display: none;
+        visibility: hidden;
     }
 }
