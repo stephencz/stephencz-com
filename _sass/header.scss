@@ -13,14 +13,14 @@ $brand-font-size: 1.5rem;
 {
     display: inline-block;
 
-    border-radius: 15px;
+    border-radius: 50px;
 
-    background-image: url('/assets/placeholder-author.jpeg');
+    background-image: url('/assets/placeholder-author.png');
     background-size: 75px;
+    background-position: top;
 
     width: 75px;
     height: 75px;
-
 
     position: relative;
     top: 28px;
