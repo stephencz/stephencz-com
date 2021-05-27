@@ -9,11 +9,9 @@
     <div class="info">
         <div class="info-section">Links</div>
         <ul>
-            <li><a href="https://twitter.com/stephencz__" target="_blank">Twitter</a></li>
-            <li><a href="https://github.com/stephencz" target="_blank">Github</a></li>
-            <li><a href="https://stackoverflow.com/users/13886258/stephen-czekalski?tab=profile" target="_blank">Stack Overflow</a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
+            {%- for link in site.data.sidebar-links -%}
+            <li><a href="{{ link.url }}" target="_blank">{{ link.name }}</a></li>
+            {%- endfor -%}
         </ul>
 
         <div class="copyright">
