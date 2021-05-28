@@ -6,20 +6,20 @@
             {% endfor %}
         </ul>
     </nav>
+
     <div class="info">
-        <div class="info-section">Links</div>
+        <div class="info-section">Social</div>
         <ul>
             {%- for link in site.data.sidebar-links -%}
             <li><a href="{{ link.url }}" target="_blank">{{ link.name }}</a></li>
             {%- endfor -%}
         </ul>
+    </div>
 
+    <div class="info">
+        <div class="info-section">Contact</div>
         <div class="email">
             <a href="mailto:admin@stephencz.com">admin@stephencz.com</a>
-        </div>
-
-        <div class="copyright">
-            Stephen Czekalski © 2021
         </div>
     </div>
 </div>

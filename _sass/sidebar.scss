@@ -9,6 +9,7 @@ $nav-border: #e6e6e6;
 
 .sidebar-wrapper nav ul
 {
+    font-size: 0.8rem;
     font-weight: 700;    
     list-style: none;
     margin-right: $unit-half;
@@ -19,7 +20,6 @@ $nav-border: #e6e6e6;
 .sidebar-wrapper nav ul li
 {
     display: block;
-    margin-bottom: $unit-quarter;
     text-align: right;
 }
 
