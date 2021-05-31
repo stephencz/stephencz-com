@@ -6,21 +6,13 @@
             {% endfor %}
         </ul>
     </nav>
-
+    
     <div class="info">
-        <div class="info-section">Social</div>
+        <div class="info-section">Links</div>
         <ul>
             {%- for link in site.data.sidebar-links -%}
             <li><a href="{{ link.url }}" target="_blank">{{ link.name }}</a></li>
             {%- endfor -%}
-        </ul>
-    </div>
-
-    <div class="info">
-        <div class="info-section">Contact</div>
-        <ul>
-            <li><a href="https://discord.gg/pDwMHcm3JF">Discord</a></li>
-            <li><a href="mailto:admin@stephencz.com">Email</a></li>
         </ul>
     </div>
 </div>
