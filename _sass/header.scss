@@ -1,7 +1,7 @@
 $post-brand-link-base: #000;
 $post-brand-link-hover: #94a7c3;
 
-$brand-font-size: 1.5rem;
+$brand-font-size: 2.5rem;
 
 .header-wrapper
 {
@@ -13,7 +13,7 @@ $brand-font-size: 1.5rem;
 {
     display: inline-block;
 
-    border-radius: 50px;
+    border-radius: 20px;
 
     background-image: url('/assets/logo.png');
     background-size: 75px;
@@ -23,7 +23,7 @@ $brand-font-size: 1.5rem;
     height: 75px;
 
     position: relative;
-    top: 28px;
+    top: 25px;
     
     margin-right: 20px;
 }
