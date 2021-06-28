@@ -91,6 +91,11 @@ $brand-font-size: 2.5rem;
         margin-bottom: $unit-half;
     }
 
+    .header-wrapper .brand
+    {
+        line-height: $unit-two;
+    }
+
     .header-wrapper .logo
     {
         display: none;

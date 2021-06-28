@@ -100,3 +100,11 @@ $nav-border: #e6e6e6;
         visibility: hidden;
     }
 }
+
+@media (max-width: 575.98px)
+{
+    .sidebar-wrapper
+    {
+        margin-top: $unit-half;
+    }
+}

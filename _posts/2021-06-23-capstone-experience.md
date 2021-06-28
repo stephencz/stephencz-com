@@ -6,8 +6,6 @@ author: "Stephen Czekalski"
 categories: ['projects']
 ---
 
-
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a viverra ipsum. Vestibulum tincidunt, est ac vestibulum iaculis, sem sem scelerisque eros, in maximus neque enim et metus. Pellentesque sem turpis, tincidunt eu venenatis id, lobortis sit amet lorem. Ut ultrices, arcu id sagittis rutrum, velit ex bibendum tortor, quis cursus purus dui eu elit. Quisque at volutpat purus. Quisque condimentum viverra purus nec vulputate. Cras sed hendrerit purus, sed placerat felis. In iaculis elit ornare tortor venenatis, a viverra metus auctor. Nunc hendrerit vulputate bibendum. Vivamus bibendum quam a velit lacinia efficitur. Vestibulum non volutpat elit. Donec sed enim eu nulla mattis aliquam in vel quam. Sed ac pretium justo.
 
 Nulla dictum et lectus ut rhoncus. Proin dapibus fermentum eros, vitae finibus eros dignissim non. Integer lacinia elit tortor, ac ullamcorper eros varius quis. Praesent quis sagittis odio, sit amet dictum mauris. Curabitur consectetur fermentum turpis, ut cursus dolor malesuada eget. Cras id dolor lobortis arcu sodales venenatis. Cras elementum elementum tellus a sollicitudin. Duis volutpat et lectus a tempus. Fusce convallis, velit nec condimentum semper, est arcu pellentesque neque, at interdum augue elit nec justo. Curabitur nisl felis, condimentum ac molestie sed, imperdiet quis dolor. Cras venenatis at ex a pharetra. Sed nec dignissim nibh.
