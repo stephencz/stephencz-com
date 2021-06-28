@@ -19,6 +19,8 @@ $figcaption-color: #9d9d9d;
 $bottom-border-color: #cecece;
 $left-spacing: 20px;
 
+$metadata-date-color: #232323;
+
 .content-wrapper
 {
     margin-bottom: $unit-three;
@@ -41,7 +43,8 @@ $left-spacing: 20px;
 
 .content .metadata .item.date
 {
-    color: #959595;
+    color: $metadata-date-color;
+    text-decoration: underline;
 }
 
 .content h1.title
