@@ -50,6 +50,7 @@ $nav-border: #e6e6e6;
 .sidebar-wrapper .info .info-section
 {
     font-weight: 700;
+    margin-bottom: $unit-quarter;
 }
 
 .sidebar-wrapper .info ul
@@ -57,16 +58,9 @@ $nav-border: #e6e6e6;
     list-style: none
 }
 
-.sidebar-wrapper .info ul li a:link
-.sidebar-wrapper .info ul li a:active
-.sidebar-wrapper .info ul li a:visited
+.sidebar-wrapper .info ul li
 {
-
-}
-
-.sidebar-wrapper .info ul li a:hover
-{
-
+    margin-bottom: $unit-quarter;
 }
 
 .sidebar-wrapper .info .email,

@@ -12,13 +12,18 @@ layout: default
         <div class="col-lg-6">
             <div class="content-wrapper">
                 <div class="content">
-                    {% if page.updated != "" %}
-                        <div class="date">Updated: {{ page.updated | date: "%b %d, %Y" }}</div>
-                    {% else %}
-                        {% if page.published != "" %}
-                            <div class="date">Published: {{ page.published | date: "%b %d, %Y" }}</div>
+                    <div class="metadata">
+                        {% if page.updated != "" %}
+                            <div class="item date">Updated: {{ page.updated | date: "%b %d, %Y" }}</div>
+                        {% else %}
+                            <div class="item date">{{ page.date | date: "%B %d, %Y" }}</div>
                         {% endif %}
-                    {% endif %}
+
+                        {% for category in page.categories %}
+                            <div class="item category"><a href="/posts#{{category}}">[{{ category }}]</a></div>
+                        {% endfor %}
+                    </div>
+
                     <h1 class="title">{{ page.title }}</h1>
                     {{ content }}
 
