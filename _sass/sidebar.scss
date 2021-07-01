@@ -1,11 +1,5 @@
 $nav-hover: #0d54c1;
 $nav-color: #000;
-$nav-border: #e6e6e6;
-
-.sidebar-wrapper nav
-{
-    border-right: 3px solid $nav-border;
-}
 
 .sidebar-wrapper nav ul
 {
@@ -13,7 +7,6 @@ $nav-border: #e6e6e6;
     font-weight: 700;    
     list-style: none;
     margin-right: $unit-half;
-    min-height: 160px;
 }
 
 
@@ -41,7 +34,6 @@ $nav-border: #e6e6e6;
 
 .sidebar-wrapper .info
 {
-    border-right: 3px solid #e6e6e6;
     font-size: 1rem;
     text-align: right;
     padding-right: $unit-half;
