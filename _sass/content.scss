@@ -87,29 +87,32 @@ $metadata-date-color: #232323;
 
 .content h2 
 { 
-    border-bottom: 1px solid $h2-line-color;
+    //border-bottom: 1px solid $h2-line-color;
     font-size: $h2-font-size; 
-    margin-top: $unit-three;
+    margin-top: $unit-two;
     margin-bottom: $unit-quarter;
 }
 
 .content h3 
 { 
-    font-size: $h3-font-size; 
-    margin-top: $unit-three;
+    font-size: $h3-font-size;
+    font-weight: 400;
+    margin-top: $unit-one;
     margin-bottom: $unit-quarter;
 }
 
 .content h4 
 { 
     font-size: $h4-font-size; 
-    margin-top: $unit-two;
+    font-weight: 400;
+    margin-top: $unit-one;
     margin-bottom: $unit-quarter;
 }
 
 .content h5 
 { 
     font-size: $h5-font-size; 
+    font-weight: 400;
     margin-top: $unit-one;
     margin-bottom: $unit-quarter;
 }
@@ -117,6 +120,7 @@ $metadata-date-color: #232323;
 .content h6 
 { 
     font-size: $h6-font-size; 
+    font-weight: 400;
     margin-top: $unit-one;
     margin-bottom: $unit-quarter;
 }
