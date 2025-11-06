@@ -1,0 +1,33 @@
+<div class="portfolio home-section" id="portfolio">
+  <h2 class="home-section-header">Portfolio</h2>
+  {{ $projects := where .Site.RegularPages "Section" "portfolio" }}
+  {{ $sorted_pages := sort $projects "Params.weight" "asc" }}
+  {{ range $projects }}
+  <a class="project" href="{{ .RelPermalink }}">
+    <div class="row">
+      <div class="project-image">
+        <img src="{{ .Params.image }}" alt="">
+      </div>
+      <div class="col">
+        <div class="row">
+          <div class="project-title">{{ .Title }}</div>
+          <div class="project-category">{{ .Params.category }} </div>
+        </div>
+        <div class="row">
+          <div class="project-description">{{ .Description }}</div>
+        </div>
+        <div class="row">
+          <ul class="skills">
+          {{ $skill_data := .Site.Data.skills }}
+          {{ range .Params.skills }}
+            {{ $skill := . }}
+            {{ $color :=  default "#d4d4d4" (index $skill_data $skill) }}
+            <li style="background-color: {{ $color }};">{{ . }}</li>
+          {{ end }}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </a>
+  {{ end }}
+</div>

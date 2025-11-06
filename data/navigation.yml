@@ -1,0 +1,10 @@
+- text: About
+  url: "/#about"
+- text: Portfolio
+  url: "/#portfolio"
+- text: Education
+  url: "/#education"
+- text: Certifications
+  url: "/#certifications"
+- text: "Contact"
+  url: "/#contact"

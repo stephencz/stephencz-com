@@ -1,0 +1,434 @@
+.container {
+  border-left: 1px solid $color-light-grey;
+  border-right: 1px solid $color-light-grey;
+  background-color: $color-bg;
+  //background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 2%, rgba(255, 255, 255, 1) 98%, rgba(255, 255, 255, 0) 100%);;
+  width: 100%;
+
+  max-width: $global-max-width;
+  min-height: 100vh;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  box-sizing: border-box;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  background-color: #fff;
+
+  border-left: 1px solid $color-light-grey;
+  border-right: 1px solid $color-light-grey;
+  border-bottom: 1px solid $color-light-grey;
+
+  width: 100%;
+  max-width: $global-max-width;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+
+  box-sizing: border-box;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: 0;
+}
+
+nav ul li a:link,
+nav ul li a:active,
+nav ul li a:visited
+{
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: $color-grey;
+}
+
+footer {
+  color: $color-grey;
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.biography {
+  margin-bottom: 4rem;
+}
+
+.biography .site-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.biography .site-title a:link,
+.biography .site-title a:active,
+.biography .site-title a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+.biography .site-title a:hover {
+  color: $color-light-grey;
+}
+
+.biography .site-job {
+  color: $color-accent;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  line-height: 3rem;
+}
+
+
+.biography .site-job  a:link,
+.biography .site-job  a:active,
+.biography .site-job  a:visited {
+  color: $color-accent;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.biography .site-job  a:hover {
+  color: $color-light-grey;
+  text-decoration: none;
+}
+
+
+.content {
+  margin-bottom: 4rem;
+  padding: 2rem;
+}
+
+.home-section {
+  margin-bottom: 10rem;
+}
+
+.home-section-header {
+  border-bottom: 1px solid $color-light-grey;
+  padding-bottom: 0;
+}
+
+.biography .info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.biography .info .pitch {
+  padding-right: 0;
+  font-size: 20px;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.biography .info .portrait {
+  min-width: 256px;
+  max-width: 256px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.biography .info .portrait img {
+
+  display: block;
+
+  border: 0.25rem solid $color-light-grey;
+  border-radius: 20px;
+
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.biography .socials table {
+  border: none;
+  border-radius: 0;
+}
+
+.biography .socials table tr:nth-child(odd) {
+  background-color: none;
+}
+
+.biography .socials table.dataTable thead {
+  display: none;
+}
+
+
+.biography .socials div.dt-container.dt-empty-footer .dt-scroll-body {
+  border: none !important;
+}
+
+@media (min-width: 700px) {
+  .biography .info {
+    flex-wrap: nowrap;
+  };
+
+  .biography .info .pitch{
+    padding-right: 4rem;
+    margin-bottom: 0;
+  }
+
+  .biography .info .portrait img {
+    margin-bottom: 0;
+  }
+}
+
+.education .degree .logo img {
+  width: 128px;
+}
+
+.education .degree .row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.5rem;
+}
+
+.education .degree .row .program {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.education .degree .row .institution {
+  font-weight: 600;
+}
+
+.education .degree .row .honors,
+.education .degree .row .gpa {
+  margin-left: auto;
+  color: $color-grey;
+  font-style: italic;
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .education .degree .row .honors,
+  .education .degree .row .gpa {
+    display: block;
+  }
+}
+
+.certifications .certification {
+  margin-bottom: 4rem;
+}
+
+.certifications .certification .info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.certifications .certification .info .name {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.certifications .certification .info .issuer {
+  color: $color-grey;
+  font-weight: 700;
+  margin-left: 0;
+  margin-top: 1rem;
+}
+
+@media (min-width: 800px) {
+  .certifications .certification .info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .certifications .certification .info .issuer {
+    color: $color-grey;
+    margin-left: AUTO;
+    margin-top: 0;
+  }
+}
+
+.portfolio .project {
+  border-radius: 10px;
+  border: 1px solid $color-light-grey;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+
+  transition: transform 0.2s, box-shadow 0.2s;
+
+}
+
+.portfolio .project:link,
+.portfolio .project:active,
+.portfolio .project:visited {
+  color: $color-text;
+  text-decoration: none;
+}
+
+.portfolio .project:hover {
+  opacity: 0.5;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.portfolio .project .row {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.portfolio .project .col {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.portfolio .project  .project-image {
+  display: none;
+  visibility: none;
+  border-right: 1px solid $color-light-grey;
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.portfolio .project .project-image img {
+  border-radius: 10px 0px 0px 10px;
+  height: 100%; /* Makes the image fill the project-image div height */
+  width: 200px;  /* Keeps the aspect ratio */
+  object-fit: cover; /* Crops if necessary to fill the container */
+}
+
+
+.portfolio .project .project-title {
+  color: $color-link;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.portfolio .project:hover .project-title {
+  color: $color-link-hover;
+}
+
+.portfolio .project .project-category {
+  color: $color-grey;
+  font-size: 12px;
+  font-weight: 700;
+  margin-left: auto;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.portfolio .project ul.skills {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+.portfolio .project ul.skills li {
+  display: inline-block;
+
+  border-radius: $global-roundness;
+  border: 1px solid $color-light-grey;
+
+  background-color: $color-light-grey;
+
+  color: #202020;
+  font-size: 0.75rem;
+
+  padding: 0rem 0.75rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+
+@media (min-width: 700px) {
+  .portfolio .project {
+    padding-left: 0;
+  }
+
+  .portfolio .project  .project-image {
+    display: block;
+    visibility: visible;
+  }
+}
+
+.google-blue,
+.google-red,
+.google-yellow,
+.google-green {
+  display: inline;
+}
+
+.google-blue { color: #4285f4; }
+.google-red { color: #ea4335; }
+.google-yellow { color: #fbbc05; }
+.google-green { color: #34a853 }
+
+.microsoft-grey { color: #737373; }
+
+
+.microsoft-logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.microsoft-logo .square-wrapper {
+  display: grid;
+  grid-template-columns: 8px 8px;
+  grid-template-rows: 8px 8px;
+  gap: 1px; /* space between squares */
+  margin-right: 0.25rem;
+}
+
+.microsoft-logo .square {
+  width: 8px;
+  height: 8px;
+}
+
+.microsoft-logo .square.red {
+  background-color: #f25022;
+}
+
+.microsoft-logo .square.green {
+  background-color: #7fba00;
+}
+
+.microsoft-logo .square.blue {
+  background-color: #00a4ef;
+}
+
+.microsoft-logo .square.yellow {
+  background-color: #ffb900;
+}
+
+.hidden {
+  display: none;
+  visibility: none;
+}
+
+.normal-text {
+  font-size: $global-font-size;
+  line-height: $global-line-height;
+}

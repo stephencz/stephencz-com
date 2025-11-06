@@ -1,0 +1,51 @@
+<div class="biography home-section" id="about">
+  {{ with .Site.Params.author }}
+  <div class="site-title"><a href="/">{{ .name }}</a></div>
+  <div class="site-job"><a href="/">{{ .job }}</a></div>
+  {{ end }}
+  <div class="info">
+    <div class="pitch">
+      <p>
+        <b>I’m an aspiring data analyst with a passion for turning numbers into narratives that drive smarter decisions.</b>
+      </p>
+      <p class="normal-text">
+        With a strong foundation in computing, data visualization, and analytical thinking, I thrive on exploring patterns, uncovering insights, and presenting findings that make an impact.
+        I’m eager to apply my training and curiosity to real-world data challenges, and to keep learning every step of the way.
+      </p>
+    </div>
+    <div class="portrait">
+      <img src="/images/portrait.webp" alt="the website's author Stephen Czekalski">
+    </div>
+  </div>
+  <div class="socials">
+    <table class="socials" id="socials">
+      <thead>
+        <tr>
+          <th>Website</th>
+          <th>Purpose</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+      {{ range $item := .Site.Data.socials }}
+      <tr>
+        <td><img style="width: 50px; float: left;" src="{{ $item.logo_path }}" alt="the logo for {{ $item.website }}."></td>
+        <td>{{ $item.function }}</td>
+        <td><a href="{{ $item.url }}" target="_blank">{{ $item.url }}</a></td>
+      </tr>
+      {{ end }}
+      </tbody>
+    </table>
+
+    <script>
+      $('#socials').DataTable({
+        paging: false,
+        searching: false,
+        info: false,
+        lengthChange: false,
+        scrollX: true
+      });
+    </script>
+  </div>
+</div>
+

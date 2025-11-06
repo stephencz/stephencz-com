@@ -1,0 +1,42 @@
+{{ define "main" }}
+<div class="portfolio-page-image" style="background-image: url({{ .Params.image }});"></div>
+<div class="content portfolio-page">
+  <h1>{{ .Title }}</h1>
+  <div class="portfolio-metadata">
+    <div class="info">
+      <p class="pitch">{{ .Params.pitch }}</p>
+    </div>
+    
+    <div class="skills">
+      <div class="skills-header">Skills Used:</div>
+      {{ $skill_data := .Site.Data.skills }}
+      {{ range .Params.skills }}
+      {{ $skill := . }}
+      {{ $color :=  default "#d4d4d4" (index $skill_data $skill) }}
+      <div class="skill" style="background-color: {{ $color }};">{{ . }}</div>
+      {{ end }}
+    </div>
+
+    <div class="outbound-links">
+      {{ with .Params.kaggle }}
+      <a class="square" href="{{ . }}" target="_blank">
+        <div class="kaggle">
+
+        </div>
+      </a>
+      {{ end }}
+
+      {{ with .Params.github }}
+      <a class="square" href="{{ . }}" target="_blank">
+        <div class="github"></div>
+      </a>
+      {{ end }}
+    </div>
+
+
+  </div>
+  <div class="markdown-content">
+  {{ .Content }}
+  </div>
+</div>
+{{ end }}
